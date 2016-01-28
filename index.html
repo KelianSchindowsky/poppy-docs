@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <link rel="stylesheet" href="css/normalize.css" media="screen">
+  <link rel="stylesheet" href="css/skeleton.css" media="screen">
+  <link rel="stylesheet" href="css/custom.css" media="screen">
+  <meta name="author" content="Version 1.0">
+  <title>Poppy Documentation</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <section class="header">
+      <h1 class="title">Poppy Documentation</h1>
+      <h2 class="author">Version 1.0</h2>
+      <h3 class="date">Jan. 2016</h3>
+    </section>
+    <nav class="toc">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="#about"><span class="toc-section-number">1.1</span> About</a></li>
+<li><a href="#version"><span class="toc-section-number">1.2</span> Version</a></li>
+<li><a href="#the-poppy-creatures"><span class="toc-section-number">1.3</span> The Poppy creatures</a></li>
+<li><a href="#build-the-robot"><span class="toc-section-number">1.4</span> Build the robot</a></li>
+<li><a href="#start-and-connect-the-robot"><span class="toc-section-number">1.5</span> Start and connect the robot</a></li>
+<li><a href="#program-the-robot"><span class="toc-section-number">1.6</span> Program the robot</a></li>
+<li><a href="#overview-of-projects-developed-by-the-community"><span class="toc-section-number">1.7</span> Overview of projects developed by the community</a></li>
+</ul></li>
+<li><a href="#setup-your-poppy-board"><span class="toc-section-number">2</span> Setup your Poppy Board</a><ul>
+<li><a href="#download-the-image"><span class="toc-section-number">2.1</span> Download the image</a></li>
+<li><a href="#write-an-image-to-the-sd-card"><span class="toc-section-number">2.2</span> Write an image to the SD card</a></li>
+</ul></li>
+<li><a href="#assembly-guide-for-the-ergo-jr"><span class="toc-section-number">3</span> Assembly guide for the Ergo Jr</a><ul>
+<li><a href="#bill-of-materials"><span class="toc-section-number">3.1</span> Bill of materials</a></li>
+<li><a href="#assembly-web-interface"><span class="toc-section-number">3.2</span> Assembly web interface</a></li>
+<li><a href="#electronic-assembly"><span class="toc-section-number">3.3</span> Electronic assembly</a></li>
+<li><a href="#motor-configuration"><span class="toc-section-number">3.4</span> Motor configuration</a></li>
+<li><a href="#mechanical-assembly"><span class="toc-section-number">3.5</span> Mechanical Assembly</a></li>
+</ul></li>
+<li><a href="#programming-poppy-robots-using-snap"><span class="toc-section-number">4</span> Programming Poppy robots using Snap!</a><ul>
+<li><a href="#introduction-to-snap-programming"><span class="toc-section-number">4.1</span> Introduction to Snap! programming</a></li>
+<li><a href="#description-of-poppy-blocks"><span class="toc-section-number">4.2</span> Description of Poppy blocks</a></li>
+<li><a href="#quick-examples"><span class="toc-section-number">4.3</span> Quick examples</a></li>
+</ul></li>
+<li><a href="#programming-poppy-robots-in-python"><span class="toc-section-number">5</span> Programming Poppy robots in Python</a><ul>
+<li><a href="#why-python-and-anaconda"><span class="toc-section-number">5.1</span> Why Python and Anaconda?</a></li>
+<li><a href="#overview-of-the-different-libraries"><span class="toc-section-number">5.2</span> Overview of the different libraries</a></li>
+<li><a href="#installation"><span class="toc-section-number">5.3</span> Installation</a></li>
+<li><a href="#quickstart-hello-poppy-world"><span class="toc-section-number">5.4</span> Quickstart: Hello Poppy world!</a></li>
+</ul></li>
+<li><a href="#jupyter-notebooks-gallery-using-python"><span class="toc-section-number">6</span> Jupyter Notebooks Gallery: using Python</a><ul>
+<li><a href="#getting-started-1"><span class="toc-section-number">6.1</span> Getting started</a></li>
+<li><a href="#simulator"><span class="toc-section-number">6.2</span> Simulator</a></li>
+<li><a href="#http-rest-api-and-remote-connection"><span class="toc-section-number">6.3</span> HTTP REST API and remote connection</a></li>
+<li><a href="#scientific-experiments"><span class="toc-section-number">6.4</span> Scientific experiments</a></li>
+<li><a href="#demo-interface"><span class="toc-section-number">6.5</span> Demo interface</a></li>
+<li><a href="#education"><span class="toc-section-number">6.6</span> Education</a></li>
+<li><a href="#going-further"><span class="toc-section-number">6.7</span> Going further</a></li>
+<li><a href="#install-the-python-interpreter-and-poppy-softwares"><span class="toc-section-number">6.8</span> Install the Python Interpreter and Poppy softwares</a></li>
+<li><a href="#install-the-robotic-simulator-v-rep"><span class="toc-section-number">6.9</span> Install the robotic simulator V-REP</a></li>
+<li><a href="#install-drivers"><span class="toc-section-number">6.10</span> Install drivers</a></li>
+</ul></li>
+<li><a href="#appendix"><span class="toc-section-number">7</span> Appendix</a><ul>
+<li><a href="#getting-involved"><span class="toc-section-number">7.1</span> Getting involved</a></li>
+<li><a href="#pypot-library"><span class="toc-section-number">7.2</span> pypot library</a></li>
+<li><a href="#poppy-creature-library"><span class="toc-section-number">7.3</span> poppy-creature library</a></li>
+<li><a href="#poppy-ergo-jr-library"><span class="toc-section-number">7.4</span> poppy-ergo-jr library</a></li>
+<li><a href="#raspoppy-manual-setup-of-a-raspberry-pi"><span class="toc-section-number">7.5</span> Raspoppy: manual setup of a Raspberry-Pi</a></li>
+</ul></li>
+</ul>
+    </nav>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<h2 id="about"><span class="header-section-number">1.1</span> About</h2>
+<p>Welcome to the manual of the <a href="https://www.poppy-project.org/">Poppy-Project</a>, an open-source robotic platform.</p>
+<p>In this documentation, we will try to cover everything from the short overview of what is possible within the project to the details on how you can build a Poppy robot or reproduce one of the pedagogical activity.</p>
+<p>In the first chapter, we will give you a simple but exhaustive overview of what you can do within this project, so you can quickly focus on the following chapters that cover what you are really interested in. While some advanced chapters may require a good understanding of mechanics, electronics or computer sciences, the <a href="#getting-started">Getting Started</a> section is intended to be easily accessible by all readers.</p>
+<p>This book is licensed under the Creative Commons License, BY-SA. The source can be found in <a href="https://github.com/poppy-project/poppy-docs">github</a>.</p>
+<h2 id="version"><span class="header-section-number">1.2</span> Version</h2>
+<p>This is the version 1.0 of the Poppy documentation.</p>
+<p>It contains the documentation for:</p>
+<ul>
+<li>Poppy Humanoid 1.0.1 hardware</li>
+<li>Poppy Torso 1.0.1 hardware</li>
+<li><p>Poppy ErgoJr beta 6 hardware</p></li>
+<li>poppy_humanoid library version 1.1.1</li>
+<li>poppy_torso library version 1.1.5</li>
+<li>poppy_ergo_jr library version 1.4.0</li>
+<li>poppy.creatures library version 1.7.1</li>
+<li><p>pypot library version 2.10.0</p>
+<h1 id="getting-started"><span class="header-section-number">1.2</span> Getting Started</h1></li>
+</ul>
+<p><embed src="img/logo/poppy.pdf" /></p>
+<p><a href="https://www.poppy-project.org/">Poppy Project</a> is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists, that all share a vision: robots are powerful tools to learn and be creative.</p>
+<p>The <a href="https://forum.poppy-project.org/">Poppy community</a> develops robotic creations that are easy to build, customize, deploy, and share. We promote open-source by sharing hardware, software, and web tools.</p>
+<p>The Poppy project has been originally released by the <a href="http://www.inria.fr/equipes/flowers/">INRIA Flowers</a>.</p>
+<p>This project aims at developing a robotic open-source and open-hardware kits, for the conception and programming of robotic creatures. These kits also contain an integrated software environment, easily installable, dedicated to the use of the robot, and associated with a web platform enabling the community to share experiences and to contribute to its improvement.</p>
+<p>Recently, Poppy robots have been used as a educational and motivational tool to learn engineering and digital sciences.</p>
+<p>The Poppy project also consists of a very active and diverse community. People of different horizons collaborate to improve the project ; they add features to the core libraries, release advanced behaviors, create pedagogical contents, design artistic performances, or even new robots.</p>
+<p>To facilitate these exchanges two supports are available:</p>
+<ul>
+<li><a href="https://forum.poppy-project.org/">the poppy-project forum</a> for help, dialogue and to share ideas</li>
+<li><a href="https://github.com/poppy-project">github</a> to deposit your contributions</li>
+</ul>
+<p>All sources of the Poppy Project (software and hardware) are available on <a href="https://github.com/poppy-project">Github</a>.</p>
+<h2 id="the-poppy-creatures"><span class="header-section-number">1.3</span> The Poppy creatures</h2>
+<p>Poppy creatures are open-source robots, available for download and modification (<a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike</a> for the hardware and <a href="http://www.gnu.org/licenses/gpl-3.0.en.html">GPLv3</a> for software). They were designed with the same principles in mind.</p>
+<p>All Poppy creatures:</p>
+<ul>
+<li>are made from pieces of printable 3D and Dynamixel motors,</li>
+<li>use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),</li>
+<li>are based on a Python library, <a href="#TODO">pypot</a>, allowing to control Dynamixel servomotors in an easy way,</li>
+<li>have a simulated version available (based on V-REP),</li>
+<li>can be controlled using a visual programming language (<a href="http://snap.berkeley.edu">Snap!</a> a variation of Scratch) and a textual language <a href="https://www.python.org">Python</a>. They are also programmable through a REST API, which enables the control with other programming language (connection for Matlab and Processing already exists) - see Chapter #TODO for details,</li>
+<li>come with associated documentation, tutorials, examples, pedagogical activities.</li>
+</ul>
+<p>They can be used as it is, or hacked to explore the shape of novel legs, arms, hands...</p>
+<p>You can get a full Poppy Creature robot from one of Poppy's official resellers:</p>
+<ul>
+<li><a href="http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform">Génération Robots</a></li>
+</ul>
+<p>But you can also get all the parts yourself by following the bill of materials (see below).</p>
+<h3 id="poppy-ergo-jr"><span class="header-section-number">1.3.1</span> Poppy Ergo Jr</h3>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts simple to design.</p>
+<p><img src="img/ergo-jr/vecto.png" alt="Poppy Ergo Jr" /></p>
+<p>The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20€ each. Unlike others Poppy creatures, the electronic card is easily accessible to make it easy to connect extra sensors and for pedagogical purposes.</p>
+<p>At the end of its arm, you can choose among several tools:</p>
+<ul>
+<li>a lamp</li>
+<li>a gripper</li>
+<li>a pen holder...</li>
+</ul>
+<p>You can change them easily thanks to rivets. depending on the type of activities you are planning.</p>
+<p><img src="img/ergo-jr/3D/multitool.gif" alt="Ergo Jr tools" /></p>
+<p>The Ergo Poppy Jr is ideal for start manipulating robots and for learning robotic without difficulties. It is particularly well suited for educational purposes (cheap, simple to assemble, and easily controllable) or can be a very nice desk decoration for geeks and makers...</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/parts/BOM.md/">bill of materials</a>(BOM) and printing the <a href="https://github.com/poppy-project/poppy-ergo-jr/releases/">3D files</a> available in the STL format.</p>
+<h3 id="poppy-humanoid"><span class="header-section-number">1.3.2</span> Poppy Humanoid</h3>
+<p>It is a 25-degrees of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
+<p>You can get all the parts yourself following the <a href="http://poppy-project.github.io/poppy-docs/poppy-humanoid/assembly_doc/BOM.html">bill of materials</a>(BOM) and printing the <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/">3D files</a> available as STL, STEP and Solidworks 2014 format.</p>
+<p><img src="img/humanoid/vecto.png" alt="Poppy Humanoid Vecto" /></p>
+<h3 id="poppy-torso"><span class="header-section-number">1.3.3</span> Poppy Torso</h3>
+<p>It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is more affordable than the full kit (Poppy Humanoid), which makes it more suitable for uses in an educational, associative and makers context. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).</p>
+<p>You can get all the parts yourself following the <a href="http://poppy-project.github.io/poppy-docs/poppy-torso/BOM.html">bill of material</a>. The 3D models for the parts can be found <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/">in the github</a>. They are the same as Poppy Humanoid, simply without the legs and with an extra <a href="https://github.com/poppy-project/robot-support-toolbox/">suction cup support</a>).</p>
+<p><img src="img/torso/vecto.png" alt="Poppy Torso Vecto" /></p>
+<h3 id="other-interesting-poppy-creatures"><span class="header-section-number">1.3.4</span> Other interesting Poppy Creatures</h3>
+<p>A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in this section below.</p>
+<h4 id="poppy-right-arm-work-in-progress"><span class="header-section-number">1.3.4.1</span> Poppy right arm (work in progress)</h4>
+<p>Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.</p>
+<!-- TODO: belle photo de Poppy Right Arm -->
+<p>The project was realized during an internship at INRIA Flowers by Joel Ortiz Sosa. Find more info and the sources in <a href="https://github.com/poppy-project/poppy-6dof-right-arm">the dedicated github repository</a>.</p>
+<h4 id="small-and-low-cost-humanoid"><span class="header-section-number">1.3.4.2</span> Small and low-cost humanoid</h4>
+<h5 id="heol"><span class="header-section-number">1.3.4.2.1</span> Heol</h5>
+<p>Heol est un robot humanoïde de 34 cm conçus par l’association <a href="">Heol robotics</a>. Il est composé de 23 moteurs, le reste des pièces étant imprimées en 3D. Il est basé sur la librairie pypot qui lui permet de se mouvoir tel un petit homme. Heol qui signifie soleil en Breton, a pour but de redonner le sourire aux enfants malades, grâce à diverses applications. Il a la capacité d’être un outil pédagogique en devenant un support d’apprentissage pour des matières tel que la programmation, la conception mécanique, etc. La participation à la robocup (coupe du monde de football pour robot) est aussi envisagee.</p>
+<p><img src="img/heol.jpg" alt="Heol" height="250" /></p>
+<h5 id="poppyrate"><span class="header-section-number">1.3.4.2.2</span> Poppyrate</h5>
+<p>Un robot humanoïde open source basé sur Poppy plus abordable grâce à une taille plus petite et à des moteurs moins chers. La réduction de taille a aussi l'avantage de le rendre plus facilement imprimable sur les imprimante 3D grand public. Il a aussi l'objectif d'être le plus nomade possible et d'être personnalisable et extensible tout en restant compatible avec le logiciel de Poppy. A terme Poppyrate sera vendu en kit avec ou sans les pièces imprimés en 3D, pour tous les publics intéressé par la robotique humanoïde. Poppyrate est réalisé par la société ZeCloud.</p>
+<p><img src="img/poppyrate.jpg" alt="Poppyrate" height="250" /></p>
+<p>Poppyrate.com<br />
+Réseaux sociaux :<br />
+Twitter.com/poppyratproject<br />
+facebook.com/poppyrate</p>
+<h2 id="build-the-robot"><span class="header-section-number">1.4</span> Build the robot</h2>
+<p><img src="img/assembly_pretty.jpg" alt="Poppy Assembly" /></p>
+<p>Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!</p>
+<p>This section intends at giving you hints and stressing some critical points so you aware of of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.</p>
+<h3 id="assembling-an-ergo-jr"><span class="header-section-number">1.4.1</span> Assembling an Ergo Jr</h3>
+<p><img src="img/ergo-jr/bom.jpg" alt="Poppy Ergo Jr BOM" /><br />
+<!-- TODO: refaire une belle photo avec la vraie BOM --></p>
+<p>The Poppy Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each. You can find the complete list in the Chapter <a href="#TODO">Step by step assembly of an Ergo Jr</a>.</p>
+<p>The Ergo Jr is very easy to build and its end effector can be easily changed - you can choose among several tools: a lamp, a gripper, a pen holder...</p>
+<!-- TODO: image des differents outils -->
+<p>Thanks to OLLO rivets the robot is very simple to assemble. These rivets can be removed and added very quickly with the OLLO tool. It should not take more than one hour to entirely built it, which allows great design freedom.</p>
+<!-- TODO: image des rivets et du tool en action -->
+<p>Except from <strong>checking the motor orientation</strong>, there is not really any pitfall. If you are familiar with Lego bricks, you should be able to assemble an Ergo Jr without much problem! In any cases, the rivets are made to be as easy to assemble than to disassemble, so in case of problem you can just start over!</p>
+<p>Also make sure, to <strong>configure your motors</strong> before assembling the robot as it is harder to do after!</p>
+<h3 id="assembling-a-torso-or-a-humanoid"><span class="header-section-number">1.4.2</span> Assembling a Torso or a Humanoid</h3>
+<p><img src="img/humanoid/bom.jpg" alt="Poppy Humanoid BOM" /></p>
+<p>Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furnitures. It mainly consists on those few steps:</p>
+<!-- TODO: add links of the advanced doc -->
+<ul>
+<li>assemble the horn on each motors: <strong>you will have to be really cautious about the motor zero position!</strong></li>
+<li>configure the motors so they match the <em>poppy configuration</em></li>
+<li>use a lot of screws to connect all 3D printed parts to the motors</li>
+<li>do a bit of electronic for the embedded board inside the head: this can be a bit tricky if you are not familiar with electronics.</li>
+</ul>
+<p>Patience and precision are your allies, but in case of errors do not panic: Poppy is a robot intended to be assembled and disassembled. If you pay attention to the few <strong>warnings</strong> bellows, and with a few trials and errors you will have a working Poppy Torso or POppy Humanoid:</p>
+<p><em>Warning 1:<br />
+The Poppy humanoid and torso robots are built using mainly MX-28 and MX-64 Dynamixel servomotors, which are pretty powerful and may be harmful to your fingers or materials.<br />
+So be very careful and put the robot in a free space while testing them.</em></p>
+<p><em>Warning 2: put the dot on the horn at the same point than the dot on the servo axis</em></p>
+<p><img src="img/humanoid/zero.JPG" alt="image" /></p>
+<p><em>Warning 3: adjusts the three dots of the motors with three dots of structural parts.</em></p>
+<p><img src="img/humanoid/three_dots.jpg" alt="image" /></p>
+<p><em>Warning 4: use thread locker to prevent vibrations from untying the screws. However, dip the extremity of the screw on the thread locker is enough (a drop for each screw hole is too much), otherwise disassembling your robot can be very hard!</em></p>
+<!-- TODO: Add directly the youtube playlist of poppy torso and humanoid-->
+<p><strong>The assembly can be divided into seven major steps:</strong></p>
+<ul>
+<li>Trunk <a href="https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/5_DoFs_humanoid_spine.md">(Text instruction)</a> Videos demonstration <a href="https://www.youtube.com/watch?v=83lrhXVNHYE">1/5</a>, <a href="https://www.youtube.com/watch?v=9oNGV9ggHaE">2/5</a>, <a href="https://www.youtube.com/watch?v=LXktU4MTITE">3/5</a>, <a href="https://www.youtube.com/watch?v=qwrgV6tKTO8">4/5</a>, <a href="">5/5</a>.</li>
+<li>Chest <a href="https://github.com/poppy-project/Poppy-multiarticulated-torso/blob/master/doc/fr/subassembly/chest_assembly_instructions.md">(Text instruction)</a> <a href="http://youtu.be/qwrgV6tKTO8">(Video demonstration)</a></li>
+<li>Right Arm <a href="https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/right_arm_assembly_instructions.md">(Text instruction)</a> Videos demonstration <a href="https://www.youtube.com/watch?v=SUlM_mE3plc">1/4</a>, <a href="https://www.youtube.com/watch?v=cYhGwD6r6NQ">2/4</a>, <a href="https://www.youtube.com/watch?v=BdQcOAwZbMY">3/4</a>, <a href="https://www.youtube.com/watch?v=Oe5v21sTst8">4/4</a>.</li>
+<li>Left Arm, which is the exact symmetry of the Right Arm<a href="https://github.com/poppy-project/Poppy-basic-arms/blob/master/doc/left_arm_assembly_instructions.md">(Text instruction)</a> Videos demonstration <a href="https://www.youtube.com/watch?v=5FsPgEt4cfA">1/4</a>, <a href="https://www.youtube.com/watch?v=MIjfAXShLJ4">2/4</a>, <a href="https://www.youtube.com/watch?v=qCF_8-M5k1o">3/4</a>, <a href="https://www.youtube.com/watch?v=Oe5v21sTst8">4/4</a>.</li>
+<li>Legs (only for Humanoid version) <a href="https://github.com/poppy-project/Poppy-lightweight-biped-legs/blob/master/doc/legs_assembly_instructions.md">(Text instruction)</a><a href="http://youtu.be/Am1XBYv134Y">(Video demonstration)</a></li>
+<li>Legs + Trunk (only for Humanoid version) <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly">(Text instruction)</a> <a href="http://youtu.be/5i0xVlrJc-8">(Video demonstration)</a></li>
+<li>Head <a href="https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md">(Text instruction)</a></li>
+</ul>
+<p>Ad previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. A detailed step by step assembly can be found in their dedicated Chapter <a href="#TODO">Step-by-step assembly of a Poppy Torso</a> or Chapter <a href="#TODO">Step-by-step assembly of a Poppy Humanoid</a>.</p>
+<h2 id="start-and-connect-the-robot"><span class="header-section-number">1.5</span> Start and connect the robot</h2>
+<p>In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it. We will focus here on real robots but we will also point to the advanced sections to follow if you are using a simulated robot.</p>
+<h3 id="setup-the-software"><span class="header-section-number">1.5.1</span> Setup the software</h3>
+<p>Poppy creatures come with an embedded board which job is to control motors and access the sensors. This computer can be access through a web interface which makes it easy to control the robot from your own computer or a tablet without having to locally install anything specific.</p>
+<p>There are two ways to setup the board for your Poppy:</p>
+<ul>
+<li>[<strong>the easy way</strong>]((#easy-way-use-the-poppy-sd-card): use a pre-made ISO image of the Poppy operating system and write it to an the SD-card</li>
+<li><a href="diy-install-everything-from-scratch"><strong>the hard way for advanced users</strong></a>: install everything from scratch</li>
+</ul>
+<p><em>Note: If you are using a simulated robot, you must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="#TODO">TODO USE SIMU</a> will guide you through all the detailed steps.</em></p>
+<h4 id="easy-way-use-the-poppy-sd-card"><span class="header-section-number">1.5.1.1</span> Easy way: use the Poppy SD-card</h4>
+<p>The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.</p>
+<p>The images can be found in the <a href="#TODO">github of the project</a>:</p>
+<ul>
+<li><a href="#TODO">for the ErgoJr</a></li>
+<li><a href="#TODO">for the Torso</a></li>
+<li><a href="#TODO">for the Humanoid</a></li>
+</ul>
+<p>They can be writed to a SD-card (at least 8Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne --><br />
+One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.</p>
+<h4 id="advanced-way-diy-install-everything-from-scratch"><span class="header-section-number">1.5.1.2</span> Advanced way: DIY, install everything from scratch</h4>
+<p>The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:</p>
+<ul>
+<li>You are <strong>working with a simulated robot</strong> and thus have to manually install all the required softwares on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,</li>
+<li>you want to customize the environment,</li>
+<li>or simply if you like to understand how it works.</li>
+</ul>
+<p><strong>Warning:</strong> <em>We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledges of how to install and setup a python environment.</em></p>
+<p><img src="img/linux.jpg" alt="Linux" /></p>
+<p>The entire procedure is detailed in the <a href="#TODO">Chapter TODO</a>. Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:</p>
+<ul>
+<li>Customize a <a href="https://www.raspbian.org">Raspbian</a> install for Poppy (setup a user/hostname...).</li>
+<li>Setup the Poppy utility tools (for install/update)</li>
+<li>Install the <a href="https://www.continuum.io/why-anaconda">Python Anaconda distribution</a>.</li>
+<li>Install the <a href="TODO%20pypot/poppy-creature/poppy-*">python libraries</a>) for Poppy.</li>
+<li>Setup the sensors for your creature.</li>
+<li>Install the web server for the control and monitoring interface.</li>
+</ul>
+<h3 id="setup-the-network"><span class="header-section-number">1.5.2</span> Setup the network</h3>
+<p>Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.</p>
+<p>Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow in order to do that.</p>
+<p>Poppy robots can use either ethernet (using cable) or wifi network. Yet, you first need to use an ethernet network so you can first configure the robot so it can then automatically use your specified wifi.</p>
+<p>Poppy robots can use either Ethernet or wifi network. But first, plug the robot and your computer on the same Ethernet network.</p>
+<p>Then, you need to choose among the two different possibilities:</p>
+<ul>
+<li>Use the <a href="https://fr.wikipedia.org/wiki/Zeroconf">Zeroconf protocol</a> to connect to the robot using its hostname: <em>&quot;poppy.local&quot;</em>. This should works directly under Mac OS and GNU/Linux but required to install <a href="https://support.apple.com/kb/DL999"><em>Bonjour Print Services</em></a> on Windows. This is the simplest way and should be preferred except if you do not have the administrator right on your Windows computer for instance. Note that <em>Bonjour Print Services for Windows</em> may be already installed if you have iTunes or QuickTime on your computer.</li>
+<li>Know the IP address of the robot assigned by the router of your network.</li>
+</ul>
+<p><strong>Note: If you are not familiar with network configuration or have no idea what the previous paragraph clumsily tried to say, you should see with the IT network engineer, how you can do that.</strong></p>
+<p><img src="img/network.png" alt="Network Schema" /></p>
+<h3 id="use-the-web-interface"><span class="header-section-number">1.5.3</span> Use the web interface</h3>
+<p>One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:</p>
+<ul>
+<li>setup your wifi and change the name of the robot - the one you will use to connect,</li>
+<li>to launch demo primitives,</li>
+<li>and monitor the state of your robot (if motors are too hot for instance).</li>
+</ul>
+<p>To access this interface, you simply have to go to the URL using your favourite web browser:</p>
+<ul>
+<li><a href="http://poppy.local" class="uri">http://poppy.local</a> (if you changed the name of your robot, simply replace <em>poppy</em> by its new name)</li>
+<li>or using directly its IP address, something similar as <a href="http://192.168.0.42" class="uri">http://192.168.0.42</a></li>
+</ul>
+<p>You should see something like:</p>
+<p><img src="img/poppy_home.png" alt="Web interface" /></p>
+<p>And then if you click on the <strong>Start Poppy-monitor</strong> link:</p>
+<p><img src="img/poppy_monitor.png" alt="Monitor interface" /></p>
+<h2 id="program-the-robot"><span class="header-section-number">1.6</span> Program the robot</h2>
+<p>In this section we will present the different options to program your robot ranging from the high level behaviors triggered using <a href="#using-snap">Snap!</a>, the visual programming language, to the low-level API written in <a href="#using-python">Python</a>.</p>
+<p>We will also say a few words on how you can interface Poppy robots with other devices or any programming language using <a href="#through-the-rest-api">Poppy's REST API</a>.</p>
+<p><strong>Note: As for the rest of the project, all our libraries are open source and available on <a href="https://github.com/poppy-project">GitHub</a>.</strong></p>
+<p><img src="img/logo/gpl-v3.png" alt="GPLv3 Logo" /><br />
+<img src="img/logo/open-source.png" alt="OpenSource Logo" /></p>
+<h3 id="using-snap"><span class="header-section-number">1.6.1</span> Using Snap!</h3>
+<!-- TODO: Didier -->
+<h3 id="using-python"><span class="header-section-number">1.6.2</span> Using Python</h3>
+<p><img src="img/logo/python.png" alt="Python Powered" /></p>
+<p>Poppy libraries have been written in Python, to allow for fast development and extensibility and to benefit from all scientific libraries existing. Python is also a well-known language and widely used in education or artistic fields. By programming Poppy in Python, you will have access from the very low-level API to the higher levels.</p>
+<p>The API has been designed to allow for very fast prototyping. In particular, creating a robot and starting to move motors should not take more than a few lines:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyErgoJr
+
+jr <span class="op">=</span> PoppyErgoJr()
+jr.m3.goal_position <span class="op">=</span> <span class="dv">30</span></code></pre></div>
+<!-- Note: "Notebook documents" or “notebooks”, all lower case -->
+<p>We are also big fan of the <a href="http://jupyter.org">Jupyter Project</a> and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We really think that this is an extremely powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.</p>
+<p><img src="img/logo/jupyter.png" alt="Jupyter Logo" /></p>
+<p>Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as <a href="#TODO-lien-notebook-de-notebook">notebooks</a>.</p>
+<p><img src="img/notebook-example.png" alt="Notebook example" /></p>
+<p>An update gallery of notebooks can be found <a href="#TODO">here</a>.</p>
+<h3 id="through-the-rest-api"><span class="header-section-number">1.6.3</span> Through the REST API</h3>
+<p>On top of the Snap! and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.</p>
+<p>From a more practical point of view, this allows to:</p>
+<ul>
+<li><strong>Write bridges to control Poppy robot in any language</strong> (awesome contributors have already written <a href="#TODO">Matlab</a> and <a href="#TODO">Ruby</a> wrappers).</li>
+<li>Easily <strong>design web apps</strong> connected to your robot (such as the <a href="#TODO">monitor interface</a>)</li>
+<li><p>Make your <strong>robot interact with other connected device</strong> such as a smartphone, intelligent sensors, or even your twitter account...</p>
+<h2 id="visualize-the-robot-in-a-simulator"><span class="header-section-number">1.6.3</span> Visualize the robot in a simulator</h2></li>
+</ul>
+<h3 id="simulated-poppy-creatures"><span class="header-section-number">1.6.4</span> Simulated Poppy Creatures</h3>
+<p>A simulated version of all Poppy robots (Humanoid, Torso, and Ergo Jr) is also available.</p>
+<p><strong>Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.</strong></p>
+<p>Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. More detailed of what you will have to do is given in the <a href="#using-v-rep">section below</a>.</p>
+<p>At the moment, only one simulator can be used. In further versions, we will also develop a web visualization hopefully simpler and lighter than the existing solution.</p>
+<p>This allows the development and test of programs without having a real robot. This is particularly useful:</p>
+<ul>
+<li>To discover and try the robot possibilities without having to spend money.</li>
+<li>In a context where multiple users share a robot: for instance in a classroom where each group can work using the simulator and validate their program on the real robot.</li>
+<li>To design and run complex and time consuming experiments.</li>
+</ul>
+<p>We try to make the switch from a simulated Poppy robot to the real one as transparent and as simple as possible. Most of the documentation is actually valid for both simulated and real robots. Yet, a dedicated chapter <em><a href="#todo">Use a simulated robot</a></em> will describe in details everything you need to know and do to use a simulated Poppy robot.</p>
+<p><strong>Warning: If you want to use Poppy robots on a simulator, you will have to install the poppy libraries locally on your computer.</strong> Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulator. Moreover, you will not have access to the robot web interface, but you will have to manually launched the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap! server).</p>
+<p><strong>Once your computer is setup, you will be able to write a program for the simulator and directly use it on a real robot (or vice-versa).</strong></p>
+<p>At the moment, only one simulator can be used - V-REP. In further versions, we will also develop a web visualization, hopefully simpler and lighter than the existing solution.</p>
+<h3 id="using-v-rep"><span class="header-section-number">1.6.5</span> Using V-REP</h3>
+<p><a href="http://www.coppeliarobotics.com/downloads.html">V-REP</a> is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under a educational license.</p>
+<p><em>It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a recent computer (especially the GPU card).</em></p>
+<p><img src="img/humanoid/vrep.png" alt="Poppy Humanoid in V-REP" /></p>
+<p>All main Poppy robots are available in V-REP:</p>
+<ul>
+<li>Poppy Humanoid</li>
+<li>Poppy Torso</li>
+<li>Poppy ErgoJr</li>
+</ul>
+<p>To start using V-REP for controlling Poppy robots, you will need:</p>
+<ul>
+<li>to install V-REP (work under Mac OS, Windows and GNU/Linux)</li>
+<li>to have a working Python (version &gt;=2.6 or &gt;=3.), we strongly recommend to use the <a href="https://www.continuum.io/why-anaconda">Anaconda Python distribution</a>.</li>
+<li>to install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr)</li>
+</ul>
+<p><strong>Note: Details about all those steps can be found in section <em><a href="#TODO">Install everything locally for using a simulator</a></em>.</strong></p>
+<p>V-REP can be used to learn how to control motors, get information from sensors but also to interact with the simulated environment. It can be used using Python, Snap! or through the REST API. Here, are some examples of what the community has already been doing using it:</p>
+<ul>
+<li><p>In a pedagogical activity to discover the different motor of your robot and how they can be controlled.</p></li>
+<li><p>In a scientific experiment, where a Poppy Torso is learning how to push a cube on a table in front of it</p></li>
+</ul>
+<p><img src="img/torso/explauto-vrep.png" alt="Torso V-REP" /><img src="img/torso/explauto-res.png" alt="Torso Explauto Res" /></p>
+<p><em>Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world.</em></p>
+<h2 id="overview-of-projects-developed-by-the-community"><span class="header-section-number">1.7</span> Overview of projects developed by the community</h2>
+<h1 id="setup-your-poppy-board"><span class="header-section-number">2</span> Setup your Poppy Board</h1>
+<p><strong>Note: this chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, go to the <a href="../07-installation-for-advanced-users/01-install-poppy-softwares.md">installation for advanced users section</a></strong></p>
+<p>Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or a Odroid for the older versions.</p>
+<p>The Operating System of this computer is hosted on a SD card.</p>
+<p>You may be in two kind of cases:</p>
+<ul>
+<li>You already have a SD-card with the Poppy Operating System (provided by one of the Poppy distributors for example). You just have to put the SD card on the board.<br />
+</li>
+<li>You have an empty SD-card, so you have to install the operating System on the SD-card (explained below) and put the SD-card on the board.</li>
+</ul>
+<p><strong>Note: The Poppy creatures Operating System use a GNU/Linux distribution, but you won't have to any knowledges on Linux to install the image on the Raspberry Pi.<br />
+You will only need a computer with a SD card reader to write the image on the SD card.</strong></p>
+<h2 id="download-the-image"><span class="header-section-number">2.1</span> Download the image</h2>
+<!-- TODO: AJouter lien images (et les uploader aussi) -->
+<p>You have to choose the image to download depending on your Poppy creature and the targeted board:</p>
+<ul>
+<li>Poppy ErgoJr</li>
+<li>Poppy Torso</li>
+<li>Poppy Humanoid</li>
+</ul>
+<p>The .zip file you have downloaded need to be unzipped to get the image file for writing to your SD card.</p>
+<h2 id="write-an-image-to-the-sd-card"><span class="header-section-number">2.2</span> Write an image to the SD card</h2>
+<p>With the image file corresponding to your Poppy creature, you need to use an image writing tool to install it on your SD card.</p>
+<p>See our guide for your system:</p>
+<ul>
+<li><a href="02-windows.md">Windows</a></li>
+<li><a href="03-macos.md">Mac OS</a></li>
+<li><p><a href="04-linux.md">GNU/Linux</a></p>
+<h3 id="installing-poppy-operating-system-images-from-a-windows-computer"><span class="header-section-number">2.2</span> Installing Poppy Operating System Images from a Windows computer</h3></li>
+<li>Insert the SD card into your SD card reader and check which drive letter was assigned. You can easily see the drive letter (for example <code>G:</code>) by looking in the left column of Windows Explorer. You can use the SD Card slot (if you have one) or a cheap SD adaptor in a USB port.</li>
+<li>Download the Win32DiskImager utility from the <a href="http://sourceforge.net/projects/win32diskimager/">Sourceforge Project page</a> (it is also a zip file); you can run this from a USB drive.</li>
+<li>Extract the executable from the zip file and run the <code>Win32DiskImager</code> utility; you may need to run the utility as administrator. Right-click on the file, and select <strong>Run as administrator</strong>.</li>
+<li>Select the image file you extracted above.</li>
+<li>Select the drive letter of the SD card in the device box. Be careful to select the correct drive; if you get the wrong one you can destroy your data on the computer's hard disk! If you are using an SD card slot in your computer and can't see the drive in the Win32DiskImager window, try using a cheap SD adaptor in a USB port.</li>
+<li>Click <code>Write</code> and wait for the write to complete.</li>
+<li><p>Exit the image and eject the SD card.</p></li>
+</ul>
+<hr />
+<p><em>This article uses content from the eLinux wiki page <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">RPi_Easy_SD_Card_Setup</a>, which is shared under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 Unported license</a></em></p>
+<h3 id="installing-poppy-operating-system-images-from-a-mac-os-computer"><span class="header-section-number">2.2.1</span> Installing Poppy Operating System Images from a Mac OS computer</h3>
+<p>On Mac OS you have the choice of the command line <code>dd</code> tool or using the graphical tool ImageWriter to write the image to your SD card.</p>
+<h3 id="mostly-graphical-interface"><span class="header-section-number">2.2.2</span> (Mostly) graphical interface</h3>
+<ul>
+<li>Connect the SD card reader with the SD card inside. Note that it must be formatted in FAT32.</li>
+<li>From the Apple menu, choose About This Mac, then click on More info...; if you are using Mac OS X 10.8.x Mountain Lion or newer then click on System Report.</li>
+<li>Click on USB (or Card Reader if using a built-in SD card reader) then search for your SD card in the upper right section of the window. Click on it, then search for the BSD name in the lower right section; it will look something like 'diskn' where n is a number (for example, disk4). Make sure you take a note of this number.</li>
+<li>Unmount the partition so that you will be allowed to overwrite the disk; to do this, open Disk Utility and unmount it (do not eject it, or you will have to reconnect it). Note that On Mac OS X 10.8.x Mountain Lion, &quot;Verify Disk&quot; (before unmounting) will display the BSD name as &quot;/dev/disk1s1&quot; or similar, allowing you to skip the previous two steps.</li>
+<li><p>From the terminal run:</p>
+<pre><code>sudo dd bs=1m if=path_of_your_image.iso of=/dev/rdiskn</code></pre>
+<p>Remember to replace <code>n</code> with the number that you noted before!</p></li>
+<li><p>If this command fails, try using <code>disk</code> instead of <code>rdisk</code>:</p>
+<p><code>sudo dd bs=1m if=path_of_your_image.iso of=/dev/diskn</code></p></li>
+</ul>
+<h4 id="command-line"><span class="header-section-number">2.2.2.1</span> Command line</h4>
+<ul>
+<li><p>If you are comfortable with the command line, you can write the image to a SD card without any additional software. Open a terminal, then run:</p>
+<p><code>diskutil list</code></p></li>
+<li>Identify the disk (not partition) of your SD card e.g. <code>disk4</code> (not <code>disk4s1</code>).</li>
+<li><p>Unmount your SD card by using the disk identifier to prepare copying data to it:</p>
+<p><code>diskutil unmountDisk /dev/disk&lt;disk# from diskutil&gt;</code></p>
+<p>e.g. <code>diskutil unmountDisk /dev/disk4</code></p></li>
+<li><p>Copy the data to your SD card:</p>
+<p><code>sudo dd bs=1m if=image.img of=/dev/rdisk&lt;disk# from diskutil&gt;</code></p>
+<p>e.g. <code>sudo dd bs=1m if=poppy-ergojr.iso of=/dev/rdisk4</code></p>
+<ul>
+<li>This may result in an <code>dd: invalid number '1m'</code> error if you have GNU<br />
+coreutils installed. In that case you need to use <code>1M</code>:</li>
+</ul>
+<p><code>sudo dd bs=1M if=image.img of=/dev/rdisk&lt;disk# from diskutil&gt;</code></p>
+<p>This will take a few minutes, depending on the image file size.<br />
+You can check the progress by sending a <code>SIGINFO</code> signal pressing <kbd>Ctrl</kbd>+<kbd>T</kbd>.</p>
+<ul>
+<li>If this command still fails, try using <code>disk</code> instead of <code>rdisk</code>:</li>
+</ul>
+<p><code>e.g. `sudo dd bs=1m if=poppy-ergojr.iso of=/dev/disk4`</code><br />
+or<br />
+<code>e.g. `sudo dd bs=1M if=poppy-ergojr.iso of=/dev/disk4`</code></p></li>
+</ul>
+<h4 id="alternative-method"><span class="header-section-number">2.2.2.2</span> Alternative method</h4>
+<p><strong>Note: Some users have reported issues with using Mac OS X to create SD cards.</strong></p>
+<p>These commands and actions need to be performed from an account that has administrator privileges.</p>
+<ul>
+<li>From the terminal run <code>df -h</code>.</li>
+<li>Connect the SD card reader with the SD card inside.</li>
+<li>Run <code>df -h</code> again and look for the new device that wasn't listed last time. Record the device name of the filesystem's partition, for example <code>/dev/disk3s1</code>.</li>
+<li><p>Unmount the partition so that you will be allowed to overwrite the disk:</p>
+<pre><code>sudo diskutil unmount /dev/disk3s1</code></pre>
+(or open Disk Utility and unmount the partition of the SD card (do not eject it, or you will have to reconnect it)</li>
+<li>Using the device name of the partition, work out the raw device name for the entire disk by omitting the final &quot;s1&quot; and replacing &quot;disk&quot; with &quot;rdisk&quot;. This is very important as you will lose all data on the hard drive if you provide the wrong device name. Make sure the device name is the name of the whole SD card as described above, not just a partition of it (for example, rdisk3, not rdisk3s1). Similarly, you might have another SD drive name/number like rdisk2 or rdisk4; you can check again by using the <code>df -h</code> command both before and after you insert your SD card reader into your Mac. For example, <code>/dev/disk3s1</code> becomes <code>/dev/rdisk3</code>.</li>
+<li><p>In the terminal, write the image to the card with this command, using the raw disk device name from above. Read the above step carefully to be sure you use the correct rdisk number here:</p>
+<pre><code>sudo dd bs=1m if=poppy-ergojr.iso of=/dev/rdisk3</code></pre>
+<p>If the above command reports an error (<code>dd: bs: illegal numeric value</code>), please change <code>bs=1m</code> to <code>bs=1M</code>.</p>
+<p>If the above command reports an error <code>dd: /dev/rdisk3: Permission denied</code> then that is because the partition table of the SD card is being protected against being overwritten by MacOS. Erase the SD card's partition table using this command:</p>
+<pre><code>sudo diskutil partitionDisk /dev/disk3 1 MBR &quot;Free Space&quot; &quot;%noformat%&quot; 100%</code></pre>
+<p>That command will also set the permissions on the device to allow writing. Now try the <code>dd</code> command again.</p>
+Note that <code>dd</code> will not feedback any information until there is an error or it is finished; information will be shown and the disk will re-mount when complete. However if you wish to view the progress you can use 'ctrl-T'; this generates SIGINFO, the status argument of your tty, and will display information on the process.</li>
+<li><p>After the <code>dd</code> command finishes, eject the card:</p>
+<pre><code>sudo diskutil eject /dev/rdisk3</code></pre>
+<p>(or: open Disk Utility and eject the SD card)</p></li>
+</ul>
+<hr />
+<p><em>This article uses content from the Raspberry Pi documentation page <a href="https://www.raspberrypi.org/documentation/installation/installing-images/mac.md">mac.md</a>, which is shared under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 license</a></em></p>
+<h3 id="installing-poppy-operating-system-images-from-a-gnulinux-computer"><span class="header-section-number">2.2.3</span> Installing Poppy Operating System Images from a GNU/Linux computer</h3>
+<h4 id="graphical-interface"><span class="header-section-number">2.2.3.1</span> Graphical interface</h4>
+<h5 id="with-any-distribution-ubuntu-fedora-arch-debian-..."><span class="header-section-number">2.2.3.1.1</span> With Any distribution (Ubuntu, Fedora, Arch, Debian, ...)</h5>
+<ul>
+<li>Download <a href="https://unetbootin.github.io/linux_download.html">UNetbootin binaries</a></li>
+<li>To run these binaries go to Right Click-&gt;Properties-&gt;Permissions and check &quot;Execute&quot;), or chmod +x ./unetbootin-linux in a Terminal then start the application by running ./unetbootin-linux</li>
+<li>Select the Poppy image in the DiskImage section</li>
+<li>Select the drive corresponding to your SD card</li>
+<li>Click &quot;ok&quot; and be patient</li>
+</ul>
+<h5 id="if-you-are-using-linux-mint"><span class="header-section-number">2.2.3.1.2</span> If you are using Linux Mint</h5>
+<p>A program called &quot;Usb key creator&quot; is already installed and allow you to do the same operations than above.</p>
+<h4 id="command-line-1"><span class="header-section-number">2.2.3.2</span> Command line</h4>
+<p>Please note that the use of the <code>dd</code> tool can overwrite any partition of your machine. If you specify the wrong device in the instructions below you could delete your primary Linux partition. Please be careful.</p>
+<ul>
+<li><p>Run <code>df -h</code> to see what devices are currently mounted.</p></li>
+<li><p>If your computer has a slot for SD cards, insert the card. If not, insert the card into an SD card reader, then connect the reader to your computer.</p></li>
+<li><p>Run <code>df -h</code> again. The new device that has appeared is your SD card. The left column gives the device name of your SD card; it will be listed as something like <code>/dev/mmcblk0p1</code> or <code>/dev/sdd1</code>. The last part (<code>p1</code> or <code>1</code> respectively) is the partition number but you want to write to the whole SD card, not just one partition. Therefore you need to remove that part from the name (getting, for example, <code>/dev/mmcblk0</code> or <code>/dev/sdd</code>) as the device for the whole SD card. Note that the SD card can show up more than once in the output of df; it will do this if you have previously written a Raspberry Pi image to this SD card, because the Raspberry Pi SD images have more than one partition.</p></li>
+<li><p>Now that you've noted what the device name is, you need to unmount it so that files can't be read or written to the SD card while you are copying over the SD image.</p></li>
+<li><p>Run <code>umount /dev/sdd1</code>, replacing <code>sdd1</code> with whatever your SD card's device name is (including the partition number).</p></li>
+<li><p>If your SD card shows up more than once in the output of <code>df</code> due to having multiple partitions on the SD card, you should unmount all of these partitions.</p></li>
+<li><p>In the terminal, write the image to the card with the command below, making sure you replace the input file <code>if=</code> argument with the path to your <code>.img</code> file, and the <code>/dev/sdd</code> in the output file <code>of=</code> argument with the right device name. This is very important, as you will lose all data on the hard drive if you provide the wrong device name. Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example <code>sdd</code>, not <code>sdds1</code> or <code>sddp1</code>; or <code>mmcblk0</code>, not <code>mmcblk0p1</code>.</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">dd</span> bs=4M if=poppy-ergojr.iso of=/dev/sdd</code></pre></div></li>
+<li><p>Please note that block size set to <code>4M</code> will work most of the time; if not, please try <code>1M</code>, although this will take considerably longer.</p></li>
+<li><p>Also note that if you are not logged in as root you will need to prefix this with <code>sudo</code>.</p></li>
+<li><p>The <code>dd</code> command does not give any information of its progress and so may appear to have frozen; it could take more than five minutes to finish writing to the card. If your card reader has an LED it may blink during the write process. To see the progress of the copy operation you can run <code>pkill -USR1 -n -x dd</code> in another terminal, prefixed with <code>sudo</code> if you are not logged in as root. The progress will be displayed in the original window and not the window with the <code>pkill</code> command; it may not display immediately, due to buffering.</p></li>
+<li><p>Instead of <code>dd</code> you can use <code>dcfldd</code>; it will give a progress report about how much has been written.</p></li>
+<li><p>Run <code>sync</code>; this will ensure the write cache is flushed and that it is safe to unmount your SD card.</p></li>
+<li><p>Remove the SD card from the card reader.</p></li>
+</ul>
+<hr />
+<p><em>This article uses content from the Raspberry Pi documentation page <a href="https://www.raspberrypi.org/documentation/installation/installing-images/linux.md">linux.md</a>, which is shared under the <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 license</a></em></p>
+<h1 id="assembly-guide-for-the-ergo-jr"><span class="header-section-number">3</span> Assembly guide for the Ergo Jr</h1>
+<p><img src="img/ergo-jr/vecto.png" alt="Ergo-tool" /></p>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm.<br />
+It consists of very simple shapes which can be easily 3D printed. They are assembled via OLLO rivets which can be removed and added very quickly with the OLLO tool.</p>
+<!-- TODO: image ollo rivet -->
+<p>Its end effector can be easily changed. You can choose among several tools:</p>
+<ul>
+<li>a lampshade,</li>
+<li>a gripper,</li>
+<li>or a pen holder.</li>
+</ul>
+<p>Thanks to the rivets, they can be very quickly and easily swapped. This allows the adaptation of the tooltip to the different applications you plan for your robot.</p>
+<p>The engines have the same functionality as other Poppy creatures but are slightly less powerful and less precise. The advantage being that they are also less expensive.</p>
+<p>The electronic card is visible next to the robot, which is very advantageous to understand, manipulate, and plug extra sensors. No soldering is needed, you just need to add the shield for XL-320 motors on top of the Raspberry-Pi pins.</p>
+<p>This chapter will guide you through all steps required to entirely assemble an Ergo Jr. It will cover:</p>
+<ul>
+<li>motors configuration</li>
+<li>electronic assembly</li>
+<li>hardware construction</li>
+</ul>
+<p><strong>The entire assembly should take about one or two hours</strong> for the first time you build one. With more practice, half an hour should be more than enough.</p>
+<p>At the end of the process, you should have a working Poppy Ergo Jr, ready to move!</p>
+<p>We recommend you to follow carefully the instructions. Even if the Ergo Jr can be easily disassembled, it is always disappointing to need to start from scratch again because you forget to configure the motors, a wire is missing, or a motor is reversed.</p>
+<h2 id="bill-of-materials"><span class="header-section-number">3.1</span> Bill of materials</h2>
+<p><img src="img/ergo-jr/bom.jpg" alt="BOM" /></p>
+<p>To have a ready-to-go Ergo-Jr, you will need:</p>
+<ul>
+<li>6x robotis motors <a href="http://www.generationrobots.com/en/401692-dynamixel-xl-320-servo-motor.html?search_query=OLLO&amp;results=23">XL-320</a></li>
+<li>6x <a href="http://www.generationrobots.com/en/401875-3p-160-mm-cables-for-xl-servos-x5.html">XL cable</a> (if possible 1 longer for the base)</li>
+<li>1 <a href="#TODO">external power supply</a> able to output 7.5V at least 2A</li>
+<li>the 3D printed parts: <a href="#TODO">[STL]</a> <a href="#TODO">[BOM]</a></li>
+<li>lots of <a href="http://www.generationrobots.com/en/401870-ollo-rivet-set-ors-10.html">OLLO rivets</a> (between 4 and 12 per motor)</li>
+<li>1x <a href="http://www.generationrobots.com/en/401872-ollo-tool.html">OLLO Tool</a></li>
+<li>1x <a href="https://www.raspberrypi.org/raspberry-pi-2-on-sale/">Raspberry-Pi 2</a></li>
+<li>1x <a href="https://www.raspberrypi.org/products/camera-module/">Raspberry-Pi camera module</a><br />
+<!-- TODO: cable plus long ? --></li>
+<li>1x <a href="#TODO">Raspberry-Pi shield for XL-320</a></li>
+</ul>
+<p><em>Most links to products above are from our local distributor but feel free to choose your own.</em></p>
+<h2 id="assembly-web-interface"><span class="header-section-number">3.2</span> Assembly web interface</h2>
+<p>Directly, from the web interface (see Chapter <a href="#TODO">Setup your Raspberry-Pi</a> if you have not seen how to access it) you have access to a notebook presenting the assembly steps. It also allows the configuration of motors at the indicated steps.</p>
+<!-- TODO ajouter une image -->
+<p>It is the best way to easily assemble your robot as it will integrate all steps described in the following sections and moreover allows you to directly configure your motor so they are ready to use.</p>
+<h2 id="electronic-assembly"><span class="header-section-number">3.3</span> Electronic assembly</h2>
+<p><img src="img/ergo-jr/electronic/bom.jpg" alt="Electronic BOM" /></p>
+<p><img src="img/ergo-jr/electronic/step-1.jpg" alt="Electronic Assembly Step 1" /></p>
+<p><img src="img/ergo-jr/electronic/step-2.jpg" alt="Electronic Assembly Step 2" /></p>
+<!-- TODO: faire la vraie doc une fois qu'on a le hard. -->
+<h2 id="motor-configuration"><span class="header-section-number">3.4</span> Motor configuration</h2>
+<p>The Ergo Jr is made of 6 XL-320 motors from robotis. Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.</p>
+<p><img src="img/ergo-jr/assembly/xl_320.jpg" alt="XL-320" /></p>
+<p>Yet, in order for the motors to be connected and identified on the same bus (same line), they must have a unique ID. Out of the factory they all set to the same ID: 1. In this section, we will give you details on how you can set a new and unique ID to each of your motors.</p>
+<p>We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. This will prevent you to swap motors. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor. Furthermore, you will also be able to directly configure the motor from the assembly notebook interface.</p>
+<!-- TODO: image notebook d'assembly -->
+<h3 id="configuring-motors-one-at-a-time"><span class="header-section-number">3.4.1</span> Configuring motors one at a time</h3>
+<p>As explained above, all motors have the same ID by default. Thus, it is important to <strong>connect one motor at a time when configuring them.</strong> Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess :-)</p>
+<p>Your electronic setup when configuring a motor should look like this:</p>
+<ul>
+<li>the Raspberry-Pi</li>
+<li>the shield on top and the AC plugged</li>
+<li>a wire from the shield to the motor you want to configure</li>
+</ul>
+<p><img src="img/ergo-jr/motorconfig.jpg" alt="XL-320 configuration" /></p>
+<p>Pre-installed on your Raspberry-Pi also comes a <a href="https://gist.github.com/pierre-rouanet/ab79debfffd12cdb0095">utility tool</a> that we developed to configure motors. The easiest way to use it, is through the notebook interface which will show you at which step of the assembly you have to configure a new motor.</p>
+<!-- TODO: image du notebook  -->
+<p><em>Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor &quot;m3&quot;:</em></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">poppy-ergo-jr</span> motorconfig m3
+
+<span class="kw">Starting</span> to configure the motor...
+<span class="kw">Changing</span> angle limit...
+<span class="kw">Adjusting</span> return delay time...
+<span class="kw">Your</span> motor is now configured as:
+<span class="kw">Id</span>: 7
+<span class="kw">Angle</span> Limit: [-90.0, 90.0]
+<span class="kw">Going</span> to Zero Position so it is ready to assemble...
+<span class="kw">Done</span>!</code></pre></div>
+<p>Once configured - either from the notebook or the command line - and that you see the message indicating that everything went well, you can unplug the motor. Its configuration will be stored in the motor internal memory.</p>
+<h2 id="mechanical-assembly"><span class="header-section-number">3.5</span> Mechanical Assembly</h2>
+<h3 id="general-advices-and-warnings"><span class="header-section-number">3.5.1</span> General advices and warnings</h3>
+<ul>
+<li>You can assemble all the rivets before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.</li>
+</ul>
+<p><img src="img/ergo-jr/assembly/ollo_rivet.png" alt="OLLO Rivet Assembly" /></p>
+<ul>
+<li>Use the OLLO Tool for the rivets, it is really convenient. This tool allows to put and remove the rivets easily.</li>
+</ul>
+<p><img src="img/ergo-jr/assembly/ollo-tool.jpg" alt="OLLO Tool" /></p>
+<ul>
+<li>Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favorite side).</li>
+<li>If you want, there are slots for getting the most beautifully wires and avoid damaging them.</li>
+</ul>
+<p><img src="img/ergo-jr/assembly/xl320_gap.jpg" alt="image" /></p>
+<ul>
+<li><strong>Always align the horn with the motor before assembling them!</strong> Otherwise your Poppy Ergo Jr will look all weird.</li>
+</ul>
+<p><img src="img/ergo-jr/assembly/align-horn.png" alt="Align Horn" /></p>
+<h3 id="step-1"><span class="header-section-number">3.5.2</span> Step 1</h3>
+<p>First, configure one XL-320 motor as &quot;m1&quot;. To do that, connect it to your Raspberry-Pi as in the image below:</p>
+<p><img src="img/ergo-jr/motorconfig.jpg" alt="XL320 configuration" /></p>
+<p>Then, from the <a href="#TODO">assembly notebook</a>, you should run the cell #TODO. If you prefer the geek way, you can run from the Raspberry-Pi terminal command line:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">poppy-ergo-jr</span> motorconfig m1</code></pre></div>
+<p>When it is done and everything went well, disconnect it from your Raspberry-Pi.</p>
+<p>Then, connect the longest cable to this motor. Connect a regular cable to the other side.</p>
+<p><img src="img/ergo-jr/assembly/step-1-1.jpg" alt="Another Step" /></p>
+<p><img src="img/ergo-jr/assembly/step-1-2.jpg" alt="Another Step" /></p>
+<h3 id="step-2"><span class="header-section-number">3.5.3</span> Step 2</h3>
+<p>Mount the motor on the 3D printed base. The wires should go out from the back.</p>
+<p><img src="img/ergo-jr/assembly/step-2.jpg" alt="Another Step" /></p>
+<h3 id="step-3"><span class="header-section-number">3.5.4</span> Step 3</h3>
+<p>Mount the U_horn_to_horn part.</p>
+<p><img src="img/ergo-jr/assembly/step-3-1.jpg" alt="Another Step" /></p>
+<p><img src="img/ergo-jr/assembly/step-3-2.jpg" alt="Another Step" /></p>
+<h3 id="step-4"><span class="header-section-number">3.5.5</span> Step 4</h3>
+<p>Configure another motor. This time its name is &quot;m2&quot;. It corresponds to the cell TODO of the notebook.</p>
+<p>Mount it on top of the construction.</p>
+<p><img src="img/ergo-jr/assembly/step-4-1.jpg" alt="Another Step" /></p>
+<p>You have to put a OLLO Pulley inside and for this you should use the bigger rivet. Bonus, you can watch this step in <a href="https://vimeo.com/125704291">slow motion</a>. Do not forget the cable!</p>
+<p><img src="img/ergo-jr/assembly/step-4-2.jpg" alt="Another Step" /></p>
+<h3 id="step-5"><span class="header-section-number">3.5.6</span> Step 5</h3>
+<p>Mount both shift_one_sides on the motors.</p>
+<p><img src="img/ergo-jr/assembly/step-5.jpg" alt="Another Step" /></p>
+<h3 id="step-6"><span class="header-section-number">3.5.7</span> Step 6</h3>
+<p>Configure a third motor: &quot;m3&quot; (cell TODO).</p>
+<p>Add it on top. Make sure to have the pulley on the same side.</p>
+<p><img src="img/ergo-jr/assembly/step-6.jpg" alt="Another Step" /></p>
+<h3 id="step-7"><span class="header-section-number">3.5.8</span> Step 7</h3>
+<p>Configure the fourth motor: &quot;m4&quot; (cell TODO).</p>
+<p>Mount the U_side_to_horn on it.</p>
+<p><img src="img/ergo-jr/assembly/step-7.jpg" alt="Another Step" /></p>
+<h3 id="step-8"><span class="header-section-number">3.5.9</span> Step 8</h3>
+<p>Mount it on top of the previous assembly. The nose of the motor should be on the other side of the base.</p>
+<p><img src="img/ergo-jr/assembly/step-8.jpg" alt="Another Step" /></p>
+<h3 id="step-9"><span class="header-section-number">3.5.10</span> Step 9</h3>
+<p>Configure a motor &quot;m5&quot;.</p>
+<p>Mount two other shift_one_sides and the configured motor. All the pulley should still be on the same side.</p>
+<p><img src="img/ergo-jr/assembly/step-9.jpg" alt="Another Step" /></p>
+<h3 id="step-10---the-tool-of-your-choice"><span class="header-section-number">3.5.11</span> Step 10 - The tool of your choice</h3>
+<p>To finish your Ergo Jr, you need to add a tool at its end. So first choose the tool you want depending on what you want to do.</p>
+<p><em>Note that they can be easily and quickly changed, so you can adapt the tool to the different activities.</em></p>
+<p><img src="img/ergo-jr/assembly/ergo-tool-2.jpg" alt="image" /></p>
+<h3 id="step-11-lamp-shade"><span class="header-section-number">3.5.12</span> Step 11: Lamp shade</h3>
+<h3 id="step-11-gripper"><span class="header-section-number">3.5.13</span> Step 11: Gripper</h3>
+<h3 id="step-11-pen-holder"><span class="header-section-number">3.5.14</span> Step 11: Pen holder</h3>
+<h3 id="step-12"><span class="header-section-number">3.5.15</span> Step 12</h3>
+<p>Grab your <a href="https://www.flickr.com/photos/poppy-project/16488256337/">favorite drink</a> and relax.</p>
+<!--
+##  Electronics
+
+A small bit of electronic hacking is required for now. You need to power the Xl320 motors with 7.5V.
+
+The cables between motors have two purposes:
+- distribute alimentation to each motor
+- convey messages to each motor (ordering them to move or asking them for sensors' values)
+
+Thus the alimentation should be added between the USB2Dynamixel (that deals with communication aspects) and the motors. To this end simply create the following hack.
+
+![Power Board](img/ergo-jr/electronic/power-board-xl320.png)
+
+Then connect the USB2Dynamixel on one end and the first motor on the other end. Connect the USB2Dynamixel to your computer or Raspberry Pi. And power the board with 7.5V.
+
+The communication with the motor is TTL, thus configure the USB2Dynamixel in TTL mode as show below.
+
+![Power Board](img/ergo-jr/electronic/usb2dynamixel.jpg) -->
+<h1 id="programming-poppy-robots-using-snap"><span class="header-section-number">4</span> Programming Poppy robots using Snap!</h1>
+<p>Snap! is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.</p>
+<p>Snap! was inspired by Scratch (a project of<br />
+the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch's features.</p>
+<p>Snap! is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip">copy of the website</a> in your personal computer and open the snap.html file in your browser.</p>
+<p><strong>Note: Even if Snap! use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap! is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/">Chromium Browser</a>(which is very similar to Chrome without tracking tools), or Google Chrome.</strong></p>
+<h2 id="introduction-to-snap-programming"><span class="header-section-number">4.1</span> Introduction to Snap! programming</h2>
+<p>This chapter will focus on things necessary to understand in Snap! for using Poppy creatures.</p>
+<p>If you want a well designed online lesson on Snap! we strongly encourage you to look at the <a href="http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html">&quot;Beauty and Joy of Computing&quot;</a> (BJC) course made by the University of Berkeley for New York high school students.</p>
+<p>Some of the snapshots and concepts of BJC have been used for writing this chapter.</p>
+<h3 id="connect-your-robot-to-snap"><span class="header-section-number">4.1.1</span> Connect your robot to Snap!</h3>
+<h4 id="with-a-simulated-robot-with-v-rep"><span class="header-section-number">4.1.1.1</span> With a simulated robot with V-REP</h4>
+<h4 id="with-a-tangible-robot"><span class="header-section-number">4.1.1.2</span> With a tangible robot</h4>
+<p>Open the web interface of your robot in your web browser.<br />
+Click on the &quot;Start Snap! link&quot;; it will start the python REST API to the robot and open the Snap! interface.</p>
+<p>Click on the file icon -&gt; Examples -&gt; click on &quot;pypot snap blocks&quot; and the &quot;open&quot; button.</p>
+<h3 id="interface-and-general-ideas"><span class="header-section-number">4.1.2</span> Interface and general ideas</h3>
+<h3 id="saving-in-snap"><span class="header-section-number">4.1.3</span> Saving in Snap!</h3>
+<p>There is three way of saving a project in Snap!</p>
+<h4 id="save-the-project-in-your-web-browser"><span class="header-section-number">4.1.3.1</span> Save the project in your web browser</h4>
+<p><img src="img/snap/snap_save.png" alt="Save click" /></p>
+<p>When you are not logged in Snap! cloud, the default behaviour of Snap! is to save you project in <strong>your browser</strong>.</p>
+<p>Technically this use the Local Storage which is a memory space in your web browser where websites are allowed to store offline data. This is very convenient because you have not to register or to see Snap! project files, but keep in mind that <strong>these projects are only visible in this specific web browser in this specific computer</strong>.</p>
+<h4 id="snap-cloud"><span class="header-section-number">4.1.3.2</span> Snap! Cloud</h4>
+<blockquote>
+<p>« There is no Cloud, it's just someone else's computer ».</p>
+</blockquote>
+<p>Instead of saving your projects on your web browser, you can save them in Snap! servers in UC Berkeley, called &quot;cloud&quot;. Moreover, this allows you to share your project with anyone, with a simple HTML link.</p>
+<h5 id="create-an-account-on-snap-cloud"><span class="header-section-number">4.1.3.2.1</span> Create an account on Snap! cloud</h5>
+<p>Click on the cloud button -&gt; &quot;signup...&quot;.</p>
+<p><img src="img/snap/snap_cloud_1.png" alt="Create account" /></p>
+<p>Fill the required fields in the popup for signing up.</p>
+<p><img src="img/snap/dialog-cloud-signup.png" alt="Create account" /></p>
+<p>You will soon receive a validation email with a random password.<br />
+You can now login with your username and password</p>
+<p><img src="img/snap/snap_login1.png" alt="Login1" /></p>
+<p>If you are in your personal computer, think to check the &quot;stay signed in on this computer [...]&quot; checkbox.</p>
+<p><img src="img/snap/snap_login2.png" alt="Login2" /></p>
+<p>After login with your new account, you are free to change your password: click on the cloud button -&gt; &quot;Change Password&quot;.</p>
+<p><img src="img/snap/logout-menu.png" alt="Create account" /></p>
+<h5 id="share-your-snap-project"><span class="header-section-number">4.1.3.2.2</span> Share your Snap! project</h5>
+<p>The big advantage of using Snap! cloud is the ability to share a copy of your project with anyone.<br />
+To share a Snap! project, you first need to be logged in Snap! cloud and having your current project saved (&quot;save&quot; or &quot;save as&quot;). Go to the &quot;open&quot; menu:</p>
+<p><img src="img/snap/snap_open.png" alt="Open menu" /></p>
+<p>In the cloud section, select the project you want to share and click on &quot;Share&quot; button.</p>
+<p><img src="img/snap/snap_cloud_3.png" alt="Share" /></p>
+<p><strong>Here is the trick step:</strong> to see the share link, you have to click on the &quot;Open&quot; button.</p>
+<p><img src="img/snap/snap_cloud_4.png" alt="Open share" /></p>
+<p>And this will re-open your project with the public sharing URL.</p>
+<p><img src="img/snap/snap_cloud_5.png" alt="Sharing URL" /></p>
+<p>You can copy and paste the URL and share it by the way you want to your friends or to the Poppy community with the forum <a href="https://forum.poppy-project.org/">forum.poppy-project.org</a>.</p>
+<p>When you open a share project, the project is automatically opened in full screen on the sprite zone. To quit the full screen you have to click on the double arrow at the top of the snapshot below.<br />
+<img src="img/snap/snap_share_full_screen.png" alt="Sharing URL" /></p>
+<h4 id="exportimport-your-snap-project"><span class="header-section-number">4.1.3.3</span> Export/Import your Snap! project</h4>
+<p>If you have a limited access to internet and you want to share project with other people, the best way is to export it:<br />
+<img src="img/snap/snap_cloud_5.png" alt="Export section" /><br />
+A new tab in your web browser will be opened with an XML file like the picture below.<br />
+<img src="img/snap/snap_xml_save_as.png" alt="Export section" /><br />
+This file describe all your Snap! project in a a simple file. It's not made to be human readable so don't be afraid, you just have to save it on your computer. For that, do a right click, chose &quot;save as&quot; and a proper name and location on you computer for this project.</p>
+<p>If you want to import a previously exported project, you simply have to click on the import section of the file icon.<br />
+<img src="img/snap/snap_import.png" alt="import section" /></p>
+<h3 id="search-poppy-blocks"><span class="header-section-number">4.1.4</span> Search Poppy blocks</h3>
+<p>Every Poppy blocks in Snap! begin by a robot icon. So you can search them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.<br />
+<img src="img/snap/find_blocks.png" alt="find blocks" /><br />
+<img src="img/snap/find_blocks2.png" alt="find blocks" /></p>
+<h3 id="first-steps-with-snap-and-a-poppy-creature"><span class="header-section-number">4.1.5</span> First steps with Snap! and a Poppy creature</h3>
+<h4 id="test-the-connection-between-snap-and-your-creature"><span class="header-section-number">4.1.5.1</span> Test the connection between Snap! and your creature</h4>
+<h5 id="if-you-are-using-a-tangible-robot"><span class="header-section-number">4.1.5.1.1</span> If you are using a tangible robot</h5>
+<p>First, you must be connected to the same network LAN area than your robot (e.g. on the same router).</p>
+<p>You have to go on the web homage of your robot with its URL. You can use its IP address (for example <a href="http://192.168.1.42" class="uri">http://192.168.1.42</a>) if you have a way to know it or its hostname like <a href="http://poppy.local" class="uri">http://poppy.local</a>. To find its IP address you can see it in your router administration web page, or with a network scanner like <a href="http://www.overlooksoft.com/download">&quot;Fing&quot;</a> (for smartphone and desktop OS). To use directly its hostname <a href="http://poppy.local" class="uri">http://poppy.local</a> you must have a <a href="https://fr.wikipedia.org/wiki/Zeroconf">Zeroconf</a> software installed on your computer, install &quot;Bonjour print services for Windows&quot; if you are running a Windows OS.</p>
+<p>The home page of your poppy creature should look like the snapshot below:<br />
+<img src="img/snap/homepage.png" alt="find blocks" /></p>
+<p>Click on the &quot;Start Snap!&quot; link to open the Snap! interface at start the connection with the Poppy robot.</p>
+<p>Poppy special blocks are stored in the Examples. Go to &quot;file&quot; icon -&gt; open -&gt; Examples -&gt; click on &quot;Poppy blocks&quot;. It may take some time to load the blocks (~5-15 seconds), be patient.</p>
+<h5 id="if-you-are-using-the-v-rep-simulator"><span class="header-section-number">4.1.5.1.2</span> If you are using the V-REP simulator</h5>
+<p>Open V-REP, open a terminal (called <em>Command Prompt</em> on Windows), type and press Enter to execute the command below:</p>
+<p><code>poppy-services --snap --vrep poppy-torso</code></p>
+<p><em>Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to launch respectively a Poppy Humanoid or a Poppy Ergo Jr</em>.</p>
+<p>If you have issues, look at the <!-- TODO --> section to see have more detailed informations.</p>
+<p>After having executed this command a tab in your web browser should have be opened to Snap! have loaded Poppy blocks.</p>
+<h4 id="network"><span class="header-section-number">4.1.5.2</span> Network</h4>
+<p>First test your connection with the (tangible or simulated) robot with the &quot;test connection&quot; block.<br />
+<img src="img/snap/test_connection.png" alt="test connection" />.<br />
+if the block answer is &quot;You may have connection troubles&quot;, your &quot;host&quot; variable inside the Snap! project is probably wrong. The host variable must be the IP or the hostname+&quot;.local&quot; of your robot ; if you're using V-REP localhost is used to point to your own computer.</p>
+<p><img src="img/snap/test_connection3.png" alt="test connection3" />.</p>
+<h3 id="build-your-own-blocks"><span class="header-section-number">4.1.6</span> Build your own blocks !</h3>
+<p>The functionality to build your own block was the first difference between Scratch and Snap! (now it's also possible to make custom blocks in Scratch)!<br />
+<!-- TODO --></p>
+<h2 id="description-of-poppy-blocks"><span class="header-section-number">4.2</span> Description of Poppy blocks</h2>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-examples"><span class="header-section-number">4.3</span> Quick examples</h2>
+<h3 id="record-and-play-back-a-move"><span class="header-section-number">4.3.1</span> Record and play back a move</h3>
+<p>You can record a movement on one motor and play it back</p>
+<p>You can change the speed</p>
+<p>You can record it on all motors</p>
+<p>or just a subset of your creature</p>
+<h4 id="record-and-by-demonstration-movement"><span class="header-section-number">4.3.1.1</span> Record and by demonstration movement</h4>
+<h1 id="programming-poppy-robots-in-python"><span class="header-section-number">5</span> Programming Poppy robots in Python</h1>
+<p><img src="img/python/banner.png" alt="Programming in Python banner" /></p>
+<p>This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.</p>
+<p>We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.</p>
+<p>We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of <a href="http://jupyter.org">Jupyter notebooks</a>. The next chapter, <a href="#jupyter-notebooks-gallery-using-python">Jupyter Notebooks Gallery</a>, presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.</p>
+<p>All Poppy libraries are open source and are released under the <a href="http://www.gnu.org/licenses/gpl.html">GPL v3</a> license. So you can freely access the source code on <a href="https://github.com/poppy-project">github</a>. Do not hesitate to fork them, send pull request and contribute!</p>
+<h2 id="why-python-and-anaconda"><span class="header-section-number">5.1</span> Why Python and Anaconda?</h2>
+<p><img src="img/python/powered.png" alt="Python powered" /></p>
+<p>The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stoping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.</p>
+<p>We decided to write most of them in Python as its flexibility allows for fast and modular development. It was also meant to be accessible by a large audience, from developers and roboticists in general, to hobbyists, researchers, artists... Python was also chosen for the tremendous pools of existing libraries (scientific, computer vision, IO, web...) so if one is interested in adding a new feature, such as support for a new motor/sensor, it should be as easy and fast as possible.</p>
+<p>Finally, support for multi-platforms and ease of installation were also key aspects.</p>
+<p><img src="img/python/anaconda.png" alt="Anaconda Python distribution" /></p>
+<p>We also strongly advise to use the <a href="https://www.continuum.io/why-anaconda">Anaconda Python distribution</a> as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the <a href="#TODO">install section</a>).</p>
+<h2 id="overview-of-the-different-libraries"><span class="header-section-number">5.2</span> Overview of the different libraries</h2>
+<p>Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.</p>
+<p>They are three main library levels:</p>
+<ul>
+<li><p><a href="https://github.com/poppy-project/pypot">pypot:</a> This is the core of the Poppy software architecture. Pypot handles all the low level communication with the hardware (both sensors and motors), defines synchronization loops so your command are always up to date. It also provides the primitives mechanism which allows the definition of simple behavior that can be - more of less - automatically combined.</p></li>
+<li><p><a href="https://github.com/poppy-project/poppy-creature">poppy-creature:</a> This library defines the common tools shared by all Poppy robots, for instance how to automatically launch the simulator or start the HTTP API attached to any robot.</p></li>
+<li><p><a href="https://github.com/poppy-project/poppy-ergo-jr">poppy-ergo-jr</a>, <a href="https://github.com/poppy-project/poppy-torso">poppy-torso</a>, and <a href="https://github.com/poppy-project/poppy-humanoid">poppy-humanoid:</a> Those libraries are specific to their respective Poppy robot. They define the particular configuration of the robot, the sensors it uses, which motors are connected to which buses... This is also were behaviors specific to a creature are defined (the stand primitive for the humanoid for instance).</p></li>
+</ul>
+<p>This is summarized in the diagram below:</p>
+<p><img src="img/python/architecture.png" alt="Poppy softwares architecture" /></p>
+<h2 id="installation"><span class="header-section-number">5.3</span> Installation</h2>
+<p><strong>First, note that if you are only planning to use real robots, they already come with Python and all Poppy libraries installed. You can directly connect to the Jupyter notebook server via the <a href="#TODO">web interface</a> and have nothing to install on your machine!</strong></p>
+<p>What you need to install is summarized in the diagram below:</p>
+<p><img src="img/python/what-to-install.png" alt="What to install" /></p>
+<p>Yet, if you are planning to either</p>
+<ul>
+<li>use a simulator (e.g. V-REP, or web simulator),</li>
+<li>or want to directly plug the robot to your computer</li>
+</ul>
+<p>you will have to install Poppy libraries locally. They work on Windows, Mac OS, Linux, and have been tested on:</p>
+<ul>
+<li>Python &gt;= 2.6</li>
+<li>Python &gt;= 3.4</li>
+</ul>
+<p>Also note that if you are planning to directly plug your robot to your USB port, specific drivers should be installed.</p>
+<p>All steps are detailed in the chapter <a href="#TODO">Manual installation</a>.</p>
+<h2 id="quickstart-hello-poppy-world"><span class="header-section-number">5.4</span> Quickstart: Hello Poppy world!</h2>
+<p>To give you a rapid overview of what you can do using Python to program Poppy robots, this section will show you how to:</p>
+<ul>
+<li>Create and connect your robot</li>
+<li>Retrieve values from the sensor and send motor commands</li>
+<li>Start playing with primitive by recording motions by demonstration</li>
+</ul>
+<p>This section does not intend to cover everything that can be done in Python with Poppy but to give you sneak peaks of the most common features. For more advanced use, you should refer to the next section where we present a list of Jupyter notebooks each detailing a specific aspect or feature.</p>
+<p>In the following examples, we assume that you have a working environment meaning that you either:</p>
+<ul>
+<li>are using the Python embedded in your robot: through the Jupyter Notebook server,</li>
+<li>or you have installed everything locally to work with a simulator.</li>
+</ul>
+<h3 id="create-and-connect-to-a-poppy-robot"><span class="header-section-number">5.4.1</span> Create and connect to a Poppy robot</h3>
+<h4 id="import-the-library"><span class="header-section-number">5.4.1.1</span> Import the library</h4>
+<p>The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called <a href="https://docs.python.org/2/tutorial/modules.html">module or package</a>.</p>
+<p>To do that, you write something similar to:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> <span class="op">*</span></code></pre></div>
+<p>This will actually import all Poppy robots installed on the Python distribution you are using. If you want to use a specific robot, you can replace the <em>*</em> (which means all here) by the name of the robot you want.</p>
+<p>For the ErgoJr:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyErgoJr</code></pre></div>
+<p>For the Torso:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyTorso</code></pre></div>
+<p>For the Humanoid:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyHumanoid</code></pre></div>
+<blockquote>
+<p>Note: If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section TODO.</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">In [<span class="dv">1</span>]: <span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyHumanoid
+<span class="op">---------------------------------------------------------------------------</span>
+<span class="pp">ImportError</span>                               Traceback (most recent call last)
+<span class="op">&lt;</span>ipython<span class="op">-</span><span class="bu">input</span><span class="dv">-1</span><span class="op">-</span>18e4c5a36525<span class="op">&gt;</span> <span class="op">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span>()
+<span class="op">----&gt;</span> <span class="dv">1</span> <span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyHumanoid
+
+<span class="pp">ImportError</span>: cannot <span class="im">import</span> name PoppyHumanoid</code></pre></div>
+<h4 id="create-the-robot-object---with-a-real-robot"><span class="header-section-number">5.4.1.2</span> Create the Robot object - with a real robot</h4>
+<p>Then, you can actually create the Python object that will represent your robot. Depending on the Poppy robot you are using:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># if you are using an Ergo Jr</span>
+poppy <span class="op">=</span> PoppyErgoJr()</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># if you are using a Torso</span>
+poppy <span class="op">=</span> PoppyTorso()</code></pre></div>
+<p>or</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># if you are using a Humanoid</span>
+poppy <span class="op">=</span> PoppyHumanoid()</code></pre></div>
+<p>And that's it, if you did not see any error message it means that you are connected to your robot. If you see an exception like the one shown below, you should check the wire connection and try again:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="pp">IOError</span>: Connection to the robot failed<span class="op">!</span> No suitable port found <span class="cf">for</span> ids [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">17</span>]. These ids are missing [<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">11</span>, <span class="dv">13</span>, <span class="dv">17</span>] <span class="op">!</span></code></pre></div>
+<h4 id="create-the-robot-object---with-v-rep"><span class="header-section-number">5.4.1.3</span> Create the Robot object - with V-REP</h4>
+<p>To use a simulated robot instead of a real one, you only have to specify it when creating the Robot object. For instance, if you want to create a simulated Poppy Torso, you simply have to execute the following line:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy <span class="op">=</span> PoppyTorso(simulated<span class="op">=</span><span class="st">&#39;vrep&#39;</span>)</code></pre></div>
+<p>All three Poppy robots - Humanoid, Torso, and Ergo Jr - can be used with V-REP.</p>
+<p>If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see #TODO for details).</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="pp">IOError</span>: Connection to V<span class="op">-</span>REP failed<span class="op">!</span></code></pre></div>
+<h4 id="create-the-robot-object---with-web-simulator"><span class="header-section-number">5.4.1.4</span> Create the Robot object - with web simulator</h4>
+<p>Currently only the Ergo Jr is usable with the web simulator.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy <span class="op">=</span> PoppyErgoJr(simulated<span class="op">=</span><span class="st">&#39;poppy-sim&#39;</span>)</code></pre></div>
+<h3 id="access-the-sensors-and-motors"><span class="header-section-number">5.4.2</span> Access the sensors and motors</h3>
+<p>The robot object you just created contains two main groups of objects:</p>
+<ul>
+<li>motors</li>
+<li>sensors</li>
+</ul>
+<p>that can be easily access using <em>poppy.motors</em> and <em>poppy.sensors</em>. As soon as the robot object is created it automatically starts synchronization loops which will ensure that the last available value are received/sent to the robot.</p>
+<blockquote>
+<p>Note: The servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being &quot;simple&quot; motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.</p>
+</blockquote>
+<h4 id="get-data-from-your-robot"><span class="header-section-number">5.4.2.1</span> Get data from your robot</h4>
+<!-- TODO: connecter un ergo et ajouter les res. des differentes lignes -->
+<p>Now that you have created your robot object, you can directly use Python to discover which motors are attached.</p>
+<blockquote>
+<p>Note: In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.</p>
+</blockquote>
+<p>For instance, to know how many motors your robot have you can execute:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(<span class="bu">len</span>(poppy.motors))</code></pre></div>
+<p><em>poppy.motors</em> is actually a list of all motors connected to your robot. Thus, if you want to get the present position of all motors, you can do:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
+    <span class="bu">print</span>(m.present_position)</code></pre></div>
+<p>Of course, you can also access a specific motor. To do that, you need to know the name fo the motor you want to access. You can find this list in the assembly documentation of your robot.</p>
+<p>You can also obtain a list of all motors name directly from python:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
+    <span class="bu">print</span>(m.name)</code></pre></div>
+<p>or using a motor pythonic expression:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>([m.name <span class="cf">for</span> m <span class="op">in</span> poppy.motors])</code></pre></div>
+<p>Then you can directly access the desired motor by its name:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">m <span class="op">=</span> poppy.m3</code></pre></div>
+<p>or get its position:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(poppy.m3.present_position)</code></pre></div>
+<p>The most common values for motors are:</p>
+<ul>
+<li>present_position</li>
+<li>present_speed</li>
+<li>present_load</li>
+</ul>
+<p>Similarly, you can get data from your sensors. Depending on the Poppy robot you have different sensors available. You can get the list of all sensors in the exact same way you did for motors:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>([s.name <span class="cf">for</span> s <span class="op">in</span> poppy.sensors])</code></pre></div>
+<p>And then access a specific sensors by its name. For instance, to get an image from the camera of the Ergo Jr:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">img <span class="op">=</span> poppy.camera.frame</code></pre></div>
+<blockquote>
+<p>Note: This section just presented some of the available values that you can get from your motors/sensors. They are many other - some are specific to a particular robot - we will present them through the different notebooks.</p>
+</blockquote>
+<h4 id="send-motor-commands"><span class="header-section-number">5.4.2.2</span> Send motor commands</h4>
+<p>Now that we have shown you how to read values from your robot, it is time to learn how to make it move!</p>
+<p>This is actually really similar to what you have just seen. Instead of getting the <em>present_position</em> of a motor you simply have to set its <em>goal_position</em>.</p>
+<p>But first, you have to make sure your motor is stiff, meaning that you cannot move it by hand. To do that we will turn off its compliancy. Assuming you have an Ergo Jr and want to make the motor <em>m3</em> moves - feel free to use any other motor but make sure the motor can freely move without hurting any of your finger:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy.m3.compliant <span class="op">=</span> <span class="va">False</span></code></pre></div>
+<p>The motor should now be stiff. And then, to make it move to its zero position:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy.m3.goal_position <span class="op">=</span> <span class="dv">0</span></code></pre></div>
+<blockquote>
+<p>Note: <em>present_position</em> and <em>goal_position</em> are actually two different registers. The first refers to the current position of the motor (read only) while the second corresponds to the target position you want your robot to reach. Thus, they can have different values while the motor is still moving to reach its <em>goal_position</em>.</p>
+</blockquote>
+<p>As a slightly more complex example we will make it go to 30 degrees then -30° three times:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+
+<span class="cf">for</span> _ <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    poppy.m3.goal_position <span class="op">=</span> <span class="dv">30</span>
+    time.sleep(<span class="fl">0.5</span>)
+    poppy.m3.goal_position <span class="op">=</span> <span class="op">-</span><span class="dv">30</span>
+    time.sleep(<span class="fl">0.5</span>)</code></pre></div>
+<p>Note that after each new value set to <em>goal_position</em> we wait so the motor has enough time to actually reach this new position. Another way to do the same thing is to use the goto_position method:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+
+<span class="cf">for</span> _ <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    poppy.m3.goto_position(<span class="dv">30</span>, <span class="fl">0.5</span>, wait<span class="op">=</span><span class="va">True</span>)
+    poppy.m3.goto_position(<span class="op">-</span><span class="dv">30</span>, <span class="fl">0.5</span>, wait<span class="op">=</span><span class="va">True</span>)</code></pre></div>
+<p>As you can see, this method takes three arguments, the target position, the duration of the move and whether to wait or not the end of the motion.</p>
+<p>If you want to move multiple motors at the same time, you can simply do something like:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> _ <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    poppy.m1.goal_position <span class="op">=</span> <span class="op">-</span><span class="dv">20</span>
+    poppy.m3.goal_position <span class="op">=</span> <span class="dv">30</span>
+    time.sleep(<span class="fl">0.5</span>)
+    poppy.m1.goal_position <span class="op">=</span> <span class="dv">20</span>
+    poppy.m3.goal_position <span class="op">=</span> <span class="op">-</span><span class="dv">30</span>
+    time.sleep(<span class="fl">0.5</span>)</code></pre></div>
+<p>or use a python dictionary storing the target position per motor you want to move, that can be given to the goto_position method:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">pos_1 <span class="op">=</span> {<span class="st">&#39;m1&#39;</span>: <span class="op">-</span><span class="dv">20</span>, <span class="st">&#39;m3&#39;</span>: <span class="dv">30</span>}
+pos_2 <span class="op">=</span> {<span class="st">&#39;m1&#39;</span>: <span class="dv">20</span>, <span class="st">&#39;m3&#39;</span>: <span class="op">-</span><span class="dv">30</span>}
+
+<span class="cf">for</span> _ <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    poppy.goto_position(pos_1, <span class="fl">0.5</span>, wait<span class="op">=</span><span class="va">True</span>)
+    poppy.goto_position(pos_2, <span class="fl">0.5</span>, wait<span class="op">=</span><span class="va">True</span>)</code></pre></div>
+<blockquote>
+<p>Note: You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:</p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy.m3.compliant <span class="op">=</span> <span class="va">True</span></code></pre></div>
+<h3 id="record-and-play-motion-by-demonstration-using-primitives"><span class="header-section-number">5.4.3</span> Record and play motion by demonstration using primitives</h3>
+<p>Pypot provides you with the primitive mechanism, which are simply pre-defined behaviors that can be attached to your robot. In this section, we will show you how to use some primitives already existing for recording and playing motions. You can also define your own primitive but this is out of the scope of this section, you will find details on how to do this in dedicated notebooks.</p>
+<h4 id="record-a-motion-by-demonstration"><span class="header-section-number">5.4.3.1</span> Record a motion by demonstration</h4>
+<p>Designing choreographies for your robot using <em>goal_position</em> or <em>goto_position</em> can be long and kind of troublesome. Fortunately, there is a much more efficient way of doing this: recording motions by directly demonstrating the move on the robot.</p>
+<p>This can be summarized into few steps:</p>
+<ul>
+<li>make the robot compliant so you can move it by hand</li>
+<li>start the recording</li>
+<li>actually moves the robot so it follows whatever move/choreography you can think of</li>
+<li>stop the recording</li>
+</ul>
+<p>And now to do that in Python:</p>
+<p>So, first we turn off the compliance of all motors of the robot:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
+    m.compliant <span class="op">=</span> <span class="va">True</span></code></pre></div>
+<p>Then, we have to include the primitive used for recording motion:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> pypot.primitive.move <span class="im">import</span> MoveRecorder</code></pre></div>
+<p>To create this primitive, you have to give the following arguments:</p>
+<ul>
+<li>on which robot you want to use this primitive (this can be useful if you are working with multiple robot at a time - for instance you can record a move on a robot and at the same time make it reproduce by another one: this <a href="#TODO">notebook</a> will guide you on how to do this).</li>
+<li>the record frequency of the move you want to register: how many position per second will be recorded - the higher the more accurate the record will be but also more data will have to be processed - good values are usually between 10Hz and 50Hz.</li>
+<li>the motors that you want to record. you can record a move on a subpart of you robot, for instance only on the left arm.</li>
+</ul>
+<p>Here, we will record a move on the whole robot at 50Hz:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">recorder <span class="op">=</span> MoveRecorder(poppy, <span class="dv">50</span>, poppy.motors)</code></pre></div>
+<blockquote>
+<p>Note: we used <em>poppy.motors</em> to specify that we want all motors if you only want let's say the two first motors of an Ergo Jr you could have used <em>[poppy.m1, poppy.m2]</em> instead.</p>
+</blockquote>
+<p>Now it is time to record. As it can be hard to both move the robot and type Python command at the same time, we will make a small script, that:</p>
+<ul>
+<li>wait 5s so you can get ready to record</li>
+<li>start the record</li>
+<li>record for 10 seconds</li>
+<li>stop the records</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+
+<span class="co"># Give you time to get ready</span>
+<span class="bu">print</span>(<span class="st">&#39;Get ready to record a move...&#39;</span>)
+time.sleep(<span class="dv">5</span>)
+
+<span class="co"># Start the record</span>
+record.start()
+<span class="bu">print</span>(<span class="st">&#39;Now recording !&#39;</span>)
+
+<span class="co"># Wait for 10s so you can record what you want</span>
+time.sleep(<span class="dv">10</span>)
+
+<span class="co"># Stop the record</span>
+<span class="bu">print</span>(<span class="st">&#39;The record is over!&#39;</span>)
+record.stop()</code></pre></div>
+<p>Now, you should have a move recorded. You can retrieve it from the recorder primitive:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">my_recorded_move <span class="op">=</span> record.move</code></pre></div>
+<p>and check how many positions where recorded:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="bu">print</span>(<span class="bu">len</span>(my_recorded_move.positions()))</code></pre></div>
+<h4 id="replay-recorded-moves"><span class="header-section-number">5.4.3.2</span> Replay recorded moves</h4>
+<p>Now to play back recorded motions you have to use another primitive: MovePlayer</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> pypot.primitive.move <span class="im">import</span> MovePlayer
+
+player <span class="op">=</span> MovePlayer(poppy, my_recorded_move)</code></pre></div>
+<p>As you can see, to create it you have to specify the robot (as for the MoveRecorder) and the move you want to play.</p>
+<p>We also have to make sure that the motors of the robot are stiff again so we can move them:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
+    m.compliant <span class="op">=</span> <span class="va">False</span></code></pre></div>
+<p>Then, you can simply start the replay:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">player.start()</code></pre></div>
+<p>And if you want to play it three times in a row:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> _ <span class="op">in</span> <span class="bu">range</span>(<span class="dv">3</span>):
+    player.start()
+    player.wait_to_stop()</code></pre></div>
+<p>We use the <em>wait_to_stop</em> method to make sure we wait for the first move to finish before we start another. By default, playing a move we will not block to allow you to play multiple move in parallel.</p>
+<h3 id="write-a-simple-sensori-motor-loop"><span class="header-section-number">5.4.4</span> Write a simple sensori-motor loop</h3>
+<p>Robotic is all about sensori-motor loops, meaning that motor commands will be more or less directly related to the sensor readings. In other terms the robot actions will be determined by what it perceives from its environment.</p>
+<p>Poppy libraries and more particularly pypot provides you with tools to easily write sensori-motor loops. We will show here a very simple example where some motor of an Ergo Jr will be controlled by the position of other motors in order to keep the head of the Ergo Jr straight.</p>
+<p>To do that, we will free the two first motors, so they can be moved by hand. Two other motors will try to lively compensate the motion applied on the free motors.</p>
+<p>We need few simple steps:</p>
+<ol>
+<li>read values from sensors (here the two free motors)</li>
+</ol>
+<ul>
+<li>compute command from those readings</li>
+<li>set new motor command</li>
+<li>go back to step 1.</li>
+</ul>
+<blockquote>
+<p>Note: this example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a &quot;cool&quot; result.</p>
+</blockquote>
+<h4 id="demo-version"><span class="header-section-number">5.4.4.1</span> Demo version</h4>
+<p>Before writing the sensori-motor loop, we will first set the Ergo Jr in a base position.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyErgoJr
+
+jr <span class="op">=</span> PoppyErgoJr()
+
+jr.goto_position({<span class="st">&#39;m1&#39;</span>: <span class="dv">0</span>.,
+                  <span class="st">&#39;m2&#39;</span>: <span class="op">-</span><span class="dv">60</span>.,
+                  <span class="co">&#39;m3&#39;</span>: <span class="dv">55</span>.,
+                  <span class="co">&#39;m4&#39;</span>: <span class="dv">0</span>.,
+                  <span class="co">&#39;m5&#39;</span>: <span class="op">-</span><span class="dv">55</span>.,
+                  <span class="co">&#39;m6&#39;</span>: <span class="dv">60</span>.}, <span class="dv">2</span>., wait<span class="op">=</span><span class="va">True</span>)</code></pre></div>
+<p>Then, we make sure the <em>moving speed</em> of the motors are not too high to prevent shaky motions:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> jr.motors:
+    m.moving_speed <span class="op">=</span> <span class="dv">250</span></code></pre></div>
+<p>Finally, we free the two first motors:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">jr.m1.compliant <span class="op">=</span> <span class="va">True</span>        
+jr.m2.compliant <span class="op">=</span> <span class="va">True</span></code></pre></div>
+<p>Now, that everything is setup we write our very simple sensori-motor loop like this:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
+
+<span class="cf">while</span> <span class="va">True</span>:
+    <span class="co"># Step 1</span>
+    p1 <span class="op">=</span> jr.m1.present_position
+    p2 <span class="op">=</span> jr.m2.present_position
+
+    <span class="co"># Step 2</span>
+    g1 <span class="op">=</span> <span class="op">-</span>p1
+    g2 <span class="op">=</span> <span class="op">-</span>p2
+
+    <span class="co"># Step 3</span>
+    jr.m4.goal_position <span class="op">=</span> g1
+    jr.m6.goal_position <span class="op">=</span> g2
+
+    time.sleep(.<span class="dv">02</span>)</code></pre></div>
+<ul>
+<li><strong>Step 1:</strong> As you can see, here our readings step is simply to retrieve the <em>present_position</em> of the motors <em>m1</em> and <em>m2</em>.</li>
+<li><strong>Step 2:</strong> Here, we defined the base position so the motors <em>m1</em>/<em>m4</em> and <em>m2</em>/<em>m6</em> are parallel. Thus, to compensate the head position, we simply have to define the new motor goal position as the opposite of the read present position.</li>
+<li><strong>Step 3:</strong> We simply set the goal position as the just computed command</li>
+</ul>
+<p>Those steps are included inside an infinite loop - with a time.sleep to avoid CPU overhead.</p>
+<blockquote>
+<p>Note: to stop this <em>while True</em> loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.</p>
+</blockquote>
+<h4 id="now-with-a-primitive"><span class="header-section-number">5.4.4.2</span> Now with a primitive</h4>
+<p>But what about if you want to make this behavior an independent &quot;brick&quot; that you can start/stop on demand combine with other behaviors. Well, primitives are meant to do just that.</p>
+<p>There is two main types of primitive: <em>Primitive</em> and <em>LoopPrimitive</em>. The first one basically gives you access to just a <em>run</em> method where you can do everything you want on a robot. The second one as the name indicates is an infinite loop which calls an <em>update</em> method at a pre-defined frequency. In our case it is the more suited one.</p>
+<p>Here is the entire definition of this primitive:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">class</span> KeepYourHeadStraight(LoopPrimitive):
+    <span class="kw">def</span> setup(<span class="va">self</span>):
+        <span class="cf">for</span> m <span class="op">in</span> <span class="va">self</span>.robot.motors:
+            m.compliant <span class="op">=</span> <span class="va">False</span>
+
+        <span class="va">self</span>.robot.goto_position({<span class="st">&#39;m1&#39;</span>: <span class="dv">0</span>.,
+                                  <span class="st">&#39;m2&#39;</span>: <span class="op">-</span><span class="dv">60</span>.,
+                                  <span class="co">&#39;m3&#39;</span>: <span class="dv">55</span>.,
+                                  <span class="co">&#39;m4&#39;</span>: <span class="dv">0</span>.,
+                                  <span class="co">&#39;m5&#39;</span>: <span class="op">-</span><span class="dv">55</span>.,
+                                  <span class="co">&#39;m6&#39;</span>: <span class="dv">60</span>.}, <span class="dv">2</span>., wait<span class="op">=</span><span class="va">True</span>)
+
+        <span class="cf">for</span> m <span class="op">in</span> <span class="va">self</span>.robot.motors:
+            m.moving_speed <span class="op">=</span> <span class="dv">250</span>
+
+        <span class="va">self</span>.robot.m1.compliant <span class="op">=</span> <span class="va">True</span>
+        <span class="va">self</span>.robot.m2.compliant <span class="op">=</span> <span class="va">True</span>
+
+    <span class="kw">def</span> update(<span class="va">self</span>):
+        <span class="va">self</span>.robot.m4.goal_position <span class="op">=</span> <span class="op">-</span><span class="va">self</span>.robot.m1.present_position
+        <span class="va">self</span>.robot.m6.goal_position <span class="op">=</span> <span class="op">-</span><span class="va">self</span>.robot.m2.present_position</code></pre></div>
+<p>As you can see, there is two main parts. The <em>setup</em> method which defines what needs to be done to prepare the robot before starting the behavior - here simply puts it in its base position and turn on the compliance for the two first motors.</p>
+<p>And the <em>update</em> method which will be regularly called: here is where we put the actual code for the sensori-motor loop: reading sensor - computing the new command - and sending the new command to the motors.</p>
+<p>Now that we have defined our primitive, we can instantiate it and start it:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># we specify we want the primitive to apply on the jr robot</span>
+<span class="co"># and that the update method should be called at 50Hz</span>
+head_straight <span class="op">=</span> KeepYourHeadStraight(jr, <span class="fl">50.0</span>)
+
+head_straight.start()</code></pre></div>
+<p>You can stop it whenever you want:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">head_straight.stop()</code></pre></div>
+<p>And re-starting it again...</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">head_straight.start()</code></pre></div>
+<p>The huge advantage of using a primitive in this case is that after starting it, you can still easily run any other codes that you want. The primitive starts its own thread and thus runs in background without blocking the execution of the rest of the code.</p>
+<h1 id="jupyter-notebooks-gallery-using-python"><span class="header-section-number">6</span> Jupyter Notebooks Gallery: using Python</h1>
+<p>Most of the existing examples of using Poppy robots in Python are given as <a href="http://jupyter.org">Jupyter Notebooks</a>. We strongly encourage the use of this web application as it allows &quot;the creation and sharing of documents that contain live code, visualization and explanatory text&quot;. Furthermore, they also permit the design of interface for live controlling a robot thanks to widgets.</p>
+<p><img src="img/python/notebook-example.png" alt="Notebook Example" /></p>
+<p>This chapter presents a gallery of notebooks and tries to organize them into different categories:</p>
+<ul>
+<li>Getting started</li>
+<li>Simulator</li>
+<li>HTTP API and remote connection</li>
+<li>Scientific experiments</li>
+<li>Education</li>
+<li>Going further (advanced topics)</li>
+</ul>
+<p>For each notebook, we provide a short description of what it does, with which robot/simulator it can be used and of course a link. Most of the notebooks are written in english but you will also find some in french (and hopefully soon in other languages).</p>
+<p><strong>If you see a notebook missing or want to submit your own, please <a href="https://github.com/poppy-project/poppy-docs/labels/notebooks">let us know</a>!</strong></p>
+<h2 id="getting-started-1"><span class="header-section-number">6.1</span> Getting started</h2>
+<ul>
+<li><p><strong>Controlling a Poppy Humanoid in V-REP: <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/software/samples/notebooks/Controlling%20a%20Poppy%20humanoid%20in%20V-REP%20using%20pypot.ipynb">Notebook</a></strong> - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.</p></li>
+<li><p><strong>Record, Save, and Play Moves: <a href="https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-ergo_Record%2C%20Save%2C%20and%20Play%20Moves.ipynb">Notebook</a></strong> - Simple introduction on how to record by demonstration moves on any Poppy Creature. It also shows how they can be re-played and saved/load to/from the disk.</p></li>
+</ul>
+<h4 id="notebooks-en-francais"><span class="header-section-number">6.1.0.1</span> Notebooks en français</h4>
+<ul>
+<li><strong>10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP: <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/Ergo_simulation%20prise%20en%20main.ipynb">pour l'ErgoJr</a>, <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/premier%20pas%20avec%20poppy%20humanoid%20en%20python%20-%2010%20choses%20à%20savoir.ipynb">pour l'Humanoid</a></strong> - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.</li>
+</ul>
+<h2 id="simulator"><span class="header-section-number">6.2</span> Simulator</h2>
+<h3 id="v-rep"><span class="header-section-number">6.2.1</span> V-REP</h3>
+<ul>
+<li><p><strong>Controlling a Poppy Humanoid in V-REP: <a href="https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-humanoid_Controlling%20in%20V-REP%20using%20pypot.ipynb">Notebook</a></strong> - Describe how to setup a Poppy Humanoid in V-REP and how to control it (motor control and sensor reading) from pypot in Python.</p></li>
+<li><p><strong>Interacting with objects in V-REP: <a href="https://github.com/poppy-project/poppy-torso/blob/ff6254355ce18a26f58654f5abc82485a7a22d13/software/doc/tutorial/Poppy%20Torso%20interacting%20with%20objects%20in%20V-REP%20using%20Pypot.ipynb">Notebook</a></strong> - Show how you can programtically add objects to the V-REP simulation and interact with them. This example uses a Poppy Torso but can be easily adapted to other creatures.</p></li>
+<li><p><strong>V-REP simulation benchmark: <a href="">Notebook</a></strong> - Check how fast the V-REP simulation is running on your computer. Can be used with the <strong>Humanoid, Torso, and ErgoJr</strong>.</p></li>
+<li><p><strong>Learning the robot IK: <a href="">Notebook</a></strong> - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.</p></li>
+</ul>
+<h4 id="notebooks-en-francais-1"><span class="header-section-number">6.2.1.1</span> Notebooks en français</h4>
+<ul>
+<li><strong>10 choses à savoir avec Poppy Humanoid/ErgoJr et V-REP <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/Ergo_simulation%20prise%20en%20main.ipynb">Notebook pour l'ErgoJr</a><a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-humanoid_poppy-torso__vrep_installation%20et%20prise%20en%20main/poppy%20simulé/premier%20pas%20avec%20poppy%20en%20python%20-%2010%20choses%20à%20savoir.ipynb">Notebook pour l'Humanoid</a></strong> - 10 informations de base pour bien commencer avec Poppy Humanoid ou Poppy ErgoJr simulés dans V-REP et comment les contrôler en Python.</li>
+</ul>
+<h2 id="http-rest-api-and-remote-connection"><span class="header-section-number">6.3</span> HTTP REST API and remote connection</h2>
+<ul>
+<li><strong>Controlling a robot using HTTP requests: <a href="https://github.com/poppy-project/community-notebooks/blob/master/demo/poppy-humanoid_Accessing%20pypot%20REST%20API%20through%20HTTP%20requests.ipynb">Notebook</a></strong> - Show how you can send HTTP requests to a robot, using the REST API, to control it. The notebook is based on a V-REP simulated Poppy Humanoid but can be adapted to other creatures.</li>
+</ul>
+<h2 id="scientific-experiments"><span class="header-section-number">6.4</span> Scientific experiments</h2>
+<h3 id="discover-explauto"><span class="header-section-number">6.4.1</span> Discover Explauto</h3>
+<ul>
+<li><strong>Learning the robot IK: <a href="">Notebook</a></strong> - Demonstrate how explauto can be used to learn the inverse kinematics of a Poppy robots. The experiments are run in V-REP simulation but it also gives hints on how it can be transposed in the real world.</li>
+</ul>
+<h2 id="demo-interface"><span class="header-section-number">6.5</span> Demo interface</h2>
+<ul>
+<li><p><strong>Primitives launcher: <a href="https://github.com/poppy-project/poppy-humanoid/blob/dd469c262ede0877153afd6e086f65fc85e8b729/software/samples/notebooks/Demo%20Interface.ipynb">Notebook</a></strong> - Provides all codes needed to directly launched primitives (stand, sit, idle motions, limit torque...)</p></li>
+<li><p><strong>Simple demo - livecoding: <a href="https://github.com/poppy-project/poppy-humanoid/blob/dd469c262ede0877153afd6e086f65fc85e8b729/software/samples/notebooks/TTFX.ipynb">Notebook</a></strong> - Show some basic examples of what you can do with a Poppy Humanoid: start primitives, control motors, get sensor readings. It was designed for a 15 minutes live coding session (in French).</p></li>
+</ul>
+<h2 id="education"><span class="header-section-number">6.6</span> Education</h2>
+<h4 id="notebooks-en-francais-2"><span class="header-section-number">6.6.0.1</span> Notebooks en français</h4>
+<h4 id="initiation-a-linformatique-en-lycee"><span class="header-section-number">6.6.0.2</span> Initiation à l'informatique en Lycée</h4>
+<ul>
+<li><p><strong>Découverte: <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d&#39;ininitiation%20à%20l&#39;informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP1.ipynb">TP1</a>, <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d&#39;ininitiation%20à%20l&#39;informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP2.ipynb">TP2</a>, <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d&#39;ininitiation%20à%20l&#39;informatique%20pour%20les%20lycéens/decouverte/Decouverte%20TP3.ipynb">TP3</a></strong> - Comprendre comment faire bouger simplement le robot. Utilisation des boucles. Ces TPs utilisent un Poppy Torso simulé dans V-REP.</p></li>
+<li><p><strong>Dialogue: <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d&#39;ininitiation%20à%20l&#39;informatique%20pour%20les%20lycéens/dialogue/Dialogue%20TP1.ipynb">TP1</a>, <a href="https://github.com/poppy-project/community-notebooks/blob/master/tutorials-education/poppy-torso__vrep_Prototype%20d&#39;ininitiation%20à%20l&#39;informatique%20pour%20les%20lycéens/dialogue/Dialogue%20TP2.ipynb">TP2</a></strong> - Établir un dialogue entre Python et le robot. Ces TPs utilisent un Poppy Torso simulé dans V-REP.</p></li>
+</ul>
+<h2 id="going-further"><span class="header-section-number">6.7</span> Going further</h2>
+<h3 id="low-level-communication"><span class="header-section-number">6.7.1</span> Low-level communication</h3>
+<ul>
+<li><strong>Configure a new motor directly in Python: <a href="">Notebook</a></strong> -</li>
+</ul>
+<h3 id="debug-and-setup"><span class="header-section-number">6.7.2</span> Debug and setup</h3>
+<ul>
+<li><strong>Configure a new motor directly in Python: <a href="">Notebook</a></strong> -</li>
+</ul>
+<h3 id="benchmark"><span class="header-section-number">6.7.3</span> Benchmark</h3>
+<ul>
+<li><p><strong>Trajectory following: <a href="https://github.com/poppy-project/community-notebooks/blob/master/debug/mini-4dof-arm-mini_benchmark_XL320.ipynb">Notebook</a></strong> - Measure how precisely a <strong>Poppy mini-4dof</strong> follows a given trajectory. It measures the position, speed and load of multiple motors on a fast and a slow trajectory.</p></li>
+<li><p><strong>V-REP simulation benchmark: <a href="">Notebook</a></strong> - Check how fast the V-REP simulation is running on your computer. Can be used with the <strong>Humanoid, Torso, and ErgoJr</strong>.</p></li>
+</ul>
+<h3 id="extending-poppy-softwares"><span class="header-section-number">6.7.4</span> Extending Poppy softwares</h3>
+<ul>
+<li><p><strong>Define your own Poppy creature: <a href="">Notebook</a></strong> -</p>
+<h1 id="use-the-rest-api-to-control-a-poppy-robot"><span class="header-section-number">6.7.4</span> Use the REST API to control a Poppy Robot</h1>
+<h1 id="gallery-of-activities"><span class="header-section-number">6.7.4</span> Gallery of activities</h1>
+<h2 id="controler-poppy-avec-un-arduino-via-snap4arduino"><span class="header-section-number">6.7.4</span> Contrôler Poppy avec un Arduino via Snap4Arduino</h2></li>
+</ul>
+<p><em>Written by <a href="https://forum.poppy-project.org/users/gilles_lassus">Gilles Lassus</a>.</em></p>
+<p><strong>Objectif</strong> : contrôler un moteur de Poppy par un potentiomètre sur la platine Arduino.</p>
+<h3 id="preparation-de-snap4arduino"><span class="header-section-number">6.7.5</span> Préparation de Snap4Arduino</h3>
+<ul>
+<li>Téléchargez et installez <a href="http://s4a.cat/snap/">Snap4Arduino</a>.</li>
+<li>Téléchargez les blocs <a href="https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml">pypot-snap-blocks.xml</a>. Ils devront être importés dans Snap4Arduino à chaque démarrage.</li>
+</ul>
+<h3 id="preparation-de-larduino"><span class="header-section-number">6.7.6</span> Préparation de l'Arduino</h3>
+<ul>
+<li>Connectez votre platine, ouvrez Arduino et téléversez le firmware StandardFirmata. (disponible via Fichier - Exemples - Firmata).</li>
+<li>Branchez un potentiomètre sur la sortie analogique A0, comme illustré ci-dessous :</li>
+</ul>
+<p><img src="img/activity/snap4arduino/montage.jpg" alt="montage" /></p>
+<h3 id="lancement-de-la-simulation-dans-le-cas-dun-poppy-simule-dans-vrep"><span class="header-section-number">6.7.7</span> Lancement de la simulation (dans le cas d'un Poppy simulé dans Vrep)</h3>
+<ul>
+<li>Lancez Vrep .</li>
+<li>Exécutez les commandes python suivantes :</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> poppy.creatures <span class="im">import</span> PoppyHumanoid
+
+poppy <span class="op">=</span> PoppyHumanoid(simulator<span class="op">=</span><span class="st">&#39;vrep&#39;</span>, use_snap<span class="op">=</span><span class="va">True</span>)</code></pre></div>
+<p>puis</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy.snap.run()</code></pre></div>
+<h3 id="ouverture-de-snap4arduino"><span class="header-section-number">6.7.8</span> Ouverture de Snap4Arduino</h3>
+<ul>
+<li>Lancez Snap4Arduino et importez les blocs <em>pypot-snap-blocks.xml</em>.<br />
+(une fenêtre avertissant que le projet importé a été créé par Snap! apparaît ; elle est sans conséquence.)</li>
+<li>Dans les blocs Arduino, cliquez sur <em>Connect Arduino </em>pour établir la connexion entre Snap4Arduino et votre platine.<br />
+<img src="img/activity/snap4arduino/connect.png" alt="connect" /></li>
+</ul>
+<p>Un message de confirmation apparaît, signe que la connexion est effective.</p>
+<h3 id="commander-un-moteur-via-le-potentiometre"><span class="header-section-number">6.7.9</span> Commander un moteur via le potentiomètre</h3>
+<p>La valeur analogique lue dans A0 est un entier entre 0 et 1024. Pour la &quot;mapper&quot; entre (environ) -40 et 40, on la divise par 12 avant de lui soustraire 40.<br />
+On peut donc alors construire l'instruction suivante, qui fera bouger le moteur <em>head_z</em> de Poppy entre -40° et +40° :</p>
+<p><img src="img/activity/snap4arduino/instructions.png" alt="instructions" /></p>
+<h3 id="remarques-diverses"><span class="header-section-number">6.7.10</span> Remarques diverses</h3>
+<ul>
+<li>Il peut être utile de créer un bloc <em>map</em> (une version <a href="https://raw.githubusercontent.com/poppy-project/poppy-docs/master/resources/block_map.xml">ici</a>) équivalent à la fonction éponyme d'Arduino, permettant de mettre à l'échelle automatiquement une valeur dans une plage donnée :</li>
+</ul>
+<p><img src="img/activity/snap4arduino/map.png" alt="map" /></p>
+<p>Le script de commande du moteur <em>head_z</em> de Poppy entre -40° et 40° deviendrait alors :<br />
+<img src="img/activity/snap4arduino/instructions_avec_map.png" alt="script avec map" /></p>
+<ul>
+<li><p>Cette méthode de contrôle a pour principal défaut de &quot;bloquer&quot; la carte Arduino avec le StandardFirmata : il serait plus agréable de pouvoir simplement lire les données du port série envoyées par l'Arduino, et ainsi pouvoir téléverser le programme de son choix dans l'Arduino. Ceci est discuté <a href="https://forum.poppy-project.org/t/snap-et-arduino/1892/2">ici</a>.<br />
+Toutefois, la page du projet <a href="http://s4a.cat/snap/">Snap4Arduino</a> liste les composants annexes (LCD display, UltraSound Sensor) pouvant être directement contrôlés, et explique en <a href="http://blog.s4a.cat/2015/03/13/Extending-Firmata-for-Snap4Arduino.html">détail</a> comment modifier le StandardFirmata pour intégrer un nouveau composant.</p>
+<h1 id="installation-for-advanced-users"><span class="header-section-number">6.7.10</span> Installation for advanced users</h1></li>
+</ul>
+<p>You may want to install Poppy softwares only if you are in one of these situations:</p>
+<ol>
+<li>You want to control a simulated robot</li>
+<li>[special case for advanced users] You want to install yourself the operating system of your robot instead of using a <a href="../installing-images/README.md">pre-made ISO image</a>.</li>
+<li>[special case for advanced users] You want to control a Poppy creature from your computer WITHOUT using the Raspberry Pi board.</li>
+</ol>
+<p><strong>Note: The first situation is a &quot;normal case&quot; but the second and third are special usages affordable only by advanced users who have a good comprehension of the global system.</strong></p>
+<h2 id="install-the-python-interpreter-and-poppy-softwares"><span class="header-section-number">6.8</span> Install the Python Interpreter and Poppy softwares</h2>
+<p>Poppy is run by Python computer code. Depending on your Operating System you will have to install Python and in any case you'll have to install the required software libraries.</p>
+<p>Whatever your Operating System if you are getting started with Python and want to install a full Python environment for scientific computing, <strong>we suggest you to use <a href="https://www.continuum.io/why-anaconda">Anaconda Python distribution</a></strong>.</p>
+<h3 id="install-everything-needed-for-a-poppy-board"><span class="header-section-number">6.8.1</span> Install everything needed for a Poppy Board</h3>
+<p>The easiest way to setup the control board of your Poppy Creature is to use one of the pre-made SD-card images. Those images come with everything installed and ready, you just need to copy it on a SD-card and you are good to go. For that, you will need a free 8Go (or more) SD-card, and download the image corresponding to your board and write it to your SD-card. This procedure is described in the <a href="#setup-your-poppy-board">Setup section</a>.</p>
+<p>Download the image of your system :</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie</a> if you are using a <strong>Raspberry Pi 2</strong></li>
+<li><a href="http://com.odroid.com/sigong/nf_file_board/nfile_board_view.php?keyword=&amp;tag=ODROID-U3&amp;bid=243">A special Ubuntu 14.04</a> if you are using a Odroid U3</li>
+</ul>
+<p>Write the image to the SD-card with you favourite disk writer tool as explained in <a href="#write-an-image-to-the-sd-card">this part</a>.</p>
+<p>Connect to your board in SSH. Use</p>
+<ul>
+<li><code>ssh pi@raspberrypi.local</code> password=raspberry for the Raspberry Pi</li>
+<li><code>ssh odroid@odroid.local</code> password=odroid for the Odroid U3</li>
+</ul>
+<p>Download the install script:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh</code></pre></div>
+<p>Execute it with two parameters:</p>
+<ul>
+<li>the board name between {odroid, rpi}</li>
+<li>the creature name between {poppy-humanoid, poppy-torso, poppy-ergo-jr}</li>
+</ul>
+<p>For example, if you want to build the system for a poppy-ergo-jr on a Raspberry Pi:</p>
+<pre><code>bash poppy-configure.sh rpi poppy-ergo-jr</code></pre>
+<p>Reboot after the end of the installation.<br />
+The hostname, default user and password will be all set to &quot;poppy&quot; (ssh poppy @poppy.local password=poppy).<br />
+You can test your installation with the web interface in your web browser <a href="http://poppy.local" class="uri">http://poppy.local</a>.</p>
+<p>If there is any issue don't hesitate to post a message on the <a href="https://github.com/poppy-project/poppy-installer/issues">issue tracker on Github</a> or in the dedicated section of <a href="https://forum.poppy-project.org/c/support">the forum</a>.</p>
+<h3 id="install-python-and-poppy-softwares-on-windows"><span class="header-section-number">6.8.2</span> Install Python and Poppy softwares on Windows</h3>
+<!-- TODO ajouter Schéma installation Thibault -->
+<p>If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see <a href="lientodo">these videos</a>.</p>
+<h4 id="install-python"><span class="header-section-number">6.8.2.1</span> Install Python</h4>
+<p>We suggest you to use Anaconda Python distribution, but if you already have a Python distribution like Canopy with scientific packages (Numpy and Scipy) you can directly <a href="#install-poppy-softwares">install Poppy softwares</a>.</p>
+<h5 id="anaconda"><span class="header-section-number">6.8.2.1.1</span> Anaconda</h5>
+<p>Download Anaconda Python distribution (400Mo) <a href="https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe">here for 64-bit</a> computer or <a href="https://repo.continuum.io/archive/Anaconda3-2.4.0-Windows-x86_64.exe">here for 32-bit</a>.</p>
+<p>Install it by clicking on &quot;next&quot; at each step. If you intend to install Anaconda for all users of your computer, be sure to select &quot;all users&quot;.</p>
+<p><img src="img/python/lucvincent/luc_vincent-012.png" alt="Anaconda all users" />.</p>
+<p>It is also very important that the two check-boxes of the PATH and the default Python are checked.</p>
+<p><img src="img/python/anaconda_install_path.png" alt="Anaconda install" /></p>
+<p>Now you have a Python distribution ready to <a href="#install-poppy-softwares">install Poppy softwares</a>.</p>
+<h5 id="miniconda-alternative-to-anaconda"><span class="header-section-number">6.8.2.1.2</span> Miniconda (alternative to Anaconda)</h5>
+<p>Miniconda is a &quot;light&quot; version of Anaconda which contain only Python and the conda package manager. You can install it <strong>instead of Anaconda</strong> and save a lot of disk space (25 Mo vs 400 Mo), but you will have to do another step in the install process.<br />
+Download miniconda <a href="https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86_64.exe">here for 64-bit</a> computer or <a href="https://repo.continuum.io/miniconda/Miniconda-latest-Windows-x86.exe">here for 32-bit</a> computer.</p>
+<p>Install it and be sure that the two check-boxes of the PATH and the default Python are checked.</p>
+<p>Open the Command Prompt (press the windows key and type &quot;Command Prompt&quot;), type and press Enter to execute the command below:</p>
+<p><code>conda install numpy scipy ipython-notebook matplotlib</code></p>
+<p>Now you have a Python distribution ready to <a href="#install-poppy-softwares">install Poppy softwares</a>.</p>
+<h4 id="install-poppy-softwares"><span class="header-section-number">6.8.2.2</span> Install Poppy softwares</h4>
+<p>Open the prompt of your Python Distribution (called <em>Anaconda Prompt</em> for Anaconda) or the <em>Command Prompt</em> of Windows, type and press Enter to execute the command below:<br />
+<img src="img/python/lucvincent/luc_vincent-031.png" alt="Anaconda all users" />.</p>
+<p><code>pip install poppy-torso --user -U --no-deps</code></p>
+<p>This will install everything necessary to control a Poppy Humanoid.<br />
+Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.</p>
+<p>In case of update, it is advised to upgrade pypot (the motor library control) and the creature package separately :</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">pip</span> install pypot --user -U --no-deps
+<span class="kw">pip</span> install poppy-torso --user -U --no-deps</code></pre></div>
+<h3 id="install-python-and-poppy-softwares-on-mac-osx"><span class="header-section-number">6.8.3</span> Install Python and Poppy softwares on Mac OSX</h3>
+<p>Mac OSX has a Python distribution installed by default. Before installing Poppy softwares, you need to install the Python package manager pip.<br />
+Open a terminal and execute the command below:<br />
+<code>curl --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py | sudo python</code></p>
+<p>You can now install Poppy softwares for the creature of your choice:<br />
+<code>pip install poppy-torso --user -U --no-deps</code></p>
+<p>Substitute 'poppy-torso' with 'poppy-humanoid' or 'poppy-ergojr' to install respectively a Poppy Humanoid or a Poppy Ergo Jr.</p>
+<h3 id="install-python-and-poppy-softwares-on-gnulinux"><span class="header-section-number">6.8.4</span> Install Python and Poppy softwares on GNU/Linux</h3>
+<p>Most of GNU/Linux distributions, have already a Python distribution installed by default.</p>
+<h4 id="using-the-default-python-distribution"><span class="header-section-number">6.8.4.1</span> Using the default Python distribution</h4>
+<p>Pypot, the main library of the robot is depending (amongst some other) on two big scientific libraries <em>Numpy</em> and <em>Scipy</em> which are themselves depending on C and Fortran code. These libraries may be installed with the Python package system (pip), but because of the huge number and differences between GNU/Linux distributions pip is not able to distribute binaries for Linux so all dependencies must be compiled... The solution to avoid the compilation of numpy and scipy is to install them with your distribution package manager.</p>
+<p>On Ubuntu &amp; Debian:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">curl</span> --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py <span class="kw">|</span> <span class="kw">sudo</span> python
+<span class="kw">sudo</span> apt-get install python-numpy python-scipy python-matplotlib python-dev</code></pre></div>
+<p>On Fedora:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">curl</span> --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py <span class="kw">|</span> <span class="kw">sudo</span> python
+<span class="kw">sudo</span> yum install numpy scipy python-matplotlib</code></pre></div>
+<p>On Arch Linux:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">curl</span> --silent --show-error --retry 5 https://bootstrap.pypa.io/get-pip.py <span class="kw">|</span> <span class="kw">sudo</span> python
+<span class="kw">sudo</span> pacman -S python2-scipy python2-numpy python2-matplotlib</code></pre></div>
+<p>You can now <a href="#install-poppy-softwares">install Poppy softwares</a>.</p>
+<p><strong>Note: The downside is the Python libraries from you distribution system are very often out of date.</strong></p>
+<h4 id="using-anaconda-or-miniconda"><span class="header-section-number">6.8.4.2</span> Using Anaconda (or miniconda)</h4>
+<p>If you want to have up to date numpy, scipy and ipython without having to compile them, we suggest you to install Anaconda or at least the conda package manager distributed with miniconda.<br />
+Download miniconda (64-bit) with these command below in your terminal:<br />
+<code>curl -o miniconda.sh http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh</code><br />
+If you have a 32-bit computer<br />
+<code>curl -o miniconda.sh http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86.sh</code></p>
+<p>Execute commands below and follow the instructions to install miniconda:</p>
+<pre><code>chmod +x miniconda.sh
+./miniconda.sh</code></pre>
+<p>You can now install some required and other useful dependencies for Poppy softwares with conda:<br />
+<code>conda install numpy scipy ipython-notebook matplotlib</code></p>
+<p>You can now <a href="#install-poppy-softwares">install Poppy softwares</a>.</p>
+<h2 id="install-the-robotic-simulator-v-rep"><span class="header-section-number">6.9</span> Install the robotic simulator V-REP</h2>
+<p><a href="http://www.coppeliarobotics.com/downloads.html">V-REP</a> is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free licence for educational entities and have a commercial licence for other purposes.<br />
+There is also an <em>PRO EVAL</em> version which limit the right to backup. As you don't need to backup the scene to use V-REP with Pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.<br />
+If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the <a href="http://www.coppeliarobotics.com/licensing-plugin-edu.html">educational licence</a>).</p>
+<h3 id="install-on-windows"><span class="header-section-number">6.9.1</span> Install on Windows</h3>
+<p><a href="http://www.coppeliarobotics.com/downloads.html">Download V-REP</a> PRO EVAL or EDU (if you are an educational entity).<br />
+As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.<br />
+<img src="img/vrep/vrep2.png" alt="VREP_smartscreen" /></p>
+<p>During the installation, make sure to install <em>Visual C++ Redistributable 2010</em> and <em>Visual C++ Redistributable 2012</em>.<br />
+<img src="img/vrep/lucvincent/luc_vincent-056.png" alt="cpp2010" /></p>
+<p><img src="img/vrep/lucvincent/luc_vincent-059.png" alt="cpp2012" /></p>
+<p>Even if you already have <em>Visual C++ Redistributable 2010</em> or <em>Visual C++ Redistributable 2012</em>, it is advised to &quot;repair&quot; them (it is a re-installation process).</p>
+<p><img src="img/vrep/lucvincent/luc_vincent-060.png" alt="cpp2012" /></p>
+<p><strong>After the installation you can <a href="#test-your-installation">test if V-REP works well</a></strong>.</p>
+<!-- TODO ### Install on MAC OSX
+### Install on GNU/Linux -->
+<h3 id="test-your-installation"><span class="header-section-number">6.9.2</span> Test your installation</h3>
+<p>Open V-REP with a double click on the desktop icon.<br />
+Open the prompt of your Python Distribution (called <em>Anaconda Prompt</em> for Anaconda) or the <em>Command Prompt</em> of Windows, type and press Enter to execute the command below:<br />
+<code>poppy-services --snap --vrep --no-browser poppy-torso</code></p>
+<p>After a few seconds, you will have an error like the picture below in your Command prompt.<br />
+<img src="img/vrep/vrep3_1.png" alt="VREP_terminal" /></p>
+<p>If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. <strong>You have to check the check-box &quot;Do not show this message again&quot; and press &quot;Ok&quot;.</strong><br />
+<img src="img/vrep/vrep3_2.png" alt="VREP_checkbox" /></p>
+<p>Switch the the command prompt window. You'll have to type the last command (poppy-services --snap --vrep --no-browser poppy-torso) and click to the vrep popup (with the checkbox checked) <em>three times</em> to make it works well!</p>
+<p><strong>Note: to avoid retyping the same command again and again, you can simply press the up arrow key to call the last typed line</strong>.</p>
+<p>Now type the last command without the &quot;--no-browser&quot; part.<br />
+<code>poppy-services --snap --vrep poppy-torso</code></p>
+<p>If you see a firewall popup like the picture below, be sure to check the &quot;private network&quot; checkbox.<br />
+<img src="img/vrep/vrep4.png" alt="firewall" /></p>
+<p>If everything works, a new tab have been opened on your default web-browser.<br />
+<!-- TODO: lien doc --><br />
+You can program you robot in Snap! or in Python.</p>
+<p><img src="img/vrep/lucvincent/luc_vincent-070.jpg" alt="firewall" /></p>
+<h2 id="install-drivers"><span class="header-section-number">6.10</span> Install drivers</h2>
+<p><strong>Note: this chapter is only for people who want to control a tangible robot without an embedded board (Raspberry Pi or Odroid). It is a special case for advanced users</strong></p>
+<p>If you intend to control tangible robots from your computer <strong>without</strong> a Raspberry Pi or a Odroid, and you use a computer with Windows (vs GNU/Linux or MAC OSX), you may need to install manually drivers for the USB2AX or the USB2Dynamixel.</p>
+<h3 id="if-you-use-a-usb2ax"><span class="header-section-number">6.10.1</span> If you use a <a href="http://www.xevelabs.com/doku.php?id=product:usb2ax:usb2ax">USB2AX</a></h3>
+<p>If the USB2AX is not recognized out of the box (its LED stay red after having been plugged) on your computer, you probably need to install manually its drivers.<br />
+The installation process and the files to download can be found on the <a href="http://www.xevelabs.com/doku.php?id=product:usb2ax:quickstart">USB2AX documentation</a>.<br />
+You don't need drivers for GNU/Linux or MAC OSX, but note that it doesn't works very well with MAC OSX.</p>
+<h3 id="if-you-use-a-usb2dynamixel"><span class="header-section-number">6.10.2</span> If you use a <a href="http://support.robotis.com/en/product/auxdevice/interface/usb2dxl_manual.htm">USB2Dynamixel</a></h3>
+<p>You need to install FTDI drivers on your computer. You have to low the &quot;Latency Timer Value&quot; from 16ms to 1ms (minimum allowed value) as explained in the <a href="http://www.ftdichip.com/Support/Knowledgebase/index.html?settingacustomdefaultlaten.htm">FTDI documentation</a> to avoid pypot timeouts.</p>
+<h1 id="appendix"><span class="header-section-number">7</span> Appendix</h1>
+<h2 id="getting-involved"><span class="header-section-number">7.1</span> Getting involved</h2>
+<h2 id="pypot-library"><span class="header-section-number">7.2</span> pypot library</h2>
+<h2 id="poppy-creature-library"><span class="header-section-number">7.3</span> poppy-creature library</h2>
+<h2 id="poppy-ergo-jr-library"><span class="header-section-number">7.4</span> poppy-ergo-jr library</h2>
+<h2 id="raspoppy-manual-setup-of-a-raspberry-pi"><span class="header-section-number">7.5</span> Raspoppy: manual setup of a Raspberry-Pi</h2>
+  </div>
+</body>
+</html>
