@@ -894,8 +894,14 @@ poppy <span class="op">=</span> PoppyHumanoid()</code></pre></div>
 <p>If you see an error message like this, check that you have launched V-REP and that you have close the popup in V-REP (see #TODO for details).</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="pp">IOError</span>: Connection to V<span class="op">-</span>REP failed<span class="op">!</span></code></pre></div>
 <h4 id="create-the-robot-object---with-web-simulator"><span class="header-section-number">5.4.1.4</span> Create the Robot object - with web simulator</h4>
-<p>Currently only the Ergo Jr is usable with the web simulator.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">poppy <span class="op">=</span> PoppyErgoJr(simulated<span class="op">=</span><span class="st">&#39;poppy-sim&#39;</span>)</code></pre></div>
+<p>Currently only the Ergo Jr is usable within the web simulator.<br />
+It also requires specific versions of libraries to be used properly.</p>
+<p>To make sure you meet these requirements, you can type this command from your shell:</p>
+<pre class="pash"><code>pip install pypot&gt;=2.12 poppy-creature&gt;=1.8 poppy-ergo-jr&gt;=1.6 --upgrade</code></pre>
+<p>You can then instantiate the poppy-ergo-jr creature:</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">poppy-services</span> --threejs --snap --no-browser poppy-ergo-jr</code></pre></div>
+<p>This will create a server for <em>Snap!</em> on port <code>6969</code>, and a server for the visualizer on port <code>8080</code>.</p>
+<p>You can then head to the <a href="https://poppy-project.github.io/poppy-docs">visualizer page</a>.</p>
 <h3 id="access-the-sensors-and-motors"><span class="header-section-number">5.4.2</span> Access the sensors and motors</h3>
 <p>The robot object you just created contains two main groups of objects:</p>
 <ul>
@@ -917,7 +923,7 @@ poppy <span class="op">=</span> PoppyHumanoid()</code></pre></div>
 <p><em>poppy.motors</em> is actually a list of all motors connected to your robot. Thus, if you want to get the present position of all motors, you can do:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
     <span class="bu">print</span>(m.present_position)</code></pre></div>
-<p>Of course, you can also access a specific motor. To do that, you need to know the name fo the motor you want to access. You can find this list in the assembly documentation of your robot.</p>
+<p>Of course, you can also access a specific motor. To do that, you need to know the name for the motor you want to access. You can find this list in the assembly documentation of your robot.</p>
 <p>You can also obtain a list of all motors name directly from python:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> poppy.motors:
     <span class="bu">print</span>(m.name)</code></pre></div>
@@ -1062,12 +1068,10 @@ player <span class="op">=</span> MovePlayer(poppy, my_recorded_move)</code></pre
 <p>We need few simple steps:</p>
 <ol>
 <li>read values from sensors (here the two free motors)</li>
-</ol>
-<ul>
 <li>compute command from those readings</li>
 <li>set new motor command</li>
 <li>go back to step 1.</li>
-</ul>
+</ol>
 <blockquote>
 <p>Note: this example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a &quot;cool&quot; result.</p>
 </blockquote>
@@ -1087,7 +1091,7 @@ jr.goto_position({<span class="st">&#39;m1&#39;</span>: <span class="dv">0</span
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="cf">for</span> m <span class="op">in</span> jr.motors:
     m.moving_speed <span class="op">=</span> <span class="dv">250</span></code></pre></div>
 <p>Finally, we free the two first motors:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">jr.m1.compliant <span class="op">=</span> <span class="va">True</span>        
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">jr.m1.compliant <span class="op">=</span> <span class="va">True</span>
 jr.m2.compliant <span class="op">=</span> <span class="va">True</span></code></pre></div>
 <p>Now, that everything is setup we write our very simple sensori-motor loop like this:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> time
@@ -1111,7 +1115,7 @@ jr.m2.compliant <span class="op">=</span> <span class="va">True</span></code></p
 <li><strong>Step 2:</strong> Here, we defined the base position so the motors <em>m1</em>/<em>m4</em> and <em>m2</em>/<em>m6</em> are parallel. Thus, to compensate the head position, we simply have to define the new motor goal position as the opposite of the read present position.</li>
 <li><strong>Step 3:</strong> We simply set the goal position as the just computed command</li>
 </ul>
-<p>Those steps are included inside an infinite loop - with a time.sleep to avoid CPU overhead.</p>
+<p>Those steps are included inside an infinite loop - with a <code>time.sleep</code> to avoid CPU overhead.</p>
 <blockquote>
 <p>Note: to stop this <em>while True</em> loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.</p>
 </blockquote>
