@@ -1,0 +1,781 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Documentation of the Poppy Platform -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Connect to the robot | Documentation of the Poppy Platform</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-language-picker/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../getting-started/program-the-robot.html" />
+    
+    
+    <link rel="prev" href="../getting-started/build.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="1.2"
+        data-chapter-title="Connect to the robot"
+        data-filepath="getting-started/connect.md"
+        data-basepath=".."
+        data-revision="Wed Mar 23 2016 19:48:59 GMT+0000 (UTC)"
+        data-innerlanguage="en">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="getting-started/index.html">
+            
+                
+                    <a href="../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Getting started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="getting-started/build.html">
+            
+                
+                    <a href="../getting-started/build.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Build a robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="getting-started/connect.html">
+            
+                
+                    <a href="../getting-started/connect.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Connect to the robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="getting-started/program-the-robot.html">
+            
+                
+                    <a href="../getting-started/program-the-robot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Program the robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="getting-started/visualize.html">
+            
+                
+                    <a href="../getting-started/visualize.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Visualize
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="getting-started/example-of-projects.html">
+            
+                
+                    <a href="../getting-started/example-of-projects.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Examples of projects
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="startup/index.html">
+            
+                
+                    <a href="../startup/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Startup
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="startup/windows.html">
+            
+                
+                    <a href="../startup/windows.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Write an ISO on Windows
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="startup/macos.html">
+            
+                
+                    <a href="../startup/macos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Write an ISO on Mac OSX
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="startup/linux.html">
+            
+                
+                    <a href="../startup/linux.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Write an ISO on GNU/Linux
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="assembly-guides/index.html">
+            
+                
+                    <a href="../assembly-guides/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Assembly guides
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="assembly-guides/electronic-assembly.html">
+            
+                
+                    <a href="../assembly-guides/electronic-assembly.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Electronic assembly
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="assembly-guides/motor-configuration.html">
+            
+                
+                    <a href="../assembly-guides/motor-configuration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Motor configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="assembly-guides/ergo-jr.html">
+            
+                
+                    <a href="../assembly-guides/ergo-jr.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Assembly of the Poppy Ergo Jr
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="programming/index.html">
+            
+                
+                    <a href="../programming/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Programming
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="programming/snap.html">
+            
+                
+                    <a href="../programming/snap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Programming with Snap!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="programming/notebooks.html">
+            
+                
+                    <a href="../programming/notebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Usage of Jupyter notebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="programming/python.html">
+            
+                
+                    <a href="../programming/python.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Programming in Python
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="programming/rest.html">
+            
+                
+                    <a href="../programming/rest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Robots APIs
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="demo-activities/index.html">
+            
+                
+                    <a href="../demo-activities/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Activities
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="demo-activities/snap4arduino.html">
+            
+                
+                    <a href="../demo-activities/snap4arduino.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Link with Snap4Arduino
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="installation-for-advanced-users/index.html">
+            
+                
+                    <a href="../installation-for-advanced-users/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Installation for advanced users
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="from-simulation-to-real-robot/index.html">
+            
+                
+                    <a href="../from-simulation-to-real-robot/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        From simulation to real robot
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="from-simulation-to-real-robot/using-snap.html">
+            
+                
+                    <a href="../from-simulation-to-real-robot/using-snap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Snap! on the real robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="from-simulation-to-real-robot/using-jupyter.html">
+            
+                
+                    <a href="../from-simulation-to-real-robot/using-jupyter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Program with Jupyter notebooks on the real robot
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="appendix/index.html">
+            
+                
+                    <a href="../appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Appendix
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="appendix/contribute.html">
+            
+                
+                    <a href="../appendix/contribute.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Contribute
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="appendix/pypot.html">
+            
+                
+                    <a href="../appendix/pypot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Pypot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="appendix/poppy-creature.html">
+            
+                
+                    <a href="../appendix/poppy-creature.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Poppy-creature
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="appendix/poppy-ergo-jr.html">
+            
+                
+                    <a href="../appendix/poppy-ergo-jr.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Poppy Ergo Jr
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="appendix/raspoppy.html">
+            
+                
+                    <a href="../appendix/raspoppy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        Raspoppy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+    <a href="../GLOSSARY.html" class="btn pull-left" aria-label="Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Documentation of the Poppy Platform</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p><style>
+body {
+  counter-reset: h1 2;
+}
+</style></p>
+<h2 id="start-and-connect-the-robot">Start and connect the robot</h2>
+<p>In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it. We will focus here on real robots but we will also point to the advanced sections to follow if you are using a simulated robot.</p>
+<h3 id="setup-the-software">Setup the software</h3>
+<p>Poppy creatures come with an embedded board which job is to control motors and access the sensors. This computer can be access through a web interface which makes it easy to control the robot from your own computer or a tablet without having to locally install anything specific.</p>
+<p>There are two ways to setup the board for your Poppy:</p>
+<ul>
+<li><a href="#easy-way-use-the-poppy-sd-card"><strong>the easy way</strong></a>: use a pre-made ISO image of the Poppy operating system and write it to an the SD-card</li>
+<li><a href="#advanced-way-diy-install-everything-from-scratch"><strong>the hard way for advanced users</strong></a>: install everything from scratch</li>
+</ul>
+<p><em>Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="#TODO">TODO USE SIMU</a> will guide you through all the detailed steps.</em></p>
+<h4 id="easy-way-use-the-poppy-sdcard">Easy way: use the Poppy SD-card</h4>
+<p>The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.</p>
+<p>The images can be found in the <a href="#TODO">github of the project</a>:</p>
+<ul>
+<li><a href="#TODO">for the ErgoJr</a></li>
+<li><a href="#TODO">for the Torso</a></li>
+<li><a href="#TODO">for the Humanoid</a></li>
+</ul>
+<p>They can be written to a SD-card (at least 8 Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
+One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.</p>
+<h4 id="advanced-way-diy-install-everything-from-scratch">Advanced way: DIY, install everything from scratch</h4>
+<p>The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:</p>
+<ul>
+<li>You are <strong>working with a simulated robot</strong> and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,</li>
+<li>you want to customize the environment,</li>
+<li>or simply if you like to understand how it works.</li>
+</ul>
+<p><strong>Warning:</strong> <em>We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.</em></p>
+<p><img src="../img/linux.jpg" alt="Linux"></p>
+<p><strong>The entire procedure is detailed in the <a href="installation-for-advanced-users/README.md">Installation for advanced users</a>.</strong> Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:</p>
+<ul>
+<li>Customize a <a href="https://www.raspbian.org" target="_blank">Raspbian</a> install for Poppy (setup a user/hostname...).</li>
+<li>Setup the Poppy utility tools (for install/update)</li>
+<li>Install the <a href="https://www.continuum.io/why-anaconda" target="_blank">Python Anaconda distribution</a>.</li>
+<li>Install the <a href="TODO pypot/poppy-creature/poppy-/*">python libraries</a>) for Poppy.</li>
+<li>Setup the sensors for your creature.</li>
+<li>Install the web server for the control and monitoring interface.</li>
+</ul>
+<h3 id="setup-the-network">Setup the network</h3>
+<p>Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.</p>
+<p>Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow to do that.</p>
+<p>Poppy robots can use either Ethernet (using cable) or wifi network. Yet, you first need to use an Ethernet network so you can first configure the robot so it can then automatically use your specified wifi.</p>
+<p>Poppy robots can use either Ethernet or wifi network. But first, plug the robot and your computer on the same Ethernet network.</p>
+<p>Then, you need to choose among the two different possibilities:</p>
+<ul>
+<li>Use the <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">Zeroconf protocol</a> to connect to the robot using its hostname: <em>&quot;poppy.local&quot;</em>. This should works directly under Mac OS and GNU/Linux but required to install <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Bonjour Print Services</em></a> on Windows. This is the simplest way and should be preferred except if you do not have the administrator right on your Windows computer for instance. Note that <em>Bonjour Print Services for Windows</em> may be already installed if you have iTunes or QuickTime on your computer.</li>
+<li>Know the IP address of the robot assigned by the router of your network.</li>
+</ul>
+<p><strong>Note: If you are not familiar with network configuration or have no idea what the previous paragraph clumsily tried to say, you should see with the IT network engineer, how you can do that.</strong></p>
+<p><img src="../img/network.png" alt="Network Schema"></p>
+<h3 id="use-the-web-interface">Use the web interface</h3>
+<p>One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:</p>
+<ul>
+<li>setup your wifi and change the name of the robot - the one you will use to connect,</li>
+<li>to launch demo primitives,</li>
+<li>and monitor the state of your robot (if motors are too hot for instance).</li>
+</ul>
+<p>To access this interface, you simply have to go to the URL using your favourite web browser:</p>
+<ul>
+<li><a href="http://poppy.local" target="_blank">http://poppy.local</a> (if you changed the name of your robot, simply replace <em>poppy</em> by its new name)</li>
+<li>or using directly its IP address, something similar as <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a></li>
+</ul>
+<p>You should see something like:</p>
+<p><img src="../img/poppy_home.png" alt="Web interface"></p>
+<p>And then if you click on the <strong>Start Poppy-monitor</strong> link:</p>
+<p><img src="../img/poppy_monitor.png" alt="Monitor interface"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../getting-started/build.html" class="navigation navigation-prev " aria-label="Previous page: Build a robot"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../getting-started/program-the-robot.html" class="navigation navigation-next " aria-label="Next page: Program the robot"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-language-picker/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-retina/retina.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-1","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Documentation of the Poppy Platform -->
+</html>
