@@ -65,7 +65,7 @@
         data-chapter-title="Assembly of the Poppy Ergo Jr"
         data-filepath="assembly-guides/ergo-jr.md"
         data-basepath=".."
-        data-revision="Thu Mar 24 2016 11:58:10 GMT+0000 (UTC)"
+        data-revision="Thu Mar 24 2016 17:41:19 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -640,20 +640,61 @@
 body {
   counter-reset: h1 13;
 }
-</style></p>
+</style>
+<!-- BOM from poppy-ergo-jr git repo --></p>
+<h1 id="bom">BOM</h1>
+<p>Here you will find the complete list of material needed to build a Poppy Ergo Jr.</p>
+<h2 id="poppys-material">Poppy&apos;s material</h2>
+<ul>
+<li>1x <a href="https://github.com/poppy-project/pixl" target="_blank">Pixl board</a> <em>(electronic board to control XL320 motors)</em></li>
+<li>1x disk_support (using laser cutting) the 2D plan can be found <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/PR_release_hardware/hardware/laser_cutting" target="_blank">here</a>. <em>You can also 3D print the base but it will take a lot of time</em></li>
+<li>the 3D printed parts <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL" target="_blank">STL here</a><ul>
+<li>1x base.stl</li>
+<li>3x horn2horn.stl</li>
+<li>3x side2side.stl</li>
+<li>1x long_U.stl</li>
+<li>1x short_U.stl</li>
+<li>1x support_camera.stl</li>
+<li>the different tools<ul>
+<li>1x lamp.stl</li>
+<li>1x gripper-fixation.stl</li>
+<li>1x gripper-fixed_part.stl</li>
+<li>1x gripper-rotative_part.stl</li>
+<li>1x pen-holder.stl</li>
+<li>1x pen-screw.stl</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="robotis-parts">Robotis parts</h2>
+<ul>
+<li>6x Robotis dynamixel motors XL-320</li>
+<li>1x set of OLLO rivets (about 70 colored and 4 grey)</li>
+<li>1x OLLO TOOL</li>
+<li>4x M2.5x6mm screw (for fixing the Raspberry Pi on the base)</li>
+</ul>
+<h2 id="various-electronics">Various electronics</h2>
+<ul>
+<li>1x Raspberry Pi 2 8Go</li>
+<li>1x Rasperry Pi camera</li>
+<li>1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector (<a href="http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&amp;relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&amp;sra=p" target="_blank">this one</a> for instance).</li>
+</ul>
 <h2 id="mechanical-assembly">Mechanical Assembly</h2>
 <h3 id="general-advices-and-warnings">General advices and warnings</h3>
 <ul>
 <li>You can assemble all the rivets before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.</li>
 </ul>
 <p><img src="../img/ergo-jr/assembly/ollo_rivet.png" alt="OLLO Rivet Assembly"></p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis.</p>
+</blockquote>
 <ul>
 <li>Use the OLLO Tool for the rivets, it is really convenient. This tool allows to put and remove the rivets easily.</li>
 </ul>
 <p><img src="../img/ergo-jr/assembly/ollo-tool.jpg" alt="OLLO Tool"></p>
 <ul>
 <li>Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favorite side).</li>
-<li>If you want, there are slots for getting the most beautifully wires and avoid damaging them.</li>
 </ul>
 <p><img src="../img/ergo-jr/assembly/xl320_gap.jpg" alt="image"></p>
 <ul>
@@ -757,6 +798,14 @@ The communication with the motor is TTL, thus configure the USB2Dynamixel in TTL
     
 
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+    
+
+    
     <script src="../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
     
 
@@ -794,7 +843,7 @@ The communication with the motor is TTL, thus configure the USB2Dynamixel in TTL
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-1","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-1","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"heading-anchors":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
