@@ -65,7 +65,7 @@
         data-chapter-title="Assembly of the Poppy Ergo Jr"
         data-filepath="assembly-guides/ergo-jr.md"
         data-basepath=".."
-        data-revision="Thu Mar 24 2016 00:54:45 GMT+0000 (UTC)"
+        data-revision="Thu Mar 24 2016 11:58:10 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -664,8 +664,11 @@ body {
 <p>First, configure one XL-320 motor as &quot;m1&quot;. To do that, connect it to your Raspberry-Pi as in the image below:</p>
 <p><img src="../img/ergo-jr/motorconfig.jpg" alt="XL320 configuration"></p>
 <p>Then, from the <a href="#TODO">assembly notebook</a>, you should run the cell #TODO. If you prefer the geek way, you can run from the Raspberry-Pi terminal command line:</p>
-<pre><code class="lang-bash">poppy-ergo-jr motorconfig m1
+<pre><code class="lang-bash">poppy-configure ergo-jr m1
 </code></pre>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> Poppy Ergo Jr motors are m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure.</p>
+</blockquote>
 <p>When it is done and everything went well, disconnect it from your Raspberry-Pi.</p>
 <p>Then, connect the longest cable to this motor. Connect a regular cable to the other side.</p>
 <p><img src="../img/ergo-jr/assembly/step-1-1.jpg" alt="Another Step"></p>
