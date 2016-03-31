@@ -65,7 +65,7 @@
         data-chapter-title="Build a robot"
         data-filepath="getting-started/build.md"
         data-basepath=".."
-        data-revision="Thu Mar 24 2016 17:41:19 GMT+0000 (UTC)"
+        data-revision="Thu Mar 31 2016 14:06:04 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -256,30 +256,38 @@
             
         </li>
     
-        <li class="chapter " data-level="3" data-path="assembly-guides/index.html">
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Assembly guides</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="assembly-guides/ergo-jr/index.html">
             
                 
-                    <a href="../assembly-guides/index.html">
+                    <a href="../assembly-guides/ergo-jr/index.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.</b>
+                            <b>3.1.</b>
                         
-                        Assembly guides
+                        Assemble the Ergo Jr
                     </a>
             
             
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1" data-path="assembly-guides/electronic-assembly.html">
+        <li class="chapter " data-level="3.1.1" data-path="assembly-guides/ergo-jr/electronic-assembly.html">
             
                 
-                    <a href="../assembly-guides/electronic-assembly.html">
+                    <a href="../assembly-guides/ergo-jr/electronic-assembly.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.1.</b>
+                            <b>3.1.1.</b>
                         
                         Electronic assembly
                     </a>
@@ -287,14 +295,14 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="assembly-guides/motor-configuration.html">
+        <li class="chapter " data-level="3.1.2" data-path="assembly-guides/ergo-jr/motor-configuration.html">
             
                 
-                    <a href="../assembly-guides/motor-configuration.html">
+                    <a href="../assembly-guides/ergo-jr/motor-configuration.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.2.</b>
+                            <b>3.1.2.</b>
                         
                         Motor configuration
                     </a>
@@ -302,16 +310,36 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="assembly-guides/ergo-jr.html">
+        <li class="chapter " data-level="3.1.3" data-path="assembly-guides/ergo-jr/mechanical-construction.html">
             
                 
-                    <a href="../assembly-guides/ergo-jr.html">
+                    <a href="../assembly-guides/ergo-jr/mechanical-construction.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>3.3.</b>
+                            <b>3.1.3.</b>
                         
-                        Assembly of the Poppy Ergo Jr
+                        Hardware construction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="assembly-guides/poppy-humanoid/index.html">
+            
+                
+                    <a href="../assembly-guides/poppy-humanoid/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Assemble the Poppy Humanoid
                     </a>
             
             
@@ -646,16 +674,22 @@ body {
 <p>Depending on the Poppy robots you are planning to use, the assembly time, required skills, tools and difficulty may vary a lot. Building an Ergo Jr should not take more than one hour and no specific tool is needed while assembling an entire Poppy Humanoid may take a few days and quite a lot of screws!</p>
 <p>This section intends to give you hints and an approach of some critical points so you aware of them before digging into the construction. We will also point to each dedicated chapter where you will find the resources and detailed step by step assembly procedure for each robot.</p>
 <h3 id="assembling-an-ergo-jr">Assembling an Ergo Jr</h3>
-<p><img src="../img/ergo-jr/bom.jpg" alt="Poppy Ergo Jr BOM">
-<!-- TODO: refaire une belle photo avec la vraie BOM --></p>
-<p>The Poppy Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each. You can find the complete list in the Chapter <a href="#TODO">Step by step assembly of an Ergo Jr</a>.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> You can find a full assembly documentation in the chapter <a href="../assembly-guides/ergo-jr/index.html">step by step assembly of an Ergo Jr</a>.</p>
+</blockquote>
+<!-- TODO: refaire une belle photo avec la vraie BOM -->
+<p><img src="../assembly-guides/ergo-jr/img/assembly/steps/ErgoJr_assembly.gif" alt="ergo-jr assembly"></p>
+<p>The Ergo Jr robot was designed to be a simple little robot, cheap and easy to use. The 3D parts were made so they can be easily printed on a basic 3D printer and the motors (6 XL-320 Dynamixel servos) are only 20$ each. </p>
 <p>The Ergo Jr is very easy to build and its end effector can be easily changed - you can choose among several tools: a lamp, a gripper, a pen holder...</p>
 <!-- TODO: image des differents outils -->
 <p>Thanks to OLLO rivets the robot is very simple to assemble. These rivets can be removed and added very quickly with the OLLO tool. It should not take more than one hour to entirely built it, which allows great design freedom.</p>
 <!-- TODO: image des rivets et du tool en action -->
 <p>Except from <strong>checking the motor orientation</strong>, there is not really any pitfall. If you are familiar with Lego bricks, you should be able to assemble an Ergo Jr without much problem! In any cases, the rivets are made to be as easy to assemble than to disassemble, so in case of problem you can just start over!</p>
-<p>Also make sure, to <strong>configure your motors</strong> before assembling the robot as it is harder to do after!</p>
+<p>Also make sure, to <a href="../assembly-guides/ergo-jr/motor-configuration.html"><strong>configure your motors</strong></a> before assembling the robot as it is harder to do after!</p>
 <h3 id="assembling-a-torso-or-a-humanoid">Assembling a Torso or a Humanoid</h3>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> You can find a full assembly documentation in the chapter <a href="../assembly-guides/poppy-humanoid/index.html">step by step assembly of a Poppy Humanoid</a>.</p>
+</blockquote>
 <p><img src="../img/humanoid/bom.jpg" alt="Poppy Humanoid BOM"></p>
 <p>Building a Poppy Torso or a Humanoid is more complex than a Ergo Jr but it is not really more complicated than building a Meccano or some Swedish furniture. It mainly consists on those few steps:</p>
 <!-- TODO: add links of the advanced doc -->
@@ -684,7 +718,7 @@ So be very careful and put the robot in a free space while testing it.</em></p>
 <li>Legs + Trunk (only for Humanoid version) <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/Poppy_Humanoid_assembly_instructions.md#3--legstorso-asembly" target="_blank">(Text instruction)</a> <a href="http://youtu.be/5i0xVlrJc-8" target="_blank">(Video demonstration)</a></li>
 <li>Head <a href="https://github.com/poppy-project/poppy-docs/blob/master/poppy-humanoid/assembly_doc/head_assembly.md" target="_blank">(Text instruction)</a></li>
 </ul>
-<p>As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. A detailed step by step assembly can be found in their dedicated Chapter <a href="#TODO">Step-by-step assembly of a Poppy Torso</a> or Chapter <a href="#TODO">Step-by-step assembly of a Poppy Humanoid</a>. </p>
+<p>As previously said, this section was just intended to give you an idea about what building a Torso or a Humanoid implies. </p>
 
                     
                     </section>

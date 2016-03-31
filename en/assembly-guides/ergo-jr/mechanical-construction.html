@@ -1,0 +1,848 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <!-- Start book Documentation of the Poppy Platform -->
+    <head>
+        <!-- head:start -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Hardware construction | Documentation of the Poppy Platform</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-richquotes/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-katex/katex.min.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-language-picker/plugin.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../../assembly-guides/poppy-humanoid/index.html" />
+    
+    
+    <link rel="prev" href="../../assembly-guides/ergo-jr/motor-configuration.html" />
+    
+
+        <!-- head:end -->
+    </head>
+    <body>
+        <!-- body:start -->
+        
+    <div class="book"
+        data-level="3.1.3"
+        data-chapter-title="Hardware construction"
+        data-filepath="assembly-guides/ergo-jr/mechanical-construction.md"
+        data-basepath="../.."
+        data-revision="Thu Mar 31 2016 14:06:04 GMT+0000 (UTC)"
+        data-innerlanguage="en">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="getting-started/index.html">
+            
+                
+                    <a href="../../getting-started/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Getting started
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="getting-started/build.html">
+            
+                
+                    <a href="../../getting-started/build.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Build a robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="getting-started/connect.html">
+            
+                
+                    <a href="../../getting-started/connect.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Connect to the robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="getting-started/program-the-robot.html">
+            
+                
+                    <a href="../../getting-started/program-the-robot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Program the robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="getting-started/visualize.html">
+            
+                
+                    <a href="../../getting-started/visualize.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Visualize
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="getting-started/example-of-projects.html">
+            
+                
+                    <a href="../../getting-started/example-of-projects.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Examples of projects
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="startup/index.html">
+            
+                
+                    <a href="../../startup/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Startup
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="startup/windows.html">
+            
+                
+                    <a href="../../startup/windows.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Write an ISO on Windows
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="startup/macos.html">
+            
+                
+                    <a href="../../startup/macos.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Write an ISO on Mac OSX
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="startup/linux.html">
+            
+                
+                    <a href="../../startup/linux.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Write an ISO on GNU/Linux
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Assembly guides</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="assembly-guides/ergo-jr/index.html">
+            
+                
+                    <a href="../../assembly-guides/ergo-jr/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Assemble the Ergo Jr
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="assembly-guides/ergo-jr/electronic-assembly.html">
+            
+                
+                    <a href="../../assembly-guides/ergo-jr/electronic-assembly.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.1.</b>
+                        
+                        Electronic assembly
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="assembly-guides/ergo-jr/motor-configuration.html">
+            
+                
+                    <a href="../../assembly-guides/ergo-jr/motor-configuration.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.2.</b>
+                        
+                        Motor configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.3" data-path="assembly-guides/ergo-jr/mechanical-construction.html">
+            
+                
+                    <a href="../../assembly-guides/ergo-jr/mechanical-construction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.3.</b>
+                        
+                        Hardware construction
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="assembly-guides/poppy-humanoid/index.html">
+            
+                
+                    <a href="../../assembly-guides/poppy-humanoid/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Assemble the Poppy Humanoid
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="programming/index.html">
+            
+                
+                    <a href="../../programming/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Programming
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="programming/snap.html">
+            
+                
+                    <a href="../../programming/snap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Programming with Snap!
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="programming/notebooks.html">
+            
+                
+                    <a href="../../programming/notebooks.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Usage of Jupyter notebooks
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="programming/python.html">
+            
+                
+                    <a href="../../programming/python.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Programming in Python
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="programming/rest.html">
+            
+                
+                    <a href="../../programming/rest.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Robots APIs
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="demo-activities/index.html">
+            
+                
+                    <a href="../../demo-activities/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Activities
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="demo-activities/snap4arduino.html">
+            
+                
+                    <a href="../../demo-activities/snap4arduino.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Link with Snap4Arduino
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="installation-for-advanced-users/index.html">
+            
+                
+                    <a href="../../installation-for-advanced-users/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Installation for advanced users
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="from-simulation-to-real-robot/index.html">
+            
+                
+                    <a href="../../from-simulation-to-real-robot/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        From simulation to real robot
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="from-simulation-to-real-robot/using-snap.html">
+            
+                
+                    <a href="../../from-simulation-to-real-robot/using-snap.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        Snap! on the real robot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="from-simulation-to-real-robot/using-jupyter.html">
+            
+                
+                    <a href="../../from-simulation-to-real-robot/using-jupyter.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        Program with Jupyter notebooks on the real robot
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="appendix/index.html">
+            
+                
+                    <a href="../../appendix/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Appendix
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="appendix/contribute.html">
+            
+                
+                    <a href="../../appendix/contribute.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Contribute
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="appendix/pypot.html">
+            
+                
+                    <a href="../../appendix/pypot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Pypot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="appendix/poppy-creature.html">
+            
+                
+                    <a href="../../appendix/poppy-creature.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Poppy-creature
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="appendix/poppy-ergo-jr.html">
+            
+                
+                    <a href="../../appendix/poppy-ergo-jr.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Poppy Ergo Jr
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="appendix/raspoppy.html">
+            
+                
+                    <a href="../../appendix/raspoppy.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        Raspoppy
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+    <a href="../../GLOSSARY.html" class="btn pull-left" aria-label="Glossary"><i class="fa fa-sort-alpha-asc"></i></a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../" >Documentation of the Poppy Platform</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <style>
+body {
+  counter-reset: h1 14;
+}
+</style>
+
+<h2 id="mechanical-assembly">Mechanical Assembly</h2>
+<h3 id="general-advices-and-warnings">General advices and warnings</h3>
+<!-- TODO: 
+* picture rivet black vs grey
+* ergo + wires
+-->
+<ul>
+<li>You can assemble all the rivets before the construction. You have to put the edges of the first part in the second part holes. You will thus be able to remove them easily if needed.</li>
+</ul>
+<p><img src="img/assembly/ollo_rivet.png" alt="OLLO Rivet Assembly"></p>
+<ul>
+<li>There are two kinds of rivets. The grey ones and the others. Grey rivets are longer to be able to be inserted in the motor axis, at the opposite side of the horn.</li>
+</ul>
+<p><img src="img/assembly/ollo_rivets_size.jpg" alt="OLLO Rivet size"></p>
+<ul>
+<li>Use the OLLO Tool for putting and removing rivets easily.</li>
+</ul>
+<p><img src="img/assembly/ollo-tool.jpg" alt="OLLO Tool"></p>
+<ul>
+<li>Do not forget to put wires between motors while building the robot! Each motor, except the last, must have two wires; one connected to the previous motor and the other to the next (no favourite side).</li>
+</ul>
+<ul>
+<li><strong>Always align the horn with the motor before assembling them!</strong> Otherwise your Poppy Ergo Jr will look all weird.</li>
+</ul>
+<p><img src="img/assembly/align-horn.png" alt="Align Horn"></p>
+<ul>
+<li>Every motor horns (black revolving circle) are <strong>facing the left side of the robot</strong>. It is a convention but it will define the orientation of your motors.</li>
+</ul>
+<p><img src="img/assembly/horns_on_left.jpg" alt="Horns on left side"></p>
+<h2 id="stepbystep-guide">Step-By-Step guide</h2>
+<h3 id="motor-configuration-for-all-steps">Motor configuration (for all steps)</h3>
+<p>You can configure your motors before, during or after the the mechanical assembly but it is highly advised to configure each motor one by one in the construction order :</p>
+<ul>
+<li>configure motor m1</li>
+<li>assemble the base and motor m1</li>
+<li>configure motor m2 </li>
+<li>...</li>
+</ul>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> To configure motors, you have to connect them separately one by one to the Raspberry Pi. If you try to configure a new motor wired to a previously configured motor, this will not work.</p>
+</blockquote>
+<p>Please consult the <a href="motor-configuration.html">motor configuration section</a> for more informations.</p>
+<h3 id="step-1">Step 1</h3>
+<p>First, <a href="motor-configuration.html">configure one XL-320</a> motor as &quot;m1&quot;. </p>
+<p>Mount the motor on the 3D printed base. </p>
+<p><img src="img/assembly/steps/step_1-2.jpg" alt="step 1"></p>
+<h3 id="step-2">Step 2</h3>
+<p>Configure the second motor, its name is &quot;m2&quot;.</p>
+<p>Mount the <em>long_U</em> part. Be careful of the orientation of the U, the horn must be oriented in the left.
+Mount the motor &quot;m2&quot; on top of the construction.</p>
+<p><img src="img/assembly/steps/step_3-4.jpg" alt="step 2"></p>
+<h3 id="step-3">Step 3</h3>
+<p>Configure a third motor: &quot;m3&quot;.</p>
+<p>Mount <em>horn2horn</em> and <em>horn2side</em> parts on motor &quot;m2&quot;, and mount &quot;m3&quot; on top of the construction.
+<img src="img/assembly/steps/step_5-6.jpg" alt="step 3"></p>
+<h3 id="step-4">Step 4</h3>
+<p>Configure the fourth motor: &quot;m4&quot;.</p>
+<p>Mount the <em>short_U</em> on it.
+<img src="img/assembly/steps/step_7-8.jpg" alt="step 4"></p>
+<p>Mount motor &quot;m4&quot; and the assembled <em>short_U</em> on top of the previous assembly. The nose of the motor should be on the other side of the base.
+<img src="img/assembly/steps/step_9-10.jpg" alt="step 4 bis"></p>
+<h3 id="step-5">Step 5</h3>
+<p>Configure the fifth motor: &quot;m5&quot;.</p>
+<p>Mount <em>horn2horn</em> and <em>horn2side</em> parts on motor &quot;m4&quot;, and mount &quot;m5&quot; on top of the construction.</p>
+<p><img src="img/assembly/steps/step_11-12-13.jpg" alt="step 5"></p>
+<h3 id="step-6--the-tool-of-your-choice">Step 6 - the tool of your choice</h3>
+<p>Configure the sixth motor: &quot;m6&quot;.</p>
+<p>To finish your Ergo Jr, you need to add a tool at its end. So first choose the tool you want depending on what you want to do.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> Tools they can be easily and quickly changed, so you can adapt it to the different activities.</p>
+</blockquote>
+<h4 id="lampshade-and-pen-holder">Lampshade and pen holder</h4>
+<p>Mount <em>horn2horn</em> and <em>horn2side</em> parts on motor &quot;m5&quot;, and mount &quot;m6&quot; on top of the construction.
+<img src="img/assembly/steps/step_14-16-17.jpg" alt="step 6"></p>
+<p>You can mount the pen holder or the lampshade on the motor &quot;m6&quot;.
+<img src="img/assembly/steps/step_18-19.jpg" alt="step 6 bis"></p>
+<h4 id="gripper">Gripper</h4>
+<p>Mount the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl" target="_blank"><em>gripper-fixation</em></a> between motors &quot;m5&quot; and &quot;m6&quot;.</p>
+<p>Mount <em>gripper-fixed_part</em> and <em>gripper-rotative_part</em> on motor &quot;m6&quot;.
+<!-- TODO closed picture of gripper--></p>
+<h3 id="step-7--fix-you-ergojr-to-the-base">Step 7 - fix you ergo-jr to the base</h3>
+<p>Mount you ergo-jr to the wood disk-support. </p>
+<p>Mount the Raspberry Pi to the disk support, and use 4 x M2.5x6mm screw to fix it.</p>
+<h3 id="step-8--electronics">Step 8 - electronics</h3>
+<p>Mount the support_camera part on the base. Fix the Raspberry Pi camera on it and move the camera flex cable between motor &quot;m1&quot; and the base.
+<img src="img/assembly/steps/step_21-22.jpg" alt="step 6"></p>
+<p>To fix the flex cable of the camera on the Raspberry Pi:</p>
+<ul>
+<li>open the camera connector by pulling on the tab </li>
+<li>make sure that connectors on the flex cable are facing away of the ethernet port</li>
+<li>push the flex on the port, and push the plastic tab down</li>
+</ul>
+<!-- TODO: add a closed picture of camera fix-->
+<h3 id="done">Done</h3>
+<p><img src="img/assembly/ergo-tool-2.jpg" alt="image"></p>
+<p>Grab your <a href="https://www.flickr.com/photos/poppy-project/16488256337/" target="_blank">favorite drink</a> and relax.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../../assembly-guides/ergo-jr/motor-configuration.html" class="navigation navigation-prev " aria-label="Previous page: Motor configuration"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../../assembly-guides/poppy-humanoid/index.html" class="navigation navigation-next " aria-label="Next page: Assemble the Poppy Humanoid"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../../gitbook/app.js"></script>
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-edit-link/plugin.js"></script>
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-github/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-language-picker/plugin.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-retina/retina.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-copy-code-button/toggle.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-1","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"heading-anchors":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        <!-- body:end -->
+    </body>
+    <!-- End of book Documentation of the Poppy Platform -->
+</html>
