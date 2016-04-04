@@ -65,7 +65,7 @@
         data-chapter-title="Program the robot"
         data-filepath="getting-started/program-the-robot.md"
         data-basepath=".."
-        data-revision="Thu Mar 31 2016 14:06:04 GMT+0000 (UTC)"
+        data-revision="Mon Apr 04 2016 07:05:30 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -533,14 +533,110 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="appendix/index.html">
+        <li class="chapter " data-level="8" data-path="software-libraries/index.html">
+            
+                
+                    <a href="../software-libraries/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Software libraries
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="software-libraries/pypot.html">
+            
+                
+                    <a href="../software-libraries/pypot.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        Pypot
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="software-libraries/poppy-creature.html">
+            
+                
+                    <a href="../software-libraries/poppy-creature.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        Poppy-creature
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="software-libraries/poppy-ergo-jr.html">
+            
+                
+                    <a href="../software-libraries/poppy-ergo-jr.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        Poppy Ergo Jr
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="software-libraries/poppy-humanoid.html">
+            
+                
+                    <a href="../software-libraries/poppy-humanoid.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        Poppy Humanoid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="software-libraries/poppy-torso.html">
+            
+                
+                    <a href="../software-libraries/poppy-torso.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        Poppy Torso
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="appendix/index.html">
             
                 
                     <a href="../appendix/index.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.</b>
+                            <b>9.</b>
                         
                         Appendix
                     </a>
@@ -549,14 +645,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="8.1" data-path="appendix/contribute.html">
+        <li class="chapter " data-level="9.1" data-path="appendix/contribute.html">
             
                 
                     <a href="../appendix/contribute.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.1.</b>
+                            <b>9.1.</b>
                         
                         Contribute
                     </a>
@@ -564,59 +660,14 @@
             
         </li>
     
-        <li class="chapter " data-level="8.2" data-path="appendix/pypot.html">
-            
-                
-                    <a href="../appendix/pypot.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.2.</b>
-                        
-                        Pypot
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.3" data-path="appendix/poppy-creature.html">
-            
-                
-                    <a href="../appendix/poppy-creature.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.3.</b>
-                        
-                        Poppy-creature
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.4" data-path="appendix/poppy-ergo-jr.html">
-            
-                
-                    <a href="../appendix/poppy-ergo-jr.html">
-                
-                        <i class="fa fa-check"></i>
-                        
-                            <b>8.4.</b>
-                        
-                        Poppy Ergo Jr
-                    </a>
-            
-            
-        </li>
-    
-        <li class="chapter " data-level="8.5" data-path="appendix/raspoppy.html">
+        <li class="chapter " data-level="9.2" data-path="appendix/raspoppy.html">
             
                 
                     <a href="../appendix/raspoppy.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>8.5.</b>
+                            <b>9.2.</b>
                         
                         Raspoppy
                     </a>
@@ -672,9 +723,11 @@ body {
 <h2 id="program-the-robot">Program the robot</h2>
 <p>In this section we will present the different options to program your robot ranging from the high level behaviors triggered using <a href="#using-snap">Snap!</a>, the visual programming language, to the low-level API written in <a href="#using-python">Python</a>.</p>
 <p>We will also say a few words on how you can interface Poppy robots with other devices or any programming language using <a href="#through-the-rest-api">Poppy&apos;s REST API</a>.</p>
-<p><strong>Note: As for the rest of the project, all our libraries are open source and available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</strong></p>
-<p><img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo">
-<img src="../img/logo/open-source.png" alt="OpenSource Logo"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> As for the rest of the project, all our libraries are open source and available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p>
+</blockquote>
+<p> <img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo" width="200"> 
+  <img src="../img/logo/open-source.png" alt="OpenSource Logo" width="200"> </p>
 <h3 id="using-snap">Using Snap<em>!</em></h3>
 <!-- TODO: Didier -->
 <h3 id="using-python">Using Python</h3>
@@ -688,10 +741,10 @@ jr.m3.goal_position = <span class="hljs-number">30</span>
 </code></pre>
 <!-- Note: "Notebook documents" or “notebooks”, all lower case -->
 <p>We are also big fan of the <a href="http://jupyter.org" target="_blank">Jupyter Project</a> and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We really think that this is an extremely powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.</p>
-<p><img src="../img/logo/jupyter.png" alt="Jupyter Logo"></p>
-<p>Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as <a href="#TODO-lien-notebook-de-notebook">notebooks</a>.</p>
+<p> <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100"> </p>
+<p>Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as <a href="../programming/notebooks.html">notebooks</a>.</p>
 <p><img src="../img/notebook-example.png" alt="Notebook example"></p>
-<p>An update gallery of notebooks can be found <a href="#TODO">here</a>.</p>
+<p>An update gallery of notebooks can be found <a href="../programming/notebooks.html">here</a>.</p>
 <h3 id="through-the-rest-api">Through the REST API</h3>
 <p>On top of the Snap<em>!</em> and Python options, it was really important for us to provide another way of accessing and controlling your robot accessible from any device or language. Thus, all our Poppy robots are providing a REST API, meaning that the most important features of the robot can be access through HTTP GET/POST requests.</p>
 <p>From a more practical point of view, this allows to:</p>

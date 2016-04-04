@@ -5,7 +5,7 @@
         <!-- head:start -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Snap! on the real robot | Documentation of the Poppy Platform</title>
+        <title>Poppy-creature | Documentation of the Poppy Platform</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -49,10 +49,10 @@
         
     
     
-    <link rel="next" href="../from-simulation-to-real-robot/using-jupyter.html" />
+    <link rel="next" href="../software-libraries/poppy-ergo-jr.html" />
     
     
-    <link rel="prev" href="../from-simulation-to-real-robot/index.html" />
+    <link rel="prev" href="../software-libraries/pypot.html" />
     
 
         <!-- head:end -->
@@ -61,9 +61,9 @@
         <!-- body:start -->
         
     <div class="book"
-        data-level="7.1"
-        data-chapter-title="Snap! on the real robot"
-        data-filepath="from-simulation-to-real-robot/using-snap.md"
+        data-level="8.2"
+        data-chapter-title="Poppy-creature"
+        data-filepath="software-libraries/poppy-creature.md"
         data-basepath=".."
         data-revision="Mon Apr 04 2016 07:05:30 GMT+0000 (UTC)"
         data-innerlanguage="en">
@@ -498,7 +498,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="7.1" data-path="from-simulation-to-real-robot/using-snap.html">
+        <li class="chapter " data-level="7.1" data-path="from-simulation-to-real-robot/using-snap.html">
             
                 
                     <a href="../from-simulation-to-real-robot/using-snap.html">
@@ -564,7 +564,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8.2" data-path="software-libraries/poppy-creature.html">
+        <li class="chapter active" data-level="8.2" data-path="software-libraries/poppy-creature.html">
             
                 
                     <a href="../software-libraries/poppy-creature.html">
@@ -717,12 +717,109 @@
                     
                         <p><style>
 body {
-  counter-reset: h1 25;
+  counter-reset: h1 29;
 }
 </style></p>
-<h2 id="using-snap">Using Snap<em>!</em></h2>
-<p>TODO</p>
+<h1 id="poppycreature-library">Poppy-creature library</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torson, Poppy Ergo Jr...). It links high level controls and pypot and Pypot, the generic, lower level library.</p>
+<p>It mainly contains the class definition of <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" target="_blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a> which takes a configuration and builds a <a href="https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py#L9" target="_blank">pypot.robot.robot.Robot</a> out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.</p>
+<p>The arguments you can provide are:</p>
+<ul>
+<li><code>base_path</code> default: None Path where the creature sources are. The
+librarie looks in the default PATH if not set.</li>
+<li><code>config</code> default: None Path to the configuration file with respect
+to the base-path</li>
+<li><code>simulator</code> default: None Possible values : &apos;vrep&apos; or &apos;poppy-simu&apos;.
+Defines if we are using a simulator (and which one) or a real robot.</li>
+<li><code>scene</code> default: None Path to the scene to load in the simulator.
+Only if simulator is vrep. Defaults to the scene present in the
+creature library if any (e.g. poppy_humanoid.ttt).</li>
+<li><code>host</code> default: &apos;localhost&apos; Hostname of the machine where the
+simulator runs. Only if simulator is not None.</li>
+<li><code>port</code> default: 19997 Port of the simulator. Only if simulator is not None.</li>
+<li><code>use_snap</code> default: False Should we launch the Snap! server</li>
+<li><code>snap_host</code> default: 0.0.0.0 Hostname of the Snap! server</li>
+<li><code>snap_port</code> default: 6969 Port of the Snap! server</li>
+<li><code>snap_quiet</code> default: True Should Snap! not output logs</li>
+<li><code>use_http</code> default: False Should we launch the HTTP server (for</li>
+<li><code>http_host</code> default: 0.0.0.0 Hostname of the HTTP server</li>
+<li><code>http_port</code> default: 8080 Port of the HTTP server</li>
+<li><code>http_quiet</code> default: True Should HTTP not output logs</li>
+<li><code>use_remote</code> default: False Should we launch the Remote Robot server</li>
+<li><code>remote_host</code> default: 0.0.0.0 Hostname of the Remote Robot server</li>
+<li><code>remote_port</code> default: 4242 Port of the Remote Robot server</li>
+<li><code>sync</code> default: True Should we launch the synchronization loop for motor communication</li>
+</ul>
+<p>The sources are available on <a href="https://github.com/poppy-project/poppy-creature" target="_blank">GitHub</a>.</p>
+<h2 id="poppy-services">Poppy services</h2>
+<p>Poppy-creature also provides a set of very useful services that can be launched directly from the command line inside your robot if you installed the soft from <a href="https://github.com/poppy-project/poppy_install" target="_blank">poppy_install</a> .
+Example:</p>
+<pre><code>    poppy-services poppy-ergo-jr --snap --no-browser
+</code></pre><p>This will launch the SnapRemoteServer for a real Poppy Ergo Jr robot.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> The <code>--no-browser</code> option avoid the automatic redirection to the <em>Snap!</em> webpage. 
+You can remove it if you use a computer with a GUI (e.g your laptop instead of the robot embedded board).</p>
+</blockquote>
+<p>Another example:</p>
+<pre><code>    poppy-services poppy-ergo-jr --poppy-simu
+</code></pre><p>It will open a <em>Snap!</em> windows for a simulated poppy-ergo-jr.</p>
+<p>The way to use it is:</p>
+<pre><code>poppy-services &lt;creature_name&gt; &lt;options&gt;
+</code></pre><p>the available options are:</p>
+<ul>
+<li><code>--vrep</code>: creates the specified creature for using with V-REP simulator</li>
+<li><code>--poppy-simu</code>: creates the specified creature for using with web simulator and also launches the HTTP server needed by poppy-simu. Poppy-simu is only available for poppy-erg-jr for now.</li>
+<li><code>--snap</code>: launches the Snap! server and directly imports the specific Poppy blocks.</li>
+<li><code>-nb</code> or <code>--no-browser</code>: avoid automatic start of Snap! in web
+browser, use only with --snap</li>
+<li><code>--http</code>: start a http robot server</li>
+<li><code>--remote</code>: start a remote robot server</li>
+<li><code>-v</code> or <code>--verbose</code>: start services in verbose mode (more logs)</li>
+</ul>
+<h2 id="create-your-own-poppy-creature">Create your own Poppy creature</h2>
+<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <a href="(https:/github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py#L9">pypot.robot.robot.Robot</a> from Pypot directly.</p>
+<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&apos;s library. It should contain a configuration file and a class that extends <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" target="_blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a>. You can then
+add your own properties and primitives.</p>
+<p>Example from Poppy Humanoid:</p>
+<pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PoppyHumanoid</span><span class="hljs-params">(AbstractPoppyCreature)</span>:</span>
+<span class="hljs-decorator">    @classmethod</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup</span><span class="hljs-params">(cls, robot)</span>:</span>
+        robot._primitive_manager._filter = partial(numpy.sum, axis=<span class="hljs-number">0</span>)
 
+        <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> robot.motors:
+            m.goto_behavior = <span class="hljs-string">&apos;minjerk&apos;</span>
+
+        <span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> robot.torso:
+            m.compliant_behavior = <span class="hljs-string">&apos;safe&apos;</span>
+
+        <span class="hljs-comment"># Attach default primitives:</span>
+        <span class="hljs-comment"># basic primitives:</span>
+        robot.attach_primitive(StandPosition(robot), <span class="hljs-string">&apos;stand_position&apos;</span>)
+        robot.attach_primitive(SitPosition(robot), <span class="hljs-string">&apos;sit_position&apos;</span>)
+
+        <span class="hljs-comment"># Safe primitives:</span>
+        robot.attach_primitive(LimitTorque(robot), <span class="hljs-string">&apos;limit_torque&apos;</span>)
+</code></pre>
+<p>Package your code it properly using <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" target="_blank">setuptools</a>.</p>
+<p>For a better integration with the Poppy installer scripts, please have in the root of your repo a folder named <em>software</em> containing:</p>
+<ul>
+<li>the installation files (setup.py, MANIFEST, LICENCE)</li>
+<li>a folder named poppy_yourcreaturename containing your actual code</li>
+</ul>
+<p>At the end, don&apos;t forget to share it to the community! Most interesting
+creatures will be added to this documentation!</p>
+<h2 id="installing">Installing</h2>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> poppy-creature library is a dependancy of any Poppy robots libraries, so you don&apos;t have to install it by hand in a normal case.</p>
+</blockquote>
+<p>To install the poppy-creature library, you can use pip:</p>
+<pre><code>    pip install poppy-creature
+</code></pre><p>Then you can update it with:</p>
+<pre><code>    pip install --upgrade poppy-creature
+</code></pre><p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a href="https://github.com/poppy-project/poppy-creature" target="_blank">GitHub</a> and install them with (in the software folder):</p>
+<pre><code>    python setup.py install
+</code></pre>
                     
                     </section>
                 
@@ -732,10 +829,10 @@ body {
         </div>
 
         
-        <a href="../from-simulation-to-real-robot/index.html" class="navigation navigation-prev " aria-label="Previous page: From simulation to real robot"><i class="fa fa-angle-left"></i></a>
+        <a href="../software-libraries/pypot.html" class="navigation navigation-prev " aria-label="Previous page: Pypot"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../from-simulation-to-real-robot/using-jupyter.html" class="navigation navigation-next " aria-label="Next page: Program with Jupyter notebooks on the real robot"><i class="fa fa-angle-right"></i></a>
+        <a href="../software-libraries/poppy-ergo-jr.html" class="navigation navigation-next " aria-label="Next page: Poppy Ergo Jr"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
