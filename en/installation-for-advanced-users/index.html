@@ -65,7 +65,7 @@
         data-chapter-title="Installation for advanced users"
         data-filepath="installation-for-advanced-users/README.md"
         data-basepath=".."
-        data-revision="Tue Apr 05 2016 01:43:00 GMT+0000 (UTC)"
+        data-revision="Tue Apr 05 2016 09:48:06 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -258,7 +258,15 @@
     
         <li class="chapter " data-level="3" data-path="assembly-guides/index.html">
             
-            <span><b>3.</b> Assembly guides</span>
+                
+                    <a href="../assembly-guides/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Assembly guides
+                    </a>
             
             
             <ul class="articles">
@@ -347,7 +355,15 @@
     
         <li class="chapter " data-level="3.3" data-path="assembly-guides/poppy-torso/index.html">
             
-            <span><b>3.3.</b> Assemble the Poppy Torso</span>
+                
+                    <a href="../assembly-guides/poppy-torso/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Assemble the Poppy Torso
+                    </a>
             
             
         </li>
@@ -749,24 +765,25 @@ body {
 <p>Connect to your board in SSH:</p>
 <ul>
 <li>For the Raspberry Pi: <code>ssh pi@raspberrypi.local</code>, password=raspberry.</li>
-<li>For the Odroid U3: <code>ssh odroid@odroid.local</code>, password=odroid.</li>
+<li>For the Odroid U3 and XU4: <code>ssh odroid@odroid.local</code>, password=odroid.</li>
 </ul>
 <p>Download the install script:</p>
-<pre><code class="lang-bash">wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh
+<pre><code class="lang-bash">wget https://raw.githubusercontent.com/poppy-project/poppy-installer/master/poppy-configure.sh -O poppy-configure.sh
 </code></pre>
 <p>This script takes two parameters:</p>
+<p>`poppy-configure.sh <board> <creature></creature></board></p>
 <ul>
 <li>The board name {odroid, rpi}.</li>
 <li>The creature name {poppy-humanoid, poppy-torso, poppy-ergo-jr}.</li>
 </ul>
 <p>To build the system for a Poppy Ergo Jr on a Raspberry Pi, one would run:</p>
-<pre><code class="lang-bash">bash poppy-configure.sh rpi poppy-ergo-jr
+<pre><code class="lang-bash">sudo bash poppy-configure.sh rpi poppy-ergo-jr
 </code></pre>
 <p>Reboot after the end of the installation.<br>The hostname, default user and password will be all set to &quot;poppy&quot; (ssh poppy@poppy.local password=poppy).<br>You can test your installation with the web interface in your web browser <a href="http://poppy.local" target="_blank">http://poppy.local</a>.</p>
 <p>If there is any issue don&apos;t hesitate to post a message on the <a href="https://github.com/poppy-project/poppy-installer/issues" target="_blank">issue tracker on GitHub</a> or in the dedicated section of <a href="https://forum.poppy-project.org/c/support" target="_blank">the forum</a>.</p>
 <h3 id="install-python-and-poppy-software-on-windows">Install Python and Poppy software on Windows</h3>
 <!-- TODO ajouter Schéma installation Thibault -->
-<p>If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see <a href="lientodo">these videos</a>.</p>
+<p>If you want a step by step screencast of the installation of Anaconda and V-REP on Windows, you can see <a href="https://www.youtube.com/watch?v=kw9lQwdOlOs&amp;list=PLT6NsCw8bf8T5FG2LGk2y_KTdexi8A5BN" target="_blank">these videos</a>.</p>
 <h4 id="install-python">Install Python</h4>
 <p>We encourage the use of the Anaconda Python distribution.<br>However, if you already installed a Python distribution like Canopy (shipped with scientific packages), you can directly <a href="#install-poppy-software">install Poppy software</a>.</p>
 <h5 id="anaconda">Anaconda</h5>

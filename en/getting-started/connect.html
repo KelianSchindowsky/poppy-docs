@@ -65,7 +65,7 @@
         data-chapter-title="Connect to the robot"
         data-filepath="getting-started/connect.md"
         data-basepath=".."
-        data-revision="Tue Apr 05 2016 01:43:00 GMT+0000 (UTC)"
+        data-revision="Tue Apr 05 2016 09:48:06 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -258,7 +258,15 @@
     
         <li class="chapter " data-level="3" data-path="assembly-guides/index.html">
             
-            <span><b>3.</b> Assembly guides</span>
+                
+                    <a href="../assembly-guides/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Assembly guides
+                    </a>
             
             
             <ul class="articles">
@@ -347,7 +355,15 @@
     
         <li class="chapter " data-level="3.3" data-path="assembly-guides/poppy-torso/index.html">
             
-            <span><b>3.3.</b> Assemble the Poppy Torso</span>
+                
+                    <a href="../assembly-guides/poppy-torso/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Assemble the Poppy Torso
+                    </a>
             
             
         </li>
@@ -727,44 +743,52 @@ body {
   counter-reset: h1 2;
 }
 </style></p>
-<h2 id="start-and-connect-the-robot">Start and connect the robot</h2>
+<h1 id="start-and-connect-the-robot">Start and connect the robot</h1>
 <p>In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it. We will focus here on real robots but we will also point to the advanced sections to follow if you are using a simulated robot.</p>
-<h3 id="setup-the-software">Setup the software</h3>
+<h2 id="setup-the-software">Setup the software</h2>
 <p>Poppy creatures come with an embedded board which job is to control motors and access the sensors. This computer can be access through a web interface which makes it easy to control the robot from your own computer or a tablet without having to locally install anything specific.</p>
 <p>There are two ways to setup the board for your Poppy:</p>
 <ul>
-<li><a href="#easy-way-use-the-poppy-sd-card"><strong>the easy way</strong></a>: use a pre-made ISO image of the Poppy operating system and write it to an the SD-card</li>
+<li><a href="#easy-way-use-the-poppy-sdcard"><strong>the easy way</strong></a>: use a pre-made ISO image of the Poppy operating system and write it to an the SD-card</li>
 <li><a href="#advanced-way-diy-install-everything-from-scratch"><strong>the hard way for advanced users</strong></a>: install everything from scratch</li>
 </ul>
-<p><em>Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="#TODO">TODO USE SIMU</a> will guide you through all the detailed steps.</em></p>
-<h4 id="easy-way-use-the-poppy-sdcard">Easy way: use the Poppy SD-card</h4>
+<p><em>Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="../installation-for-advanced-users/index.html">Installation for advanced users</a> will guide you through all the detailed steps.</em></p>
+<h3 id="easy-way-use-the-poppy-sdcard">Easy way: use the Poppy SD-card</h3>
 <p>The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.</p>
-<p>The images can be found in the <a href="#TODO">github of the project</a>:</p>
+<p>The images can be found in the release of each creatures:</p>
 <ul>
-<li><a href="#TODO">for the ErgoJr</a></li>
-<li><a href="#TODO">for the Torso</a></li>
-<li><a href="#TODO">for the Humanoid</a></li>
+<li><a href="https://github.com/poppy-project/poppy-ergo-jr/releases" target="_blank">for the Poppy ErgoJr</a></li>
+<li><a href="https://github.com/poppy-project/poppy-torso/releases" target="_blank">for the Poppy Torso</a></li>
+<li><a href="https://github.com/poppy-project/poppy-humanoid/releases/" target="_blank">for the Poppy Humanoid</a></li>
 </ul>
-<p>They can be written to a SD-card (at least 8 Go) by using classical utility tools. Details can be found on the procedure of <!-- TODO :lien interne -->
+<p>They can be written to a SD-card (at least 8 Go) by using classical utility tools.
 One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.</p>
-<h4 id="advanced-way-diy-install-everything-from-scratch">Advanced way: DIY, install everything from scratch</h4>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> More details can be found in the <a href="../startup/index.html">startup section</a>.</p>
+</blockquote>
+<h3 id="advanced-way-diy-install-everything-from-scratch">Advanced way: DIY, install everything from scratch</h3>
 <p>The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:</p>
 <ul>
 <li>You are <strong>working with a simulated robot</strong> and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,</li>
 <li>you want to customize the environment,</li>
 <li>or simply if you like to understand how it works.</li>
 </ul>
-<p><strong>Warning:</strong> <em>We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.</em></p>
-<p><img src="../img/linux.jpg" alt="Linux"></p>
-<p><strong>The entire procedure is detailed in the <a href="installation-for-advanced-users/README.md">Installation for advanced users</a>.</strong> Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.</p>
+</blockquote>
+<!-- ![Linux](../img/linux.jpg) -->
+<p>Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:</p>
 <ul>
 <li>Customize a <a href="https://www.raspbian.org" target="_blank">Raspbian</a> install for Poppy (setup a user/hostname...).</li>
 <li>Setup the Poppy utility tools (for install/update)</li>
 <li>Install the <a href="https://www.continuum.io/why-anaconda" target="_blank">Python Anaconda distribution</a>.</li>
-<li>Install the <a href="TODO pypot/poppy-creature/poppy-/*">python libraries</a>) for Poppy.</li>
+<li>Install the <a href="../software-libraries/index.html">python libraries</a>) for Poppy.</li>
 <li>Setup the sensors for your creature.</li>
 <li>Install the web server for the control and monitoring interface.</li>
 </ul>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> More details can be found in the <a href="../installation-for-advanced-users/index.html">Installation for advanced users section</a>.</p>
+</blockquote>
 <h3 id="setup-the-network">Setup the network</h3>
 <p>Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.</p>
 <p>Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow to do that.</p>
