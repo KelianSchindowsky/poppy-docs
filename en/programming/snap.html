@@ -45,6 +45,8 @@
         
     
     
+        <link rel="stylesheet" href="../styles/website.css">
+    
 
         
     
@@ -65,7 +67,7 @@
         data-chapter-title="Programming with Snap!"
         data-filepath="programming/snap.md"
         data-basepath=".."
-        data-revision="Tue Apr 05 2016 09:48:06 GMT+0000 (UTC)"
+        data-revision="Wed Apr 06 2016 00:47:58 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -668,14 +670,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="9.1" data-path="appendix/contribute.html">
+        <li class="chapter " data-level="9.1" data-path="appendix/network.html">
+            
+                
+                    <a href="../appendix/network.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        Network
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="appendix/contribute.html">
             
                 
                     <a href="../appendix/contribute.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>9.1.</b>
+                            <b>9.2.</b>
                         
                         Contribute
                     </a>
@@ -683,16 +700,16 @@
             
         </li>
     
-        <li class="chapter " data-level="9.2" data-path="appendix/raspoppy.html">
+        <li class="chapter " data-level="9.3" data-path="appendix/faq.html">
             
                 
-                    <a href="../appendix/raspoppy.html">
+                    <a href="../appendix/faq.html">
                 
                         <i class="fa fa-check"></i>
                         
-                            <b>9.2.</b>
+                            <b>9.3.</b>
                         
-                        Raspoppy
+                        FAQ
                     </a>
             
             
@@ -747,18 +764,59 @@ body {
 <p>Snap<em>!</em> is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.</p>
 <p>Snap<em>!</em> was inspired by Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch&apos;s features.</p>
-<p>Snap<em>!</em> is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html" target="_blank">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.2.zip" target="_blank">copy of the website</a> in your personal computer and open the <code>snap.html</code> file in your browser.</p>
-<p><strong>Note: Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a>(which is very similar to Chrome without tracking tools), or Google Chrome.</strong></p>
+<p>Snap<em>!</em> is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html" target="_blank">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/v4.0.6.zip" target="_blank">copy of the website</a> in your personal computer and open the <code>snap.html</code> file in your browser.</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a> (which is very similar to Chrome without tracking tools), or Google Chrome.**</p>
+</blockquote>
 <h2 id="introduction-to-snap-programming">Introduction to Snap<em>!</em> programming</h2>
 <p>This chapter will focus on things necessary to understand in Snap<em>!</em> for using Poppy creatures.</p>
 <p>If you want a well designed online lesson on Snap<em>!</em> we strongly encourage you to look at the <a href="http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html" target="_blank">&quot;Beauty and Joy of Computing&quot;</a> (BJC) course made by the University of Berkeley for New York high school students.</p>
 <p>Some of the snapshots and concepts of BJC have been used for writing this chapter.</p>
 <h3 id="connect-your-robot-to-snap">Connect your robot to Snap<em>!</em></h3>
-<h4 id="with-a-simulated-robot-with-vrep">With a simulated robot with V-REP</h4>
-<h4 id="with-a-tangible-robot">With a tangible robot</h4>
-<p>Open the web interface of your robot in your web browser.
-Click on the &quot;Start Snap<em>!</em> link&quot;; it will start the python REST API to the robot and open the Snap<em>!</em> interface.</p>
-<p>Click on the file icon -&gt; Examples -&gt; click on &quot;pypot snap blocks&quot; and the &quot;open&quot; button.</p>
+<h4 id="if-you-use-a-simulated-robot-on-vrep">If you use a simulated robot on V-REP</h4>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the <a href="../installation-for-advanced-users/index.html">installation for advanced users section</a>.</p>
+</blockquote>
+<p>First open V-REP.</p>
+<p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
+<pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --vrep
+</code></pre>
+<p><em>Substitute &apos;poppy-ergo-jr&apos; with &apos;poppy-humanoid&apos; or &apos;poppy-torso&apos; to launch respectively a Poppy Humanoid or a Poppy Torso</em>.</p>
+<p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
+If it is not automatically done, you can open Snap with preloaded blocks at <a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.</p>
+</blockquote>
+<p><strong>Alternative method</strong>:
+Instead of using <code>poppy-service</code> you can start it in full python:</p>
+<pre><code class="lang-python"><span class="hljs-comment"># use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want</span>
+<span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
+poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
+</code></pre>
+<h4 id="if-you-use-a-simulated-robot-on-poppysimu-web-viewer">If you use a simulated robot on poppy-simu (web viewer)</h4>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> You need to have installed Poppy software libraries on your computer. If it is not done, go to the <a href="../installation-for-advanced-users/index.html">installation for advanced users section</a>.</p>
+</blockquote>
+<p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
+<pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --poppy-simu
+</code></pre>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.</p>
+</blockquote>
+<p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr. 
+If it is not automatically done, you can open Snap with preloaded blocks at <strong><a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></strong> and the robot viewer at <strong><a href="http://simu.poppy-project.org/poppy-ergo-jr" target="_blank">simu.poppy-project.org/poppy-ergo-jr</a></strong>.</p>
+<p><strong>Alternative method</strong>:
+Instead of using <code>poppy-service</code> you can start it in full python:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
+poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;poppy-simu&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
+</code></pre>
+<h4 id="if-you-have-a-tangible-robot">If you have a tangible robot</h4>
+<p>First, you must be connected to the same network LAN area than your robot (e.g. on the same router or Wifi).</p>
+<p>You have to go on the web homepage of your robot with its URL. You can use its IP address (for example <a href="http://192.168.1.42" target="_blank">http://192.168.1.42</a>) if you have a way to know it or its hostname like <a href="http://poppy.local" target="_blank">http://poppy.local</a>. To find its IP address you can see it in your router administration web page, or with a network scanner like <a href="http://www.overlooksoft.com/download" target="_blank">&quot;Fing&quot;</a> (for smartphone and desktop OS). To use directly its hostname <a href="http://poppy.local" target="_blank">http://poppy.local</a> you must have a Zeroconf software installed on your computer (aka <a href="https://support.apple.com/kb/DL999?locale=en_US" target="_blank">&quot;Bonjour print services for Windows&quot;</a> if you are running Windows).</p>
+<p>The home page of your poppy creature should look like the snapshot below:
+<img src="../img/snap/homepage.png" alt="find blocks"></p>
+<p>Click on the &quot;Start Snap!&quot; link to open the Snap<em>!</em> interface at start the connection with the Poppy robot.</p>
+<p>Poppy special blocks are stored in the Examples. Go to &quot;file&quot; icon -&gt; open -&gt; Examples -&gt; click on &quot;Poppy blocks&quot;. It may take some time to load the blocks (~5-15 seconds), be patient.</p>
 <h3 id="interface-and-general-ideas">Interface and general ideas</h3>
 <h3 id="saving-in-snap">Saving in Snap<em>!</em></h3>
 <p>There are three ways of saving a project in Snap<em>!</em></p>
@@ -807,21 +865,11 @@ This file describe all your Snap<em>!</em> project in a a simple file. It&apos;s
 <p>Every Poppy block in Snap<em>!</em> begins by a robot icon. So you can search all of them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.
 <img src="../img/snap/find_blocks.png" alt="find blocks">
 <img src="../img/snap/find_blocks2.png" alt="find blocks"></p>
-<h3 id="first-steps-with-snap-and-a-poppy-creature">First steps with Snap<em>!</em> and a Poppy creature</h3>
-<h4 id="test-the-connection-between-snap-and-your-creature">Test the connection between Snap<em>!</em> and your creature</h4>
-<h5 id="if-you-are-using-a-tangible-robot">If you are using a tangible robot</h5>
-<p>First, you must be connected to the same network LAN area than your robot (e.g. on the same router).</p>
-<p>You have to go on the web homage of your robot with its URL. You can use its IP address (for example <a href="http://192.168.1.42" target="_blank">http://192.168.1.42</a>) if you have a way to know it or its hostname like <a href="http://poppy.local" target="_blank">http://poppy.local</a>. To find its IP address you can see it in your router administration web page, or with a network scanner like <a href="http://www.overlooksoft.com/download" target="_blank">&quot;Fing&quot;</a> (for smartphone and desktop OS). To use directly its hostname <a href="http://poppy.local" target="_blank">http://poppy.local</a> you must have a <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">Zeroconf</a> software installed on your computer, install &quot;Bonjour print services for Windows&quot; if you are running a Windows OS.</p>
-<p>The home page of your poppy creature should look like the snapshot below:
-<img src="../img/snap/homepage.png" alt="find blocks"></p>
-<p>Click on the &quot;Start Snap!&quot; link to open the Snap<em>!</em> interface at start the connection with the Poppy robot.</p>
-<p>Poppy special blocks are stored in the Examples. Go to &quot;file&quot; icon -&gt; open -&gt; Examples -&gt; click on &quot;Poppy blocks&quot;. It may take some time to load the blocks (~5-15 seconds), be patient.</p>
-<h5 id="if-you-are-using-the-vrep-simulator">If you are using the V-REP simulator</h5>
-<p>Open V-REP, open a terminal (called <em>Command Prompt</em> on Windows), type and press Enter to execute the command below:</p>
-<p><code>poppy-services --snap --vrep poppy-torso</code></p>
-<p><em>Substitute &apos;poppy-torso&apos; with &apos;poppy-humanoid&apos; or &apos;poppy-ergojr&apos; to launch respectively a Poppy Humanoid or a Poppy Ergo Jr</em>.</p>
-<p>If you have issues, look at the <!-- TODO --> section to see have more detailed informations.</p>
-<p>After having executed this command a tab in your web browser should have be opened to Snap<em>!</em> have loaded Poppy blocks.</p>
+<!-- ### First steps with Snap_!_ and a Poppy creature
+
+#### Test the connection between Snap_!_ and your creature
+
+ -->
 <h4 id="network">Network</h4>
 <p>First test your connection with the (tangible or simulated) robot with the &quot;test connection&quot; block.
 <img src="../img/snap/test_connection.png" alt="test connection">.
