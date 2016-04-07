@@ -67,7 +67,7 @@
         data-chapter-title="Visualize"
         data-filepath="getting-started/visualize.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 12:45:40 GMT+0000 (UTC)"
+        data-revision="Thu Apr 07 2016 14:18:03 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -762,11 +762,18 @@ body {
 </style></p>
 <h2 id="visualize-the-robot-in-a-simulator">Visualize the robot in a simulator</h2>
 <h3 id="simulated-poppy-creatures">Simulated Poppy Creatures</h3>
-<p>Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are also available.</p>
-<p>At the moment, only Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.</p>
-<p><strong>Note: If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.</strong></p>
-<p>Indeed, while those libraries are already installed within the physical robots, they are not integrated in the simulators. More detailed of what you will have to do is given in the <a href="#using-v-rep">section below</a>.</p>
-<p>Moreover, you will not have access to the robot web interface, but you will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap<em>!</em> server).</p>
+<p>Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.</p>
+<p>Connection with two main &quot;simulators&quot; were develop:</p>
+<ul>
+<li>using <a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a>: a virtual robot experimentation platform</li>
+<li>using <a href="http://simu.poppy-project.org" target="_blank">a 3D web viewer</a></li>
+</ul>
+<p>At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP.</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.</p>
+</blockquote>
+<p>While the physical robots come with libraries pre-installed, they are not integrated in the simulators. More detailed of what you will have to do is given in the <a href="#using-v-rep">section below</a>.</p>
+<p>You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or use the Snap<em>!</em> server).</p>
 <p>This allows the development and test of programs without having a real robot. This is particularly useful:</p>
 <ul>
 <li>To discover and try the robot possibilities without having to spend money.</li>
@@ -801,6 +808,7 @@ body {
 </ul>
 <p><img src="../img/torso/explauto-vrep.png" alt="Torso V-REP"><img src="../img/torso/explauto-res.png" alt="Torso Explauto Res"></p>
 <p><em>Note: Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world.</em></p>
+<h3 id="using-the-web-visualisator">Using the web visualisator</h3>
 
                     
                     </section>
@@ -872,7 +880,7 @@ body {
 
 <script>
 require(["gitbook"], function(gitbook) {
-    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-1","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"heading-anchors":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    var config = {"github":{"url":"https://github.com/poppy-project/poppy-docs"},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"ga":{"token":"UA-44384879-5","configuration":"auto"},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"richquotes":{},"heading-anchors":{},"katex":{},"language-picker":{"grid-columns":3},"retina":{},"numbered-headings":{},"copy-code-button":{},"todo":{},"youtube":{},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
     gitbook.start(config);
 });
 </script>
