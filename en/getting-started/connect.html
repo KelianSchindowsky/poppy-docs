@@ -67,7 +67,7 @@
         data-chapter-title="Connect to the robot"
         data-filepath="getting-started/connect.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 11:12:57 GMT+0000 (UTC)"
+        data-revision="Thu Apr 07 2016 12:12:18 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -809,15 +809,15 @@ One the SD-card is ready, just insert it into the board. Then when you plug your
 <li>Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).</li>
 <li>Directly connect your robot to your computer using an ethernet cable.</li>
 </ul>
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
 <p> While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work. </p>
 </blockquote>
 <p>To found the address of your robot on the network we use the standard <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">Zeroconf protocol</a>. It allows you to use the robot hostname: <em>&quot;poppy.local&quot;</em> as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Bonjour Print Services</em></a> on Windows.
 If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.</p>
 <p>To check that everything is setup correctly, you can go to the following url using your favorite web browser: <a href="http://poppy.local" target="_blank">http://poppy.local/</a>. You can replace <em>poppy.local</em> by the IP address of your robot (something similar as <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a>).</p>
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
 <p> Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.</p>
-<p><strong>Caution:</strong> If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.</p>
+<p><strong>Caution</strong> If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.</p>
 </blockquote>
 <h3 id="use-the-web-interface">Use the web interface</h3>
 <p>One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:</p>
