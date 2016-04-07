@@ -67,7 +67,7 @@
         data-chapter-title="Getting started"
         data-filepath="getting-started/README.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 09:41:16 GMT+0000 (UTC)"
+        data-revision="Thu Apr 07 2016 10:13:51 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -772,58 +772,62 @@ body {
 <p>All sources of the Poppy Project (software and hardware) are available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p>
 <p>The Poppy project has been originally designed at <a href="http://www.inria.fr/equipes/flowers/" target="_blank">Inria Flowers</a>.</p>
 <h2 id="the-poppy-creatures">The Poppy creatures</h2>
-<p>Poppy creatures are open-source robots, available for download and modification (<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a> for the hardware and <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a> for software). They were designed with the same principles in mind.</p>
+<p>Poppy creatures are open-source robots, available for download and modification (<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a> for the hardware and <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a> for the software). They were designed with the same principles in mind.</p>
 <p>All Poppy creatures:</p>
 <ul>
 <li>are made from pieces of printable 3D and Dynamixel motors,</li>
 <li>use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),</li>
 <li>are based on a Python library, <a href="../software-libraries/pypot.html">pypot</a>, allowing to control Dynamixel servomotors in an easy way,</li>
-<li>have a simulated version available (based on V-REP),</li>
-<li>can be controlled using a visual programming language (<a href="http://snap.berkeley.edu" target="_blank">Snap!</a> a variation of Scratch) and a textual language <a href="https://www.python.org" target="_blank">Python</a>. They are also programmable through a REST API, which enables the control with other programming language (connection for Matlab and Processing already exists) - see Chapter #TODO for details,</li>
+<li>have a simulated version available (based on <a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a>),</li>
+<li>can be controlled using a visual programming language (<a href="http://snap.berkeley.edu" target="_blank">Snap!</a> a variation of Scratch) and a textual language <a href="https://www.python.org" target="_blank">Python</a>. They are also programmable through a REST API, which enables the control with other programming language,</li>
 <li>come with associated documentation, tutorials, examples, pedagogical activities.</li>
 </ul>
-<p>They can be used as it is, or hacked to explore the shape of novel legs, arms, hands...</p>
-<p>You can buy a full Poppy Creature robot from our <a href="http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform" target="_blank">official retailer</a>.</p>
-<p>You can also get all the parts yourself by following the bill of materials (see below).</p>
+<p>They can be used as it is, or hacked to explore new shapes, add sensors, etc...</p>
+<p>To get your own Poppy robot, you can either:</p>
+<ul>
+<li>Get all the parts yourself by following the bill of materials (see below).</li>
+<li>Buy a full Poppy robotic kit from our <a href="http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform" target="_blank">official retailer</a>.</li>
+</ul>
 <h3 id="poppy-ergo-jr">Poppy Ergo Jr</h3>
-<p>The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with 3D-printed parts simple to design.</p>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.</p>
 <p><img src="../assembly-guides/ergo-jr/img/vecto.png" alt="Poppy Ergo Jr"></p>
-<p>The 3D parts were made so they can be easily printed on a basic 3D printer and the motors are only 20 &#x20AC; each. Its electronic card access is simple. It makes it easy to connect extra sensors and is perfect for pedagogical purposes.</p>
-<p>You can choose among several tools to use for the end of its arm:</p>
+<p>The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20&#x20AC; each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.</p>
+<p>You can choose among three tools at the end of its arm:</p>
 <ul>
 <li>A lamp.</li>
 <li>A gripper.</li>
-<li>A pen holder...</li>
+<li>A pen holder.</li>
 </ul>
-<p>Rivets make them easy to change, depending on the type of activities you are planning.</p>
+<p>The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.</p>
 <p><img src="../assembly-guides/ergo-jr/img/ergo_tools.gif" alt="Ergo Jr tools"></p>
-<p>The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties.</p>
-<p>Its low price, simple assembly, and easy control make it suited for educational purpose.</p>
-<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md" target="_blank">bill of materials</a> (BOM) and printing the <a href="https://github.com/poppy-project/poppy-ergo-jr/releases/" target="_blank">3D files</a> available in the STL format.</p>
-<p>For more informations, check the <a href="../assembly-guides/ergo-jr/index.html">assembly guide of the Ergo Jr</a></p>
+<p>The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-ergo-jr/releases/" target="_blank">3D parts</a> available in the STL format.</p>
+<p>For more information, check the <a href="../assembly-guides/ergo-jr/index.html">assembly guide of the Ergo Jr</a>.</p>
 <h3 id="poppy-humanoid">Poppy Humanoid</h3>
-<p>It is a 25-degrees of freedom humanoid robot with a fully actuated torso. Used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
-<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md" target="_blank">bill of materials</a> (BOM) and printing the <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D files</a> available as STL, STEP and Solidworks 2014 format.</p>
+<p>It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D parts</a> available as STL, STEP and Solidworks 2014 format.</p>
 <p><img src="../img/humanoid/vecto.png" alt="Poppy Humanoid Vecto"></p>
 <h3 id="poppy-torso">Poppy Torso</h3>
-<p>It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is more affordable than the complete Poppy Humanoid, which makes it more suitable to uses in an educational, associative and makers context. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).</p>
+<p>It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).</p>
 <p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md" target="_blank">bill of material</a>. The <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D models</a> for the parts are the same as Poppy Humanoid, without the legs and with an extra <a href="https://github.com/poppy-project/robot-support-toolbox/" target="_blank">suction cup support</a>.</p>
 <p><img src="../img/torso/vecto.png" alt="Poppy Torso Vecto"></p>
 <h3 id="other-interesting-poppy-creatures">Other interesting Poppy Creatures</h3>
-<p>A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in this section below.</p>
+<p>A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.</p>
 <h4 id="poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</h4>
 <p>Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.</p>
-<!-- TODO: belle photo de Poppy Right Arm -->
-<p>The project was realized during an internship at Inria Flowers by <a href="https://github.com/joelortizsosa" target="_blank">Joel Ortiz Sosa</a>. Find more info and the sources in its <a href="https://github.com/poppy-project/poppy-6dof-right-arm" target="_blank">repository</a>.</p>
+<p><img src="poppy-right-arm.jpg" alt=""></p>
+<p>The project was realized during an internship at Inria Flowers by <a href="https://github.com/joelortizsosa" target="_blank">Joel Ortiz Sosa</a>. Find more info and the sources in the <a href="https://github.com/poppy-project/poppy-6dof-right-arm" target="_blank">repository</a>.</p>
 <h4 id="small-and-lowcost-humanoids">Small and low-cost humanoids</h4>
 <h5 id="heol">Heol</h5>
-<p>Heol - meaning &quot;sun&quot; in Breton - is a humanoid robot 34 cm tall made by association <a href="http://heol.io/" target="_blank">Heol robotics</a>. 23 motors compose it, all other parts are 3D printed. It also uses the Pypot library for its movements.</p>
-<p>Heol&apos;s purpose is to put a smile on ill children&apos;s faces. It has the ability to be an educational tool by becoming a learning support materials such as programming and mechanical design.</p>
+<p>Heol - meaning &quot;sun&quot; in Breton - is a 34cm tall humanoid robot made by the association <a href="http://heol.io/" target="_blank">Heol robotics</a>. 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.</p>
+<p>Heol&apos;s purpose is to put a smile on ill children&apos;s faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.</p>
 <p>Its participation in the RoboCup (World Cup football for robot) is also envisaged.</p>
 <p><img src="../img/heol.jpg" alt="Heol"></p>
 <h5 id="poppyrate">Poppyrate</h5>
+<p>It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.</p>
+<p>Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud. </p>
 <p><img src="../img/poppyrate.jpg" alt="Poppyrate"></p>
-<p><a href="http://www.poppyrate.com/" target="_blank">Website</a> - <a href="https://twitter.com/poppyratproject" target="_blank">Twitter</a> - <a href="https://www.facebook.com/Poppyrate/" target="_blank">Facebook</a></p>
+<p>For more information, check their <a href="http://www.poppyrate.com/" target="_blank">Website</a> - <a href="https://twitter.com/poppyratproject" target="_blank">Twitter</a> - <a href="https://www.facebook.com/Poppyrate/" target="_blank">Facebook</a>!</p>
 
                     
                     </section>
