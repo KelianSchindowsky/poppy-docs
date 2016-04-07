@@ -67,7 +67,7 @@
         data-chapter-title="Connect to the robot"
         data-filepath="getting-started/connect.md"
         data-basepath=".."
-        data-revision="Thu Apr 07 2016 10:25:06 GMT+0000 (UTC)"
+        data-revision="Thu Apr 07 2016 11:12:57 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -761,17 +761,22 @@ body {
 }
 </style></p>
 <h1 id="start-and-connect-the-robot">Start and connect the robot</h1>
-<p>In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it. We will focus here on real robots but we will also point to the advanced sections to follow if you are using a simulated robot.</p>
+<p>In this section, we will describe how to start your robot and a give an overview of the possibilities to connect to it.</p>
 <h2 id="setup-the-software">Setup the software</h2>
-<p>Poppy creatures come with an embedded board which job is to control motors and access the sensors. This computer can be access through a web interface which makes it easy to control the robot from your own computer or a tablet without having to locally install anything specific.</p>
-<p>There are two ways to setup the board for your Poppy:</p>
+<p>Poppy creatures come with an embedded board which job is to control motors and access the sensors. For simplicity purpose, this computer can be remotely access through a web interface. It makes it easy to control the robot from your own computer or a tablet without having to download/install anything.</p>
+<p>There are two ways to setup the board for your Poppy robot:</p>
 <ul>
 <li><a href="#easy-way-use-the-poppy-sdcard"><strong>the easy way</strong></a>: use a pre-made ISO image of the Poppy operating system and write it to an the SD-card</li>
 <li><a href="#advanced-way-diy-install-everything-from-scratch"><strong>the hard way for advanced users</strong></a>: install everything from scratch</li>
 </ul>
-<p><em>Note: If you are using a simulated robot, you  must install the software locally. Thus, you can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="../installation-for-advanced-users/index.html">Installation for advanced users</a> will guide you through all the detailed steps.</em></p>
-<h3 id="easy-way-use-the-poppy-sdcard">Easy way: use the Poppy SD-card</h3>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> If you are planning to use a simulated robot, you must install the software locally. You can not use a pre made SD-card. You will have to follow steps from the advanced way adapted to your configuration (OS, architecture...). The Chapter <a href="../installation-for-advanced-users/index.html">Installation for advanced users</a> will guide you through all the detailed steps.</p>
+</blockquote>
+<h3 id="easy-and-recommended-way-use-the-poppy-sdcard">Easy and recommended way: use the Poppy SD-card</h3>
 <p>The easiest and quickest way - by far - is to use an already made system image for a SD-card. ISO images come with everything pre-installed for your Poppy robot. It is also a good way to ensure that you are using exactly the same software as we are. Thus, you will avoid most problems.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> Poppy robotic kits come with a ready to use SD-card. So, you do not have anything special to do.</p>
+</blockquote>
 <p>The images can be found in the release of each creatures:</p>
 <ul>
 <li><a href="https://github.com/poppy-project/poppy-ergo-jr/releases" target="_blank">for the Poppy ErgoJr</a></li>
@@ -779,12 +784,12 @@ body {
 <li><a href="https://github.com/poppy-project/poppy-humanoid/releases/" target="_blank">for the Poppy Humanoid</a></li>
 </ul>
 <p>They can be written to a SD-card (at least 8 Go) by using classical utility tools.
-One the SD-card is ready, just insert it into the board and when you plug your robot it should automatically start and you should then be able to connect to the web interface.</p>
+One the SD-card is ready, just insert it into the board. Then when you plug your robot it should automatically start and you should be able to connect to its web interface.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
 <p> More details can be found in the <a href="../startup/index.html">startup section</a>.</p>
 </blockquote>
 <h3 id="advanced-way-diy-install-everything-from-scratch">Advanced way: DIY, install everything from scratch</h3>
-<p>The other way is basically to install everything needed from scratch. This basically means follow the same procedure as we are, to generate the image for SD-card. This can be useful if:</p>
+<p>The advanced way mainly consists in installing everything needed from scratch. This follows the same procedure as we use to generate the image for SD-cards. We mention this possibilty here as it can be useful if:</p>
 <ul>
 <li>You are <strong>working with a simulated robot</strong> and thus have to manually install all the required software on your computer, this procedure could be a good place to see how this can be done on a Raspberry-Pi and adapted to another computer,</li>
 <li>you want to customize the environment,</li>
@@ -793,31 +798,27 @@ One the SD-card is ready, just insert it into the board and when you plug your r
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
 <p> We try to keep this installation procedure as generic as possible. Yet, some details may vary depending on your operating system or your computer. Moreover, the installation from scratch required some good knowledge of how to install and setup a python environment.</p>
 </blockquote>
-<!-- ![Linux](../img/linux.jpg) -->
-<p>Depending on what you want to do all steps are not necessary required. In particular, you may just want to install the python libraries for Poppy, or entirely setup a Linux environment to match the Poppy ones. The entire installation process used to make the SD-card image can be sum up with those steps:</p>
-<ul>
-<li>Customize a <a href="https://www.raspbian.org" target="_blank">Raspbian</a> install for Poppy (setup a user/hostname...).</li>
-<li>Setup the Poppy utility tools (for install/update)</li>
-<li>Install the <a href="https://www.continuum.io/why-anaconda" target="_blank">Python Anaconda distribution</a>.</li>
-<li>Install the <a href="../software-libraries/index.html">python libraries</a>) for Poppy.</li>
-<li>Setup the sensors for your creature.</li>
-<li>Install the web server for the control and monitoring interface.</li>
-</ul>
+<p>Depending on what you want to do all steps are not necessary required. In particular, if you want to control a simulated robot, you may just want to install the python libraries for Poppy.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
 <p> More details can be found in the <a href="../installation-for-advanced-users/index.html">Installation for advanced users section</a>.</p>
 </blockquote>
 <h3 id="setup-the-network">Setup the network</h3>
-<p>Once your Poppy is built and its software is ready, the next step is to connect it to a network so you can start access it from your computer or smartphone/tablet and then control and program it.</p>
-<p>Indeed, except if you plug a keyboard and a screen to the embedded board you will not be able to directly use it. Thus, you have to connect to it to your network so you can remotely access it. This section will describe the main steps to follow to do that.</p>
-<p>Poppy robots can use either Ethernet (using cable) or wifi network. Yet, you first need to use an Ethernet network so you can first configure the robot so it can then automatically use your specified wifi.</p>
-<p>Poppy robots can use either Ethernet or wifi network. But first, plug the robot and your computer on the same Ethernet network.</p>
-<p>Then, you need to choose among the two different possibilities:</p>
+<p>Once your Poppy is assembled and its software is ready, the next step is to connect it to a network. The goal is to let you remotely access the robot from your computer or smartphone/tablet, control and program it. </p>
+<p>They are two main ways to connect your robot to your computer/tablet/smartphone:</p>
 <ul>
-<li>Use the <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">Zeroconf protocol</a> to connect to the robot using its hostname: <em>&quot;poppy.local&quot;</em>. This should works directly under Mac OS and GNU/Linux but required to install <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Bonjour Print Services</em></a> on Windows. This is the simplest way and should be preferred except if you do not have the administrator right on your Windows computer for instance. Note that <em>Bonjour Print Services for Windows</em> may be already installed if you have iTunes or QuickTime on your computer.</li>
-<li>Know the IP address of the robot assigned by the router of your network.</li>
+<li>Connect both the robot and the computer to the same network (e.g. the box of your home or the school network).</li>
+<li>Directly connect your robot to your computer using an ethernet cable.</li>
 </ul>
-<p><strong>Note: If you are not familiar with network configuration or have no idea what the previous paragraph clumsily tried to say, you should see with the IT network engineer, how you can do that.</strong></p>
-<p><img src="../img/network.png" alt="Network Schema"></p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> While directly plugging the robot to a computer works for most users. It seems that in some strange cases it refuses to work. </p>
+</blockquote>
+<p>To found the address of your robot on the network we use the standard <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">Zeroconf protocol</a>. It allows you to use the robot hostname: <em>&quot;poppy.local&quot;</em> as its address. This should works without any configuration under Mac OS and GNU/Linux. But it required to install <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Bonjour Print Services</em></a> on Windows.
+If you prefer you can use the IP address assigned to your robot instead. If you are not administrator of your network this can be a tricky information to find. In this case the first procedure should be preferred.</p>
+<p>To check that everything is setup correctly, you can go to the following url using your favorite web browser: <a href="http://poppy.local" target="_blank">http://poppy.local/</a>. You can replace <em>poppy.local</em> by the IP address of your robot (something similar as <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a>).</p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> Poppy robots can all be connected to the network using Ethernet cable. Poppy humanoid and torso can also use wifi network. In the next release of the Poppy Ergo Jr we will add support for the wifi. To use wifi you have to first access the web interface using an Ethernet cable. From there you can setup the wifi access.</p>
+<p><strong>Caution:</strong> If you are not familiar with network configuration or have no idea what the previous paragraph poorly tried to explain, you should see with the IT network engineer, how this can be done.</p>
+</blockquote>
 <h3 id="use-the-web-interface">Use the web interface</h3>
 <p>One you managed to have either Zeroconf working or the IP address of you robot, you can directly access the control and monitoring interface. This web interface can be used to:</p>
 <ul>
@@ -828,7 +829,7 @@ One the SD-card is ready, just insert it into the board and when you plug your r
 <p>To access this interface, you simply have to go to the URL using your favourite web browser:</p>
 <ul>
 <li><a href="http://poppy.local" target="_blank">http://poppy.local</a> (if you changed the name of your robot, simply replace <em>poppy</em> by its new name)</li>
-<li>or using directly its IP address, something similar as <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a></li>
+<li>or using directly its IP address, </li>
 </ul>
 <p>You should see something like:</p>
 <p><img src="../img/poppy_home.png" alt="Web interface"></p>
