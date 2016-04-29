@@ -67,7 +67,7 @@
         data-chapter-title="Startup with a Poppy robot"
         data-filepath="installation/burn-an-image-file.md"
         data-basepath=".."
-        data-revision="Fri Apr 29 2016 15:30:59 GMT+0000 (UTC)"
+        data-revision="Fri Apr 29 2016 21:04:06 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -843,7 +843,7 @@ Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</
 <pre><code class="lang-bash">sudo dd bs=<span class="hljs-number">4</span>M <span class="hljs-keyword">if</span>=poppy-ergojr.img of=/dev/mmcblk0
 </code></pre>
 <p>If you are running OSX or another BSD based OS:</p>
-<pre><code class="lang-bash">sudo dd bs=<span class="hljs-number">4</span>m <span class="hljs-keyword">if</span>=poppy-ergojr.img of=/dev/disks1
+<pre><code class="lang-bash">sudo dd bs=<span class="hljs-number">4</span>m <span class="hljs-keyword">if</span>=poppy-ergojr.img of=/dev/disks8
 </code></pre>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
 <p> The <code>dd</code> command does not give any information of its progress and so may appear to have frozen; it &gt; could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run <code>sudo pkill -USR1 -n -x dd</code> in another terminal.</p>
