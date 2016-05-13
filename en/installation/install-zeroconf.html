@@ -67,7 +67,7 @@
         data-chapter-title="Install a zeroconf client"
         data-filepath="installation/install-zeroconf.md"
         data-basepath=".."
-        data-revision="Mon May 09 2016 14:48:07 GMT+0000 (UTC)"
+        data-revision="Fri May 13 2016 14:34:16 GMT+0000 (UTC)"
         data-innerlanguage="en">
     
 
@@ -790,21 +790,30 @@ body {
   counter-reset: h1 7;
 }
 </style></p>
-<h1 id="install-zeroconf">Install zeroconf</h1>
-<p>Zeroconf is a protocol which allow you to call any local computer by its hostname with the &apos;.local&apos; suffix instead of its IP address.</p>
-<p>With a zeroconf client, to <code>ping</code> a computer called &apos;goldstine&apos;, you can simply do:</p>
+<h1 id="zeroconf">Zeroconf</h1>
+<p><a href="https://en.wikipedia.org/wiki/Zero-configuration_networking" target="_blank">Zeroconf</a> also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> Zeroconf is not mandatory on your computer to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.</p>
+</blockquote>
+<h2 id="local-domain-name">Local domain name</h2>
+<p>Zeroconf client <em>publishes</em> a decentralised local domain name (mDNS) with the &apos;.local&apos; top level domain. It means that you can join any local local computer by its hostname with the &apos;.local&apos; suffix instead of its IP address.</p>
+<p>With a zeroconf client, to <code>ping</code> a computer called (hostname) &apos;goldstine&apos;, you can simply do:</p>
 <pre><code>$ ping goldstine.local
 64 bytes from 192.168.1.42: icmp_seq=0 ttl=54 time=3.14 ms
 [...]
 </code></pre><p>You no longer need to look for its IP address on your local network; you don&apos;t even need to understand what an IP address is.</p>
 <p>It also work on your web browser. To open the website hosted on the robot computer called &apos;goldstine&apos;, you have to open: <a href="http://goldstine.local" target="_blank">http://goldstine.local</a> on your favorite web browser URL field.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> Zeroconf is not mandatory to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.</p>
+<h2 id="linklocal-ipv4-addresses">Link-local IPv4 addresses</h2>
+<p>Among other Zeroconf tools, there is an implementation of decentralized DHCP (<a href="https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses" target="_blank">IPv4LL</a>), which allow computers obtain an IP and connect each others <strong>without</strong> a DHCP server.</p>
+<p>The auto-adressed IP is in the <a href="https://en.wikipedia.org/wiki/Link-local_address#IPv4" target="_blank">APIPA</a> range, from 169.254.0.0 to 169.254.255.255.</p>
+<p>You can plug a robot to your computer <strong>directly</strong> on your computer with an Ethernet cable, <strong>without</strong> any router and connect it with its local domain name (hostname.local).</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> You will be able to use the local-link IPv4 address <strong>only</strong> if you installed your robots after end of May 2016. Previously <em>avahi-autoipd</em> packet was missing. </p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <ul>
 <li>On Windows, you have to install <em><a href="https://support.apple.com/kb/DL999" target="_blank">Bonjour print services for Windows</a></em> (yes, it is an Apple software).</li>
-<li>On GNU/Linux, you have to install <em>avahi-tools</em>, it may or may not be installed by default depending on your installation. Run <code>sudo apt-get install avahi-tools</code> on Debian/Ubuntu or <code>sudo yum install avahi-tools</code> on Fedora.</li>
+<li>On GNU/Linux, you have to install <em>avahi-daemon</em> (mDNS) and <em>avahi-autoipd</em> (IPv4LL), it may or may not be installed by default depending on your installation. Run <code>sudo apt-get install avahi-daemon avahi-autoipd</code> on Debian/Ubuntu or <code>sudo yum install avahi-daemon avahi-autoipd</code> on Fedora.</li>
 <li>On Mac OSX it works out of the box.</li>
 </ul>
 <p>You ready to follow your <a href="index.html">installation path</a>.</p>
@@ -816,10 +825,10 @@ body {
 <li>You can also go to your router web interface (with its IP address on your web browser like <a href="http://192.168.0.1" target="_blank">http://192.168.0.1</a> or <a href="http://192.168.1.1" target="_blank">http://192.168.1.1</a> or <a href="http://192.168.0.254" target="_blank">http://192.168.0.254</a> or <a href="http://192.168.1.254" target="_blank">http://192.168.1.254</a>), you should have a section of connected hosts.</li>
 </ul>
 <!-- TODO: talk about poppy-discover -->
-<h2 id="how-zeroconf-works-only-for-computer-science-culture">How zeroconf works (only for computer science culture)</h2>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> This paragraph is not currently written. Your help is welcome to fulfill it !</p>
-</blockquote>
+<!-- 
+## How zeroconf works (only for computer science culture)
+> **Caution** This paragraph is not currently written. Your help is welcome to fulfill it !
+-->
 
                     
                     </section>
