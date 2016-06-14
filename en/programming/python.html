@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.0.3">
+        <meta name="generator" content="GitBook 3.1.1">
         
         
         
@@ -739,15 +739,15 @@
 <p><img src="../img/python/banner.png" alt="Programming in Python banner"></p>
 <p>This chapter will guide you through how to control Poppy robots in Python. As it is actually the language used for writing Poppy core libraries, you will see how to access all the different levels of control, from the higher to the lower.</p>
 <p>We will detail everything you need to know to directly program you robot using the Python embedded in the Poppy robot or to install everything locally. Note that this chapter does not intend to teach you Python or programming from scratch and thus if you are completely new to Python it may be good to start with a Python tutorial. Yet, we try to keep the tutorials as simple as possible and we will always warn you when some parts are targeting more advanced users.</p>
-<p>We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of <a href="http://jupyter.org" _target="blank">Jupyter notebooks</a>. The next chapter, <a href="notebooks.html">Jupyter Notebooks Gallery</a>, presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.</p>
-<p>All Poppy libraries are open source and are released under the <a href="http://www.gnu.org/licenses/gpl.html" _target="blank">GPL v3</a> license. So you can freely access the source code on <a href="https://github.com/poppy-project" _target="blank">github</a>. Do not hesitate to fork them, send pull request and contribute!</p>
+<p>We will try to provide as many examples as possible and point to the complete API so you can find and use the least famous features. Most of the examples and tutorials are available as a collection of <a href="http://jupyter.org" target="_blank">Jupyter notebooks</a>. The next chapter, <a href="notebooks.html">Jupyter Notebooks Gallery</a>, presents a list describing each notebook, what they will teach, what they can be used for, for which robot, etc.</p>
+<p>All Poppy libraries are open source and are released under the <a href="http://www.gnu.org/licenses/gpl.html" target="_blank">GPL v3</a> license. So you can freely access the source code on <a href="https://github.com/poppy-project" target="_blank">github</a>. Do not hesitate to fork them, send pull request and contribute!</p>
 <h2 id="why-python-and-anaconda">Why Python and Anaconda?</h2>
 <p><img src="../img/python/powered.png" alt="Python powered"></p>
 <p>The libraries developed for the Poppy project were designed with the aim to make it easy and fast to write code for controlling various robots based on - originally - robotis dynamixel motors. The idea was to provide access from the lower level - raw serial communication with a specific motor for instance - to higher levels such as starting and stopping primitives/behaviors (e.g. face tracking, postures, ...) or directly recording motions through learning by demonstration.</p>
 <p>We decided to write most of them in Python as its flexibility allows for fast and modular development. It was also meant to be accessible by a large audience, from developers and roboticists in general, to hobbyists, researchers, artists... Python was also chosen for the tremendous pools of existing libraries (scientific, computer vision, IO, web...) so if one is interested in adding a new feature, such as support for a new motor/sensor, it should be as easy and fast as possible.</p>
 <p>Finally, support for multiplatforms and ease of installation were also key aspects.</p>
 <p><img src="../img/python/anaconda.png" alt="Anaconda Python distribution"></p>
-<p>We also strongly advise to use the <a href="https://www.continuum.io/why-anaconda" _target="blank">Anaconda Python distribution</a> as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the <a href="../installation/install-poppy-softwares.html">install section</a>).</p>
+<p>We also strongly advise to use the <a href="https://www.continuum.io/why-anaconda" target="_blank">Anaconda Python distribution</a> as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the <a href="../installation/install-poppy-softwares.html">install section</a>).</p>
 <h2 id="overview-of-the-different-libraries">Overview of the different libraries</h2>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
 <p> A more detailled documentation of these software libraries is available in the <a href="../software-libraries/">software libraries section</a></p>
@@ -755,11 +755,11 @@
 <p>Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.</p>
 <p>They are three main library levels:</p>
 <ul>
-<li><p><a href="https://github.com/poppy-project/pypot" _target="blank">pypot:</a> This is the core of the Poppy software architecture. Pypot handles all the low level communication with the hardware (both sensors and motors), defines synchronization loops so your command are always up to date. It also provides the primitives mechanism which allows the definition of simple behavior that can be - more of less - automatically combined.</p>
+<li><p><a href="https://github.com/poppy-project/pypot" target="_blank">pypot:</a> This is the core of the Poppy software architecture. Pypot handles all the low level communication with the hardware (both sensors and motors), defines synchronization loops so your command are always up to date. It also provides the primitives mechanism which allows the definition of simple behavior that can be - more of less - automatically combined.</p>
 </li>
-<li><p><a href="https://github.com/poppy-project/poppy-creature" _target="blank">poppy-creature:</a> This library defines the common tools shared by all Poppy robots, for instance how to automatically launch the simulator or start the HTTP API attached to any robot.</p>
+<li><p><a href="https://github.com/poppy-project/poppy-creature" target="_blank">poppy-creature:</a> This library defines the common tools shared by all Poppy robots, for instance how to automatically launch the simulator or start the HTTP API attached to any robot.</p>
 </li>
-<li><p><a href="https://github.com/poppy-project/poppy-ergo-jr" _target="blank">poppy-ergo-jr</a>, <a href="https://github.com/poppy-project/poppy-torso" _target="blank">poppy-torso</a>, and <a href="https://github.com/poppy-project/poppy-humanoid" _target="blank">poppy-humanoid:</a> Those libraries are specific to their respective Poppy robot. They define the particular configuration of the robot, the sensors it uses, which motors are connected to which buses... This is also were behaviors specific to a creature are defined (the stand primitive for the humanoid for instance).</p>
+<li><p><a href="https://github.com/poppy-project/poppy-ergo-jr" target="_blank">poppy-ergo-jr</a>, <a href="https://github.com/poppy-project/poppy-torso" target="_blank">poppy-torso</a>, and <a href="https://github.com/poppy-project/poppy-humanoid" target="_blank">poppy-humanoid:</a> Those libraries are specific to their respective Poppy robot. They define the particular configuration of the robot, the sensors it uses, which motors are connected to which buses... This is also were behaviors specific to a creature are defined (the stand primitive for the humanoid for instance).</p>
 </li>
 </ul>
 <p>This is summarized in the diagram below:</p>
@@ -795,7 +795,7 @@
 </ul>
 <h3 id="create-and-connect-to-a-poppy-robot">Create and connect to a Poppy robot</h3>
 <h4 id="import-the-library">Import the library</h4>
-<p>The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called <a href="https://docs.python.org/2/tutorial/modules.html" _target="blank">module or package</a>.</p>
+<p>The very first step you have to do to start programming Poppy robots in Python is to import the library. In Python they are called <a href="https://docs.python.org/2/tutorial/modules.html" target="_blank">module or package</a>.</p>
 <p>To do that, you write something similar to:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> *
 </code></pre>
@@ -854,7 +854,7 @@ It also requires specific versions of libraries to be used properly.</p>
 <pre><code class="lang-bash">poppy-services --poppy-simu --snap --no-browser poppy-ergo-jr
 </code></pre>
 <p>This will create a server for Snap<em>!</em> on port 6969, and a server for the visualizer on port 8080.</p>
-<p>You can then head to the <a href="http://simu.poppy-project.org/" _target="blank">visualizer page</a>.</p>
+<p>You can then head to the <a href="http://simu.poppy-project.org/" target="_blank">visualizer page</a>.</p>
 <h3 id="access-the-sensors-and-motors">Access the sensors and motors</h3>
 <p>The robot object you just created contains two main groups of objects:</p>
 <ul>
@@ -1188,7 +1188,7 @@ head_straight.start()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming in Python","level":"1.5.3","depth":2,"next":{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]},"previous":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"token":"UA-44384879-5","configuration":"auto"},"retina":{},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/python.md","mtime":"2016-06-03T15:25:02.677Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-03T15:27:12.966Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Programming in Python","level":"1.5.3","depth":2,"next":{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]},"previous":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/python.md","mtime":"2016-06-14T13:43:48.513Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-14T13:45:57.748Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1250,7 +1250,7 @@ head_straight.start()
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 

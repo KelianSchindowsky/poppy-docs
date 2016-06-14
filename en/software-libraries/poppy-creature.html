@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.0.3">
+        <meta name="generator" content="GitBook 3.1.1">
         
         
         
@@ -738,7 +738,7 @@
                                 <h1 id="poppy-creature-library">Poppy-creature library</h1>
 <h2 id="introduction">Introduction</h2>
 <p>Poppy-creature is a small library providing an abstract interface for robots (Poppy Humanoid, Poppy Torso, Poppy Ergo Jr...). It links high level controls and pypot, the generic low level library.</p>
-<p>It mainly contains the class definition of <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" _target="blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a> which takes a configuration and builds a <a href="https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py" _target="blank">pypot.robot.robot.Robot</a> out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.</p>
+<p>It mainly contains the class definition of <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" target="_blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a> which takes a configuration and builds a <a href="https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py" target="_blank">pypot.robot.robot.Robot</a> out of it, but also a bunch of parameters to launch Snap! or HTTP servers, or to replace the communication toward Dynamixel servos by a communication with a simulator.</p>
 <p>The arguments you can provide are:</p>
 <ul>
 <li><code>base_path</code> default: None Path where the creature sources are. The
@@ -766,7 +766,7 @@ simulator runs. Only if simulator is not None.</li>
 <li><code>remote_port</code> default: 4242 Port of the Remote Robot server</li>
 <li><code>sync</code> default: True Should we launch the synchronization loop for motor communication</li>
 </ul>
-<p>The sources are available on <a href="https://github.com/poppy-project/poppy-creature" _target="blank">GitHub</a>.</p>
+<p>The sources are available on <a href="https://github.com/poppy-project/poppy-creature" target="_blank">GitHub</a>.</p>
 <h2 id="poppy-services">Poppy services</h2>
 <p>Poppy-creature also provides a command line utility <em>poppy-services</em>. It provides shortcuts to start services like SnapRemoteServer and HTTPRemoteServer from your terminal.
 Example:</p>
@@ -793,8 +793,8 @@ browser, use only with --snap</li>
 <li><code>-v</code> or <code>--verbose</code>: start services in verbose mode (more logs)</li>
 </ul>
 <h2 id="create-your-own-poppy-creature">Create your own Poppy creature</h2>
-<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <a href="https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py" _target="blank">pypot.robot.robot.Robot</a> from Pypot directly.</p>
-<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&apos;s library. It should contain a configuration file and a class that extends <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" _target="blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a>. You can then
+<p>While developping a new Poppy creature, it is first easier to simply define it in a configuration file or dictionnary and instanciate a <a href="https://github.com/poppy-project/pypot/blob/master/pypot/robot/robot.py" target="_blank">pypot.robot.robot.Robot</a> from Pypot directly.</p>
+<p>But when you want to make it easily usable and available to non-geek public, the best is to create your own creature&apos;s library. It should contain a configuration file and a class that extends <a href="https://github.com/poppy-project/poppy-creature/blob/master/software/poppy/creatures/abstractcreature.py" target="_blank">poppy.creatures.abstractcreature.AbstractPoppyCreature</a>. You can then
 add your own properties and primitives.</p>
 <p>Example from Poppy Humanoid:</p>
 <pre><code class="lang-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PoppyHumanoid</span><span class="hljs-params">(AbstractPoppyCreature)</span>:</span>
@@ -816,7 +816,7 @@ add your own properties and primitives.</p>
         <span class="hljs-comment"># Safe primitives:</span>
         robot.attach_primitive(LimitTorque(robot), <span class="hljs-string">&apos;limit_torque&apos;</span>)
 </code></pre>
-<p>Package your code it properly using <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" _target="blank">setuptools</a>.</p>
+<p>Package your code it properly using <a href="https://pythonhosted.org/an_example_pypi_project/setuptools.html" target="_blank">setuptools</a>.</p>
 <p>For a better integration with the Poppy installer scripts, please have in the root of your repo a folder named <em>software</em> containing:</p>
 <ul>
 <li>the installation files (setup.py, MANIFEST, LICENCE)</li>
@@ -832,7 +832,7 @@ creatures will be added to this documentation!</p>
 <pre><code>    pip install poppy-creature
 </code></pre><p>Then you can update it with:</p>
 <pre><code>    pip install --upgrade poppy-creature
-</code></pre><p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a href="https://github.com/poppy-project/poppy-creature" _target="blank">GitHub</a> and install them with (in the software folder):</p>
+</code></pre><p>If you prefer to work from the sources (latest but possibly unstable releases), you can clone them from <a href="https://github.com/poppy-project/poppy-creature" target="_blank">GitHub</a> and install them with (in the software folder):</p>
 <pre><code>    python setup.py install
 </code></pre>
                                 
@@ -877,7 +877,7 @@ creatures will be added to this documentation!</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Poppy-creature","level":"1.8.2","depth":2,"next":{"title":"Poppy Ergo Jr","level":"1.8.3","depth":2,"path":"software-libraries/poppy-ergo-jr.md","ref":"software-libraries/poppy-ergo-jr.md","articles":[]},"previous":{"title":"Pypot","level":"1.8.1","depth":2,"path":"software-libraries/pypot.md","ref":"software-libraries/pypot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"token":"UA-44384879-5","configuration":"auto"},"retina":{},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"software-libraries/poppy-creature.md","mtime":"2016-06-03T15:25:02.677Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-03T15:27:12.966Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Poppy-creature","level":"1.8.2","depth":2,"next":{"title":"Poppy Ergo Jr","level":"1.8.3","depth":2,"path":"software-libraries/poppy-ergo-jr.md","ref":"software-libraries/poppy-ergo-jr.md","articles":[]},"previous":{"title":"Pypot","level":"1.8.1","depth":2,"path":"software-libraries/pypot.md","ref":"software-libraries/pypot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"software-libraries/poppy-creature.md","mtime":"2016-06-14T13:43:48.513Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-14T13:45:57.748Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -939,7 +939,7 @@ creatures will be added to this documentation!</p>
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 

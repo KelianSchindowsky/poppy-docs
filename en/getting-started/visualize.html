@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.0.3">
+        <meta name="generator" content="GitBook 3.1.1">
         
         
         
@@ -740,8 +740,8 @@
 <p>Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.</p>
 <p>Connection with two main &quot;simulators&quot; were developed:</p>
 <ul>
-<li>using <a href="http://www.coppeliarobotics.com" _target="blank">V-REP</a>: a virtual robot experimentation platform</li>
-<li>using <a href="http://simu.poppy-project.org" _target="blank">a 3D web viewer</a>: lighter but without physics support</li>
+<li>using <a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a>: a virtual robot experimentation platform</li>
+<li>using <a href="http://simu.poppy-project.org" target="_blank">a 3D web viewer</a>: lighter but without physics support</li>
 </ul>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
 <p> At the moment, only the Poppy Ergo Jr can be used in the web visualizer. If you want to simulate other creatures, you should use V-REP. Support for the other robots is planned but not expected in the near future.</p>
@@ -763,14 +763,14 @@
 </blockquote>
 <p>To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need:</p>
 <ul>
-<li>To have a working Python, we strongly recommend to use the <a href="https://www.continuum.io/downloads" _target="blank">Anaconda Python distribution</a>. It works with any version &gt;=2.7 or &gt;=3.4. Prefer Python 2.7 if you can, as it is the version we used.</li>
+<li>To have a working Python, we strongly recommend to use the <a href="https://www.continuum.io/downloads" target="_blank">Anaconda Python distribution</a>. It works with any version &gt;=2.7 or &gt;=3.4. Prefer Python 2.7 if you can, as it is the version we used.</li>
 <li>To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).</li>
 </ul>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
 <p> Details about those steps can be found in section <em><a href="../installation/install-poppy-softwares.html">Install everything locally for using a simulator</a></em>.</p>
 </blockquote>
 <h3 id="using-v-rep">Using V-REP</h3>
-<p><a href="http://www.coppeliarobotics.com" _target="blank">V-REP</a> is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from <a href="http://www.coppeliarobotics.com/downloads.html" _target="blank">this website</a> (works under Mac OS, Windows and GNU/Linux).</p>
+<p><a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a> is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from <a href="http://www.coppeliarobotics.com/downloads.html" target="_blank">this website</a> (works under Mac OS, Windows and GNU/Linux).</p>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
 <p> It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).</p>
 </blockquote>
@@ -791,7 +791,7 @@
 <p> Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).</p>
 </blockquote>
 <h3 id="using-our-web-visualizer">Using our web visualizer</h3>
-<p>Our web visualizer - based on the <a href="http://threejs.org" _target="blank">Three.js</a> library - will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot. </p>
+<p>Our web visualizer - based on the <a href="http://threejs.org" target="_blank">Three.js</a> library - will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot. </p>
 <p><img src="../img/visu/presentation.png" alt="Poppy Simu Presentation"></p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
 <p> A mockup robot can be started via the poppy-services command. For instance: <code>poppy-services --poppy-simu --snap poppy-ergo-jr</code></p>
@@ -842,7 +842,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Visualize","level":"1.2.4","depth":2,"next":{"title":"Examples of projects","level":"1.2.5","depth":2,"path":"getting-started/example-of-projects.md","ref":"getting-started/example-of-projects.md","articles":[]},"previous":{"title":"Program the robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"token":"UA-44384879-5","configuration":"auto"},"retina":{},"sharing":{"facebook":false,"twitter":false,"all":["twitter","facebook","google","instapaper"],"google":false,"weibo":false,"instapaper":false,"vk":false},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/visualize.md","mtime":"2016-06-03T15:25:02.565Z","type":"markdown"},"gitbook":{"version":"3.0.3","time":"2016-06-03T15:27:12.966Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Visualize","level":"1.2.4","depth":2,"next":{"title":"Examples of projects","level":"1.2.5","depth":2,"path":"getting-started/example-of-projects.md","ref":"getting-started/example-of-projects.md","articles":[]},"previous":{"title":"Program the robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/visualize.md","mtime":"2016-06-14T13:43:48.429Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-14T13:45:57.748Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -904,7 +904,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
 
