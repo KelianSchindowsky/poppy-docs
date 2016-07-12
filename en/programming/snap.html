@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.1.1">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -735,167 +735,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="programming-poppy-robots-using-snap">Programming Poppy robots using Snap<em>!</em></h1>
-<p>Snap<em>!</em> is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.</p>
-<p>Snap<em>!</em> was inspired by Scratch (a project of
-the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch&apos;s features.</p>
-<p>Snap<em>!</em> is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html" target="_blank">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/4.0.6.zip" target="_blank">copy of the website</a> in your personal computer and open the <code>snap.html</code> file in your browser.</p>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a> (which is very similar to Chrome without tracking tools), or Google Chrome.**</p>
-</blockquote>
-<h2 id="introduction-to-snap-programming">Introduction to Snap<em>!</em> programming</h2>
-<p>This chapter will focus on things necessary to understand in Snap<em>!</em> for using Poppy creatures.</p>
-<p>If you want a well designed online lesson on Snap<em>!</em> we strongly encourage you to look at the <a href="http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html" target="_blank">&quot;Beauty and Joy of Computing&quot;</a> (BJC) course made by the University of Berkeley for New York high school students.</p>
-<p>Some of the snapshots and concepts of BJC have been used for writing this chapter.</p>
-<h3 id="connect-your-robot-to-snap">Connect your robot to Snap<em>!</em></h3>
-<h4 id="if-you-use-a-simulated-robot-on-v-rep">If you use a simulated robot on V-REP</h4>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
-</blockquote>
-<p>First open V-REP.</p>
-<p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
-<pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --vrep
-</code></pre>
-<p><em>Substitute &apos;poppy-ergo-jr&apos; with &apos;poppy-humanoid&apos; or &apos;poppy-torso&apos; to launch respectively a Poppy Humanoid or a Poppy Torso</em>.</p>
-<p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
-If it is not automatically done, you can open Snap with preloaded blocks at <a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></p>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.</p>
-</blockquote>
-<p><strong>Alternative method</strong>:
-Instead of using <code>poppy-service</code> you can start it in full python:</p>
-<pre><code class="lang-python"><span class="hljs-comment"># use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want</span>
+                                <h1 id="programming-poppy-robots-using-snap">Programming Poppy robots using Snap<em>!</em></h1><p>Snap<em>!</em> is a blocks-based graphical programming language that allows users to create interactive animations, games, and more, while learning about mathematical and computational ideas.</p><p>Snap<em>!</em> was inspired by Scratch (a project of
+the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch&apos;s features.</p><p>Snap<em>!</em> is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html" target="_blank">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/4.0.6.zip" target="_blank">copy of the website</a> in your personal computer and open the <code>snap.html</code> file in your browser.</p><blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a> (which is very similar to Chrome without tracking tools), or Google Chrome.**</p></blockquote><h2 id="introduction-to-snap-programming">Introduction to Snap<em>!</em> programming</h2><p>This chapter will focus on things necessary to understand in Snap<em>!</em> for using Poppy creatures.</p><p>If you want a well designed online lesson on Snap<em>!</em> we strongly encourage you to look at the <a href="http://bjc.edc.org/bjc-r/course/bjc4nyc_2015-2016.html" target="_blank">&quot;Beauty and Joy of Computing&quot;</a> (BJC) course made by the University of Berkeley for New York high school students.</p><p>Some of the snapshots and concepts of BJC have been used for writing this chapter.</p><h3 id="connect-your-robot-to-snap">Connect your robot to Snap<em>!</em></h3><h4 id="if-you-use-a-simulated-robot-on-v-rep">If you use a simulated robot on V-REP</h4><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p></blockquote><p>First open V-REP.</p><p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p><pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --vrep</code></pre>
+<p><em>Substitute &apos;poppy-ergo-jr&apos; with &apos;poppy-humanoid&apos; or &apos;poppy-torso&apos; to launch respectively a Poppy Humanoid or a Poppy Torso</em>.</p><p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
+If it is not automatically done, you can open Snap with preloaded blocks at <a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></p><blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.</p></blockquote><p><strong>Alternative method</strong>:
+Instead of using <code>poppy-service</code> you can start it in full python:</p><pre><code class="lang-python"><span class="hljs-comment"># use PoppyTorso PoppyHumanoid or PoppyEgoJr depending on what you want</span>
 <span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
-poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
-</code></pre>
-<h4 id="if-you-use-a-simulated-robot-on-poppy-simu-web-viewer">If you use a simulated robot on poppy-simu (web viewer)</h4>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> You need to have installed Poppy software libraries on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
-</blockquote>
-<p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
-<pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --poppy-simu
-</code></pre>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.</p>
-</blockquote>
-<p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
-If it is not automatically done, you can open Snap with preloaded blocks at <strong><a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></strong> and the robot viewer at <strong><a href="http://simu.poppy-project.org/poppy-ergo-jr" target="_blank">simu.poppy-project.org/poppy-ergo-jr</a></strong>.</p>
-<p><strong>Alternative method</strong>:
-Instead of using <code>poppy-service</code> you can start it in full python:</p>
-<pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
-poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;poppy-simu&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
-</code></pre>
-<h4 id="if-you-have-a-tangible-robot">If you have a tangible robot</h4>
-<p>First, you must be connected to the same network LAN area than your robot (e.g. on the same router or Wifi).</p>
-<p>You have to go on the web homepage of your robot with its URL. You can use its IP address (for example <a href="http://192.168.1.42" target="_blank">http://192.168.1.42</a>) if you have a way to know it or its hostname like <a href="http://poppy.local" target="_blank">http://poppy.local</a>. To find its IP address look at <a href="../installation/install-zeroconf.html#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network">the zeroconf chapter</a>. To use directly its hostname <a href="http://poppy.local" target="_blank">http://poppy.local</a> you must have a Zeroconf software installed on your computer (aka <a href="https://support.apple.com/kb/DL999?locale=en_US" target="_blank">&quot;Bonjour print services for Windows&quot;</a> if you are running Windows).</p>
-<p>The home page of your poppy creature should look like the snapshot below:
-<img src="../img/snap/homepage.png" alt="find blocks"></p>
-<p>Click on the &quot;Start Snap!&quot; link to open the Snap<em>!</em> interface at start the connection with the Poppy robot.</p>
-<p>Poppy special blocks are stored in the Examples. Go to &quot;file&quot; icon -&gt; open -&gt; Examples -&gt; click on &quot;Poppy blocks&quot;. It may take some time to load the blocks (~5-15 seconds), be patient.</p>
-<h3 id="interface-and-general-ideas">Interface and general ideas</h3>
-<h3 id="saving-in-snap">Saving in Snap<em>!</em></h3>
-<p>There are three ways of saving a project in Snap<em>!</em></p>
-<h4 id="save-the-project-in-your-web-browser">Save the project in your web browser</h4>
-<p><img src="../img/snap/snap_save.png" alt="Save click"></p>
-<p>When you are not logged in Snap<em>!</em> Cloud, the default behaviour of Snap<em>!</em> is to save your project in <strong>your browser</strong>.</p>
-<p>Technically this uses the Local Storage which is a memory space in your web browser where websites can store offline data. This is very convenient because you have not to register or to see Snap<em>!</em> project files, but keep in mind that <strong>these projects are only visible in this specific web browser in this specific computer</strong>.</p>
-<h4 id="snap-cloud">Snap<em>!</em> Cloud</h4>
-<blockquote>
-<p>&#xAB; There is no Cloud, it&apos;s just someone else&apos;s computer &#xBB;.</p>
-</blockquote>
-<p>Instead of saving your projects on your web browser, you can save them in Snap<em>!</em> servers in UC Berkeley, called &quot;cloud&quot;. Moreover, this allows you to share your project with anyone, with a simple link.</p>
-<h5 id="create-an-account-on-snap-cloud">Create an account on Snap<em>!</em> cloud</h5>
-<p>Click on the cloud button -&gt; &quot;signup...&quot;.</p>
-<p><img src="../img/snap/snap_cloud_1.png" alt="Create account"></p>
-<p>Fill the required fields in the modal window for signing up.</p>
-<p><img src="../img/snap/dialog-cloud-signup.png" alt="Create account"></p>
-<p>You will soon receive a validation email with a random password.
-You can now log in with your username and password.</p>
-<p><img src="../img/snap/snap_login1.png" alt="Login1"></p>
-<p>If you use your personal computer, remember to check the &quot;stay signed in on this computer [...]&quot; checkbox.</p>
-<p><img src="../img/snap/snap_login2.png" alt="Login2"></p>
-<p>After logging in account, you are free to change your password: click on the cloud button -&gt; &quot;Change Password&quot;.</p>
-<p><img src="../img/snap/logout-menu.png" alt="Create account"></p>
-<h5 id="share-your-snap-project">Share your Snap<em>!</em> project</h5>
-<p>The big advantage of using Snap<em>!</em> Cloud is the ability to share a copy of your project with anyone.
-To share a Snap<em>!</em> project, you first need to be logged in Snap<em>!</em> Cloud and having your current project saved (&quot;save&quot; or &quot;save as&quot;). Go to the &quot;open&quot; menu:</p>
-<p><img src="../img/snap/snap_open.png" alt="Open menu"></p>
-<p>In the cloud section, select the project you want to share and click on &quot;Share&quot; button.</p>
-<p><img src="../img/snap/snap_cloud_3.png" alt="Share"></p>
-<p><strong>Here is the trick step:</strong> to see the share link, you have to click on the &quot;Open&quot; button.</p>
-<p><img src="../img/snap/snap_cloud_4.png" alt="Open share"></p>
-<p>And this will re-open your project with the public sharing URL.</p>
-<p><img src="../img/snap/snap_cloud_5.png" alt="Sharing URL"></p>
-<p>You can copy and paste the URL and share it by the way you want to your friends or to the Poppy community with the forum <a href="https://forum.poppy-project.org/" target="_blank">forum.poppy-project.org</a>.</p>
-<p>When you open a share project, the project is automatically opened in full screen on the sprite zone. To quit the full screen you have to click on the double arrow at the top of the snapshot below.
-<img src="../img/snap/snap_share_full_screen.png" alt="Sharing URL"></p>
-<h4 id="exportimport-your-snap-project">Export/Import your Snap<em>!</em> project</h4>
-<p>If you have a limited access to internet and you want to share project with other people, the best way is to export it:
-<img src="../img/snap/snap_cloud_5.png" alt="Export section">
+poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)</code></pre>
+<h4 id="if-you-use-a-simulated-robot-on-poppy-simu-web-viewer">If you use a simulated robot on poppy-simu (web viewer)</h4><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> You need to have installed Poppy software libraries on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p></blockquote><p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p><pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --poppy-simu</code></pre>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.</p></blockquote><p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
+If it is not automatically done, you can open Snap with preloaded blocks at <strong><a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></strong> and the robot viewer at <strong><a href="http://simu.poppy-project.org/poppy-ergo-jr" target="_blank">simu.poppy-project.org/poppy-ergo-jr</a></strong>.</p><p><strong>Alternative method</strong>:
+Instead of using <code>poppy-service</code> you can start it in full python:</p><pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
+poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;poppy-simu&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)</code></pre>
+<h4 id="if-you-have-a-tangible-robot">If you have a tangible robot</h4><p>First, you must be connected to the same network LAN area than your robot (e.g. on the same router or Wifi).</p><p>You have to go on the web homepage of your robot with its URL. You can use its IP address (for example <a href="http://192.168.1.42" target="_blank">http://192.168.1.42</a>) if you have a way to know it or its hostname like <a href="http://poppy.local" target="_blank">http://poppy.local</a>. To find its IP address look at <a href="../installation/install-zeroconf.html#alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network">the zeroconf chapter</a>. To use directly its hostname <a href="http://poppy.local" target="_blank">http://poppy.local</a> you must have a Zeroconf software installed on your computer (aka <a href="https://support.apple.com/kb/DL999?locale=en_US" target="_blank">&quot;Bonjour print services for Windows&quot;</a> if you are running Windows).</p><p>The home page of your poppy creature should look like the snapshot below:
+<img alt="find blocks" src="../img/snap/homepage.png"></p><p>Click on the &quot;Start Snap!&quot; link to open the Snap<em>!</em> interface at start the connection with the Poppy robot.</p><p>Poppy special blocks are stored in the Examples. Go to &quot;file&quot; icon -&gt; open -&gt; Examples -&gt; click on &quot;Poppy blocks&quot;. It may take some time to load the blocks (~5-15 seconds), be patient.</p><h3 id="interface-and-general-ideas">Interface and general ideas</h3><h3 id="saving-in-snap">Saving in Snap<em>!</em></h3><p>There are three ways of saving a project in Snap<em>!</em></p><h4 id="save-the-project-in-your-web-browser">Save the project in your web browser</h4><p><img alt="Save click" src="../img/snap/snap_save.png"></p><p>When you are not logged in Snap<em>!</em> Cloud, the default behaviour of Snap<em>!</em> is to save your project in <strong>your browser</strong>.</p><p>Technically this uses the Local Storage which is a memory space in your web browser where websites can store offline data. This is very convenient because you have not to register or to see Snap<em>!</em> project files, but keep in mind that <strong>these projects are only visible in this specific web browser in this specific computer</strong>.</p><h4 id="snap-cloud">Snap<em>!</em> Cloud</h4><blockquote><p>&#xAB; There is no Cloud, it&apos;s just someone else&apos;s computer &#xBB;.</p></blockquote><p>Instead of saving your projects on your web browser, you can save them in Snap<em>!</em> servers in UC Berkeley, called &quot;cloud&quot;. Moreover, this allows you to share your project with anyone, with a simple link.</p><h5 id="create-an-account-on-snap-cloud">Create an account on Snap<em>!</em> cloud</h5><p>Click on the cloud button -&gt; &quot;signup...&quot;.</p><p><img alt="Create account" src="../img/snap/snap_cloud_1.png"></p><p>Fill the required fields in the modal window for signing up.</p><p><img alt="Create account" src="../img/snap/dialog-cloud-signup.png"></p><p>You will soon receive a validation email with a random password.
+You can now log in with your username and password.</p><p><img alt="Login1" src="../img/snap/snap_login1.png"></p><p>If you use your personal computer, remember to check the &quot;stay signed in on this computer [...]&quot; checkbox.</p><p><img alt="Login2" src="../img/snap/snap_login2.png"></p><p>After logging in account, you are free to change your password: click on the cloud button -&gt; &quot;Change Password&quot;.</p><p><img alt="Create account" src="../img/snap/logout-menu.png"></p><h5 id="share-your-snap-project">Share your Snap<em>!</em> project</h5><p>The big advantage of using Snap<em>!</em> Cloud is the ability to share a copy of your project with anyone.
+To share a Snap<em>!</em> project, you first need to be logged in Snap<em>!</em> Cloud and having your current project saved (&quot;save&quot; or &quot;save as&quot;). Go to the &quot;open&quot; menu:</p><p><img alt="Open menu" src="../img/snap/snap_open.png"></p><p>In the cloud section, select the project you want to share and click on &quot;Share&quot; button.</p><p><img alt="Share" src="../img/snap/snap_cloud_3.png"></p><p><strong>Here is the trick step:</strong> to see the share link, you have to click on the &quot;Open&quot; button.</p><p><img alt="Open share" src="../img/snap/snap_cloud_4.png"></p><p>And this will re-open your project with the public sharing URL.</p><p><img alt="Sharing URL" src="../img/snap/snap_cloud_5.png"></p><p>You can copy and paste the URL and share it by the way you want to your friends or to the Poppy community with the forum <a href="https://forum.poppy-project.org/" target="_blank">forum.poppy-project.org</a>.</p><p>When you open a share project, the project is automatically opened in full screen on the sprite zone. To quit the full screen you have to click on the double arrow at the top of the snapshot below.
+<img alt="Sharing URL" src="../img/snap/snap_share_full_screen.png"></p><h4 id="exportimport-your-snap-project">Export/Import your Snap<em>!</em> project</h4><p>If you have a limited access to internet and you want to share project with other people, the best way is to export it:
+<img alt="Export section" src="../img/snap/snap_cloud_5.png">
 A new tab in your web browser will be opened with an XML file like the picture below.
-<img src="../img/snap/snap_xml_save_as.png" alt="Export section">
-This file describe all your Snap<em>!</em> project in a a simple file. It&apos;s not made to be human readable so don&apos;t be afraid, you just have to save it on your computer. For that, do a right click, chose &quot;save as&quot; and a proper name and location on you computer for this project.</p>
-<p>If you want to import a previously exported project, you simply have to click on the import section of the file icon.
-<img src="../img/snap/snap_import.png" alt="import section"></p>
-<h3 id="search-poppy-blocks">Search Poppy blocks</h3>
-<p>Every Poppy block in Snap<em>!</em> begins by a robot icon. So you can search all of them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.
-<img src="../img/snap/find_blocks.png" alt="find blocks">
-<img src="../img/snap/find_blocks2.png" alt="find blocks"></p>
-<!-- ### First steps with Snap_!_ and a Poppy creature
+<img alt="Export section" src="../img/snap/snap_xml_save_as.png">
+This file describe all your Snap<em>!</em> project in a a simple file. It&apos;s not made to be human readable so don&apos;t be afraid, you just have to save it on your computer. For that, do a right click, chose &quot;save as&quot; and a proper name and location on you computer for this project.</p><p>If you want to import a previously exported project, you simply have to click on the import section of the file icon.
+<img alt="import section" src="../img/snap/snap_import.png"></p><h3 id="search-poppy-blocks">Search Poppy blocks</h3><p>Every Poppy block in Snap<em>!</em> begins by a robot icon. So you can search all of them by the robot keyword. To search a specific block, do a right click on the block area, or use the keyboard shortcut CTRL+F.
+<img alt="find blocks" src="../img/snap/find_blocks.png">
+<img alt="find blocks" src="../img/snap/find_blocks2.png"></p><!-- ### First steps with Snap_!_ and a Poppy creature
 
 #### Test the connection between Snap_!_ and your creature
 
  -->
-<h4 id="network">Network</h4>
-<p>First test your connection with the (tangible or simulated) robot with the &quot;test connection&quot; block.
-<img src="../img/snap/test_connection.png" alt="test connection">.
-if the block answer is &quot;You may have connection troubles&quot;, your &quot;host&quot; variable inside the Snap<em>!</em> project is probably wrong. The host variable must be the IP or the hostname+&quot;.local&quot; of your robot ; if you&apos;re using V-REP localhost is used to point to your own computer.</p>
-<p><img src="../img/snap/test_connection3.png" alt="test connection3">.</p>
-<h3 id="build-your-own-blocks">Build your own blocks!</h3>
-<p>The functionality to build your own block was the first difference between Scratch and Snap<em>!</em> (now it&apos;s also possible to make custom blocks in Scratch)!
-<!-- TODO --></p>
-<h2 id="description-of-poppy-blocks">Description of Poppy blocks</h2>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="quick-examples">Quick examples</h2>
-<h3 id="record-and-play-back-a-move">Record and play back a move</h3>
-<p>You can record a movement on one motor and play it back</p>
-<p>You can change the speed</p>
-<p>You can record it on all motors</p>
-<p>or just a subset of your creature</p>
-<h4 id="record-and-by-demonstration-movement">Record and by demonstration movement</h4>
 
+
+<h4 id="network">Network</h4><p>First test your connection with the (tangible or simulated) robot with the &quot;test connection&quot; block.
+<img alt="test connection" src="../img/snap/test_connection.png">.
+if the block answer is &quot;You may have connection troubles&quot;, your &quot;host&quot; variable inside the Snap<em>!</em> project is probably wrong. The host variable must be the IP or the hostname+&quot;.local&quot; of your robot ; if you&apos;re using V-REP localhost is used to point to your own computer.</p><p><img alt="test connection3" src="../img/snap/test_connection3.png">.</p><h3 id="build-your-own-blocks">Build your own blocks!</h3><p>The functionality to build your own block was the first difference between Scratch and Snap<em>!</em> (now it&apos;s also possible to make custom blocks in Scratch)!
+<!-- TODO --></p><h2 id="description-of-poppy-blocks">Description of Poppy blocks</h2><table>
+<thead>
+<tr><th>  </th>
+<th>  </th>
+<th>  </th>
+<th>  </th>
+<th>  </th>
+</tr></thead><tbody>
+<tr><td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+</tr><tr><td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+</tr><tr><td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+<td style="text-align:left">  </td>
+</tr></tbody></table>
+
+<h2 id="quick-examples">Quick examples</h2><h3 id="record-and-play-back-a-move">Record and play back a move</h3><p>You can record a movement on one motor and play it back</p><p>You can change the speed</p><p>You can record it on all motors</p><p>or just a subset of your creature</p><h4 id="record-and-by-demonstration-movement">Record and by demonstration movement</h4>
                                 
                                 </section>
                             
@@ -938,7 +834,7 @@ if the block answer is &quot;You may have connection troubles&quot;, your &quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2016-06-29T09:14:14.655Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-29T09:16:19.841Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2016-07-12T08:34:10.782Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-12T08:37:55.658Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

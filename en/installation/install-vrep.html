@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.1.1">
+        <meta name="generator" content="GitBook 3.2.0">
         
         
         
@@ -735,55 +735,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="install-the-robotic-simulator-v-rep">Install the robotic simulator V-REP</h1>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> You need to install <a href="install-poppy-softwares.html">Poppy softwares</a> before installing the V-REP simulator.</p>
-</blockquote>
-<p><a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a> is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
+                                <h1 id="install-the-robotic-simulator-v-rep">Install the robotic simulator V-REP</h1><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> You need to install <a href="install-poppy-softwares.html">Poppy softwares</a> before installing the V-REP simulator.</p></blockquote><p><a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a> is an efficient robotic simulator mainly open source (GNU GPL), which is distributed under a free license for educational entities and have a commercial license for other purposes.
 There is also an <em>PRO EVAL</em> version which limit the right to backup. As you don&apos;t need to backup the scene to use V-REP with pypot (the Python library made for Poppy creatures), we suggest you to install this version to not worry about copyright infringement.
-If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the <a href="http://www.coppeliarobotics.com/licensing-plugin-edu.html" target="_blank">educational license</a>).</p>
-<h2 id="install-v-rep-on-windows">Install V-REP on Windows</h2>
-<p><a href="http://www.coppeliarobotics.com/downloads.html" target="_blank">Download V-REP</a> PRO EVAL or EDU (if you are an educational entity).
+If you want to modify the V-REP scene for adding or customizing a Poppy creature, you will have to use the PRO or the EDU version (look at the <a href="http://www.coppeliarobotics.com/licensing-plugin-edu.html" target="_blank">educational license</a>).</p><h2 id="install-v-rep-on-windows">Install V-REP on Windows</h2><p><a href="http://www.coppeliarobotics.com/downloads.html" target="_blank">Download V-REP</a> PRO EVAL or EDU (if you are an educational entity).
 As V-REP is not signed, you will have to pass the Windows SmartScreen (on Windows 10) popup to begin the installation.
-<img src="../img/vrep/vrep2.png" alt="VREP_smartscreen"></p>
-<p>During the installation, make sure to install <em>Visual C++ Redistributable 2010</em> and <em>Visual C++ Redistributable 2012</em>.
-<img src="../img/vrep/lucvincent/luc_vincent-056.png" alt="cpp2010"></p>
-<p><img src="../img/vrep/lucvincent/luc_vincent-059.png" alt="cpp2012"></p>
-<p>Even if you already have <em>Visual C++ Redistributable 2010</em> or <em>Visual C++ Redistributable 2012</em>, it is advised to &quot;repair&quot; them (it is a re-installation process).</p>
-<p><img src="../img/vrep/lucvincent/luc_vincent-060.png" alt="cpp2012"></p>
-<p><strong>After the installation you can <a href="#test-your-installation">test if V-REP works well</a></strong>.</p>
-<h2 id="install-on-mac-osx">Install on MAC OSX</h2>
-<!-- TODO -->
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> This paragraph is not currently written. Your help is welcome to fulfill it !</p>
-</blockquote>
-<h2 id="install-on-gnulinux">Install on GNU/Linux</h2>
-<!-- TODO -->
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> This paragraph is not currently written. Your help is welcome to fulfill it !</p>
-</blockquote>
-<h2 id="test-your-installation">Test your installation</h2>
-<p>Open V-REP with a double click on the desktop icon.
-Open the prompt of your Python Distribution (called <em>Anaconda Prompt</em> for Anaconda) or the <em>Command Prompt</em> of Windows, type and press Enter to execute the command below:</p>
-<pre><code class="lang-bash">poppy-services --snap --vrep --no-browser poppy-torso`
-</code></pre>
-<p>After a one or two seconds, you will have an error like the picture below in your Command prompt.
-<img src="../img/vrep/vrep3_1.png" alt="VREP_terminal"></p>
-<p>If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. <strong>You have to check the check-box &quot;Do not show this message again&quot; and press &quot;Ok&quot;.</strong>
-<img src="../img/vrep/vrep3_2.png" alt="VREP_checkbox"></p>
-<p>Switch the the command prompt window. You will have to execute the last command (<code>poppy-services --snap --vrep --no-browser poppy-torso</code>) and click again to the V-REP popup (with the check-box checked). <strong>This process will have to be done <em>three times</em> to make it works well!</strong></p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.</p>
-</blockquote>
-<p>When the setup of V-REP is ready, you can execute the last command without the &quot;--no-browser&quot; part.</p>
-<pre><code>poppy-services --snap --vrep poppy-torso
-</code></pre><p>If you see a firewall popup like the picture below, be sure to check the &quot;private network&quot; check-box.</p>
-<p><img src="../img/vrep/vrep4.png" alt="firewall"></p>
-<p>If everything works, a new tab have been opened on your default web-browser.
-<!-- TODO: lien doc -->
-You can program you robot in Snap<em>!</em> or in Python.</p>
-<p><img src="../img/vrep/lucvincent/luc_vincent-070.jpg" alt="jupyter notebook"></p>
+<img alt="VREP_smartscreen" src="../img/vrep/vrep2.png"></p><p>During the installation, make sure to install <em>Visual C++ Redistributable 2010</em> and <em>Visual C++ Redistributable 2012</em>.
+<img alt="cpp2010" src="../img/vrep/lucvincent/luc_vincent-056.png"></p><p><img alt="cpp2012" src="../img/vrep/lucvincent/luc_vincent-059.png"></p><p>Even if you already have <em>Visual C++ Redistributable 2010</em> or <em>Visual C++ Redistributable 2012</em>, it is advised to &quot;repair&quot; them (it is a re-installation process).</p><p><img alt="cpp2012" src="../img/vrep/lucvincent/luc_vincent-060.png"></p><p><strong>After the installation you can <a href="#test-your-installation">test if V-REP works well</a></strong>.</p><h2 id="install-on-mac-osx">Install on MAC OSX</h2><!-- TODO -->
 
+
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> This paragraph is not currently written. Your help is welcome to fulfill it !</p></blockquote><h2 id="install-on-gnulinux">Install on GNU/Linux</h2><!-- TODO -->
+
+
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> This paragraph is not currently written. Your help is welcome to fulfill it !</p></blockquote><h2 id="test-your-installation">Test your installation</h2><p>Open V-REP with a double click on the desktop icon.
+Open the prompt of your Python Distribution (called <em>Anaconda Prompt</em> for Anaconda) or the <em>Command Prompt</em> of Windows, type and press Enter to execute the command below:</p><pre><code class="lang-bash">poppy-services --snap --vrep --no-browser poppy-torso`</code></pre>
+<p>After a one or two seconds, you will have an error like the picture below in your Command prompt.
+<img alt="VREP_terminal" src="../img/vrep/vrep3_1.png"></p><p>If you switch to the V-REP window, a popup appeared to inform you that the simulation use custom parameters. This popup block the communication to the Python API of V-REP. <strong>You have to check the check-box &quot;Do not show this message again&quot; and press &quot;Ok&quot;.</strong>
+<img alt="VREP_checkbox" src="../img/vrep/vrep3_2.png"></p><p>Switch the the command prompt window. You will have to execute the last command (<code>poppy-services --snap --vrep --no-browser poppy-torso</code>) and click again to the V-REP popup (with the check-box checked). <strong>This process will have to be done <em>three times</em> to make it works well!</strong></p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> To avoid retyping the same command again and again, you can press the up arrow key to call the last typed line.</p></blockquote><p>When the setup of V-REP is ready, you can execute the last command without the &quot;--no-browser&quot; part.</p><pre><code>poppy-services --snap --vrep poppy-torso</code></pre>
+<p>If you see a firewall popup like the picture below, be sure to check the &quot;private network&quot; check-box.</p><p><img alt="firewall" src="../img/vrep/vrep4.png"></p><p>If everything works, a new tab have been opened on your default web-browser.
+<!-- TODO: lien doc -->
+You can program you robot in Snap<em>!</em> or in Python.</p><p><img alt="jupyter notebook" src="../img/vrep/lucvincent/luc_vincent-070.jpg"></p>
                                 
                                 </section>
                             
@@ -826,7 +796,7 @@ You can program you robot in Snap<em>!</em> or in Python.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Install V-REP simulator","level":"1.3.4","depth":2,"next":{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},"previous":{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-vrep.md","mtime":"2016-06-29T09:14:14.655Z","type":"markdown"},"gitbook":{"version":"3.1.1","time":"2016-06-29T09:16:19.841Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Install V-REP simulator","level":"1.3.4","depth":2,"next":{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},"previous":{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-vrep.md","mtime":"2016-07-12T08:34:10.782Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-07-12T08:37:55.658Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
