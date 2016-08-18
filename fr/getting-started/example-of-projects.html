@@ -1,0 +1,898 @@
+
+<!DOCTYPE HTML>
+<html lang="fr" >
+    <head>
+        <title>Exemples de projets · Documentation of the Poppy Platform</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../installation/" />
+    
+    
+    <link rel="prev" href="visualize.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Tapez pour rechercher" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Démarrer
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="build.html">
+            
+                <a href="build.html">
+            
+                    
+                    Construire un robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="connect.html">
+            
+                <a href="connect.html">
+            
+                    
+                    Se connecter au robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="program-the-robot.html">
+            
+                <a href="program-the-robot.html">
+            
+                    
+                    Program,er le robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="visualize.html">
+            
+                <a href="visualize.html">
+            
+                    
+                    Visualiser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="example-of-projects.html">
+            
+                <a href="example-of-projects.html">
+            
+                    
+                    Exemples de projets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../installation/">
+            
+                <a href="../installation/">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../installation/install-zeroconf.md">
+            
+                <span>
+            
+                    
+                    Installer un client zeroconf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../installation/burn-an-image-file.md">
+            
+                <span>
+            
+                    
+                    Démarrage d'un robot Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../installation/install-poppy-softwares.md">
+            
+                <span>
+            
+                    
+                    Installer les logiciels Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../installation/install-vrep.md">
+            
+                <span>
+            
+                    
+                    Installer le simulateur V-REP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../installation/install-drivers.md">
+            
+                <span>
+            
+                    
+                    Installer les pilots USB vers port série
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../installation/install-a-poppy-board.md">
+            
+                <span>
+            
+                    
+                    Installer une carte d'extension Poppy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../assembly-guides/">
+            
+                <a href="../assembly-guides/">
+            
+                    
+                    Guides d'assemblage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../assembly-guides/ergo-jr/">
+            
+                <a href="../assembly-guides/ergo-jr/">
+            
+                    
+                    Assembler le Ergo Jr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../assembly-guides/ergo-jr/electronic-assembly.html">
+            
+                <a href="../assembly-guides/ergo-jr/electronic-assembly.html">
+            
+                    
+                    Assembler l'électronique
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../assembly-guides/ergo-jr/motor-configuration.html">
+            
+                <a href="../assembly-guides/ergo-jr/motor-configuration.html">
+            
+                    
+                    Configurer les moteurs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../assembly-guides/ergo-jr/mechanical-construction.html">
+            
+                <a href="../assembly-guides/ergo-jr/mechanical-construction.html">
+            
+                    
+                    Construire la mécanique
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../assembly-guides/poppy-humanoid/README.md">
+            
+                <span>
+            
+                    
+                    Assembler le Poppy Humanoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../assembly-guides/poppy-torso/README.md">
+            
+                <span>
+            
+                    
+                    Assembler le Poppy Torso
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../programming/README.md">
+            
+                <span>
+            
+                    
+                    Programmation
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../programming/snap.md">
+            
+                <span>
+            
+                    
+                    Programmer avec Snap!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../programming/notebooks.md">
+            
+                <span>
+            
+                    
+                    Utiliser Jupyter notebooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../programming/python.md">
+            
+                <span>
+            
+                    
+                    Programmer en Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../programming/rest.md">
+            
+                <span>
+            
+                    
+                    APIs Robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../demo-activities/README.md">
+            
+                <span>
+            
+                    
+                    Activités
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../demo-activities/snap4arduino.md">
+            
+                <span>
+            
+                    
+                    Se connecter avec Snap4Arduino
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../from-simulation-to-real-robot/README.md">
+            
+                <span>
+            
+                    
+                    De la simulation à un vrai robot
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../from-simulation-to-real-robot/using-snap.md">
+            
+                <span>
+            
+                    
+                    Snap! sur un vrai robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../from-simulation-to-real-robot/using-jupyter.md">
+            
+                <span>
+            
+                    
+                    Programmer avec Jupyter notebooks sur un vrai robot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../software-libraries/README.md">
+            
+                <span>
+            
+                    
+                    Bibliothèques Logicielles
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../software-libraries/pypot.md">
+            
+                <span>
+            
+                    
+                    Pypot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../software-libraries/poppy-creature.md">
+            
+                <span>
+            
+                    
+                    Poppy-creature
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../software-libraries/poppy-ergo-jr.md">
+            
+                <span>
+            
+                    
+                    Poppy Ergo Jr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../software-libraries/poppy-humanoid.md">
+            
+                <span>
+            
+                    
+                    Poppy Humanoid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../software-libraries/poppy-torso.md">
+            
+                <span>
+            
+                    
+                    Poppy Torso
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../appendix/">
+            
+                <a href="../appendix/">
+            
+                    
+                    Appendices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../appendix/network.md">
+            
+                <span>
+            
+                    
+                    Réseau
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../appendix/contribute.md">
+            
+                <span>
+            
+                    
+                    Contribuer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../appendix/faq.md">
+            
+                <span>
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Publié avec GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Exemples de projets</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="aper&#xE7;u-des-projets-d&#xE9;velopp&#xE9;s-par-la-communaut&#xE9;">Aper&#xE7;u des projets d&#xE9;velopp&#xE9;s par la communaut&#xE9;</h2><p>La communaut&#xE9; Poppy rassemble une communaut&#xE9; interdisciplinaire de d&#xE9;butants et d&apos;experts, de scientifiques, d&apos;&#xE9;ducateurs, de d&#xE9;veloppeurs et d&apos;artistes. De nombreuses cr&#xE9;ations robotiques ont &#xE9;merg&#xE9;es. En voici quelques-unes illustr&#xE9;es ci-dessous.</p><h3 id="school-of-moon">School of Moon</h3><p>La pi&#xE8;ce <a href="http://shonen.info/schoolofmoon/" target="_blank">School of moon</a> a &#xE9;t&#xE9; cr&#xE9;&#xE9;e par la troupe de danse contemporaine <a href="http://shonen.info" target="_blank">Shonen</a> conduite par le chor&#xE9;ographe Eric Minh Cuong Castaing.</p><p>La sc&#xE8;ne est partag&#xE9;e avec des enfants, deux danseurs (Ga&#xEB;tan Brun Picard and Ana Pi), 3 Robots Nao et deux robots Humano&#xEF;des Poppy. Cette pi&#xE8;ce est une m&#xE9;taphore de la cr&#xE9;ation d&apos;une post-humanit&#xE9; en trois actes: l&apos;Homme, l&apos;Homme et la Machine, et la Machine.</p><iframe src="https://player.vimeo.com/video/149653064" width="640" height="360" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe>
+
+
+
+<p>Les repr&#xE9;sentations sont adapt&#xE9;es &#xE0; l&apos;endroit o&#xF9; elles se tiennent, les enfants participants &#xE0; la danse appartiennent &#xE0; la communaut&#xE9; locale. Il y a aussi des s&#xE9;quences sp&#xE9;cifiques suivant les robots disponibles dans la ville.</p><p>Les d&#xE9;fis artistiques sont:</p><ul><li>de diriger des enfants sur sc&#xE8;ne
+</li>
+<li>d&apos;avoir des interactions entre humains et robots sur sc&#xE8;ne
+</li>
+<li>d&apos;avoir des robots sur sc&#xE8;ne.
+</li></ul>
+<p>La cr&#xE9;ation s&apos;est tenue sur quatre p&#xE9;riodes de temps:</p><ul><li>2 semaines en r&#xE9;sidence au CDC de Toulouse (France) en Septembre 2015
+</li>
+<li>2 semaines en r&#xE9;sidence au KLAP de Marseille (France) en D&#xE9;cembre 2015
+</li>
+<li>4 semaines en r&#xE9;sidence au <em>Ballet National de Marseille</em> (France) en Janvier 2016
+</li>
+<li>2 semaines en r&#xE9;sidence &#xE0; D&#xFC;sseldorf (Germany)
+</li></ul>
+<h3 id="le-projet-cherry">Le Projet Cherry</h3><p><img src="https://forum.poppy-project.org/uploads/default/original/2X/3/33984972217cd45f473246b130f0001df33ffcfc.png">
+Le projet Cherry est un projet communautaire pour d&#xE9;veloper des sc&#xE9;narios afin de r&#xE9;duire l&apos;isolation des enfants &#xE0; l&apos;h&#xF4;pital.</p><p>Ce projet utilise le robot Poppy comme compagnon pour les enfants hospitalis&#xE9;s. Cherry peut compenser la rupture sociale durant l&apos;hospitablisation. Il agit comme m&#xE9;diateur entre l&apos;enfant, ses amis, sa famille et les enseignants, et peut lui parler ou jouer avec lui.</p><p>Il agit aussi au niveau p&#xE9;dagogique, en encourageant l&apos;enfant &#xE0; interagir avec l&apos;&#xE9;cole, en offrant des quizz et des jeux &#xE9;ducatifs.</p><p>Enfin, un dernier aspect est d&apos;assister le personnel m&#xE9;dical dans l&apos;&#xE9;ducation th&#xE9;rapeutique. En effet, un message est parfois plus acceptable pour l&apos;enfant s&apos;il est d&#xE9;livr&#xE9; par un robot, plut&#xF4;t que par un adulte habill&#xE9; comme un m&#xE9;decin.</p> <div style="text-align: center;">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/URB1kDDScfM" frameborder="0" allowfullscreen></iframe>
+ </div>
+
+
+
+<p>Plus d&apos;information:</p><ul><li>La page <a href="https://www.facebook.com/projetcherry/?ref=ts&amp;fref=ts" target="_blank">facebook</a>
+</li>
+<li>Le flux <a href="https://twitter.com/projetcherry" target="_blank">twitter</a>
+</li>
+<li>Le blog <a href="https://projetcherry.wordpress.com/" target="_blank">wordpress</a>
+</li>
+<li>Le d&#xE9;p&#xF4;t <a href="https://github.com/Cherry-project" target="_blank">github</a> (avec un <a href="https://github.com/Cherry-project/cherry-software/wiki" target="_blank">wiki</a>)
+</li></ul>
+<h3 id="connecter-poppy-et-arduino-gr&#xE2;ce-&#xE0;-snap4arduino">Connecter Poppy et Arduino gr&#xE2;ce &#xE0; Snap4Arduino</h3><p><a href="https://forum.poppy-project.org/users/gilles_lassus/" target="_blank">Gilles</a>, enseignant et &quot;maker&quot; &#xE0; ses heures perdues, a d&#xE9;velopp&#xE9; de nombreux projets bas&#xE9;s sur le Poppy Ergo Jr et Arduino. Pour connecter les deux mondes, il utilise <a href="http://s4a.cat/snap/" target="_blank">Snap4arduino</a>. Alors, il devient tr&#xE8;s ais&#xE9; et &#xE9;l&#xE9;gant de les faire communiquer. Vous pouvez combiner Arduino avec des blocs Poppy et voil&#xE0; !! Vous pouvez contr&#xF4;ler votre robot avec n&apos;importe quel capteur bas&#xE9; sur Arduino.</p><iframe width="480" height="270" src="https://www.youtube.com/embed/FGKFoUICByE" frameborder="0" allowfullscreen></iframe>
+
+
+
+<p>La seule limite est alors votre cr&#xE9;ativit&#xE9;! Par exemple, vous pouvez faire <a href="https://www.youtube.com/embed/usDAgvcEXJA" target="_blank">Poppy Ergo Jr jouer au Morpion</a>:</p><iframe width="480" height="270" src="https://www.youtube.com/embed/usDAgvcEXJA" frameborder="0" allowfullscreen></iframe>
+
+
+
+<p>La documentation d&#xE9;taill&#xE9;e peut &#xEA;tre trouv&#xE9;e dans la section <a href="#contr&#xF4;ler-poppy-avec-un-arduino-via-snap4arduino">Contr&#xF4;ler Poppy avec Arduino</a>.</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="visualize.html" class="navigation navigation-prev " aria-label="Previous page: Visualiser">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../installation/" class="navigation navigation-next " aria-label="Next page: Installation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Exemples de projets","level":"1.2.5","depth":2,"next":{"title":"Installation","level":"1.3","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[{"title":"Installer un client zeroconf","level":"1.3.1","depth":2,"path":"installation/install-zeroconf.md","ref":"installation/install-zeroconf.md","articles":[]},{"title":"Démarrage d'un robot Poppy","level":"1.3.2","depth":2,"path":"installation/burn-an-image-file.md","ref":"installation/burn-an-image-file.md","articles":[]},{"title":"Installer les logiciels Poppy","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},{"title":"Installer le simulateur V-REP","level":"1.3.4","depth":2,"path":"installation/install-vrep.md","ref":"installation/install-vrep.md","articles":[]},{"title":"Installer les pilots USB vers port série","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},{"title":"Installer une carte d'extension Poppy","level":"1.3.6","depth":2,"path":"installation/install-a-poppy-board.md","ref":"installation/install-a-poppy-board.md","articles":[]}]},"previous":{"title":"Visualiser","level":"1.2.4","depth":2,"path":"getting-started/visualize.md","ref":"getting-started/visualize.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"fr","gitbook":"*"},"file":{"path":"getting-started/example-of-projects.md","mtime":"2016-08-18T10:51:19.726Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-18T10:53:37.636Z"},"basePath":"..","book":{"language":"fr"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
