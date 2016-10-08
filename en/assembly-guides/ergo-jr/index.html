@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Assemble the Ergo Jr · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Assemble the Ergo Jr · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -735,78 +735,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="assembly-guide-for-the-ergo-jr">Assembly guide for the Ergo Jr</h1><p><img alt="Ergo-tool" src="img/ErgoJr.jpg"></p><p>The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm.
-It consists of very simple shapes which can be easily 3D printed. They are assembled via OLLO rivets which can be removed and added very quickly with the OLLO tool.</p><p>Its end effector can be easily changed. You can choose among several tools:</p><ul><li>a lampshade,
+                                <h1 id="assembly-guide-for-the-ergo-jr">Assembly guide for the Ergo Jr</h1>
+<p><img src="img/ErgoJr.jpg" alt="Ergo-tool"></p>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degree-of-freedom robot arm.
+It consists of very simple shapes which can be easily 3D printed. They are assembled via OLLO rivets which can be removed and added very quickly with the OLLO tool.</p>
+<p>Its end effector can be easily changed. You can choose among several tools:</p>
+<ul>
+<li>a lampshade,</li>
+<li>a gripper,</li>
+<li>or a pen holder.</li>
+</ul>
+<p>Thanks to the rivets, they can be very quickly and easily swapped. This allows the adaptation of the tooltip to the different applications you plan for your robot.</p>
+<p>The engines have the same functionality as other Poppy  creatures but are slightly less powerful and less precise. The advantage being that they are also less expensive.</p>
+<p>The electronic card is visible next to the robot, which is very advantageous to understand, manipulate, and plug extra sensors. No soldering is needed, you just need to add the shield for XL-320 motors on top of the Raspberry Pi pins.</p>
+<p>This chapter will guide you through all steps required to entirely assemble a Poppy Ergo Jr. It will cover:</p>
+<ul>
+<li><a href="motor-configuration.html">motors configuration</a></li>
+<li><a href="electronic-assembly.html">electronic assembly</a></li>
+<li><a href="mechanical-construction.html">hardware construction</a></li>
+</ul>
+<p><strong>The entire assembly should take about one or two hours</strong> for the first time you build one. With more practice, half an hour should be more than enough.</p>
+<p>At the end of the process, you should have a working Poppy Ergo Jr, ready to move!</p>
+<p>We recommend you to follow carefully the instructions. Even if the Ergo Jr can be easily disassembled, it is always disappointing to need to start from scratch again because you forget to configure the motors, a wire is missing, or a motor is reversed.</p>
+<!-- Should be updated from https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md -->
+<h2 id="bill-of-materials">Bill of materials</h2>
+<p>Here you will find the complete list of material (BOM) needed to build a Poppy Ergo Jr.</p>
+<h2 id="poppys-material">Poppy&apos;s material</h2>
+<ul>
+<li>1x <a href="https://github.com/poppy-project/pixl" target="_blank">Pixl board</a> <em>(electronic board to control XL320 motors)</em></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl" target="_blank">disk_support.stl</a> (using laser cutting) the 2D plan can be found <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting" target="_blank">here</a>. <em>You can also 3D print the base but it will take a lot of time</em></li>
+<li>the 3D printed parts <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL" target="_blank">STL here</a><ul>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl" target="_blank">base.stl</a></li>
+<li>3x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl" target="_blank">horn2horn.stl</a></li>
+<li>3x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/side2side.stl" target="_blank">side2side.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl" target="_blank">long_U.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/short_U.stl" target="_blank">short_U.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/support_camera.stl" target="_blank">support_camera.stl</a></li>
+<li>the different tools<ul>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl" target="_blank">lamp.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl" target="_blank">gripper-fixation.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl" target="_blank">gripper-fixed_part.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-rotative_part.stl" target="_blank">gripper-rotative_part.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl" target="_blank">pen-holder.stl</a></li>
+<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl" target="_blank">pen-screw.stl</a></li>
+</ul>
 </li>
-<li>a gripper,
+</ul>
 </li>
-<li>or a pen holder.
-</li></ul>
-<p>Thanks to the rivets, they can be very quickly and easily swapped. This allows the adaptation of the tooltip to the different applications you plan for your robot.</p><p>The engines have the same functionality as other Poppy  creatures but are slightly less powerful and less precise. The advantage being that they are also less expensive.</p><p>The electronic card is visible next to the robot, which is very advantageous to understand, manipulate, and plug extra sensors. No soldering is needed, you just need to add the shield for XL-320 motors on top of the Raspberry Pi pins.</p><p>This chapter will guide you through all steps required to entirely assemble a Poppy Ergo Jr. It will cover:</p><ul><li><a href="motor-configuration.html">motors configuration</a>
-</li>
-<li><a href="electronic-assembly.html">electronic assembly</a>
-</li>
-<li><a href="mechanical-construction.html">hardware construction</a>
-</li></ul>
-<p><strong>The entire assembly should take about one or two hours</strong> for the first time you build one. With more practice, half an hour should be more than enough.</p><p>At the end of the process, you should have a working Poppy Ergo Jr, ready to move!</p><p>We recommend you to follow carefully the instructions. Even if the Ergo Jr can be easily disassembled, it is always disappointing to need to start from scratch again because you forget to configure the motors, a wire is missing, or a motor is reversed.</p><!-- Should be updated from https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md -->
-
-
-<h2 id="bill-of-materials">Bill of materials</h2><p>Here you will find the complete list of material (BOM) needed to build a Poppy Ergo Jr.</p><h2 id="poppys-material">Poppy&apos;s material</h2><ul><li>1x <a href="https://github.com/poppy-project/pixl" target="_blank">Pixl board</a> <em>(electronic board to control XL320 motors)</em>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/disk_support.stl" target="_blank">disk_support.stl</a> (using laser cutting) the 2D plan can be found <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/laser_cutting" target="_blank">here</a>. <em>You can also 3D print the base but it will take a lot of time</em>
-</li>
-<li>the 3D printed parts <a href="https://github.com/poppy-project/poppy-ergo-jr/tree/master/hardware/STL" target="_blank">STL here</a>
-<ul><li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/base.stl" target="_blank">base.stl</a>
-</li>
-<li>3x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/horn2horn.stl" target="_blank">horn2horn.stl</a>
-</li>
-<li>3x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/side2side.stl" target="_blank">side2side.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/long_U.stl" target="_blank">long_U.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/short_U.stl" target="_blank">short_U.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/support_camera.stl" target="_blank">support_camera.stl</a>
-</li>
-<li>the different tools
-<ul><li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/lamp.stl" target="_blank">lamp.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl" target="_blank">gripper-fixation.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixed_part.stl" target="_blank">gripper-fixed_part.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-rotative_part.stl" target="_blank">gripper-rotative_part.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-holder.stl" target="_blank">pen-holder.stl</a>
-</li>
-<li>1x <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/pen-screw.stl" target="_blank">pen-screw.stl</a>
-</li></ul>
-</li></ul>
-</li></ul>
-<h2 id="robotis-parts">Robotis parts</h2><ul><li>6x Robotis dynamixel motors XL-320
-</li>
-<li>1x set of OLLO rivets (about 70 colored and 4 grey)
-</li>
-<li>1x OLLO TOOL
-</li></ul>
-<h2 id="screw">Screw</h2><ul><li>4x M2.5x6mm screw (for fixing the Raspberry Pi on the base)
-</li>
-<li>4x M2x5mm screw (for fixing the camera)
-</li>
-<li>4x M2 nuts (fixing camera)
-</li>
-<li>1x Standoff Male/Female M2.5 10mm
-</li></ul>
-<h2 id="various-electronics">Various electronics</h2><ul><li>1x Raspberry Pi 2
-</li>
-<li>1x micro SD 8Go
-</li>
-<li>1x Rasperry Pi camera
-</li>
-<li>1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector (<a href="http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&amp;relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&amp;sra=p" target="_blank">this one</a> for instance).
-</li>
-<li>Short ethernet cable
-</li></ul>
+</ul>
+<h2 id="robotis-parts">Robotis parts</h2>
+<ul>
+<li>6x Robotis dynamixel motors XL-320</li>
+<li>1x set of OLLO rivets (about 70 colored and 4 grey)</li>
+<li>1x OLLO TOOL</li>
+</ul>
+<h2 id="screw">Screw</h2>
+<ul>
+<li>4x M2.5x6mm screw (for fixing the Raspberry Pi on the base)</li>
+<li>4x M2x5mm screw (for fixing the camera)</li>
+<li>4x M2 nuts (fixing camera)</li>
+<li>1x Standoff Male/Female M2.5 10mm</li>
+</ul>
+<h2 id="various-electronics">Various electronics</h2>
+<ul>
+<li>1x Raspberry Pi 2</li>
+<li>1x micro SD 8Go</li>
+<li>1x Rasperry Pi camera</li>
+<li>1x AC power 7.5V 2A with a 2.1 x 5.5 x 9.5 jack connector (<a href="http://fr.rs-online.com/web/p/alimentations-enfichables/7262814/?searchTerm=ECP-15-7.5E&amp;relevancy-data=636F3D3226696E3D4931384E4B6E6F776E41734D504E266C753D6672266D6D3D6D61746368616C6C7061727469616C26706D3D5E5B5C707B4C7D5C707B4E647D2D2C2F255C2E5D2B2426706F3D313326736E3D592673743D4D414E5F504152545F4E554D4245522677633D424F5448267573743D4543502D31352D372E354526&amp;sra=p" target="_blank">this one</a> for instance).</li>
+<li>Short ethernet cable</li>
+</ul>
 <!--
 TODO: assembly web interface
 ## Assembly web interface
@@ -815,8 +812,6 @@ Directly, from the web interface (see Chapter [Setup your Raspberry-Pi](#TODO) i
 
 It is the best way to easily assemble your robot as it will integrate all steps described in the following sections and moreover allows you to directly configure your motor so they are ready to use.
  -->
-
-
 
                                 
                                 </section>
@@ -860,7 +855,7 @@ It is the best way to easily assemble your robot as it will integrate all steps 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"next":{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"previous":{"title":"Assembly guides","level":"1.4","depth":1,"path":"assembly-guides/README.md","ref":"assembly-guides/README.md","articles":[{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"path":"assembly-guides/ergo-jr/README.md","ref":"assembly-guides/ergo-jr/README.md","articles":[{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},{"title":"Motor configuration","level":"1.4.1.2","depth":3,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]}]},{"title":"Assemble the Poppy Humanoid","level":"1.4.2","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},{"title":"Assemble the Poppy Torso","level":"1.4.3","depth":2,"path":"assembly-guides/poppy-torso/README.md","ref":"assembly-guides/poppy-torso/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/README.md","mtime":"2016-09-12T14:18:54.043Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"next":{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"previous":{"title":"Assembly guides","level":"1.4","depth":1,"path":"assembly-guides/README.md","ref":"assembly-guides/README.md","articles":[{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"path":"assembly-guides/ergo-jr/README.md","ref":"assembly-guides/ergo-jr/README.md","articles":[{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},{"title":"Motor configuration","level":"1.4.1.2","depth":3,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]}]},{"title":"Assemble the Poppy Humanoid","level":"1.4.2","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},{"title":"Assemble the Poppy Torso","level":"1.4.3","depth":2,"path":"assembly-guides/poppy-torso/README.md","ref":"assembly-guides/poppy-torso/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/README.md","mtime":"2016-10-08T19:58:29.115Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"../..","book":{"language":"en"}});
         });
     </script>
 </div>

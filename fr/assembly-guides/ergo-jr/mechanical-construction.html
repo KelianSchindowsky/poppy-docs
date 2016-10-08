@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="fr" >
     <head>
-        <title>Construire la mécanique · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Construire la mécanique · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -729,54 +729,115 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="construction-m&#xE9;canique">Construction m&#xE9;canique</h2><h3 id="avis-et-avertissements-dordre-g&#xE9;n&#xE9;ral">Avis et avertissements d&apos;ordre g&#xE9;n&#xE9;ral</h3><!-- TODO:
+                                <h2 id="construction-m&#xE9;canique">Construction m&#xE9;canique</h2>
+<h3 id="avis-et-avertissements-dordre-g&#xE9;n&#xE9;ral">Avis et avertissements d&apos;ordre g&#xE9;n&#xE9;ral</h3>
+<!-- TODO:
 * picture rivet black vs grey
 * ergo + wires
 -->
-
-
-<ul><li>Vous pouvez assembler tous les rivets avant la construction.  Vous devez ins&#xE9;rer la tige de la premi&#xE8;re partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si n&#xE9;cessaire.
-</li></ul>
-<p><img alt="Assemblage d&apos;un rivet OLLO" src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivet.png"></p><ul><li>Il y a deux types de rivets: les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les ins&#xE9;rer &#xE0; travers l&apos;axe du moteur, par le c&#xF4;t&#xE9; oppos&#xE9; aux palonniers d&apos;assemblage.
-</li></ul>
-<p><img alt="OLLO Rivet size" src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivets_size.jpg"></p><ul><li>Utilisez l&apos;outil OLLO pour pouvoir monter et d&#xE9;monter les rivets facilement.
-</li></ul>
-<p><img alt="OLLO Tool" src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo-tool.jpg"></p><ul><li><p>N&apos;oubliez pas d&apos;ins&#xE9;rer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis &#xE0; part le dernier de la cha&#xEE;ne, doit avoir deux fils : un connect&#xE9; au moteur pr&#xE9;c&#xE9;dent et l&apos;autre au moteur suivant (le sens de connexion n&apos;a pas d&apos;importance).</p></li>
-<li><p><strong>Alignez toujours le palonnier (la roue d&apos;entrainement noire) avec le moteur avant de les assembler!</strong> Sinon votre Poppy Ergo Jr aura l&apos;air tout &#xE0; fait bizarre...</p></li></ul>
-<p><img alt="Alignement du palonnier" src="../../../en/assembly-guides/ergo-jr/img/assembly/align-horn.png"></p><ul><li>Toutes les palonniers moteur doivent &#xEA;tre align&#xE9;es sur <strong>le c&#xF4;t&#xE9; gauche du robot</strong>. C&apos;est juste une convention mais elle d&#xE9;finira l&apos;orientation de vos moteurs.
-</li></ul>
-<p><img alt="Horns on left side" src="../../../en/assembly-guides/ergo-jr/img/assembly/horns_on_left.jpg"></p><h2 id="guide-pas-&#xE0;-pas">Guide pas &#xE0; pas</h2><h3 id="configuration-des-moteurs-pour-toutes-les-&#xE9;tapes">Configuration des moteurs (pour toutes les &#xE9;tapes)</h3><p>Vous pouvez configurer les moteurs avant, pendant ou apr&#xE8;s l&apos;assemblage m&#xE9;canique mais il est hautement conseill&#xE9; de configurer chaque moteur un par un dans l&apos;ordre de construction :</p><ul><li>Configurer moteur m1
-</li>
-<li>Assembler la base et le moteur m1
-</li>
-<li>Configurer le moteur m2
-</li>
-<li>...
-</li></ul>
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong><p> Pour configurer les moteurs vous devez les connecter s&#xE9;par&#xE9;ment un par un avec le Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu&apos;il est connect&#xE9; avec le moteur pr&#xE9;c&#xE9;dent, cela ne fonctionnera pas.</p></blockquote><p>Veuillez consulter le <a href="motor-configuration.html">chapitre configuration des moteurs</a> pour plus d&apos;informations.</p><h3 id="etape-1">Etape 1</h3><p>Tout d&apos;abord, <a href="motor-configuration.html">configurez un moteur XL-320</a> en tant que &quot;m1&quot;.</p><p>Montez le moteur sur la base imprim&#xE9;e en 3D.</p><p><img alt="&#xE9;tape 1" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_1-2.jpg"></p><p>Pour se faire, pr&#xE9;parez 8 petits rivets. Placez la premi&#xE8;re partie dans la seconde sans les mettre &#xE0; l&apos;int&#xE9;rieur du moteur. Ensuite, placez le moteur sur la base avec la palonnier faisant face au c&#xF4;t&#xE9; le plus ouvert. Utilisez l&apos;outil OLLO pour attraper le rivet entre la premi&#xE8;re et seconde partie puis ins&#xE9;rez le rivet dans un des trous d&apos;assemblage. Une fois le rivet en place, verrouillez-le en poussant la partie 1 du rivet dans la partie 2.</p><h3 id="etape-2">Etape 2</h3><p>Configurez le second moteur (son nom est &quot;m2&quot;), avec la commande suivante dans un terminal Poppy:</p><pre><code class="lang-bash">poppy-configure ergo-jr m2</code></pre>
+<ul>
+<li>Vous pouvez assembler quelques rivets avant la construction.  Vous devez ins&#xE9;rer la tige de la premi&#xE8;re partie dans le trou de la seconde. Vous pourrez ainsi les enlever facilement si n&#xE9;cessaire.</li>
+</ul>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivet.png" alt="Assemblage d&apos;un rivet OLLO"></p>
+<ul>
+<li>Il y a deux types de rivets: les gris et les autres. Les rivets gris sont plus longs afin de pouvoir les ins&#xE9;rer &#xE0; travers l&apos;axe du moteur, par le c&#xF4;t&#xE9; oppos&#xE9; aux palonniers d&apos;assemblage.</li>
+</ul>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo_rivets_size.jpg" alt="OLLO Rivet size"></p>
+<ul>
+<li>Utilisez l&apos;outil OLLO pour pouvoir monter et d&#xE9;monter les rivets facilement.</li>
+</ul>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/ollo-tool.jpg" alt="OLLO Tool"></p>
+<ul>
+<li>N&apos;oubliez pas d&apos;ins&#xE9;rer les fils entre les moteurs quand vous construisez le robot ! Chaque moteur, mis &#xE0; part le dernier de la cha&#xEE;ne, doit avoir deux fils : un connect&#xE9; au moteur pr&#xE9;c&#xE9;dent et l&apos;autre au moteur suivant (le sens de connexion n&apos;a pas d&apos;importance).</li>
+</ul>
+<ul>
+<li><strong>Alignez toujours le palonnier (la roue d&apos;entrainement noire) avec le moteur avant de les assembler!</strong> Sinon votre Poppy Ergo Jr aura l&apos;air tout &#xE0; fait bizarre...</li>
+</ul>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/align-horn.png" alt="Alignement du palonnier"></p>
+<ul>
+<li>Toutes les palonniers moteur doivent &#xEA;tre align&#xE9;es sur <strong>le c&#xF4;t&#xE9; gauche du robot</strong>. C&apos;est juste une convention mais elle d&#xE9;finira l&apos;orientation de vos moteurs.</li>
+</ul>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/horns_on_left.jpg" alt="Horns on left side"></p>
+<h2 id="guide-pas-&#xE0;-pas">Guide pas &#xE0; pas</h2>
+<h3 id="configuration-des-moteurs-pour-toutes-les-&#xE9;tapes">Configuration des moteurs (pour toutes les &#xE9;tapes)</h3>
+<p>Vous pouvez configurer les moteurs avant, pendant ou apr&#xE8;s l&apos;assemblage m&#xE9;canique mais il est hautement conseill&#xE9; de configurer chaque moteur un par un dans l&apos;ordre de construction :</p>
+<ul>
+<li>Configurer moteur m1</li>
+<li>Assembler la base et le moteur m1</li>
+<li>Configurer le moteur m2</li>
+<li>...</li>
+</ul>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> Pour configurer les moteurs vous devez les connecter s&#xE9;par&#xE9;ment un par un avec le Raspberry Pi. Si vous essayez de configurer un nouveau moteur alors qu&apos;il est connect&#xE9; avec le moteur pr&#xE9;c&#xE9;dent, cela ne fonctionnera pas.</p>
+</blockquote>
+<p>Veuillez consulter le <a href="motor-configuration.html">chapitre configuration des moteurs</a> pour plus d&apos;informations.</p>
+<h3 id="etape-1">Etape 1</h3>
+<p>Tout d&apos;abord, <a href="motor-configuration.html">configurez un moteur XL-320</a> en tant que &quot;m1&quot;.</p>
+<p>Montez le moteur sur la base imprim&#xE9;e en 3D.</p>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_1-2.jpg" alt="&#xE9;tape 1"></p>
+<p>Pour se faire, pr&#xE9;parez 8 petits rivets. Placez la premi&#xE8;re partie dans la seconde sans les mettre &#xE0; l&apos;int&#xE9;rieur du moteur. Ensuite, placez le moteur sur la base avec la palonnier faisant face au c&#xF4;t&#xE9; le plus ouvert. Utilisez l&apos;outil OLLO pour attraper le rivet entre la premi&#xE8;re et seconde partie puis ins&#xE9;rez le rivet dans un des trous d&apos;assemblage. Une fois le rivet en place, verrouillez-le en poussant la partie 1 du rivet dans la partie 2.</p>
+<h3 id="etape-2">Etape 2</h3>
+<p>Configurez le second moteur (son nom est &quot;m2&quot;), avec la commande suivante dans un terminal Poppy:</p>
+<pre><code class="lang-bash">poppy-configure ergo-jr m2
+</code></pre>
 <p>Montez la pi&#xE8;ce en forme de <em>long U</em>. Attention avec l&apos;orientation du U, le palonnier doit &#xEA;tre orient&#xE9;e sur la gauche.
-Montez le moteur &quot;m2&quot; au sommet de la construction.</p><p><img alt="&#xE9;tape 2" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_3-4.jpg"></p><h3 id="etape-3">Etape 3</h3><p>Configurez le moteur &quot;m3&quot;.</p><p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m2&quot; et montez &quot;m3&quot; au sommet de la construction.
-<img alt="&#xE9;tape 3" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_5-6.jpg"></p><h3 id="etape-4">Etape 4</h3><p>Configurez le moteur &quot;m4&quot;.</p><p>Montez une pi&#xE8;ce en &quot;U court&quot; sur le moteur 4.
-<img alt="&#xE9;tape 4" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_7-8.jpg"></p><p>Montez le moteur &quot;m4&quot; et la pi&#xE8;ce en &quot;U court&quot; qui y figure au sommet de la construction. Le nez du moteur devrait &#xEA;tre sur l&apos;autre c&#xF4;t&#xE9; de la base.
-<img alt="&#xE9;tape 4 bis" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_9-10.jpg"></p><h3 id="etape-5">Etape 5</h3><p>Configurez le moteur &quot;m5&quot;.</p><p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m4&quot;, et montez &quot;m5&quot; au sommet de la construction.</p><p><img alt="&#xE9;tape 5" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_11-12-13.jpg"></p><h3 id="etape-6---loutil-de-votre-choix">Etape 6 - l&apos;outil de votre choix</h3><p>Configurez le moteur &quot;m6&quot;.</p><p>Pour achever votre Ergo Jr, vous devez ajouter un outil &#xE0; son extr&#xE9;mit&#xE9;. Choisissez un outil en fonction de ce que vous souhaitez faire.</p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong><p> Les outils peuvent &#xEA;tre facilement et rapidement changer vous pouvez donc l&apos;adapter aux diff&#xE9;rentes activit&#xE9;s.</p></blockquote><h4 id="abat-jour-ou-porte-stylo">Abat-jour ou porte-stylo</h4><p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m5&quot;, et montez &quot;m6&quot; au sommet de la construction.
-<img alt="&#xE9;tape 6" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_14-16-17.jpg"></p><p>Vous pouvez monter le porte-stylo ou l&apos;abat-jour sur le moteur &quot;m6&quot;.
-<img alt="&#xE9;tape 6 bis" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_18-19.jpg"></p><h4 id="pince">Pince</h4><p>Montez l&apos;<a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl" target="_blank"><em>attache de la pince</em></a> entre les moteurs &quot;m5&quot; et &quot;m6&quot;.</p><p>Montez la partie <em>Fixe de pince</em> et partie <em>Rotative de pince</em> sur le moteur &quot;m6&quot;.
-<!-- TODO closed picture of gripper--></p><h3 id="etape-7---electronics">Etape 7 - electronics</h3><p>Monter la partie support cam&#xE9;ra sur la base. Attacher la cam&#xE9;ra Raspberry Pi et bouger le c&#xE2;ble cam&#xE9;ra Flex entre le moteur &quot;m1&quot; et la base.
-<img alt="&#xE9;tape 7" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_21-22.jpg"></p><p>Pour connecter le c&#xE2;ble Flex de la cam&#xE9;ra sur le Raspberry Pi, vous devez:</p><ul><li>Ouvrir le connecteur cam&#xE9;ra en tirant l&apos;attache vers le haut.
-</li>
-<li>Vous assurer que la face des connecteurs du c&#xE2;ble Flex est dos au port Ethernet.
-</li>
-<li>Pousser le flex dans le port et repoussez l&apos;attache plastique du port cam&#xE9;ra vers le bas.
-</li></ul>
+Montez le moteur &quot;m2&quot; au sommet de la construction.</p>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_3-4.jpg" alt="&#xE9;tape 2"></p>
+<h3 id="etape-3">Etape 3</h3>
+<p>Configurez le moteur &quot;m3&quot;.</p>
+<p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m2&quot; et montez &quot;m3&quot; au sommet de la construction.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_5-6.jpg" alt="&#xE9;tape 3"></p>
+<h3 id="etape-4">Etape 4</h3>
+<p>Configurez le moteur &quot;m4&quot;.</p>
+<p>Montez une pi&#xE8;ce en &quot;U court&quot; sur le moteur 4.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_7-8.jpg" alt="&#xE9;tape 4"></p>
+<p>Montez le moteur &quot;m4&quot; et la pi&#xE8;ce en &quot;U court&quot; qui y figure au sommet de la construction. Le nez du moteur devrait &#xEA;tre sur l&apos;autre c&#xF4;t&#xE9; de la base.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_9-10.jpg" alt="&#xE9;tape 4 bis"></p>
+<h3 id="etape-5">Etape 5</h3>
+<p>Configurez le moteur &quot;m5&quot;.</p>
+<p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m4&quot;, et montez &quot;m5&quot; au sommet de la construction.</p>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_11-12-13.jpg" alt="&#xE9;tape 5"></p>
+<h3 id="etape-6---loutil-de-votre-choix">Etape 6 - l&apos;outil de votre choix</h3>
+<p>Configurez le moteur &quot;m6&quot;.</p>
+<p>Pour achever votre Ergo Jr, vous devez ajouter un outil &#xE0; son extr&#xE9;mit&#xE9;. Choisissez un outil en fonction de ce que vous souhaitez faire.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> Les outils peuvent &#xEA;tre facilement et rapidement changer vous pouvez donc l&apos;adapter aux diff&#xE9;rentes activit&#xE9;s.</p>
+</blockquote>
+<h4 id="abat-jour-ou-porte-stylo">Abat-jour ou porte-stylo</h4>
+<p>Montez la pi&#xE8;ce &quot;palonnier &#xE0; palonnier&quot; et la pi&#xE8;ce &quot;palonnier &#xE0; c&#xF4;t&#xE9;&quot; sur le moteur &quot;m5&quot;, et montez &quot;m6&quot; au sommet de la construction.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_14-16-17.jpg" alt="&#xE9;tape 6"></p>
+<p>Vous pouvez monter le porte-stylo ou l&apos;abat-jour sur le moteur &quot;m6&quot;.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_18-19.jpg" alt="&#xE9;tape 6 bis"></p>
+<h4 id="pince">Pince</h4>
+<p>Montez l&apos;<a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/hardware/STL/tools/gripper-fixation.stl" target="_blank"><em>attache de la pince</em></a> entre les moteurs &quot;m5&quot; et &quot;m6&quot;.</p>
+<p>Montez la partie <em>Fixe de pince</em> et partie <em>Rotative de pince</em> sur le moteur &quot;m6&quot;.
+<!-- TODO closed picture of gripper--></p>
+<h3 id="etape-7---electronics">Etape 7 - electronics</h3>
+<p>Monter la partie support cam&#xE9;ra sur la base. Attacher la cam&#xE9;ra Raspberry Pi et bouger le c&#xE2;ble cam&#xE9;ra Flex entre le moteur &quot;m1&quot; et la base.
+<img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_21-22.jpg" alt="&#xE9;tape 7"></p>
+<p>Pour connecter le c&#xE2;ble Flex de la cam&#xE9;ra sur le Raspberry Pi, vous devez:</p>
+<ul>
+<li>Ouvrir le connecteur cam&#xE9;ra en tirant l&apos;attache vers le haut.</li>
+<li>Vous assurer que la face des connecteurs du c&#xE2;ble Flex est dos au port Ethernet.</li>
+<li>Pousser le flex dans le port et repoussez l&apos;attache plastique du port cam&#xE9;ra vers le bas.</li>
+</ul>
 <!-- TODO: add a closed picture of camera fix-->
+<p><strong>Fils moteurs:</strong></p>
+<p>Si ca n&apos;est pas d&#xE9;j&#xE0; le cas, vous pouvez connecter tous les fils moteurs. Chaque moteur a deux connecteurs mais il n&apos;y pas ni entr&#xE9;e ni sortie, vous devez simplement cr&#xE9;er une cha&#xEE;ne de moteurs.
+Le premier moteur est connect&#xE9; &#xE0; la carte d&apos;extension PIXL et au second moteur; le dernier moteur est li&#xE9; seulement au moteur pr&#xE9;c&#xE9;dent, et tous les autres sont connect&#xE9;s au moteur pr&#xE9;c&#xE9;dent.</p>
+<!-- TODO picture of OLLO + base rivets -->
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p>  Les connecteurs du moteur &quot;m1&quot; (sur la base) sont un peu difficiles &#xE0; connecteur, vous pouvez utiliser l&apos;outil OLLO pour vous aider.</p>
+</blockquote>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_24.jpg" alt="step 7 bis"></p>
+<h3 id="etape-8---connectez-votre-ergo-jr-au-raspberry-pi">Etape 8 - connectez votre ergo-jr au Raspberry Pi</h3>
+<p>Montez votre ergo-jr sur le <em>disque de support en bois</em>.</p>
+<p>Montez votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5x6mm pour l&apos;arrimer.
+<!-- TODO: picture of disk fixation --></p>
+<h3 id="cest-fini">C&apos;est Fini</h3>
+<p><img src="../../../en/assembly-guides/ergo-jr/img/assembly/ergo-tool-2.jpg" alt="image"></p>
+<p>Prenez maintenant un verre de votre <a href="https://www.flickr.com/photos/poppy-project/16488256337/" target="_blank">boisson pr&#xE9;f&#xE9;r&#xE9;e</a> et d&#xE9;tendez-vous.</p>
 
-
-<p><strong>Fils moteurs:</strong></p><p>Si ca n&apos;est pas d&#xE9;j&#xE0; le cas, vous pouvez connecter tous les fils moteurs. Chaque moteur a deux connecteurs mais il n&apos;y pas ni entr&#xE9;e ni sortie, vous devez simplement cr&#xE9;er une cha&#xEE;ne de moteurs.
-Le premier moteur est connect&#xE9; &#xE0; la carte d&apos;extension PIXL et au second moteur; le dernier moteur est li&#xE9; seulement au moteur pr&#xE9;c&#xE9;dent, et tous les autres sont connect&#xE9;s au moteur pr&#xE9;c&#xE9;dent.</p><!-- TODO picture of OLLO + base rivets -->
-
-
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong><p>  Les connecteurs du moteur &quot;m1&quot; (sur la base) sont un peu difficiles &#xE0; connecteur, vous pouvez utiliser l&apos;outil OLLO pour vous aider.</p></blockquote><p><img alt="step 7 bis" src="../../../en/assembly-guides/ergo-jr/img/assembly/steps/step_24.jpg"></p><h3 id="etape-8---connectez-votre-ergo-jr-au">Etape 8 - connectez votre ergo-jr au</h3><p>Montez votre ergo-jr sur le <em>disque de support en bois</em>.</p><p>Montez votre Raspberry Pi sur le disque de support, et utilisez une vis 4 x M2.5x6mm pour l&apos;arrimer.
-<!-- TODO: picture of disk fixation --></p><h3 id="cest-fini">C&apos;est Fini</h3><p><img alt="image" src="../../../en/assembly-guides/ergo-jr/img/assembly/ergo-tool-2.jpg"></p><p>Prenez maintenant un verre de votre <a href="https://www.flickr.com/photos/poppy-project/16488256337/" target="_blank">boisson pr&#xE9;f&#xE9;r&#xE9;e</a> et d&#xE9;tendez-vous.</p>
                                 
                                 </section>
                             
@@ -819,7 +880,7 @@ Le premier moteur est connect&#xE9; &#xE0; la carte d&apos;extension PIXL et au 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Construire la mécanique","level":"1.4.4","depth":2,"next":{"title":"Assembler le Poppy Humanoid","level":"1.4.5","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},"previous":{"title":"Configurer les moteurs","level":"1.4.3","depth":2,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"fr","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/mechanical-construction.md","mtime":"2016-09-12T14:18:54.299Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"../..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Construire la mécanique","level":"1.4.4","depth":2,"next":{"title":"Assembler le Poppy Humanoid","level":"1.4.5","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},"previous":{"title":"Configurer les moteurs","level":"1.4.3","depth":2,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"fr","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/mechanical-construction.md","mtime":"2016-10-08T19:58:29.363Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"../..","book":{"language":"fr"}});
         });
     </script>
 </div>

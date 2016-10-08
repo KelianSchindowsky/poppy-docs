@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Motor configuration · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Motor configuration · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -735,28 +735,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="motor-configuration">Motor configuration</h2><p>The Ergo Jr is made of 6 XL-320 motors from <a href="http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm" target="_blank">Robotis</a>. Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.</p><p><img alt="XL-320" src="img/assembly/xl_320.jpg"></p><p>Yet, in order for the motors to be connected and identified on the same bus (same line), they must have a unique ID. Out of the factory they all set to the same ID: 1. In this section, we will give you details on how you can set a new and unique ID to each of your motors.</p><p>We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. This will prevent you to swap motors. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor. Furthermore, you will also be able to directly configure the motor from the assembly notebook interface.</p><h3 id="configuring-motors-one-at-a-time">Configuring motors one at a time</h3><p>As explained above, all motors have the same ID by default. <strong>Only one motor at a time should be connected to the data bus when you configure them.</strong> Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess.</p><p>Your electronic setup when configuring a motor should look like this:</p><ul><li>the Raspberry Pi
-</li>
-<li>the shield on top and the AC plugged
-</li>
-<li>a wire from the shield to the motor you want to configure
-</li>
-<li>a ethernet cable going from the Raspberry Pi to your computer or your router
-</li></ul>
-<p><img alt="XL-320 configuration ; one motor at a time" src="img/motor_one_by_one.jpg"></p><h4 id="web-interface-user-friendly">Web interface (user friendly)</h4><!-- TODO: image du notebook  -->
-
-
+                                <h2 id="motor-configuration">Motor configuration</h2>
+<p>The Ergo Jr is made of 6 XL-320 motors from <a href="http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm" target="_blank">Robotis</a>. Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.</p>
+<p><img src="img/assembly/xl_320.jpg" alt="XL-320"></p>
+<p>Yet, in order for the motors to be connected and identified on the same bus (same line), they must have a unique ID. Out of the factory they all set to the same ID: 1. In this section, we will give you details on how you can set a new and unique ID to each of your motors.</p>
+<p>We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. This will prevent you to swap motors. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor. Furthermore, you will also be able to directly configure the motor from the assembly notebook interface.</p>
+<h3 id="configuring-motors-one-at-a-time">Configuring motors one at a time</h3>
+<p>As explained above, all motors have the same ID by default. <strong>Only one motor at a time should be connected to the data bus when you configure them.</strong> Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess.</p>
+<p>Your electronic setup when configuring a motor should look like this:</p>
+<ul>
+<li>the Raspberry Pi</li>
+<li>the shield on top and the AC plugged</li>
+<li>a wire from the shield to the motor you want to configure</li>
+<li>a ethernet cable going from the Raspberry Pi to your computer or your router</li>
+</ul>
+<p><img src="img/motor_one_by_one.jpg" alt="XL-320 configuration ; one motor at a time"></p>
+<h4 id="web-interface-user-friendly">Web interface (user friendly)</h4>
+<!-- TODO: image du notebook  -->
 <!-- The easiest way to use it, is through the notebook interface which will show you at which step of the assembly you have to configure a new motor.
  -->
-
-
  <!-- *Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor "m3":* -->
-
-
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong><p> The web utility for configuring motors is still in the TODO stack.</p></blockquote><h4 id="command-line-utility">Command-line utility</h4><p>Robots come with a command line utility <code>poppy-configure</code> ; to use it you need to open a terminal on your Raspberry Pi.</p><p>You can access to the Raspberry Pi directly from your computer. To do so, open the page <a href="http://poppy.local" target="_blank">http://poppy.local</a> in a web browser. You see the Poppy home page. Click on the &quot;Python, Terminal&quot; link and select &quot;New Terminal&quot;.
-<img alt="Jupyter terminal" src="img/IHM/new_terminal.png"></p><p>Once the terminal is open, copy and press enter to execute the commande bellow.</p><pre><code class="lang-bash">poppy-configure ergo-jr m1</code></pre>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
+<p> The web utility for configuring motors is still in the TODO stack.</p>
+</blockquote>
+<h4 id="command-line-utility">Command-line utility</h4>
+<p>Robots come with a command line utility <code>poppy-configure</code> ; to use it you need to open a terminal on your Raspberry Pi.</p>
+<p>You can access to the Raspberry Pi directly from your computer. To do so, open the page <a href="http://poppy.local" target="_blank">http://poppy.local</a> in a web browser. You see the Poppy home page. Click on the &quot;Python, Terminal&quot; link and select &quot;New Terminal&quot;.
+<img src="img/IHM/new_terminal.png" alt="Jupyter terminal"></p>
+<p>Once the terminal is open, copy and press enter to execute the commande bellow.</p>
+<pre><code class="lang-bash">poppy-configure ergo-jr m1
+</code></pre>
 <p>You have now configured the m1 motor of your robot.
-Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don&apos;t need to turn off the card). The configuration of the motor is stored in the motor internal memory.</p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> Poppy Ergo Jr motors are named m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure in the command above.</p></blockquote>
+Once configured and that you see the message indicating that everything went well, you can unplug the motor (you don&apos;t need to turn off the card). The configuration of the motor is stored in the motor internal memory.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> Poppy Ergo Jr motors are named m1, m2, m3, m4, m5, m6. To configure the others motors, you have to change m1 by the name of the motor you want to configure in the command above.</p>
+</blockquote>
+
                                 
                                 </section>
                             
@@ -799,7 +813,7 @@ Once configured and that you see the message indicating that everything went wel
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Motor configuration","level":"1.4.1.2","depth":3,"next":{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]},"previous":{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/motor-configuration.md","mtime":"2016-09-12T14:18:54.211Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Motor configuration","level":"1.4.1.2","depth":3,"next":{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]},"previous":{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/motor-configuration.md","mtime":"2016-10-08T19:58:29.275Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"../..","book":{"language":"en"}});
         });
     </script>
 </div>

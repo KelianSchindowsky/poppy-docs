@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="fr" >
     <head>
-        <title>Se connecter au robot · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Se connecter au robot · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -729,45 +729,85 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="d&#xE9;marrer-et-connecter-le-robot">D&#xE9;marrer et connecter le robot</h1><p>Dans cette section, nous allons d&#xE9;crire comment d&#xE9;marrer votre robot et vous donner un aper&#xE7;u des possibilit&#xE9;s pour y acc&#xE9;der.</p><h2 id="configurer-le-logiciel">Configurer le logiciel</h2><p>Les cr&#xE9;atures Poppy viennent avec une carte embarqu&#xE9;e dont le travail est de contr&#xF4;ler les moteurs et d&apos;acc&#xE9;der aux capteurs. Pour une plus grande simplicit&#xE9;, cette carte embarqu&#xE9;e peut &#xEA;tre contact&#xE9;e &#xE0; travers une interface Web. cela facilite le contr&#xF4;le du robot depuis votre propre ordinateur ou une tablette sans avoir &#xE0; t&#xE9;l&#xE9;charger ou installer quoique ce soit.</p><p>Il y a plusieurs m&#xE9;thodes pour configurer la carte embarqu&#xE9;e de votre robot Poppy :</p><ul><li><a href="#simplement-utiliser-la-carte-sd-poppy"><strong>la m&#xE9;thode simple</strong></a>: utilisez une image ISO toute pr&#xEA;te et transf&#xE9;rez la sur une carte SD
-</li>
-<li><a href="#plus-avance-tout-installer-vous-meme"><strong>la m&#xE9;thode avanc&#xE9;e</strong></a>: tout installer vous-m&#xEA;me
-</li></ul>
+                                <h1 id="d&#xE9;marrer-et-connecter-le-robot">D&#xE9;marrer et connecter le robot</h1>
+<p>Dans cette section, nous allons d&#xE9;crire comment d&#xE9;marrer votre robot et vous donner un aper&#xE7;u des possibilit&#xE9;s pour y acc&#xE9;der.</p>
+<h2 id="configurer-le-logiciel">Configurer le logiciel</h2>
+<p>Les cr&#xE9;atures Poppy viennent avec une carte embarqu&#xE9;e dont le travail est de contr&#xF4;ler les moteurs et d&apos;acc&#xE9;der aux capteurs. Pour une plus grande simplicit&#xE9;, cette carte embarqu&#xE9;e peut &#xEA;tre contact&#xE9;e &#xE0; travers une interface Web. cela facilite le contr&#xF4;le du robot depuis votre propre ordinateur ou une tablette sans avoir &#xE0; t&#xE9;l&#xE9;charger ou installer quoique ce soit.</p>
+<p>Il y a plusieurs m&#xE9;thodes pour configurer la carte embarqu&#xE9;e de votre robot Poppy :</p>
+<ul>
+<li><a href="#simplement-utiliser-la-carte-sd-poppy"><strong>la m&#xE9;thode simple</strong></a>: utilisez une image ISO toute pr&#xEA;te et transf&#xE9;rez la sur une carte SD</li>
+<li><a href="#plus-avance-tout-installer-vous-meme"><strong>la m&#xE9;thode avanc&#xE9;e</strong></a>: tout installer vous-m&#xEA;me</li>
+</ul>
 <!-- TODO: corriger le lien ci-desous pour le setup de la simulation -->
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> Si vous pr&#xE9;voyez d&apos;utiliser un robot simul&#xE9;, vous devez installer le logiciel sur votre propre ordinauter. Suivez les instructions pour <a href="./#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer">configurer la simulation</a>.</p>
+</blockquote>
+<h3 id="simplement-utiliser-la-carte-sd-poppy">Simplement: utiliser la Carte SD Poppy</h3>
+<p>Le moyen le plus simple et le plus rapide - de loin - est d&apos;utiliser des images ISO d&#xE9;j&#xE0; faites pour les cartes SD. Ces images ISO viennent avec tout le n&#xE9;cessaire d&#xE9;j&#xE0; pr&#xE9;-install&#xE9; pour votre robot Poppy. C&apos;est aussi un bon moyen de vous assurer que vous utilisez exactement le m&#xEA;me logiciel que nous Ainsi vous &#xE9;viterez de nombreux probl&#xE8;mes.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
+<p> Les kits de robotique Poppy viennent avec une carte SD pr&#xEA;te &#xE0; l&apos;emploi. Ainsi vous n&apos;avez rien de sp&#xE9;cial &#xE0; faire.</p>
+</blockquote>
+<p>Les images ISO peuvent &#xEA;tre trouv&#xE9;es avec les distributions de chaque cr&#xE9;ature :</p>
+<ul>
+<li><a href="https://github.com/poppy-project/poppy-ergo-jr/releases" target="_blank">pour le Poppy Ergo Jr</a></li>
+<li><a href="https://github.com/poppy-project/poppy-torso/releases" target="_blank">pour le Torse Poppy</a></li>
+<li><a href="https://github.com/poppy-project/poppy-humanoid/releases/" target="_blank">pour l&apos;Humano&#xEF;de Poppy</a></li>
+</ul>
+<p>Elles peuvent &#xEA;tre &#xE9;crites sur une carte SD d&apos;au moins 8 Go en utilisant un outil classique. Une fois la carte SD pr&#xEA;te, vous n&apos;avez qu&apos;&#xE0; l&apos;ins&#xE9;rer dans votre carte embarqu&#xE9;e. Vous pouvez ensuite mettre votre robot sous tension, il devrait d&#xE9;marrer et vous pourrez ainsi vous connecter &#xE0; son interface web.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> Plus de d&#xE9;tails dans la <a href="../installation/">section D&#xE9;marrage</a>.</p>
+</blockquote>
+<h3 id="plus-avanc&#xE9;-tout-installer-vous-m&#xEA;me">Plus avanc&#xE9;: tout installer vous-m&#xEA;me</h3>
+<p>La m&#xE9;thode avanc&#xE9;e consiste &#xE0; installer tout le n&#xE9;cessaire depuis z&#xE9;ro. Elle suit la m&#xEA;me proc&#xE9;dure que nous utilisons pour g&#xE9;n&#xE9;rer les images ISO pour cartes SD. Nous mentionnons cette m&#xE9;thode car elle peut s&apos;av&#xE9;rer utile si :</p>
+<ul>
+<li><strong>vous travaillez avec un robot simul&#xE9;</strong> et vous devez donc installer tout le logiciel n&#xE9;cessaire sur votre ordinateur, cette proc&#xE9;dure est un bon endroit pour voir comment le faire sur un Raspberry Pi et l&apos;adapter pour un autre ordinateur,</li>
+<li>vous voulez modifier l&apos;environnement de travail,</li>
+<li>vous voulez simplement comprendre comment tout fonctionne.</li>
+</ul>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> Nous essayons de garder cette proc&#xE9;dure d&apos;installation aussi g&#xE9;n&#xE9;rique que possible. Pour autant, certains d&#xE9;tails peuvent varier en fonction de votre syst&#xE8;me d&apos;exploitation ou de votre ordinateur. De plus, l&apos;installation depuis z&#xE9;ro demande quelques connaissances de base pour installer et configurer un environnement Python.</p>
+</blockquote>
+<p>Suivant ce que vous souhaitez accomplir, toutes les &#xE9;tapes ne sont pas n&#xE9;cessairement requises. En particulier, si vous souhaitez contr&#xF4;ler un robot simul&#xE9;, il suffit d&apos;installer les biblioth&#xE8;ques Python pour Poppy.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
+<p> Plus de d&#xE9;tails vous sont fournis dans le chapitre <a href="../installation/">Installation pour utilisateurs avanc&#xE9;s</a>.</p>
+</blockquote>
+<h3 id="configurer-le-r&#xE9;seau">Configurer le r&#xE9;seau</h3>
+<p>Une fois que votre Poppy est assembl&#xE9; et son logiciel pr&#xEA;t, l&apos;&#xE9;tape suivante est de le connecter &#xE0; un r&#xE9;seau. Le but est de vous permettre d&apos;acc&#xE9;der au robot depuis votre ordinateur ou votre tablette/smartphone, de le contr&#xF4;ler et de le programmer.</p>
+<p>Il y a deux mani&#xE8;res de connecter votre robot &#xE0; votre ordinateur/tablette/smartphone:</p>
+<ul>
+<li>Connecter le robot et l&apos;ordinateur au m&#xEA;me r&#xE9;seau (par exemple la box wifi de votre domicile ou votre &#xE9;tablissement scolaire).</li>
+<li>Connecter directement votre robot &#xE0; votre ordinateur par l&apos;interm&#xE9;diaire d&apos;un c&#xE2;ble ethernet.</li>
+</ul>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> Bien que connecter le robot et l&apos;ordinateur marche pour la plupart des utilisateurs, il semble que dans certains cas cela ne fonctionne pas.</p>
+</blockquote>
+<p>Pour trouver l&apos;adresse de votre robot sur le r&#xE9;seau, nous utilisons le <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">protocole standard Zeroconf</a>. Il vous permet d&apos;utiliser le nom d&apos;h&#xF4;te: <em>&quot;poppy.local&quot;</em> en tant qu&apos;adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais cela n&#xE9;cessitera d&apos;installer les <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Services d&apos;impression Bonjour</em></a> sous Windows. Si vous pr&#xE9;f&#xE9;rez, vous pouvez utiliser l&apos;adresse IP assign&#xE9;e &#xE0; votre robot &#xE0; la place. Si vous n&apos;&#xEA;tes pas administrateur de votre r&#xE9;seau cela peut &#xEA;tre assez difficile &#xE0; d&#xE9;terminer. Dans ce cas, utilisez de pr&#xE9;f&#xE9;rence la premi&#xE8;re proc&#xE9;dure.</p>
+<p>Pour v&#xE9;rifier que tout est configur&#xE9; correctement, vous pouvez aller &#xE0; l&apos;adresse suivante avec votre navigateur web favori : <a href="http://poppy.local" target="_blank">http://poppy.local/</a>. Vous pouvez remplacer <em>poppy.local</em> par l&apos;adresse IP de votre robot (par exemple <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a>).</p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong>
+<p> Si vous n&apos;&#xEA;tes pas familier avec la configuration des r&#xE9;seaux ou si vous n&apos;avez aucune id&#xE9;e de ce que le paragraphe pr&#xE9;c&#xE9;dent a tent&#xE9; de vous expliquer, il est pr&#xE9;f&#xE9;rable de consulter un ing&#xE9;nieur r&#xE9;seau afin de compl&#xE9;ter cette &#xE9;tape.</p>
+</blockquote>
+<h3 id="utiliser-linterface-web">Utiliser l&apos;interface Web</h3>
+<p>L&apos;interface web est le point central pour contr&#xF4;ler, programmer et configurer votre robot. Elle peut &#xEA;tre utilis&#xE9;e pour:</p>
+<ul>
+<li>Suivre l&apos;activit&#xE9; du robot</li>
+<li>Le programmer en utilisant <a href="http://snap.berkeley.edu" target="_blank">Snap!</a></li>
+<li>Le programmer en utilisant <a href="https://www.python.org" target="_blank">Python</a></li>
+<li>Configurer le robot (changer son nom, activer ou d&#xE9;sactiver la cam&#xE9;ra, le mettre &#xE0; jour)</li>
+<li>Remettre &#xE0; z&#xE9;ro et arr&#xEA;ter le robot.</li>
+</ul>
+<p>Pour acc&#xE9;der &#xE0; cette interface, il suffit d&apos;aller &#xE0; l&apos;URL suivante avec votre navigateur Web favori:</p>
+<ul>
+<li><a href="http://poppy.local" target="_blank">http://poppy.local</a> (si vous avez chang&#xE9; le nom de votre robot, remplacez simplement <em>poppy</em> par son nouveau nom)</li>
+<li>ou utilisez son adresse IP.</li>
+</ul>
+<p>Vous devriez voir quelque chose comme:</p>
+<p><img src="../../en/img/poppy_home.png" alt="Home Page">
+Les boutons peuvent &#xEA;tre utilis&#xE9;s pour naviguer vers les diff&#xE9;rentes fonctionnalit&#xE9;s. Par exemple, si vous cliquez sur le <em>Monitor and Control</em>, vous acc&#xE9;derez &#xE0; l&apos;application de monitoring:</p>
+<p><img src="../en/img/poppy_monitor.png" alt="Interface de Monitoring"></p>
+<p>Cela vous permettra d&apos;allumer ou d&apos;&#xE9;teindre les moteurs de votre robot, de suivre leur activit&#xE9;, et leur comportement d&apos;allumage et d&apos;extinction.</p>
+<p>Le bouton <em>What happened</em> est l&#xE0; o&#xF9; vous devriez regarder pour plus d&apos;information sur ce qui s&apos;est mal pass&#xE9;. Voici une capture d&apos;&#xE9;cran de ce que vous devriez voir si tout se passe comme pr&#xE9;vu:</p>
+<p><img src="../../en/img/web-logs.png" alt="Capture d&apos;&#xE9;cran de l&apos;interface web log"></p>
 
-
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong><p> Si vous pr&#xE9;voyez d&apos;utiliser un robot simul&#xE9;, vous devez installer le logiciel sur votre propre ordinauter. Suivez les instructions pour <a href="./#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer">configurer la simulation</a>.</p></blockquote><h3 id="simplement-utiliser-la-carte-sd-poppy">Simplement: utiliser la Carte SD Poppy</h3><p>Le moyen le plus simple et le plus rapide - de loin - est d&apos;utiliser des images ISO d&#xE9;j&#xE0; faites pour les cartes SD. Ces images ISO viennent avec tout le n&#xE9;cessaire d&#xE9;j&#xE0; pr&#xE9;-install&#xE9; pour votre robot Poppy. C&apos;est aussi un bon moyen de vous assurer que vous utilisez exactement le m&#xEA;me logiciel que nous Ainsi vous &#xE9;viterez de nombreux probl&#xE8;mes.</p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong><p> Les kits de robotique Poppy viennent avec une carte SD pr&#xEA;te &#xE0; l&apos;emploi. Ainsi vous n&apos;avez rien de sp&#xE9;cial &#xE0; faire.</p></blockquote><p>Les images ISO peuvent &#xEA;tre trouv&#xE9;es avec les distributions de chaque cr&#xE9;ature :</p><ul><li><a href="https://github.com/poppy-project/poppy-ergo-jr/releases" target="_blank">pour le Poppy Ergo Jr</a>
-</li>
-<li><a href="https://github.com/poppy-project/poppy-torso/releases" target="_blank">pour le Torse Poppy</a>
-</li>
-<li><a href="https://github.com/poppy-project/poppy-humanoid/releases/" target="_blank">pour l&apos;Humano&#xEF;de Poppy</a>
-</li></ul>
-<p>Elles peuvent &#xEA;tre &#xE9;crites sur une carte SD d&apos;au moins 8 Go en utilisant un outil classique. Une fois la carte SD pr&#xEA;te, vous n&apos;avez qu&apos;&#xE0; l&apos;ins&#xE9;rer dans votre carte embarqu&#xE9;e. Vous pouvez ensuite mettre votre robot sous tension, il devrait d&#xE9;marrer et vous pourrez ainsi vous connecter &#xE0; son interface web.</p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> Plus de d&#xE9;tails dans la <a href="../installation/">section D&#xE9;marrage</a>.</p></blockquote><h3 id="plus-avanc&#xE9;-tout-installer-vous-m&#xEA;me">Plus avanc&#xE9;: tout installer vous-m&#xEA;me</h3><p>La m&#xE9;thode avanc&#xE9;e consiste &#xE0; installer tout le n&#xE9;cessaire depuis z&#xE9;ro. Elle suit la m&#xEA;me proc&#xE9;dure que nous utilisons pour g&#xE9;n&#xE9;rer les images ISO pour cartes SD. Nous mentionnons cette m&#xE9;thode car elle peut s&apos;av&#xE9;rer utile si :</p><ul><li><strong>vous travaillez avec un robot simul&#xE9;</strong> et vous devez donc installer tout le logiciel n&#xE9;cessaire sur votre ordinateur, cette proc&#xE9;dure est un bon endroit pour voir comment le faire sur un Raspberry Pi et l&apos;adapter pour un autre ordinateur,
-</li>
-<li>vous voulez modifier l&apos;environnement de travail,
-</li>
-<li>vous voulez simplement comprendre comment tout fonctionne.
-</li></ul>
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong><p> Nous essayons de garder cette proc&#xE9;dure d&apos;installation aussi g&#xE9;n&#xE9;rique que possible. Pour autant, certains d&#xE9;tails peuvent varier en fonction de votre syst&#xE8;me d&apos;exploitation ou de votre ordinateur. De plus, l&apos;installation depuis z&#xE9;ro demande quelques connaissances de base pour installer et configurer un environnement Python.</p></blockquote><p>Suivant ce que vous souhaitez accomplir, toutes les &#xE9;tapes ne sont pas n&#xE9;cessairement requises. En particulier, si vous souhaitez contr&#xF4;ler un robot simul&#xE9;, il suffit d&apos;installer les biblioth&#xE8;ques Python pour Poppy.</p><blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong><p> Plus de d&#xE9;tails vous sont fournis dans le chapitre <a href="../installation/">Installation pour utilisateurs avanc&#xE9;s</a>.</p></blockquote><h3 id="configurer-le-r&#xE9;seau">Configurer le r&#xE9;seau</h3><p>Une fois que votre Poppy est assembl&#xE9; et son logiciel pr&#xEA;t, l&apos;&#xE9;tape suivante est de le connecter &#xE0; un r&#xE9;seau. Le but est de vous permettre d&apos;acc&#xE9;der au robot depuis votre ordinateur ou votre tablette/smartphone, de le contr&#xF4;ler et de le programmer.</p><p>Il y a deux mani&#xE8;res de connecter votre robot &#xE0; votre ordinateur/tablette/smartphone:</p><ul><li>Connecter le robot et l&apos;ordinateur au m&#xEA;me r&#xE9;seau (par exemple la box wifi de votre domicile ou votre &#xE9;tablissement scolaire).
-</li>
-<li>Connecter directement votre robot &#xE0; votre ordinateur par l&apos;interm&#xE9;diaire d&apos;un c&#xE2;ble ethernet.
-</li></ul>
-<blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong><p> Bien que connecter le robot et l&apos;ordinateur marche pour la plupart des utilisateurs, il semble que dans certains cas cela ne fonctionne pas.</p></blockquote><p>Pour trouver l&apos;adresse de votre robot sur le r&#xE9;seau, nous utilisons le <a href="https://fr.wikipedia.org/wiki/Zeroconf" target="_blank">protocole standard Zeroconf</a>. Il vous permet d&apos;utiliser le nom d&apos;h&#xF4;te: <em>&quot;poppy.local&quot;</em> en tant qu&apos;adresse. Cela devrait fonctionner sans aucune configuration sous Mac OS et GNU/Linux. Mais cela n&#xE9;cessitera d&apos;installer les <a href="https://support.apple.com/kb/DL999" target="_blank"><em>Services d&apos;impression Bonjour</em></a> sous Windows. Si vous pr&#xE9;f&#xE9;rez, vous pouvez utiliser l&apos;adresse IP assign&#xE9;e &#xE0; votre robot &#xE0; la place. Si vous n&apos;&#xEA;tes pas administrateur de votre r&#xE9;seau cela peut &#xEA;tre assez difficile &#xE0; d&#xE9;terminer. Dans ce cas, utilisez de pr&#xE9;f&#xE9;rence la premi&#xE8;re proc&#xE9;dure.</p><p>Pour v&#xE9;rifier que tout est configur&#xE9; correctement, vous pouvez aller &#xE0; l&apos;adresse suivante avec votre navigateur web favori : <a href="http://poppy.local" target="_blank">http://poppy.local/</a>. Vous pouvez remplacer <em>poppy.local</em> par l&apos;adresse IP de votre robot (par exemple <a href="http://192.168.0.42" target="_blank">http://192.168.0.42</a>).</p><blockquote class="clearfix alert alert-quote"><strong class="fa fa-4x fa-quote-left"></strong><p> Si vous n&apos;&#xEA;tes pas familier avec la configuration des r&#xE9;seaux ou si vous n&apos;avez aucune id&#xE9;e de ce que le paragraphe pr&#xE9;c&#xE9;dent a tent&#xE9; de vous expliquer, il est pr&#xE9;f&#xE9;rable de consulter un ing&#xE9;nieur r&#xE9;seau afin de compl&#xE9;ter cette &#xE9;tape.</p></blockquote><h3 id="utiliser-linterface-web">Utiliser l&apos;interface Web</h3><p>L&apos;interface web est le point central pour contr&#xF4;ler, programmer et configurer votre robot. Elle peut &#xEA;tre utilis&#xE9;e pour:</p><ul><li>Suivre l&apos;activit&#xE9; du robot
-</li>
-<li>Le programmer en utilisant <a href="http://snap.berkeley.edu" target="_blank">Snap!</a>
-</li>
-<li>Le programmer en utilisant <a href="https://www.python.org" target="_blank">Python</a>
-</li>
-<li>Configurer le robot (changer son nom, activer ou d&#xE9;sactiver la cam&#xE9;ra, le mettre &#xE0; jour)
-</li>
-<li>Remettre &#xE0; z&#xE9;ro et arr&#xEA;ter le robot.
-</li></ul>
-<p>Pour acc&#xE9;der &#xE0; cette interface, il suffit d&apos;aller &#xE0; l&apos;URL suivante avec votre navigateur Web favori:</p><ul><li><a href="http://poppy.local" target="_blank">http://poppy.local</a> (si vous avez chang&#xE9; le nom de votre robot, remplacez simplement <em>poppy</em> par son nouveau nom)
-</li>
-<li>ou utilisez son adresse IP.
-</li></ul>
-<p>Vous devriez voir quelque chose comme:</p><p><img alt="Home Page" src="../../en/img/poppy_home.png">
-Les boutons peuvent &#xEA;tre utilis&#xE9;s pour naviguer vers les diff&#xE9;rentes fonctionnalit&#xE9;s. Par exemple, si vous cliquez sur le <em>Monitor and Control</em>, vous acc&#xE9;derez &#xE0; l&apos;application de monitoring:</p><p><img alt="Interface de Monitoring" src="../en/img/poppy_monitor.png"></p><p>Cela vous permettra d&apos;allumer ou d&apos;&#xE9;teindre les moteurs de votre robot, de suivre leur activit&#xE9;, et leur comportement d&apos;allumage et d&apos;extinction.</p><p>Le bouton <em>What happened</em> est l&#xE0; o&#xF9; vous devriez regarder pour plus d&apos;information sur ce qui s&apos;est mal pass&#xE9;. Voici une capture d&apos;&#xE9;cran de ce que vous devriez voir si tout se passe comme pr&#xE9;vu:</p><p><img alt="Capture d&apos;&#xE9;cran de l&apos;interface web log" src="../../en/img/web-logs.png"></p>
                                 
                                 </section>
                             
@@ -810,7 +850,7 @@ Les boutons peuvent &#xEA;tre utilis&#xE9;s pour naviguer vers les diff&#xE9;ren
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Se connecter au robot","level":"1.2.2","depth":2,"next":{"title":"Programmer le robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"previous":{"title":"Construire un robot","level":"1.2.1","depth":2,"path":"getting-started/build.md","ref":"getting-started/build.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"fr","gitbook":"*"},"file":{"path":"getting-started/connect.md","mtime":"2016-09-12T14:18:54.299Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"..","book":{"language":"fr"}});
+            gitbook.page.hasChanged({"page":{"title":"Se connecter au robot","level":"1.2.2","depth":2,"next":{"title":"Programmer le robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"previous":{"title":"Construire un robot","level":"1.2.1","depth":2,"path":"getting-started/build.md","ref":"getting-started/build.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"fr","gitbook":"*"},"file":{"path":"getting-started/connect.md","mtime":"2016-10-08T19:58:29.363Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"..","book":{"language":"fr"}});
         });
     </script>
 </div>

@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Getting started · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting started · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -735,33 +735,75 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-started">Getting Started</h1><p><img alt="Poppy Logo" src="../img/logo/poppy.png"></p><p><a href="https://www.poppy-project.org/" target="_blank">Poppy Project</a> is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative and collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve the software or even create new robots.</p><p>The <a href="https://forum.poppy-project.org/" target="_blank">Poppy community</a> develops robotic creations that are easy to build, customize, and deploy. We promote open-source by sharing hardware, software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.</p><p>To ease these exchanges two supports are available:</p><ul><li><a href="https://forum.poppy-project.org/" target="_blank">The poppy-project forum</a> for help, discussions and sharing ideas.
-</li>
-<li><a href="https://github.com/poppy-project" target="_blank">GitHub</a> to submit your contributions.
-</li></ul>
-<p>All sources of the Poppy Project (software and hardware) are available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p><p>The Poppy project has been originally designed at <a href="http://www.inria.fr/equipes/flowers/" target="_blank">Inria Flowers</a>.</p><h2 id="the-poppy-creatures">The Poppy creatures</h2><p>Poppy creatures are open-source robots, available for download and modification (<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a> for the hardware and <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a> for the software). They were designed with the same principles in mind.</p><p>All Poppy creatures:</p><ul><li>are made from pieces of printable 3D and Dynamixel motors,
-</li>
-<li>use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),
-</li>
-<li>are based on a Python library, <a href="../software-libraries/pypot.html">pypot</a>, allowing to control Dynamixel servomotors in an easy way,
-</li>
-<li>have a simulated version available (based on <a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a>),
-</li>
-<li>can be controlled using a visual programming language (<a href="http://snap.berkeley.edu" target="_blank">Snap!</a> a variation of Scratch) and a textual language <a href="https://www.python.org" target="_blank">Python</a>. They are also programmable through a REST API, which enables the control with other programming language,
-</li>
-<li>come with associated documentation, tutorials, examples, pedagogical activities.
-</li></ul>
-<p>They can be used as it is, or hacked to explore new shapes, add sensors, etc...</p><p>To get your own Poppy robot, you can either:</p><ul><li>Get all the parts yourself by following the bill of materials (see below).
-</li>
-<li>Buy a full Poppy robotic kit from our <a href="http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform" target="_blank">official retailer</a>.
-</li></ul>
-<h3 id="poppy-ergo-jr">Poppy Ergo Jr</h3><p>The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.</p><p><img alt="Poppy Ergo Jr" src="../assembly-guides/ergo-jr/img/ErgoJr.jpg"></p><p>The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20&#x20AC; each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.</p><p>You can choose among three tools at the end of its arm:</p><ul><li>A lamp.
-</li>
-<li>A gripper.
-</li>
-<li>A pen holder.
-</li></ul>
-<p>The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.</p><p><img alt="Ergo Jr tools" src="../assembly-guides/ergo-jr/img/ergo_tools.gif"></p><p>The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.</p><p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-ergo-jr/releases/" target="_blank">3D parts</a> available in the STL format.</p><p>For more information, check the <a href="../assembly-guides/ergo-jr/">assembly guide of the Ergo Jr</a>.</p><h3 id="poppy-humanoid">Poppy Humanoid</h3><p>It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p><p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D parts</a> available as STL, STEP and Solidworks 2014 format.</p><p><img alt="Poppy Humanoid Vecto" src="../img/humanoid/vecto.png"></p><h3 id="poppy-torso">Poppy Torso</h3><p>It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).</p><p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md" target="_blank">bill of material</a>. The <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D models</a> for the parts are the same as Poppy Humanoid, without the legs and with an extra <a href="https://github.com/poppy-project/robot-support-toolbox/" target="_blank">suction cup support</a>.</p><p><img alt="Poppy Torso Vecto" src="../img/torso/vecto.png"></p><h3 id="other-interesting-poppy-creatures">Other interesting Poppy Creatures</h3><p>A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.</p><h4 id="poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</h4><p>Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.</p><p><img alt="Poppy Right Arm" src="../img/poppy-right-arm.jpg"></p><p>The project was realized during an internship at Inria Flowers by <a href="https://github.com/joelortizsosa" target="_blank">Joel Ortiz Sosa</a>. Find more info and the sources in the <a href="https://github.com/poppy-project/poppy-6dof-right-arm" target="_blank">repository</a>.</p><h4 id="small-and-low-cost-humanoids">Small and low-cost humanoids</h4><h5 id="heol">Heol</h5><p>Heol - meaning &quot;sun&quot; in Breton - is a 34cm tall humanoid robot made by the association <a href="http://heol.io/" target="_blank">Heol robotics</a>. 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.</p><p>Heol&apos;s purpose is to put a smile on ill children&apos;s faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.</p><p>Its participation in the RoboCup (World Cup football for robot) is also envisaged.</p><p><img alt="Heol" src="../img/heol.jpg"></p><h5 id="poppyrate"><a href="http://www.poppyrate.com/" target="_blank">Poppyrate</a></h5><p>It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.</p><p>Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud.</p><p><img alt="Poppyrate" src="../img/poppyrate.jpg"></p><p>For more information, check their <a href="http://www.poppyrate.com/" target="_blank">Website</a> - <a href="https://twitter.com/poppyratproject" target="_blank">Twitter</a> - <a href="https://www.facebook.com/Poppyrate/" target="_blank">Facebook</a>!</p>
+                                <h1 id="getting-started">Getting Started</h1>
+<p><img src="../img/logo/poppy.png" alt="Poppy Logo"></p>
+<p><a href="https://www.poppy-project.org/" target="_blank">Poppy Project</a> is an open-source platform for the creation, use and sharing of interactive 3D printed robots. It gathers an interdisciplinary community of beginners and experts, scientists, educators, developers and artists. They all share a vision: robots are powerful tools to learn and be creative and collaborate to improve the project. They develop new robotic behaviors, create pedagogical contents, design artistic performances, improve the software or even create new robots.</p>
+<p>The <a href="https://forum.poppy-project.org/" target="_blank">Poppy community</a> develops robotic creations that are easy to build, customize, and deploy. We promote open-source by sharing hardware, software. A web platform is associated enabling the community to share experiences and to contribute to its improvement.</p>
+<p>To ease these exchanges two supports are available:</p>
+<ul>
+<li><a href="https://forum.poppy-project.org/" target="_blank">The poppy-project forum</a> for help, discussions and sharing ideas.</li>
+<li><a href="https://github.com/poppy-project" target="_blank">GitHub</a> to submit your contributions.</li>
+</ul>
+<p>All sources of the Poppy Project (software and hardware) are available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p>
+<p>The Poppy project has been originally designed at <a href="http://www.inria.fr/equipes/flowers/" target="_blank">Inria Flowers</a>.</p>
+<h2 id="the-poppy-creatures">The Poppy creatures</h2>
+<p>Poppy creatures are open-source robots, available for download and modification (<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike</a> for the hardware and <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GPLv3</a> for the software). They were designed with the same principles in mind.</p>
+<p>All Poppy creatures:</p>
+<ul>
+<li>are made from pieces of printable 3D and Dynamixel motors,</li>
+<li>use an embedded board for control (a Raspberry Pi 2 or Odroid for older versions),</li>
+<li>are based on a Python library, <a href="../software-libraries/pypot.html">pypot</a>, allowing to control Dynamixel servomotors in an easy way,</li>
+<li>have a simulated version available (based on <a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a>),</li>
+<li>can be controlled using a visual programming language (<a href="http://snap.berkeley.edu" target="_blank">Snap!</a> a variation of Scratch) and a textual language <a href="https://www.python.org" target="_blank">Python</a>. They are also programmable through a REST API, which enables the control with other programming language,</li>
+<li>come with associated documentation, tutorials, examples, pedagogical activities.</li>
+</ul>
+<p>They can be used as it is, or hacked to explore new shapes, add sensors, etc...</p>
+<p>To get your own Poppy robot, you can either:</p>
+<ul>
+<li>Get all the parts yourself by following the bill of materials (see below).</li>
+<li>Buy a full Poppy robotic kit from our <a href="http://www.generationrobots.com/en/279-poppy-opensource-robotics-platform" target="_blank">official retailer</a>.</li>
+</ul>
+<h3 id="poppy-ergo-jr">Poppy Ergo Jr</h3>
+<p>The Poppy Ergo Jr robot is a small and low cost 6-degrees-of-freedom robot arm. It is made of 6 cheap motors (XL-320 Dynamixel servos) with simple 3D-printed parts.</p>
+<p><img src="../assembly-guides/ergo-jr/img/ErgoJr.jpg" alt="Poppy Ergo Jr"></p>
+<p>The 3D parts were made so they can be easily printed on a basic 3D printer. The motors are only 20&#x20AC; each. Its electronic card access is simple. It makes it easy to connect extra sensors and is well suited for pedagogical purposes.</p>
+<p>You can choose among three tools at the end of its arm:</p>
+<ul>
+<li>A lamp.</li>
+<li>A gripper.</li>
+<li>A pen holder.</li>
+</ul>
+<p>The rivets used make it easy and quick to change the tools. You can adapt it depending on the type of activities you are doing.</p>
+<p><img src="../assembly-guides/ergo-jr/img/ergo_tools.gif" alt="Ergo Jr tools"></p>
+<p>The Ergo Poppy Jr is ideal to start manipulating robots and learn robotic without difficulties. It is simple to assemble, easy to control and low price.</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-ergo-jr/blob/master/doc/bom.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-ergo-jr/releases/" target="_blank">3D parts</a> available in the STL format.</p>
+<p>For more information, check the <a href="../assembly-guides/ergo-jr/">assembly guide of the Ergo Jr</a>.</p>
+<h3 id="poppy-humanoid">Poppy Humanoid</h3>
+<p>It is a 25-degrees of freedom humanoid robot with a fully actuated vertebral column. It is used for education, research (walk, human-robot interaction) or art (dance, performances). From a single arm to the complete humanoid, this platform is actively used in labs, engineering schools, FabLabs, and artistic projects.</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-humanoid/blob/master/hardware/doc/BOM.md" target="_blank">bill of materials</a> (BOM) and print the <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D parts</a> available as STL, STEP and Solidworks 2014 format.</p>
+<p><img src="../img/humanoid/vecto.png" alt="Poppy Humanoid Vecto"></p>
+<h3 id="poppy-torso">Poppy Torso</h3>
+<p>It is the upper part of Poppy Humanoid (13 degrees of freedom). Poppy Torso is thus more affordable than the complete Poppy Humanoid. It makes it a more suitable solution for educational, associative and makers contexts. Poppy Torso can be a good medium to learn science, technology, engineering and mathematics (STEM).</p>
+<p>You can get all the parts yourself following the <a href="https://github.com/poppy-project/poppy-torso/blob/master/hardware/doc/BOM.md" target="_blank">bill of material</a>. The <a href="https://github.com/poppy-project/poppy-humanoid/releases/tag/hardware_1.0.1/" target="_blank">3D models</a> for the parts are the same as Poppy Humanoid, without the legs and with an extra <a href="https://github.com/poppy-project/robot-support-toolbox/" target="_blank">suction cup support</a>.</p>
+<p><img src="../img/torso/vecto.png" alt="Poppy Torso Vecto"></p>
+<h3 id="other-interesting-poppy-creatures">Other interesting Poppy Creatures</h3>
+<p>A key aspect of the Poppy Project is to stimulate creativity and experimentation around robotics. We try to provide all the tools needed to design new robots based on the same technological bricks. Some new creatures are in development within the community. Some of them are presented in the section below.</p>
+<h4 id="poppy-right-arm-work-in-progress">Poppy right arm (work in progress)</h4>
+<p>Poppy right arm is a Poppy creature based on a right arm of Poppy Humanoid, with 3 additional XL-320 motors at the end to improve the reach and agility of the arm. It used the same gripper tool used in the Ergo Jr, designed to grab simple objects.</p>
+<p><img src="../img/poppy-right-arm.jpg" alt="Poppy Right Arm"></p>
+<p>The project was realized during an internship at Inria Flowers by <a href="https://github.com/joelortizsosa" target="_blank">Joel Ortiz Sosa</a>. Find more info and the sources in the <a href="https://github.com/poppy-project/poppy-6dof-right-arm" target="_blank">repository</a>.</p>
+<h4 id="small-and-low-cost-humanoids">Small and low-cost humanoids</h4>
+<h5 id="heol">Heol</h5>
+<p>Heol - meaning &quot;sun&quot; in Breton - is a 34cm tall humanoid robot made by the association <a href="http://heol.io/" target="_blank">Heol robotics</a>. 23 motors compose it, all other parts are 3D printed. It also uses the pypot library for its movements.</p>
+<p>Heol&apos;s purpose is to put a smile on ill children&apos;s faces. It can be an educational tool by becoming a learning support materials for programming and mechanical design.</p>
+<p>Its participation in the RoboCup (World Cup football for robot) is also envisaged.</p>
+<p><img src="../img/heol.jpg" alt="Heol"></p>
+<h5 id="poppyrate"><a href="http://www.poppyrate.com/" target="_blank">Poppyrate</a></h5>
+<p>It a robot based on Poppy Humnaoid. It aims at developing a more affordable version thanks to its smaller size and the use of cheaper motors. The size reduction also makes it easier to print the parts on a standard 3D-printer. Goals also involved making it as mobile and customisable as possible while maintaining compability with Poppy software.</p>
+<p>Poppyrate will be sold as a kit (with and without the 3D parts) It has been designed by the socity ZeCloud.</p>
+<p><img src="../img/poppyrate.jpg" alt="Poppyrate"></p>
+<p>For more information, check their <a href="http://www.poppyrate.com/" target="_blank">Website</a> - <a href="https://twitter.com/poppyratproject" target="_blank">Twitter</a> - <a href="https://www.facebook.com/Poppyrate/" target="_blank">Facebook</a>!</p>
+
                                 
                                 </section>
                             
@@ -804,7 +846,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Getting started","level":"1.2","depth":1,"next":{"title":"Build a robot","level":"1.2.1","depth":2,"path":"getting-started/build.md","ref":"getting-started/build.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/README.md","mtime":"2016-09-12T14:18:54.215Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Getting started","level":"1.2","depth":1,"next":{"title":"Build a robot","level":"1.2.1","depth":2,"path":"getting-started/build.md","ref":"getting-started/build.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/README.md","mtime":"2016-10-08T19:58:29.279Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

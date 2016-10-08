@@ -2,12 +2,12 @@
 <!DOCTYPE HTML>
 <html lang="en" >
     <head>
-        <title>Link with Snap4Arduino · Documentation of the Poppy Platform</title>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Link with Snap4Arduino · Documentation of the Poppy Platform</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.0">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -735,34 +735,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="contr&#xF4;ler-poppy-avec-un-arduino-via-snap4arduino">Contr&#xF4;ler Poppy avec un Arduino via Snap4Arduino</h2><p><em>Written by <a href="https://forum.poppy-project.org/users/gilles_lassus" target="_blank">Gilles Lassus</a>.</em></p><p><strong>Objectif</strong> : contr&#xF4;ler un moteur de Poppy par un potentiom&#xE8;tre sur la platine Arduino.</p><h3 id="pr&#xE9;paration-de-snap4arduino">Pr&#xE9;paration de Snap4Arduino</h3><ul><li>T&#xE9;l&#xE9;chargez et installez <a href="http://s4a.cat/snap/" target="_blank">Snap4Arduino</a>.
-</li>
-<li>T&#xE9;l&#xE9;chargez les blocs <a href="https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">pypot-snap-blocks.xml</a>. Ils devront &#xEA;tre import&#xE9;s dans Snap4Arduino &#xE0; chaque d&#xE9;marrage.
-</li></ul>
-<h3 id="pr&#xE9;paration-de-larduino">Pr&#xE9;paration de l&apos;Arduino</h3><ul><li>Connectez votre platine, ouvrez Arduino et t&#xE9;l&#xE9;versez le firmware StandardFirmata. (disponible via Fichier - Exemples - Firmata).
-</li>
-<li>Branchez un potentiom&#xE8;tre sur la sortie analogique A0, comme illustr&#xE9; ci-dessous  :
-</li></ul>
-<p><img alt="montage" src="../img/activity/snap4arduino/montage.jpg"></p><h3 id="lancement-de-la-simulation-dans-le-cas-dun-poppy-simul&#xE9;-dans-vrep">Lancement de la simulation (dans le cas d&apos;un Poppy simul&#xE9; dans Vrep)</h3><ul><li>Lancez Vrep .
-</li>
-<li>Ex&#xE9;cutez les commandes python suivantes :
-</li></ul>
+                                <h2 id="contr&#xF4;ler-poppy-avec-un-arduino-via-snap4arduino">Contr&#xF4;ler Poppy avec un Arduino via Snap4Arduino</h2>
+<p><em>Written by <a href="https://forum.poppy-project.org/users/gilles_lassus" target="_blank">Gilles Lassus</a>.</em></p>
+<p><strong>Objectif</strong> : contr&#xF4;ler un moteur de Poppy par un potentiom&#xE8;tre sur la platine Arduino.</p>
+<h3 id="pr&#xE9;paration-de-snap4arduino">Pr&#xE9;paration de Snap4Arduino</h3>
+<ul>
+<li>T&#xE9;l&#xE9;chargez et installez <a href="http://s4a.cat/snap/" target="_blank">Snap4Arduino</a>.</li>
+<li>T&#xE9;l&#xE9;chargez les blocs <a href="https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">pypot-snap-blocks.xml</a>. Ils devront &#xEA;tre import&#xE9;s dans Snap4Arduino &#xE0; chaque d&#xE9;marrage.</li>
+</ul>
+<h3 id="pr&#xE9;paration-de-larduino">Pr&#xE9;paration de l&apos;Arduino</h3>
+<ul>
+<li>Connectez votre platine, ouvrez Arduino et t&#xE9;l&#xE9;versez le firmware StandardFirmata. (disponible via Fichier - Exemples - Firmata).</li>
+<li>Branchez un potentiom&#xE8;tre sur la sortie analogique A0, comme illustr&#xE9; ci-dessous  :</li>
+</ul>
+<p><img src="../img/activity/snap4arduino/montage.jpg" alt="montage"></p>
+<h3 id="lancement-de-la-simulation-dans-le-cas-dun-poppy-simul&#xE9;-dans-vrep">Lancement de la simulation (dans le cas d&apos;un Poppy simul&#xE9; dans Vrep)</h3>
+<ul>
+<li>Lancez Vrep .</li>
+<li>Ex&#xE9;cutez les commandes python suivantes :</li>
+</ul>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyHumanoid
 
-poppy = PoppyHumanoid(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)</code></pre>
-<p>puis</p><pre><code class="lang-python">poppy.snap.run()</code></pre>
-<h3 id="ouverture-de-snap4arduino">Ouverture de Snap4Arduino</h3><ul><li>Lancez Snap4Arduino et importez les blocs <em>pypot-snap-blocks.xml</em>.
-(une fen&#xEA;tre avertissant que le projet import&#xE9; a &#xE9;t&#xE9; cr&#xE9;&#xE9; par Snap<em>!</em> appara&#xEE;t ; elle est sans cons&#xE9;quence.)
-</li>
+poppy = PoppyHumanoid(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
+</code></pre>
+<p>puis</p>
+<pre><code class="lang-python">poppy.snap.run()
+</code></pre>
+<h3 id="ouverture-de-snap4arduino">Ouverture de Snap4Arduino</h3>
+<ul>
+<li>Lancez Snap4Arduino et importez les blocs <em>pypot-snap-blocks.xml</em>.
+(une fen&#xEA;tre avertissant que le projet import&#xE9; a &#xE9;t&#xE9; cr&#xE9;&#xE9; par Snap<em>!</em> appara&#xEE;t ; elle est sans cons&#xE9;quence.)</li>
 <li>Dans les blocs Arduino, cliquez sur <em>Connect Arduino</em> pour &#xE9;tablir la connexion entre Snap4Arduino et votre platine.
-<img alt="connect" src="../img/activity/snap4arduino/connect.png">
-</li></ul>
-<p>Un message de confirmation appara&#xEE;t, signe que la connexion est effective.</p><h3 id="commander-un-moteur-via-le-potentiom&#xE8;tre">Commander un moteur via le potentiom&#xE8;tre</h3><p>La valeur analogique lue dans A0 est un entier entre 0 et 1024. Pour la &quot;mapper&quot; entre (environ) -40 et 40, on la divise par 12 avant de lui soustraire 40.
-On peut donc alors construire l&apos;instruction suivante, qui fera bouger le moteur <em>head_z</em> de Poppy entre -40&#xB0; et +40&#xB0; :</p><p><img alt="instructions" src="../img/activity/snap4arduino/instructions.png"></p><h3 id="remarques-diverses">Remarques diverses</h3><ul><li>Il peut &#xEA;tre utile de cr&#xE9;er un bloc <em>map</em> &#xE9;quivalent &#xE0; la fonction &#xE9;ponyme d&apos;Arduino, permettant de mettre &#xE0; l&apos;&#xE9;chelle automatiquement une valeur dans une plage donn&#xE9;e :
-</li></ul>
-<p><img alt="map" src="../img/activity/snap4arduino/map.png"></p><p>Le script de commande du moteur <em>head_z</em> de Poppy entre -40&#xB0; et 40&#xB0; deviendrait alors :
-<img alt="script avec map" src="../img/activity/snap4arduino/instructions_avec_map.png"></p><p>Cette m&#xE9;thode de contr&#xF4;le a pour principal d&#xE9;faut de &quot;bloquer&quot; la carte Arduino avec le StandardFirmata : il serait plus agr&#xE9;able de pouvoir simplement lire les donn&#xE9;es du port s&#xE9;rie envoy&#xE9;es par l&apos;Arduino, et ainsi pouvoir t&#xE9;l&#xE9;verser le programme de son choix dans l&apos;Arduino. Ceci est discut&#xE9; <a href="https://forum.poppy-project.org/t/snap-et-arduino/1892/2" target="_blank">ici</a>.
+<img src="../img/activity/snap4arduino/connect.png" alt="connect"></li>
+</ul>
+<p>Un message de confirmation appara&#xEE;t, signe que la connexion est effective.</p>
+<h3 id="commander-un-moteur-via-le-potentiom&#xE8;tre">Commander un moteur via le potentiom&#xE8;tre</h3>
+<p>La valeur analogique lue dans A0 est un entier entre 0 et 1024. Pour la &quot;mapper&quot; entre (environ) -40 et 40, on la divise par 12 avant de lui soustraire 40.
+On peut donc alors construire l&apos;instruction suivante, qui fera bouger le moteur <em>head_z</em> de Poppy entre -40&#xB0; et +40&#xB0; :</p>
+<p><img src="../img/activity/snap4arduino/instructions.png" alt="instructions"></p>
+<h3 id="remarques-diverses">Remarques diverses</h3>
+<ul>
+<li>Il peut &#xEA;tre utile de cr&#xE9;er un bloc <em>map</em> &#xE9;quivalent &#xE0; la fonction &#xE9;ponyme d&apos;Arduino, permettant de mettre &#xE0; l&apos;&#xE9;chelle automatiquement une valeur dans une plage donn&#xE9;e :</li>
+</ul>
+<p><img src="../img/activity/snap4arduino/map.png" alt="map"></p>
+<p>Le script de commande du moteur <em>head_z</em> de Poppy entre -40&#xB0; et 40&#xB0; deviendrait alors :
+<img src="../img/activity/snap4arduino/instructions_avec_map.png" alt="script avec map"></p>
+<p>Cette m&#xE9;thode de contr&#xF4;le a pour principal d&#xE9;faut de &quot;bloquer&quot; la carte Arduino avec le StandardFirmata : il serait plus agr&#xE9;able de pouvoir simplement lire les donn&#xE9;es du port s&#xE9;rie envoy&#xE9;es par l&apos;Arduino, et ainsi pouvoir t&#xE9;l&#xE9;verser le programme de son choix dans l&apos;Arduino. Ceci est discut&#xE9; <a href="https://forum.poppy-project.org/t/snap-et-arduino/1892/2" target="_blank">ici</a>.
 Toutefois, la page du projet  <a href="http://s4a.cat/snap/" target="_blank">Snap4Arduino</a> liste les composants annexes (LCD display, UltraSound Sensor) pouvant &#xEA;tre directement contr&#xF4;l&#xE9;s, et explique en <a href="http://blog.s4a.cat/2015/03/13/Extending-Firmata-for-Snap4Arduino.html" target="_blank">d&#xE9;tail</a> comment modifier le StandardFirmata pour int&#xE9;grer un nouveau composant.</p>
+
                                 
                                 </section>
                             
@@ -805,7 +825,7 @@ Toutefois, la page du projet  <a href="http://s4a.cat/snap/" target="_blank">Sna
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Link with Snap4Arduino","level":"1.6.1","depth":2,"next":{"title":"From simulation to real robot","level":"1.7","depth":1,"path":"from-simulation-to-real-robot/README.md","ref":"from-simulation-to-real-robot/README.md","articles":[{"title":"Snap! on the real robot","level":"1.7.1","depth":2,"path":"from-simulation-to-real-robot/using-snap.md","ref":"from-simulation-to-real-robot/using-snap.md","articles":[]},{"title":"Program with Jupyter notebooks on the real robot","level":"1.7.2","depth":2,"path":"from-simulation-to-real-robot/using-jupyter.md","ref":"from-simulation-to-real-robot/using-jupyter.md","articles":[]}]},"previous":{"title":"Activities","level":"1.6","depth":1,"path":"demo-activities/README.md","ref":"demo-activities/README.md","articles":[{"title":"Link with Snap4Arduino","level":"1.6.1","depth":2,"path":"demo-activities/snap4arduino.md","ref":"demo-activities/snap4arduino.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"demo-activities/snap4arduino.md","mtime":"2016-09-12T14:18:54.211Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-09-12T14:21:00.489Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Link with Snap4Arduino","level":"1.6.1","depth":2,"next":{"title":"From simulation to real robot","level":"1.7","depth":1,"path":"from-simulation-to-real-robot/README.md","ref":"from-simulation-to-real-robot/README.md","articles":[{"title":"Snap! on the real robot","level":"1.7.1","depth":2,"path":"from-simulation-to-real-robot/using-snap.md","ref":"from-simulation-to-real-robot/using-snap.md","articles":[]},{"title":"Program with Jupyter notebooks on the real robot","level":"1.7.2","depth":2,"path":"from-simulation-to-real-robot/using-jupyter.md","ref":"from-simulation-to-real-robot/using-jupyter.md","articles":[]}]},"previous":{"title":"Activities","level":"1.6","depth":1,"path":"demo-activities/README.md","ref":"demo-activities/README.md","articles":[{"title":"Link with Snap4Arduino","level":"1.6.1","depth":2,"path":"demo-activities/snap4arduino.md","ref":"demo-activities/snap4arduino.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"demo-activities/snap4arduino.md","mtime":"2016-10-08T19:58:29.275Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-08T20:00:27.365Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
