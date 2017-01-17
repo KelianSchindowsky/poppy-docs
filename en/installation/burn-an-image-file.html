@@ -736,8 +736,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="startup-with-a-poppy-robot">Startup with a Poppy robot</h1>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> This chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, look at the <a href="./#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer">simulation install path</a>.</p>
+<blockquote>
+<p><strong>Note</strong> This chapter is only for people who want to control a tangible robot. If you intend to control a simulated robot on your computer, look at the <a href="./#you-want-to-try-poppy-robots-in-a-simulator-or-in-a-web-viewer">simulation install path</a>.</p>
 </blockquote>
 <p>Poppy creatures are controlled by a small embedded computer: a Raspberry Pi or an Odroid board.</p>
 <p>The operating system of this computer is hosted on a SD card (you can also use an MMC for the Odroid).</p>
@@ -746,8 +746,8 @@
 <li>You already have a SD card with the Poppy operating system (provided by one of the Poppy distributors for example). You&apos;re ready to go to the <a href="../assembly-guides/">assembly section</a>.</li>
 <li>You have an empty SD-card, so you have to <a href="#download-the-image-of-the-operating-system">download</a> and <a href="#write-the-operating-system-image-to-the-sd-card">write</a> the operating system on the SD card.</li>
 </ul>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> The Poppy creatures operating system use a GNU/Linux distribution, but you won&apos;t have to any knowledges on Linux to install the image on the Raspberry Pi.
+<blockquote>
+<p><strong>Info</strong> The Poppy creatures operating system use a GNU/Linux distribution, but you won&apos;t have to any knowledges on Linux to install the image on the Raspberry Pi.
 You will only need a computer with a SD card reader/writer to write the image on the SD card.</p>
 </blockquote>
 <h2 id="download-the-image-of-the-operating-system">Download the image of the operating system</h2>
@@ -767,8 +767,8 @@ First unzip the image you have previously downloaded.</p>
 Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</em> button, and wait until it is done.</p>
 <p>Now you are ready to <a href="../assembly-guides/">assemble your robot</a>!</p>
 <h3 id="burn-the-image-with-dd-cli-software">Burn the image with <code>dd</code> (CLI software)</h3>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> This method works only for GNU/Linux and OSX operating systems, and is not recommended if you don&apos;t understand what you do.</p>
+<blockquote>
+<p><strong>Warning</strong> This method works only for GNU/Linux and OSX operating systems, and is not recommended if you don&apos;t understand what you do.</p>
 </blockquote>
 <ul>
 <li>Run <code>df -h</code> to see what devices are currently mounted.</li>
@@ -780,8 +780,8 @@ Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</
 <li><p>In the terminal, write the image to the card with the command below, making sure you replace the input file <code>if=</code> argument with the path to your <code>.img</code> file, and the <code>/dev/sdd</code> in the output file <code>of=</code> argument with the right device name.</p>
 </li>
 </ul>
-<blockquote class="clearfix alert alert-warning"><strong class="fa fa-4x fa-exclamation-triangle"></strong>
-<p> You will lose all data on your hard drive if you provide the device name of another running partition.</p>
+<blockquote>
+<p><strong>Caution</strong> You will lose all data on your hard drive if you provide the device name of another running partition.</p>
 </blockquote>
 <p>Make sure the device name is the name of the whole SD card as described above, not just a partition of it; for example <code>sdd</code>, not <code>sdds1</code> or <code>sddp1</code>; or <code>mmcblk0</code>, not <code>mmcblk0p1</code>.</p>
 <p>If you are running a GNU/Linux OS:</p>
@@ -790,8 +790,8 @@ Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</
 <p>If you are running OSX or another BSD based OS:</p>
 <pre><code class="lang-bash">sudo dd bs=4m <span class="hljs-keyword">if</span>=poppy-ergojr.img of=/dev/rdisk2
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> The <code>dd</code> command does not give any information of its progress and so may appear to have frozen; it &gt; could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run <code>sudo pkill -USR1 -n -x dd</code> in another terminal.</p>
+<blockquote>
+<p><strong>Info</strong> The <code>dd</code> command does not give any information of its progress and so may appear to have frozen; it &gt; could take more than five minutes to finish writing to the card. To see the progress of the copy operation you can run <code>sudo pkill -USR1 -n -x dd</code> in another terminal.</p>
 </blockquote>
 <ul>
 <li><p>Run <code>sync</code>; this will ensure the write cache is flushed and that it is safe to unmount your SD card.</p>
@@ -843,7 +843,7 @@ Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"next":{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},"previous":{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"path":"installation/install-zeroconf.md","ref":"installation/install-zeroconf.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/burn-an-image-file.md","mtime":"2016-10-12T13:58:50.266Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-12T14:00:44.292Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"next":{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},"previous":{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"path":"installation/install-zeroconf.md","ref":"installation/install-zeroconf.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/burn-an-image-file.md","mtime":"2017-01-17T08:43:48.116Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-17T08:45:54.182Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -882,6 +882,10 @@ Select the unzipped image, select the SD-card or MMC drive, press the <em>burn</
     
         
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-downloadpdf/plugin.js"></script>
         
     
         

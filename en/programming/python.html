@@ -749,8 +749,8 @@
 <p><img src="../img/python/anaconda.png" alt="Anaconda Python distribution"></p>
 <p>We also strongly advise to use the <a href="https://www.continuum.io/why-anaconda" target="_blank">Anaconda Python distribution</a> as it already includes most of the libraries needed by the Poppy libraries. We also provide all poppy libraries as conda recipes so they can be easily install using Anaconda (see the <a href="../installation/install-poppy-softwares.html">install section</a>).</p>
 <h2 id="overview-of-the-different-libraries">Overview of the different libraries</h2>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> A more detailled documentation of these software libraries is available in the <a href="../software-libraries/">software libraries section</a></p>
+<blockquote>
+<p><strong>Info</strong> A more detailled documentation of these software libraries is available in the <a href="../software-libraries/">software libraries section</a></p>
 </blockquote>
 <p>Before jumping into the code, we will briefly introduce the different existing Poppy libraries and how they interact with each other.</p>
 <p>They are three main library levels:</p>
@@ -809,8 +809,8 @@
 <p>For the Humanoid:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyHumanoid
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section <em><a href="../installation/install-poppy-softwares.html">install Poppy software</a></em>.</p>
+<blockquote>
+<p><strong>Note</strong> If you see an error similar to the one below when executing the previous line, this means that the libraries are not correctly installed. See the section <em><a href="../installation/install-poppy-softwares.html">install Poppy software</a></em>.</p>
 </blockquote>
 <pre><code class="lang-python">In [1]: from poppy.creatures import PoppyHumanoid
 ImportError Traceback (most recent call last)
@@ -861,14 +861,14 @@ It also requires specific versions of libraries to be used properly.</p>
 <li>sensors</li>
 </ul>
 <p>that can be easily access using <em>poppy.motors</em> and <em>poppy.sensors</em>. As soon as the robot object is created it automatically starts synchronization loops which will ensure that the last available value are received/sent to the robot.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p>  Servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being &quot;simple&quot; motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.</p>
+<blockquote>
+<p><strong>Note</strong>  Servomotors that are used in Poppy robots can be seen as both motors and sensors. Indeed, on top of being &quot;simple&quot; motors, they also provide multiple sensing information: their current position, speed and load but also their temperature, the current used... Yet, for simplification they are only available under the motor category.</p>
 </blockquote>
 <h4 id="get-data-from-your-robot">Get data from your robot</h4>
 <!-- TODO: connecter un ergo et ajouter les res. des differentes lignes -->
 <p>Now that you have created your robot object, you can directly use Python to discover which motors are attached.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.</p>
+<blockquote>
+<p><strong>Note</strong> In all examples below the results are shown for an ErgoJr. If you are using a Torso or a Humanoid you will see more motors with different names.</p>
 </blockquote>
 <p>For instance, to know how many motors your robot have you can execute:</p>
 <pre><code class="lang-python">print(len(poppy.motors))
@@ -903,8 +903,8 @@ It also requires specific versions of libraries to be used properly.</p>
 <p>And then access a specific sensors by its name. For instance, to get an image from the camera of the Ergo Jr:</p>
 <pre><code class="lang-python">img = poppy.camera.frame
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> This section just presented some of the available values that you can get from your motors/sensors. They are many other - some are specific to a particular robot - we will present them through the different notebooks.</p>
+<blockquote>
+<p><strong>Note</strong> This section just presented some of the available values that you can get from your motors/sensors. They are many other - some are specific to a particular robot - we will present them through the different notebooks.</p>
 </blockquote>
 <h4 id="send-motor-commands">Send motor commands</h4>
 <p>Now that we have shown you how to read values from your robot, it is time to learn how to make it move!</p>
@@ -952,8 +952,8 @@ pos_2 = {<span class="hljs-string">&apos;m1&apos;</span>: <span class="hljs-numb
     poppy.goto_position(pos_1, <span class="hljs-number">0.5</span>, wait=<span class="hljs-keyword">True</span>)
     poppy.goto_position(pos_2, <span class="hljs-number">0.5</span>, wait=<span class="hljs-keyword">True</span>)
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:</p>
+<blockquote>
+<p><strong>Note</strong> You can turn a motor back to its compliant mode (where you can freely move it) by setting its compliant register to True:</p>
 <pre><code class="lang-python">poppy.m3.compliant = <span class="hljs-keyword">True</span>
 </code></pre>
 </blockquote>
@@ -973,8 +973,8 @@ pos_2 = {<span class="hljs-string">&apos;m1&apos;</span>: <span class="hljs-numb
 <pre><code class="lang-python"><span class="hljs-keyword">for</span> m <span class="hljs-keyword">in</span> poppy.motors:
     m.compliant = <span class="hljs-keyword">True</span>
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-info"></strong>
-<p> You can also record a movement with motors stiff (<code>compliant = False</code>), and moving them with goal_position or goto_position commands.</p>
+<blockquote>
+<p><strong>Info</strong> You can also record a movement with motors stiff (<code>compliant = False</code>), and moving them with goal_position or goto_position commands.</p>
 </blockquote>
 <p>Then, we have to include the primitive used for recording motion:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> pypot.primitive.move <span class="hljs-keyword">import</span> MoveRecorder
@@ -988,8 +988,8 @@ pos_2 = {<span class="hljs-string">&apos;m1&apos;</span>: <span class="hljs-numb
 <p>Here, we will record a move on the whole robot at 50Hz:</p>
 <pre><code class="lang-python">recorder = MoveRecorder(poppy, <span class="hljs-number">50</span>, poppy.motors)
 </code></pre>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> We used <em>poppy.motors</em> to specify that we want all motors if you only want let&apos;s say the two first motors of an Ergo Jr you could have used <em>[poppy.m1, poppy.m2]</em> instead.</p>
+<blockquote>
+<p><strong>Note</strong> We used <em>poppy.motors</em> to specify that we want all motors if you only want let&apos;s say the two first motors of an Ergo Jr you could have used <em>[poppy.m1, poppy.m2]</em> instead.</p>
 </blockquote>
 <p>Now it is time to record. As it can be hard to both move the robot and type Python command at the same time, we will make a small script, that:</p>
 <ul>
@@ -1028,8 +1028,8 @@ record.stop()
 player = MovePlayer(poppy, my_recorded_move)
 </code></pre>
 <p>As you can see, to create it you have to specify the robot (as for the MoveRecorder) and the move you want to play.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> Automatically all recorded motors become stiff to be able to play the move.</p>
+<blockquote>
+<p><strong>Note</strong> Automatically all recorded motors become stiff to be able to play the move.</p>
 </blockquote>
 <p>Then, you can simply start the replay:</p>
 <pre><code class="lang-python">player.start()
@@ -1051,8 +1051,8 @@ player = MovePlayer(poppy, my_recorded_move)
 <li>set new motor command</li>
 <li>go back to step 1.</li>
 </ol>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> This example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a &quot;cool&quot; result.</p>
+<blockquote>
+<p><strong>Note</strong> This example is designed for the Ergo Jr. It could be adapted to other Poppy robots, by changing the motors used. Yet, it is not that obvious which one to use to have a &quot;cool&quot; result.</p>
 </blockquote>
 <h4 id="demo-version">Demo version</h4>
 <p>Before writing the sensori-motor loop, we will first set the Ergo Jr in a base position.</p>
@@ -1099,8 +1099,8 @@ jr.m2.compliant = <span class="hljs-keyword">True</span>
 <li><strong>Step 3:</strong> We simply set the goal position as the just computed command</li>
 </ul>
 <p>Those steps are included inside an infinite loop - with a <code>time.sleep</code> to avoid CPU overhead.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-4x fa-edit"></strong>
-<p> To stop this <em>while True</em> loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.</p>
+<blockquote>
+<p><strong>Note</strong> To stop this <em>while True</em> loop, you will have to use the classical Ctrl-c, or use the stop button if you are running it through Jupyter.</p>
 </blockquote>
 <h4 id="now-with-a-primitive">Now with a primitive</h4>
 <p>But what about if you want to make this behavior an independent &quot;brick&quot; that you can start/stop on demand combine with other behaviors. Well, primitives are meant to do just that.</p>
@@ -1187,7 +1187,7 @@ head_straight.start()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming in Python","level":"1.5.3","depth":2,"next":{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]},"previous":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/python.md","mtime":"2016-10-12T13:58:50.270Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-12T14:00:44.292Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Programming in Python","level":"1.5.3","depth":2,"next":{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]},"previous":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/python.md","mtime":"2017-01-17T08:43:48.120Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-17T08:45:54.182Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1226,6 +1226,10 @@ head_straight.start()
     
         
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-downloadpdf/plugin.js"></script>
         
     
         
