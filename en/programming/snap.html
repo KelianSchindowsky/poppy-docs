@@ -859,42 +859,150 @@ if the block answer is &quot;You may have connection troubles&quot;, your &quot;
 <thead>
 <tr>
 <th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><img src="../img/snap/snap_blocks/set_host.png" alt=""></td>
+<td>This block allows you to connect Snap! to your robot. The host input can accept : - robot_name.local (e.g. : poppy.local if your robot&#x2019;s name is poppy)- the IP address (e.g. 123.124.145.176)</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/test_connection.png" alt=""></td>
+<td>Click on this block to verify that you are connected to your robot.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/set_motors_compliant.png" alt=""></td>
+<td>Put one or many motors in compliant or stiff mode. Motors are hand-drivable in compliant mode but must be in stiff mode to controlled with Snap!.The &#x201C;motor(s)&#x201D; input can accept:- string of a motor name (e.g. m1)- string of many motors separated with spaces (e.g. m1 m2 m4)- a Snap! list of motors like the reporter block &quot;$robot all motors&quot;&quot; or the block &#x201C;list&#x201D;&quot;</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/set_position.png" alt=""></td>
+<td>Put one or many motors in a position (angle in degree) in a given time.The &#x201C;motor(s)&#x201D; input can accept: - string of a motor name (e.g. m1) - string of many motors separated with spaces (e.g. m1 m2 m4) - a Snap! list of motors like the reporter block &quot;$robot all motors&quot;&quot; or the block &#x201C;list&#x201D;.  &#x201C;Wait&#x201D; can be true or false. If it&#x2019;s on True, the action will wait the end of the previous action. If it&#x2019;s on False, then the action will proceed during the previous one.&quot;</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/reset.png" alt=""></td>
+<td>Restart the software inside the robot.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/set_register_of_motor.png" alt=""></td>
+<td>Put the value to one register (position, speed, max torque, &#x2026;) of one or many motors.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/set_led.png" alt=""></td>
+<td>Activate/deactivate color leds of motors and choose the color of your choice.The &#x201C;motor(s)&#x201D; input can accept: - string of a motor name (e.g. m1) - string of many motors separated with spaces (e.g. m1 m2 m4) - a Snap! list of motors like the reporter block &quot;$robot all motors&quot;&quot; or the block &#x201C;list&#x201D;</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/play_move_reporter.png" alt=""></td>
+<td>Play a movement at a given speed. It is necessary to indicate the exact name of the movement previously recorded. This block can be nested in the &#x201C;concurrent/sequential&#x201D; block.&quot;</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/sequence.png" alt=""></td>
+<td>All blocks in input are run one after each other.You can use this block to play concurrently many sequently move.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/concurrent.png" alt=""></td>
+<td>All reports input are run simultaneously.You can use this block to play concurrently many recorded move.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/create_and_start_record.png" alt=""></td>
+<td>Create and start a movement recorded by demonstration to the given motors.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/stop_record_and_save_move.png" alt=""></td>
+<td>Stop a record and save the recorded move in the robot.Be careful, you must have previously defined a move record with the &quot;create &amp; start record move ...&quot;&quot; block.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/stop_move.png" alt=""></td>
+<td>Stop a movement that is being played.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/play_concurently_moves.png" alt=""></td>
+<td>Play movements at the same time (can be nested to concurrent block). Inputs can be : - move name (string) - any reporter block, like sequential or play sequentially&quot;</td>
 </tr>
 <tr>
 <td></td>
 <td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><img src="../img/snap/snap_blocks/play_sequentially_moves.png" alt=""></td>
+<td>Play movements following in order (can be nested to sequential block). Inputs can be :  - move name (string) - any reporter block, like sequential or play sequentially</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/start_behaviours.png" alt=""></td>
+<td>Start/Stop/Pause/Resume an integrated behaviour of the robot. It can be a position, a movement, a sensorimotor loop, high level camera feature..</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/play_move_in_reverse.png" alt=""></td>
+<td>Play a move in reverse at a given speed  (reporter block)</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/play_move_command.png" alt=""></td>
+<td>Play a move at a given speed (command block)</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/motors_in_group.png" alt=""></td>
+<td>Give motors which are in a given group. You can know groups name with the block &#x201C;all motors groups&#x201D;.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/all_motors.png" alt=""></td>
+<td>Return a list with the name of every motors in the robot.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/get_register.png" alt=""></td>
+<td>Give the value of a register (position, speed, load, ... ) of one or many motors.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/get_all_motors_position.png" alt=""></td>
+<td>Give the position of every motors. It is a shortcut to the block above. It is useful to make a snapshot of pose of the robot.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/index_of_motor.png" alt=""></td>
+<td>Return the index of a motor name in the &quot;all motors&quot; block list.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/robot_URL.png" alt=""></td>
+<td>Give the URL of the robot. For internal use only.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/all_recorded_moves.png" alt=""></td>
+<td>Give all records stored in this robot.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/get_all_behaviours.png" alt=""></td>
+<td>Give the list of all attached/running behaviours .</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/.png" alt=""></td>
+<td>Give all existing motors groups.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/get_function_of_behaviour.png" alt=""></td>
+<td>Get all methods or functions which are runnable in a behavior.It is an advanced block.</td>
+</tr>
+<tr>
+<td><img src="../img/snap/snap_blocks/card_is_detected.png" alt=""></td>
+<td>Return a boolean (true/false) depending if the selected card is detected by the camera of the robot.</td>
 </tr>
 </tbody>
 </table>
-<h2 id="quick-examples">Quick examples</h2>
-<h3 id="record-and-play-back-a-move">Record and play back a move</h3>
-<p>You can record a movement on one motor and play it back</p>
-<p>You can change the speed</p>
-<p>You can record it on all motors</p>
-<p>or just a subset of your creature</p>
-<h4 id="record-and-by-demonstration-movement">Record and by demonstration movement</h4>
+<!-- TODO
+
+## Quick examples
+
+### Record and play back a move
+
+You can record a movement on one motor and play it back
+
+You can change the speed
+
+You can record it on all motors
+
+or just a subset of your creature
+
+
+#### Record and by demonstration movement
+
+-->
 
                                 
                                 </section>
@@ -938,7 +1046,7 @@ if the block answer is &quot;You may have connection troubles&quot;, your &quot;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2017-01-17T08:43:48.120Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-17T08:45:54.182Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2017-01-24T20:58:54.389Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-24T21:01:14.053Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
