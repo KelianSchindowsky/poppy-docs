@@ -21,11 +21,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
                 
             
                 
@@ -737,8 +737,8 @@
                                 
                                 <h1 id="zeroconf">Zeroconf</h1>
 <p><a href="https://en.wikipedia.org/wiki/Zero-configuration_networking" target="_blank">Zeroconf</a> also called Bonjour (name of Apple implementation) is set of technologies that allow more easily communication between computers without configuration.</p>
-<blockquote>
-<p><strong>Info</strong> Zeroconf is not mandatory on your computer to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> Zeroconf is not mandatory on your computer to use Poppy robots, but we will assume it is installed. It is more convenient and readable for the documentation.</p>
 </blockquote>
 <h2 id="installation">Installation</h2>
 <ul>
@@ -760,8 +760,8 @@
 <p>Among other Zeroconf tools, there is an implementation of decentralized DHCP (<a href="https://en.wikipedia.org/wiki/Zero-configuration_networking#Link-local_IPv4_addresses" target="_blank">IPv4LL</a>), which allow computers obtain an IP and connect each others <strong>without</strong> a DHCP server.</p>
 <p>The auto-adressed IP is in the <a href="https://en.wikipedia.org/wiki/Link-local_address#IPv4" target="_blank">APIPA</a> range, from 169.254.0.0 to 169.254.255.255.</p>
 <p>You can plug a robot to your computer <strong>directly</strong> on your computer with an Ethernet cable, <strong>without</strong> any router and connect it with its local domain name (hostname.local).</p>
-<blockquote>
-<p><strong>Warning</strong> You will be able to use the local-link IPv4 address <strong>only</strong> if you installed your robots after end of May 2016. Previously <em>avahi-autoipd</em> packet was missing. </p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> You will be able to use the local-link IPv4 address <strong>only</strong> if you installed your robots after end of May 2016. Previously <em>avahi-autoipd</em> packet was missing. </p>
 </blockquote>
 <h2 id="alternatives-to-find-the-ip-address-of-a-computer-on-your-local-network">Alternatives to find the IP address of a computer on your local network</h2>
 <p>If you cannot (or doesn&apos;t want to) install a zeroconf client on your personal computer, you can use one of the following methods to find the IP address of your robot.</p>
@@ -818,7 +818,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"next":{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"path":"installation/burn-an-image-file.md","ref":"installation/burn-an-image-file.md","articles":[]},"previous":{"title":"Installation","level":"1.3","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"path":"installation/install-zeroconf.md","ref":"installation/install-zeroconf.md","articles":[]},{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"path":"installation/burn-an-image-file.md","ref":"installation/burn-an-image-file.md","articles":[]},{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},{"title":"Install V-REP simulator","level":"1.3.4","depth":2,"path":"installation/install-vrep.md","ref":"installation/install-vrep.md","articles":[]},{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},{"title":"Install a Poppy Board","level":"1.3.6","depth":2,"path":"installation/install-a-poppy-board.md","ref":"installation/install-a-poppy-board.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-zeroconf.md","mtime":"2017-04-04T16:20:58.976Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T16:24:27.260Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"next":{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"path":"installation/burn-an-image-file.md","ref":"installation/burn-an-image-file.md","articles":[]},"previous":{"title":"Installation","level":"1.3","depth":1,"path":"installation/README.md","ref":"installation/README.md","articles":[{"title":"Install a zeroconf client","level":"1.3.1","depth":2,"path":"installation/install-zeroconf.md","ref":"installation/install-zeroconf.md","articles":[]},{"title":"Startup with a Poppy robot","level":"1.3.2","depth":2,"path":"installation/burn-an-image-file.md","ref":"installation/burn-an-image-file.md","articles":[]},{"title":"Install Poppy softwares","level":"1.3.3","depth":2,"path":"installation/install-poppy-softwares.md","ref":"installation/install-poppy-softwares.md","articles":[]},{"title":"Install V-REP simulator","level":"1.3.4","depth":2,"path":"installation/install-vrep.md","ref":"installation/install-vrep.md","articles":[]},{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},{"title":"Install a Poppy Board","level":"1.3.6","depth":2,"path":"installation/install-a-poppy-board.md","ref":"installation/install-a-poppy-board.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","github","ga","language-picker","copy-code-button","downloadpdf","katex","youtube","retina"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-zeroconf.md","mtime":"2017-04-05T14:52:30.154Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T14:55:26.418Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -829,14 +829,6 @@
     
         
         <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
-    
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -852,15 +844,15 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
         <script src="../../gitbook/gitbook-plugin-downloadpdf/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
         
     
         

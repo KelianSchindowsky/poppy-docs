@@ -21,11 +21,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
                 
             
                 
@@ -736,8 +736,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="install-a-poppy-board">Install a Poppy board</h1>
-<blockquote>
-<p><strong>Caution</strong> This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. <strong>It is strongly advised</strong> to simply <a href="burn-an-image-file.html">burn a pre-made system image on your robot</a>.</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> This chapter is only for people who want to create from scratch a Raspberry Pi or Odroid image. <strong>It is strongly advised</strong> to simply <a href="burn-an-image-file.html">burn a pre-made system image on your robot</a>.</p>
 </blockquote>
 <p>To install a Poppy board, we start from a vanilla distribution (Debian or Ubuntu), remove some useless stuff and launch some scripts.</p>
 <p><strong>Keep in mind that our install scripts are not written for end users: it is not well maintained and there is almost no error messages.</strong> If you encounter issues with these scripts, you can post a message in the <a href="https://forum.poppy-project.org/c/support" target="_blank">support section</a> of the forums.</p>
@@ -748,8 +748,8 @@
 <li><a href="https://www.raspberrypi.org/downloads/raspbian/" target="_blank">Raspbian Jessie</a> if you are using a <strong>Raspberry Pi 2</strong>.</li>
 </ul>
 <p>Write the image to the SD-card with you favorite disk writer tool as explained in the <a href="burn-an-image-file.html#write-an-image-to-the-sd-card">startup section</a>.</p>
-<blockquote>
-<p><strong>Info</strong> If you are using Windows, you have no native SSH client ; you have to download and install <a href="http://www.putty.org/" target="_blank">putty</a> or <a href="http://mobaxterm.mobatek.net/" target="_blank">mobaxterm</a> to use SSH.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> If you are using Windows, you have no native SSH client ; you have to download and install <a href="http://www.putty.org/" target="_blank">putty</a> or <a href="http://mobaxterm.mobatek.net/" target="_blank">mobaxterm</a> to use SSH.</p>
 </blockquote>
 <p>Login to the board in SSH: <code>ssh pi@raspberrypi.local</code>, password=raspberry.</p>
 <p>You will need to make sure that you have enough free space in your raspberry. The easiest way is to use the raspi-config script to expand your partition to the full SD-card. Just log into your raspberry and run (you will need to reboot it afterwards):</p>
@@ -771,8 +771,8 @@ In the case you have not a fresh installation you have download and burn default
 <p>To burn it on the MMC/SD-card, look at the <a href="burn-an-image-file.html#write-an-image-to-the-sd-card">startup section</a>.</p>
 <p>Now you have a clean and fresh installation, you can mount your memory card to your board, plug your ethernet connection, and power up.</p>
 <p>Login to the board in SSH: <code>ssh odroid@odroid.local</code>, password=odroid.</p>
-<blockquote>
-<p><strong>Info</strong> If you are using Windows, you have no native SSH client ; you have to download and install <a href="http://www.putty.org/" target="_blank">putty</a> or <a href="http://mobaxterm.mobatek.net/" target="_blank">mobaxterm</a> to use SSH.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> If you are using Windows, you have no native SSH client ; you have to download and install <a href="http://www.putty.org/" target="_blank">putty</a> or <a href="http://mobaxterm.mobatek.net/" target="_blank">mobaxterm</a> to use SSH.</p>
 </blockquote>
 <p>Be sure that your board is connected to the Internet, download and run poppy_setup.sh (replace &apos;poppy-humanoid&apos; below with poppy-torso&apos; if you want to install a Poppy Torso robot):</p>
 <pre><code>wget https://raw.githubusercontent.com/poppy-project/odroid-poppysetup/master/poppy_setup.sh -O poppy_setup.sh
@@ -786,8 +786,8 @@ sudo bash poppy_setup.sh poppy-humanoid
 <p>At the end of the installation, your board will reboot again. You can look at the log <code>tail -f install_log</code>, if everything ended well, last lines should be:</p>
 <pre><code>System install complete!
 Please share your experiences with the community : https://forum.poppy-project.org/
-</code></pre><blockquote>
-<p><strong>Note:</strong> If you are not sure of what going up, you can see if the install process is running with: <code>ps up $(pgrep -f &apos;poppy_launcher.sh&apos;)</code></p>
+</code></pre><blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> If you are not sure of what going up, you can see if the install process is running with: <code>ps up $(pgrep -f &apos;poppy_launcher.sh&apos;)</code></p>
 </blockquote>
 <p>The hostname, default user and password will be all set to &quot;poppy&quot; (<code>ssh poppy@poppy.local</code> password=poppy).
 You can test your installation with the web interface in your web browser <a href="http://poppy.local" target="_blank">http://poppy.local</a>.</p>
@@ -834,7 +834,7 @@ You can test your installation with the web interface in your web browser <a hre
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Install a Poppy Board","level":"1.3.6","depth":2,"next":{"title":"Assembly guides","level":"1.4","depth":1,"path":"assembly-guides/README.md","ref":"assembly-guides/README.md","articles":[{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"path":"assembly-guides/ergo-jr/README.md","ref":"assembly-guides/ergo-jr/README.md","articles":[{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},{"title":"Motor configuration","level":"1.4.1.2","depth":3,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]}]},{"title":"Assemble the Poppy Humanoid","level":"1.4.2","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},{"title":"Assemble the Poppy Torso","level":"1.4.3","depth":2,"path":"assembly-guides/poppy-torso/README.md","ref":"assembly-guides/poppy-torso/README.md","articles":[]}]},"previous":{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-a-poppy-board.md","mtime":"2017-04-04T16:20:58.976Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T16:24:27.260Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Install a Poppy Board","level":"1.3.6","depth":2,"next":{"title":"Assembly guides","level":"1.4","depth":1,"path":"assembly-guides/README.md","ref":"assembly-guides/README.md","articles":[{"title":"Assemble the Ergo Jr","level":"1.4.1","depth":2,"path":"assembly-guides/ergo-jr/README.md","ref":"assembly-guides/ergo-jr/README.md","articles":[{"title":"Electronic assembly","level":"1.4.1.1","depth":3,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},{"title":"Motor configuration","level":"1.4.1.2","depth":3,"path":"assembly-guides/ergo-jr/motor-configuration.md","ref":"assembly-guides/ergo-jr/motor-configuration.md","articles":[]},{"title":"Hardware construction","level":"1.4.1.3","depth":3,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]}]},{"title":"Assemble the Poppy Humanoid","level":"1.4.2","depth":2,"path":"assembly-guides/poppy-humanoid/README.md","ref":"assembly-guides/poppy-humanoid/README.md","articles":[]},{"title":"Assemble the Poppy Torso","level":"1.4.3","depth":2,"path":"assembly-guides/poppy-torso/README.md","ref":"assembly-guides/poppy-torso/README.md","articles":[]}]},"previous":{"title":"Install USB to serial drivers","level":"1.3.5","depth":2,"path":"installation/install-drivers.md","ref":"installation/install-drivers.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","github","ga","language-picker","copy-code-button","downloadpdf","katex","youtube","retina"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"installation/install-a-poppy-board.md","mtime":"2017-04-05T14:52:30.154Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T14:55:26.418Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -845,14 +845,6 @@ You can test your installation with the web interface in your web browser <a hre
     
         
         <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
-    
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -868,15 +860,15 @@ You can test your installation with the web interface in your web browser <a hre
         
     
         
-        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
         <script src="../../gitbook/gitbook-plugin-downloadpdf/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
         
     
         

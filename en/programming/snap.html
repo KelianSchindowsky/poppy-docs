@@ -21,11 +21,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
                 
             
                 
@@ -740,8 +740,8 @@
 <p>Snap<em>!</em> was inspired by Scratch (a project of
 the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both novice and more advanced users by including and expanding Scratch&apos;s features.</p>
 <p>Snap<em>!</em> is open-source and it is entirely written in javascript, you can use it from the <a href="http://snap.berkeley.edu/snapsource/snap.html" target="_blank">official website</a> but you can also use a <a href="https://github.com/jmoenig/Snap--Build-Your-Own-Blocks/archive/4.0.6.zip" target="_blank">copy of the website</a> in your personal computer and open the <code>snap.html</code> file in your browser.</p>
-<blockquote>
-<p><strong>Warning</strong> Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a> (which is very similar to Chrome without tracking tools), or Google Chrome.**</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> Even if Snap<em>!</em> use JavaScript and HTML5 which are browser independent technologies, opening blocks for Poppy robots in Snap<em>!</em> is far faster in a web browser based on Webkit engine. We strongly recommend you to use <a href="http://chromium.woolyss.com/" target="_blank">Chromium Browser</a> (which is very similar to Chrome without tracking tools), or Google Chrome.**</p>
 </blockquote>
 <h2 id="introduction-to-snap-programming">Introduction to Snap<em>!</em> programming</h2>
 <p>This chapter will focus on things necessary to understand in Snap<em>!</em> for using Poppy creatures.</p>
@@ -749,8 +749,8 @@ the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both nov
 <p>Some of the snapshots and concepts of BJC have been used for writing this chapter.</p>
 <h3 id="connect-your-robot-to-snap">Connect your robot to Snap<em>!</em></h3>
 <h4 id="if-you-use-a-simulated-robot-on-v-rep">If you use a simulated robot on V-REP</h4>
-<blockquote>
-<p><strong>Info</strong> You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> You need to have installed Poppy software libraries and V-REP simulator on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
 </blockquote>
 <p>First open V-REP.</p>
 <p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
@@ -759,8 +759,8 @@ the Lifelong Kindergarten Group at the MIT Media Lab), but also targets both nov
 <p><em>Substitute &apos;poppy-ergo-jr&apos; with &apos;poppy-humanoid&apos; or &apos;poppy-torso&apos; to launch respectively a Poppy Humanoid or a Poppy Torso</em>.</p>
 <p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
 If it is not automatically done, you can open Snap with preloaded blocks at <a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></p>
-<blockquote>
-<p><strong>Warning</strong> Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> Every popup in V-REP will block the communication to the robot interface. If a popup appear, close it and restart the command above.</p>
 </blockquote>
 <p><strong>Alternative method</strong>:
 Instead of using <code>poppy-service</code> you can start it in full python:</p>
@@ -769,14 +769,14 @@ Instead of using <code>poppy-service</code> you can start it in full python:</p>
 poppy = PoppyErgoJr(simulator=<span class="hljs-string">&apos;vrep&apos;</span>, use_snap=<span class="hljs-keyword">True</span>)
 </code></pre>
 <h4 id="if-you-use-a-simulated-robot-on-poppy-simu-web-viewer">If you use a simulated robot on poppy-simu (web viewer)</h4>
-<blockquote>
-<p><strong>Info</strong> You need to have installed Poppy software libraries on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> You need to have installed Poppy software libraries on your computer. If it is not done, go to the <a href="../installation/install-poppy-softwares.html">install poppy software section</a>.</p>
 </blockquote>
 <p>The quickest way is to use the command line utility <a href="../software-libraries/poppy-creature.html#poppy-services">poppy-service</a>. Copy and press enter to execute the command below in your command prompt (windows) or terminal (OSX and Linux):</p>
 <pre><code class="lang-bash">poppy-services poppy-ergo-jr --snap --poppy-simu
 </code></pre>
-<blockquote>
-<p><strong>Warning</strong> poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> poppy-simu is only available for poppy-ergo-jr. Other creatures are only supported in V-REP.</p>
 </blockquote>
 <p>It will open a Snap<em>!</em> tab in your web browser for a simulated poppy-ergo-jr.
 If it is not automatically done, you can open Snap with preloaded blocks at <strong><a href="http://simu.poppy-project.org/snap/#open:https://raw.githubusercontent.com/poppy-project/pypot/master/pypot/server/snap_projects/pypot-snap-blocks.xml" target="_blank">simu.poppy-project.org/snap/</a></strong> and the robot viewer at <strong><a href="http://simu.poppy-project.org/poppy-ergo-jr" target="_blank">simu.poppy-project.org/poppy-ergo-jr</a></strong>.</p>
@@ -1046,7 +1046,7 @@ or just a subset of your creature
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","heading-anchors","github","katex","ga","language-picker","retina","copy-code-button","todo","youtube","downloadpdf"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"todo":{},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"heading-anchors":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2017-04-04T16:20:58.980Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-04T16:24:27.260Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Programming with Snap!","level":"1.5.1","depth":2,"next":{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},"previous":{"title":"Programming","level":"1.5","depth":1,"path":"programming/README.md","ref":"programming/README.md","articles":[{"title":"Programming with Snap!","level":"1.5.1","depth":2,"path":"programming/snap.md","ref":"programming/snap.md","articles":[]},{"title":"Usage of Jupyter notebooks","level":"1.5.2","depth":2,"path":"programming/notebooks.md","ref":"programming/notebooks.md","articles":[]},{"title":"Programming in Python","level":"1.5.3","depth":2,"path":"programming/python.md","ref":"programming/python.md","articles":[]},{"title":"Robots APIs","level":"1.5.4","depth":2,"path":"programming/rest.md","ref":"programming/rest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-share","edit-link","richquotes","github","ga","language-picker","copy-code-button","downloadpdf","katex","youtube","retina"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"search":{},"downloadpdf":{"label":"Download PDF","multilingual":false,"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"retina":{},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","instapaper","instapaper"]},"edit-link":{"label":{"en":"Edit this page","de":"Seite bearbeiten","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"programming/snap.md","mtime":"2017-04-05T14:52:30.154Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-05T14:55:26.418Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1057,14 +1057,6 @@ or just a subset of your creature
     
         
         <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
-    
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
         
     
         
@@ -1080,15 +1072,15 @@ or just a subset of your creature
         
     
         
-        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
         
     
         
         <script src="../../gitbook/gitbook-plugin-downloadpdf/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-retina/retina.min.js"></script>
         
     
         
