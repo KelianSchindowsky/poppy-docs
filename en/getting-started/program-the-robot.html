@@ -250,7 +250,7 @@
                     
                         <b>2.1.1.</b>
                     
-                    Install a zeroconf client
+                    Install Bonjour/Zeroconf
             
                 </a>
             
@@ -808,20 +808,25 @@
 <ul>
 <li>using <a href="#using-snap">Snap!</a>, a variant of Scratch the visual programming language,</li>
 <li>using <a href="#using-python">Python</a> and leveraging the power of the whole API,</li>
-<li>through the  <a href="#through-the-rest-api">REST API</a> which let you  interface Poppy robots with other devices or any programming language.</li>
+<li>through the <a href="#through-the-rest-api">REST API</a> which let you  interface Poppy robots with other devices or any programming language.</li>
 </ul>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
-<p> As for the rest of the project, all our libraries are open source and available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p>
+<p> Info: As for the rest of the project, all our software libraries are open source (GPLv3 License) and available on <a href="https://github.com/poppy-project" target="_blank">GitHub</a>.</p>
 </blockquote>
-<p><img src="../img/logo/open-source.png" alt="OpenSource Logo" height="100"><img src="../img/logo/gpl-v3.png" alt="GPLv3 Logo" height="100"></p>
 <h2 id="using-snap">Using Snap<em>!</em></h2>
-<p><img src="../img/logo/snap.png" alt="Snap! logo"></p>
+<p style="text-align:center">
+<img src="../img/logo/snap.png" alt="Snap! logo" height="200">
+</p>
+
 <p>Snap<em>!</em> is a visual programming language - a variant of the very famous Scratch language. It is a block based drag-and-drop programming language that allows for a thorough introduction of IT. It runs in your browser as it is implemented in JavaScript. You do not need to install anything to start using it. It is open sourced and actively maintained.</p>
 <p><img src="../img/snap/presentation.jpg" alt="Exemple of Snap project using Poppy"></p>
 <p>We developed a set of custom blocks for Poppy robots that let you send motor commands and read values from the sensors of your robot. This let you to directly jump into controlling and programming your without any syntax/compilation issue. Thanks to Snap<em>!</em> live interaction loop you simply have to click on a block to send its associated command to the robot. Snap<em>!</em> also naturally scales to more complex projects.</p>
 <p>A <a href="../programming/snap.html">dedicated chapter</a> will guide you in what you can do with Snap<em>!</em> and Poppy robots.</p>
 <h2 id="using-python">Using Python</h2>
-<p><img src="../img/logo/python.png" alt="Python Powered"></p>
+<p style="text-align:center">
+<img src="../img/logo/python.png" alt="Python Powered" height="170">
+</p>
+
 <p>Poppy libraries have been written in Python, to allow for fast development and extensibility and to benefit from all existing scientific libraries. Python is also a well-known language and widely used in education or artistic fields. By programming Poppy in Python, you will have access from the very low-level API to the higher levels.</p>
 <p>The API has been designed to allow for very fast prototyping. Creating a robot and starting to move motors should not take more than a few lines:</p>
 <pre><code class="lang-python"><span class="hljs-keyword">from</span> poppy.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
@@ -831,7 +836,10 @@ jr.m3.goal_position = <span class="hljs-number">30</span>
 </code></pre>
 <!-- Note: "Notebook documents" or “notebooks”, all lower case -->
 <p>We are also big fan of the <a href="http://jupyter.org" target="_blank">Jupyter Project</a> and notebooks. Notebooks are documents which contain both Python code and rich text elements like equations, pictures, videos. They can be edited from the Jupyter Web interface which allow users to program Poppy robots directly from a website hosted on the robot computer. We think that this is a powerful tool permitting the creation and sharing of live code, results visualizations and explanatory text combined in a single document.</p>
-<p> <img src="../img/logo/jupyter.png" alt="Jupyter Logo" width="100"></p>
+<p style="text-align:center">
+<img src="../img/logo/jupyter.png" alt="Jupyter Logo" height="150">
+</p>
+
 <p>Most of the tutorials, experiments or pedagogical activities that we and the community develop are available as notebooks.</p>
 <p><img src="../img/notebook-example.png" alt="Notebook example"></p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
@@ -891,7 +899,7 @@ jr.m3.goal_position = <span class="hljs-number">30</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Program the robot","level":"1.2.3","depth":2,"next":{"title":"Visualize","level":"1.2.4","depth":2,"path":"getting-started/visualize.md","ref":"getting-started/visualize.md","articles":[]},"previous":{"title":"Connect to the robot","level":"1.2.2","depth":2,"path":"getting-started/connect.md","ref":"getting-started/connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","edit-link","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"label":{"en":"Edit this page","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/program-the-robot.md","mtime":"2017-04-14T21:39:59.603Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T21:42:11.678Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Program the robot","level":"1.2.3","depth":2,"next":{"title":"Visualize","level":"1.2.4","depth":2,"path":"getting-started/visualize.md","ref":"getting-started/visualize.md","articles":[]},"previous":{"title":"Connect to the robot","level":"1.2.2","depth":2,"path":"getting-started/connect.md","ref":"getting-started/connect.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/program-the-robot.md","mtime":"2017-04-15T11:51:28.289Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T11:53:24.973Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -899,10 +907,6 @@ jr.m3.goal_position = <span class="hljs-number">30</span>
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>

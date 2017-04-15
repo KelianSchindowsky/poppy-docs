@@ -250,7 +250,7 @@
                     
                         <b>2.1.1.</b>
                     
-                    Install a zeroconf client
+                    Install Bonjour/Zeroconf
             
                 </a>
             
@@ -803,8 +803,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="visualize-the-robot-in-a-simulator">Visualize the robot in a simulator</h2>
-<h3 id="simulated-poppy-creatures">Simulated Poppy Creatures</h3>
+                                <h1 id="visualize-the-robot-in-a-simulator">Visualize the robot in a simulator</h1>
+<h2 id="simulated-poppy-creatures">Simulated Poppy Creatures</h2>
 <p>Simulated versions of all Poppy robots (Humanoid, Torso, and Ergo Jr) are available.</p>
 <p>Connection with two main &quot;simulators&quot; were developed:</p>
 <ul>
@@ -824,20 +824,17 @@
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
 <p> If you want to use Poppy robots using a simulator you will have to install some of the poppy libraries locally on your computer.</p>
 </blockquote>
-<h3 id="install-the-needed-software">Install the needed software</h3>
+<h2 id="install-the-needed-software">Install the needed software</h2>
 <p>While the physical robots come with libraries pre-installed, they are not integrated in the simulators. Thus, you need to install them on your computer. More details of what you will have to do is given in the <a href="#install-the-needed-software">section below</a>. You will also not have access to the robot web interface. You will have to manually launch the different services to start programming your robot (the Jupyter server for Python notebooks, or the Snap<em>!</em> server).</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
-<p> We are hoping to have a one-click app for Windows/Mac/Linux with everything setup at some point. Yet, this is not expected to be available in the near future.</p>
-</blockquote>
 <p>To start controlling a simulated Poppy robots, either using V-REP or the web visualizer, you will need:</p>
 <ul>
 <li>To have a working Python, we strongly recommend to use the <a href="https://www.continuum.io/downloads" target="_blank">Anaconda Python distribution</a>. It works with any version &gt;=2.7 or &gt;=3.4. Prefer Python 2.7 if you can, as it is the version we used.</li>
 <li>To install the Poppy libraries: pypot and the library corresponding to your creature (e.g. poppy-ergo-jr).</li>
 </ul>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Details about those steps can be found in section <em><a href="../installation/install-poppy-softwares.html">Install everything locally for using a simulator</a></em>.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-info"></strong>
+<p> Info: Details about those steps can be found in section <em><a href="../installation/install-poppy-softwares.html">Install everything locally for using a simulator</a></em>.</p>
 </blockquote>
-<h3 id="using-v-rep">Using V-REP</h3>
+<h2 id="using-v-rep">Using V-REP</h2>
 <p><a href="http://www.coppeliarobotics.com" target="_blank">V-REP</a> is a well known and powerful robot simulator. It is widely used for research and educational purposes. Moreover, it is available for free under an educational license. It can be download from <a href="http://www.coppeliarobotics.com/downloads.html" target="_blank">this website</a> (works under Mac OS, Windows and GNU/Linux).</p>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
 <p> It is important to note that as V-REP is simulating the whole physics and rendering of the robot, it may be slow if you do not have a powerful computer (especially the GPU card).</p>
@@ -856,14 +853,26 @@
 </ul>
 <p><img src="../img/torso/explauto-vrep.png" alt="Torso V-REP"><img src="../img/torso/explauto-res.png" alt="Torso Explauto Res"></p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Even if we try, to reproduce the robot behaviour and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).</p>
+<p> Even if we try, to reproduce the robot behavior and functioning, some differences remain. In particular, if you make a robot walk in simulation that does not necessarily mean that it will walk in the real world (and vice-versa).</p>
 </blockquote>
-<h3 id="using-our-web-visualizer">Using our web visualizer</h3>
-<p>Our web visualizer - based on the <a href="http://threejs.org" target="_blank">Three.js</a> library - will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot. </p>
+<p>To start the simulated robot, first open V-REP and instantiate you robot with <code>simulator=&apos;vrep&apos;</code> argument. V-REP will open a popup that you will have to close to enable to communication between V-REP and Python.</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pypot.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
+robot = PoppyErgoJr(simulator=<span class="hljs-string">&apos;vrep&apos;</span>)
+</code></pre>
+<p>If you want to control a simulated robot from Snap, you can also start it directly from the command line interface <code>poppy-services</code> in your terminal (called command prompt on Windows):</p>
+<pre><code class="lang-bash">poppy-services --vrep --snap poppy-ergo-jr
+</code></pre>
+<h2 id="using-our-web-visualizer">Using our web visualizer</h2>
+<p>Our web visualizer will show you a 3D representation of a Poppy robot. For this, you will need to connect it to either a real robot (through the REST-API) or to a simple mockup robot running on your computer. You simply have to set the host variable from within the web interface to match the address of your robot.</p>
 <p><img src="../img/visu/presentation.png" alt="Poppy Simu Presentation"></p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> A mockup robot can be started via the poppy-services command. For instance: <code>poppy-services --poppy-simu --snap poppy-ergo-jr</code></p>
-</blockquote>
+<p>In Python, you can start the mockup robot with:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> pypot.creatures <span class="hljs-keyword">import</span> PoppyErgoJr
+robot = PoppyErgoJr(simulator=<span class="hljs-string">&apos;poppy-simu&apos;</span>)
+</code></pre>
+<p>Add a <code>use_snap=True</code> argument if you want to start Snap API.</p>
+<p>If you want to use command the mockup robot from Snap, you can also start it directly from the command line interface <code>poppy-services</code> in your terminal (called command prompt on Windows):</p>
+<pre><code class="lang-bash">poppy-services --poppy-simu --snap poppy-ergo-jr
+</code></pre>
 <p>As for V-REP, you can control your Robot using Python, Snap<em>!</em>, or the REST API. Yet, there is no physics simulation so its lighter but you will not be able to interact with objects.</p>
 <p>Here is an example with Python:</p>
 <p><img src="../img/visu/python-setup.gif" alt="Poppy Visu with Python"></p>
@@ -910,7 +919,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Visualize","level":"1.2.4","depth":2,"next":{"title":"Examples of projects","level":"1.2.5","depth":2,"path":"getting-started/example-of-projects.md","ref":"getting-started/example-of-projects.md","articles":[]},"previous":{"title":"Program the robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","edit-link","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"label":{"en":"Edit this page","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/visualize.md","mtime":"2017-04-14T21:39:59.603Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T21:42:11.678Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Visualize","level":"1.2.4","depth":2,"next":{"title":"Examples of projects","level":"1.2.5","depth":2,"path":"getting-started/example-of-projects.md","ref":"getting-started/example-of-projects.md","articles":[]},"previous":{"title":"Program the robot","level":"1.2.3","depth":2,"path":"getting-started/program-the-robot.md","ref":"getting-started/program-the-robot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"getting-started/visualize.md","mtime":"2017-04-15T11:51:28.289Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T11:53:24.973Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -918,10 +927,6 @@
         
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
     
         
         <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>

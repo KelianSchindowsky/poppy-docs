@@ -250,7 +250,7 @@
                     
                         <b>2.1.1.</b>
                     
-                    Install a zeroconf client
+                    Install Bonjour/Zeroconf
             
                 </a>
             
@@ -803,30 +803,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="motor-configuration">Motor configuration</h2>
+                                <h1 id="motor-configuration">Motor configuration</h1>
 <p>The Ergo Jr is made of 6 XL-320 motors from <a href="http://support.robotis.com/en/product/dynamixel/xl-series/xl-320.htm" target="_blank">Robotis</a>. Each of this servomotor embeds an electronic board allowing it to receive different kind of orders (about position, speed, torque...) and to communicate with other servos. Therefore, you can chain up several of this servomotors and command them all from one end of the chain: each servomotor will pass the orders to the next one.</p>
 <p><img src="img/assembly/xl_320.jpg" alt="XL320" height="300"></p>
 <p>Yet, in order for the motors to be connected and identified on the same bus (same line), they must have a unique ID. Out of the factory they all set to the same ID: 1. In this section, we will give you details on how you can set a new and unique ID to each of your motors.</p>
 <p>We recommend to configure motors in parallel of the hardware assembly. Meaning, that before assembling a new motor, you first configure it, then assemble to the rest of your robot. This will prevent you to swap motors. In the step-by-step assembly procedure, we will point out each time you need to configure a new motor. Furthermore, you will also be able to directly configure the motor from the assembly notebook interface.</p>
-<h3 id="configuring-motors-one-at-a-time">Configuring motors one at a time</h3>
+<h2 id="configuring-motors-one-at-a-time">Configuring motors one at a time</h2>
 <p>As explained above, all motors have the same ID by default. <strong>Only one motor at a time should be connected to the data bus when you configure them.</strong> Otherwise, it will not work as all motors connected will think that the order sent on the line is intended for them, they will all try to answer resulting in a big mess.</p>
 <p>Your electronic setup when configuring a motor should look like this:</p>
 <ul>
 <li>the Raspberry Pi</li>
-<li>the shield on top and the AC plugged</li>
+<li>the Pixl shield on top and the AC plugged</li>
 <li>a wire from the shield to the motor you want to configure</li>
-<li>a ethernet cable going from the Raspberry Pi to your computer or your router</li>
+<li>an Ethernet cable going from the Raspberry Pi to your computer or your router</li>
 </ul>
-<p><img src="img/motor_one_by_one.jpg" alt="XL-320 configuration ; one motor at a time"></p>
-<h4 id="web-interface-user-friendly">Web interface (user friendly)</h4>
-<!-- TODO: image du notebook  -->
-<!-- The easiest way to use it, is through the notebook interface which will show you at which step of the assembly you have to configure a new motor.
- -->
- <!-- *Note: advanced users may directly use it from the command line terminal. For instance, to configure the motor "m3":* -->
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The web utility for configuring motors is still in the TODO stack.</p>
-</blockquote>
-<h4 id="command-line-utility">Command-line utility</h4>
+<p><img src="img/motor_one_by_one.jpg" alt="XL-320 configuration ; one motor at a time">.</p>
+<h3 id="command-line-utility">Command-line utility</h3>
 <p>Robots come with a command line utility <code>poppy-configure</code> ; to use it you need to open a terminal on your Raspberry Pi.</p>
 <p>You can access to the Raspberry Pi directly from your computer. To do so, open the page <a href="http://poppy.local" target="_blank">http://poppy.local</a> in a web browser.</p>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
@@ -891,7 +883,7 @@ Once configured and that you see the message indicating that everything went wel
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Motor configuration","level":"3.1.2","depth":2,"next":{"title":"Hardware construction","level":"3.1.3","depth":2,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]},"previous":{"title":"Electronic assembly","level":"3.1.1","depth":2,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","edit-link","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"label":{"en":"Edit this page","fr":"Editez cette page"},"base":"https://github.com/poppy-project/poppy-docs/edit/master/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/motor-configuration.md","mtime":"2017-04-14T21:39:59.599Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-14T21:42:11.678Z"},"basePath":"../..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Motor configuration","level":"3.1.2","depth":2,"next":{"title":"Hardware construction","level":"3.1.3","depth":2,"path":"assembly-guides/ergo-jr/mechanical-construction.md","ref":"assembly-guides/ergo-jr/mechanical-construction.md","articles":[]},"previous":{"title":"Electronic assembly","level":"3.1.1","depth":2,"path":"assembly-guides/ergo-jr/electronic-assembly.md","ref":"assembly-guides/ergo-jr/electronic-assembly.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-share","-search","richquotes","toggle-chapters","toggle-headers","page-toc","sitemap","search-plus","youtube","github","ga","anchorjs","language-picker","download-pdf-link","copy-code-button"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"youtube":{},"github":{"url":"https://github.com/poppy-project/poppy-docs"},"page-toc":{"position":"before-first","selector":".markdown-section h2, .markdown-section h3"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"toggle-headers":{},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{},"highlight":{},"sitemap":{"hostname":"https://docs.poppy-project.org/"},"copy-code-button":{},"ga":{"configuration":"auto","token":"UA-44384879-5"},"download-pdf-link":{"label":{"en":"Download PDF","fr":"Télécharger en PDF"},"base":"https://www.gitbook.com/download/pdf/book/poppy-project/poppy-docs","multilingual":true},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["twitter","facebook","google","weibo","instapaper"]},"edit-link":{"base":"https://github.com/poppy-project/poppy-docs/edit/master/","label":{"en":"Edit this page","fr":"Editez cette page"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchorjs":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"poppy_doc_version":"1.0","poppy-humanoid_humanoid_hardware_version":"1.0","poppy-humanoid_humanoid_software_version":"1.0","poppy-torso_hardware_version":"1.0","poppy-torso_software_version":"1.0","poppy-ergo-jr_hardware_version":"1.0","poppy-ergo-jr_software_version":"1.0"},"title":"Documentation of the Poppy Platform","language":"en","gitbook":"*"},"file":{"path":"assembly-guides/ergo-jr/motor-configuration.md","mtime":"2017-04-15T11:51:28.285Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-04-15T11:53:24.973Z"},"basePath":"../..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -899,10 +891,6 @@ Once configured and that you see the message indicating that everything went wel
         
     <script src="../../../gitbook/gitbook.js"></script>
     <script src="../../../gitbook/theme.js"></script>
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
-        
     
         
         <script src="../../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
